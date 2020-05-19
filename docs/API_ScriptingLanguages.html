@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Scripting Languages · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Enklu Cloud&#x27;s scripting interface offers 2 types of scripts: Behavior scripts and Vine scripts. Behavior scripts utilize JavaScript while Vine scripts utilize VineML."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Scripting Languages · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/"/><meta property="og:description" content="Enklu Cloud&#x27;s scripting interface offers 2 types of scripts: Behavior scripts and Vine scripts. Behavior scripts utilize JavaScript while Vine scripts utilize VineML."/><meta property="og:image" content="https://enklu.github.io/documentation/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><link rel="stylesheet" href="/documentation/css/code-block-buttons.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/js/code-block-buttons.js"></script><script src="/documentation/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/css/prism.css"/><link rel="stylesheet" href="/documentation/css/main.css"/><script src="/documentation/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/"><img class="logo" src="/documentation/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/docs/doc1" target="_self">Guides</a></li><li class="siteNavGroupActive siteNavItemActive"><a href="/documentation/docs/API_ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/documentation/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/help" target="_self">Help</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul class=""><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/docs/API_ScriptingLanguages">Scripting Languages</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/API_Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/API_Math">Math</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/API_Random">Random</a></li><li class="navListItem"><a class="navItem" href="/documentation/docs/API_Time">Time</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Scripting Languages</h1></header><article><div><span><p>Enklu Cloud's scripting interface offers 2 types of scripts: Behavior scripts and Vine scripts. Behavior scripts utilize JavaScript while Vine scripts utilize VineML.</p>
+<h2><a class="anchor" aria-hidden="true" id="vine-scripts"></a><a href="#vine-scripts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vine Scripts</h2>
+<p>Vine scripts are written using VineML.  VineML is a markup language which strongly correlates to HTML. However unlike HTML, VineML has several built-in features specifically aimed at creating UI elements for AR. In Enklu Cloud, Vine scripts are used to describe element hierarchies, assign schema data, and display information.</p>
+<p>VineML files are called <em>documents</em>. These documents are made up of a hierarchy of nested <em>tags</em> which start from a single root element. Each tag can have zero or more attributes. Let's look at an example Vine script:</p>
+<pre><code class="hljs css language-xml">/* A vine header is optional.*/
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?Vine</span><span class="token punctuation">></span></span>
+
+/* Documents can have only a single root element. */
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Float</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>Hello World!<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Float</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>This example shows an opening and closing <em>Float</em> tags <code>&lt;Float&gt;&lt;/Float&gt;</code> which create the root element. Within the <em>Float</em> tags is a self closing <em>Button</em> tag <code>&lt;Button /&gt;</code>. Note that VineML supports C-style block comments.  It is best practice to avoid using comments between an opening and closing tag.</p>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="tags"></a><a href="#tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tags</h3>
+<p>Tags follow XHTML conventions, i.e. every tag must be closed. In HTML, we can write <code>&lt;br&gt;</code>, but in VineML this is invalid. Every tag must have a closing tag or it must be a self closing tag.</p>
+<p>This is not valid VineML:</p>
+<pre><code class="hljs css language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Container</span><span class="token punctuation">></span></span>
+/* Do not use this */
+</code></pre>
+<p>These are both valid options.</p>
+<pre><code class="hljs css language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Container</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Container</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Container</span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p><br></p>
+<p>In addition, tags may not have raw text inside of them. All values are passed to tags through attributes.</p>
+<p>This is not valid VineML:</p>
+<pre><code class="hljs css language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Caption</span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Caption</span><span class="token punctuation">></span></span>
+/* Do not use this */
+</code></pre>
+<p>Instead we use attributes:</p>
+<pre><code class="hljs css language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Caption</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>Hello World<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="attributes"></a><a href="#attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h3>
+<p>While tags define the object structure, attributes define the object properties. VineML has support for string, boolean, number, and vector literals. Any property of an element may be passed through element attributes.</p>
+<pre><code class="hljs css language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Caption</span>
+    <span class="token attr-name">label</span> <span class="token attr-value"><span class="token punctuation">=</span> <span class="token punctuation">'</span>Hello<span class="token punctuation">'</span></span>
+    <span class="token attr-name">visible</span> <span class="token attr-value"><span class="token punctuation">=</span> false</span> 
+    <span class="token attr-name">font.size</span> <span class="token attr-value"><span class="token punctuation">=</span> 100</span>
+    <span class="token attr-name">width</span> <span class="token attr-value"><span class="token punctuation">=</span> 1000.5</span>
+    <span class="token attr-name">position</span> <span class="token attr-value"><span class="token punctuation">=</span> (0,0,10)</span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="behavior-scripts"></a><a href="#behavior-scripts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Behavior Scripts</h2>
+<p>The entry point into scripting with Enklu is the Behavior script which utilizes JavaScript. Many Behavior scripts may be attached to elements throughout the hierarchy. They can manipulate the object graph, work with central systems, or send messages to scripts on other elements.</p>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="lifecycle-functions"></a><a href="#lifecycle-functions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lifecycle Functions</h3>
+<p>Before any Vine or Behavior scripts are executed, all scripts on an element are loaded. Once they are all loaded, they begin to execute in the order in which they are arranged on the element.</p>
+<p>After initial execution of all Vine and Behavior scripts, each Behavior script will begin calling lifecycle methods.</p>
+<p>If an enter function is defined, it will be called once and only once after all scripts have been initially executed. This is a safe place to manipulate elements created through vines, as the elements are guaranteed to be created by this point.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> okBtn<span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    okBtn <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'..btn-ok'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    okBtn<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'activated'</span><span class="token punctuation">,</span> onOkActivated<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">onOkActivated</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Ok button was activated!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><br></p>
+<p>An update function may also be defined, which will be called every frame. This function is guaranteed to be called after enter is called, though an enter function is not required for update to be called.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> acc <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> radius <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> speed <span class="token operator">=</span> <span class="token number">1.3</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    acc <span class="token operator">+=</span> speed <span class="token operator">*</span> time<span class="token punctuation">.</span><span class="token function">dt</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// move the object in a circle</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token function">vec3</span><span class="token punctuation">(</span>
+        rad <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">cos</span><span class="token punctuation">(</span>acc<span class="token punctuation">)</span><span class="token punctuation">,</span>
+        <span class="token number">0</span><span class="token punctuation">,</span>
+        rad <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">sin</span><span class="token punctuation">(</span>acc<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><br></p>
+<p>Finally, an exit function may be defined which is called right before the object is destroyed.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    okBtn<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'activated'</span><span class="token punctuation">,</span> onOkActivated<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="scripts-as-modules"></a><a href="#scripts-as-modules" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scripts as Modules</h2>
+<p>All scripts are wrapped in functions to prevent name collision in the global scope. Because of this, all functions that should be exposed to other scripts and the lifecycle functions should be exported on a module object passed in by the runtime.</p>
+<p>A simple script:</p>
+<pre><code class="hljs css language-js">log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This script would be treated by the runtime like the following:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> module_1 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">module</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span>module_1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<p>The runtime will use the specific module's exports to call any lifecycle functions as well any functions to expose to other scripts. Be sure to expose these methods via <code>module.exports</code>. For example:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Enter Called!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Exit Called!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">sayHi</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">'Hello!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    enter<span class="token operator">:</span> enter<span class="token punctuation">,</span>
+    exit<span class="token operator">:</span> exit<span class="token punctuation">,</span>
+    sayHi<span class="token operator">:</span> sayHi
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="preprocessors"></a><a href="#preprocessors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Preprocessors</h2>
+<p>A powerful preprocessor is included as part of the Behavior and VineML execution pipeline. The preprocessor can process two types of blocks: schema and js blocks. The former allows injecting schema data, while the latter allows generating VineML or JavaScript via... JavaScript.</p>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="schema-preprocessor"></a><a href="#schema-preprocessor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema Preprocessor</h3>
+<p>It is very useful to insert schema data into a VineML document or a Behavior script. This allows for scripts to be reused with different data on different elements. While <code>{{ }}</code> allow you to include JS, <code>{[ ]}</code> blocks allow you to include Prop Definitions. These definitions define the type of data needed, which expose inspector fields in Enklu editors.</p>
+<p>Values can be pulled from an element's schema:</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>{[label]}<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p>This will expose a 'label' string field in the editors and store the 'label' data in a prop on the element. A type may be specified as well:</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>{[amount:float]}<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p>This will inform the editor when building the editor field. Finally, you may also specify a default value. If a default value is specified, the type is required:</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>{[label:String = "Push Me!"]}<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="js-preprocessor"></a><a href="#js-preprocessor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JS Preprocessor</h3>
+<p>Sometimes it's useful to insert logic into a VineML document. In these cases, scripts can be embedded in a VineML document that will be executed by a JavaScript preprocessor before being handed off to the VineML parser.</p>
+<p>The value returned from the JS block is inserted into the VineML document:</p>
+<pre><code class="hljs css language-js"><span class="token operator">&lt;</span><span class="token operator">?</span>Vine<span class="token operator">></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> elements <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">100</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            elements<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"&lt;Button label='"</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"' />"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> elements<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Menu</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<p><br></p>
+<h3><a class="anchor" aria-hidden="true" id="advanced-usage"></a><a href="#advanced-usage" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Advanced Usage</h3>
+<p>Both the schema and the JS preprocessors are applied to every VineML document and Behavior script. They are always executed schema first, then JS. Because of this, one may be used inside another.</p>
+<p>We are generating VineML with JS by using the schema prop, numElements. The schema value is injected before the JS executes.</p>
+<pre><code class="hljs css language-js"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Menu</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    </span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>numElements<span class="token operator">:</span>int <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            result<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">"&lt;Button label='"</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">"' />"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token keyword">return</span> result<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Menu</span></span><span class="token punctuation">></span></span>
+</code></pre>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-next button" href="/documentation/docs/API_Logging"><span>Logging</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#vine-scripts">Vine Scripts</a><ul class="toc-headings"><li><a href="#tags">Tags</a></li><li><a href="#attributes">Attributes</a></li></ul></li><li><a href="#behavior-scripts">Behavior Scripts</a><ul class="toc-headings"><li><a href="#lifecycle-functions">Lifecycle Functions</a></li></ul></li><li><a href="#scripts-as-modules">Scripts as Modules</a></li><li><a href="#preprocessors">Preprocessors</a><ul class="toc-headings"><li><a href="#schema-preprocessor">Schema Preprocessor</a></li><li><a href="#js-preprocessor">JS Preprocessor</a></li><li><a href="#advanced-usage">Advanced Usage</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/" class="nav-home"><img src="/documentation/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/docs/en/doc1.html">Getting Started</a><a href="/documentation/docs/en/doc2.html">Guides</a><a href="/documentation/docs/en/doc3.html">API Reference</a></div><div><h5>Community</h5><a href="https://discord.gg/7GThNjY" target="_blank">Discord</a><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div><h5>More</h5><a href="/documentation/blog">Blog</a><a href="https://github.com/enklu">GitHub</a><a class="github-button" data-icon="octicon-star" data-count-href="/facebook/docusaurus/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div></body></html>
