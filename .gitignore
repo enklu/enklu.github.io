@@ -5,7 +5,7 @@ node_modules
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 
-website/translated_docs
-website/yarn.lock
-website/node_modules
-website/i18n/*
+translated_docs
+yarn.lock
+node_modules
+i18n/*
