@@ -30,6 +30,7 @@ const siteConfig = {
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
+  docsUrl: './docs',
 	disableTitleTagline: true,
   // Used for publishing and more
   projectName: 'documentation',
@@ -40,9 +41,9 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {markdown: 'doc1', label: 'Guides'},
-    {markdown: 'API_ScriptingLanguages', label: 'API Reference'},
-		{markdown: 'FAQ', label: 'FAQ'},
+    {doc: 'doc1', label: 'Guides'},
+    {doc: 'API_ScriptingLanguages', label: 'API Reference'},
+		{doc: 'FAQ', label: 'FAQ'},
     {page: 'help', label: 'Help'},
     //{blog: true, label: 'Blog'},
   ],

@@ -4,7 +4,54 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "",
-    "docs": {},
+    "docs": {
+      "API_App": {
+        "title": "App"
+      },
+      "API_Elements": {
+        "title": "Elements"
+      },
+      "API_Logging": {
+        "title": "Logging"
+      },
+      "API_Math": {
+        "title": "Math"
+      },
+      "API_Random": {
+        "title": "Random"
+      },
+      "API_ScriptingLanguages": {
+        "title": "Scripting Languages"
+      },
+      "API_System": {
+        "title": "System"
+      },
+      "API_Time": {
+        "title": "Time"
+      },
+      "doc1": {
+        "title": "Latin-ish",
+        "sidebar_label": "Example Page"
+      },
+      "doc2": {
+        "title": "document number 2"
+      },
+      "doc3": {
+        "title": "This is document number 3"
+      },
+      "doc9": {
+        "title": "This is Doc 9"
+      },
+      "doc5": {
+        "title": "Fifth Document"
+      },
+      "FAQ": {
+        "title": "Frequently Asked Questions"
+      },
+      "Guide_WebEditorInterface": {
+        "title": "Web Editor Interface"
+      }
+    },
     "links": {
       "Guides": "Guides",
       "API Reference": "API Reference",
