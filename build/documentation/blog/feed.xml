@@ -9,7 +9,7 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Enklu Documentation Blog</title>
-            <url>https://enklu.github.io/documentation/build/documentation/img/logo/EnkluLogo_White.svg</url>
+            <url>https://enklu.github.io/documentation/build/documentation//documentation/build/documentation/img/logo/EnkluLogo_White.svg</url>
             <link>https://enklu.github.io/documentation/build/documentation/blog</link>
         </image>
         <copyright>Copyright © 2020 Enklu, Inc.</copyright>

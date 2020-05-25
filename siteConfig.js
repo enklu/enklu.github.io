@@ -20,11 +20,13 @@ const users = [
   },
 ];
 
+baseUrl = '/documentation/build/documentation/';
+
 const siteConfig = {
   title: 'Enklu Documentation', // Title for your website.
   tagline: '',
   url: 'https://enklu.github.io', // Your website URL
-  baseUrl: '/documentation/build/documentation/', // Base URL for your project */
+  baseUrl: baseUrl, // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
@@ -49,9 +51,9 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/logo/EnkluLogo_White.svg',
-  footerIcon: 'img/logo/EnkluLogo_White.svg',
-  favicon: 'img/logo/EnkluLogo.svg',
+  headerIcon: baseUrl + 'img/logo/EnkluLogo_White.svg',
+  footerIcon: baseUrl + 'img/logo/EnkluLogo_White.svg',
+  favicon: baseUrl + 'img/logo/EnkluLogo.svg',
 
   /* Colors for website */
   colors: {
@@ -95,17 +97,17 @@ const siteConfig = {
   // Add custom scripts here that would be placed in <script> tags.
   scripts: ['https://buttons.github.io/buttons.js',
 		'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
-		'/documentation/js/code-block-buttons.js',
+		baseUrl + '/documentation/js/code-block-buttons.js',
 	],
-	stylesheets: ['/documentation/css/code-block-buttons.css'],
+	stylesheets: [baseUrl + '/documentation/css/code-block-buttons.css'],
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
   // No .html extensions for paths.
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/undraw_online.svg',
-  twitterImage: 'img/undraw_tweetstorm.svg',
+  ogImage: baseUrl + 'img/undraw_online.svg',
+  twitterImage: baseUrl + 'img/undraw_tweetstorm.svg',
 
   // For sites with a sizable amount of content, set collapsible to true.
   // Expand/collapse the links and subcategories under categories.

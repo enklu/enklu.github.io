@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://enklu.github.io/documentation/build/documentation/blog"/>
     <subtitle>The best place to stay up-to-date with the latest Enklu Documentation news and events.</subtitle>
-    <logo>https://enklu.github.io/documentation/build/documentation/img/logo/EnkluLogo_White.svg</logo>
+    <logo>https://enklu.github.io/documentation/build/documentation//documentation/build/documentation/img/logo/EnkluLogo_White.svg</logo>
     <rights>Copyright © 2020 Enklu, Inc.</rights>
     <entry>
         <title type="html"><![CDATA[New Version 1.0.0]]></title>
