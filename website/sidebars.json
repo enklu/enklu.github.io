@@ -1,0 +1,27 @@
+{
+  "Guides": {
+    "Web Editor Basics": [
+    	"doc1", 
+    	"Guide_WebEditorInterface"
+    ],
+    "Chapters Series": ["doc2"],
+    "Assets": ["doc3"],
+		"HoloLens": ["doc3"],
+		"Scripting": ["doc3"]
+  },
+  "API": {
+    "API Reference": [
+      "API_ScriptingLanguages", 
+      "API_Logging", 
+      "API_Math", 
+      "API_Random",
+      "API_Time",
+      "API_Elements",
+      "API_System",
+      "API_App"
+    ]
+  },
+	"Frequently Asked Questions":{
+		"Enklu Cloud FAQ" : ["FAQ"]
+	}
+}
