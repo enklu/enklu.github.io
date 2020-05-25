@@ -24,7 +24,7 @@ const siteConfig = {
   title: 'Enklu Documentation', // Title for your website.
   tagline: '',
   url: 'https://enklu.github.io', // Your website URL
-  baseUrl: '/documentation/', // Base URL for your project */
+  baseUrl: '/documentation/build/documentation/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
