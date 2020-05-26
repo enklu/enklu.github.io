@@ -154,7 +154,7 @@ class Index extends React.Component {
 					image: `${baseUrl}img/undraw_design_layout.svg`,
 					imageAlign: 'top',
 					imageLink: `${siteConfig.baseUrl}en/Guide_WebEditorBasics.html`,
-					title: `[NEW TESTING! Web Editor Basics](${siteConfig.baseUrl}en/Guide_WebEditorBasics.html)`,
+					title: `[Web Editor Basics](${siteConfig.baseUrl}en/Guide_WebEditorBasics.html)`,
 					},
 					{
 					content: `[Features specific to HoloLens.](${siteConfig.baseUrl}en/Guide_Hololens.html)`,
