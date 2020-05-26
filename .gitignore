@@ -1,11 +1,3 @@
-.DS_Store
-
-node_modules
-
-lib/core/metadata.js
-lib/core/MetadataBlog.js
-
-translated_docs
-yarn.lock
-node_modules
-i18n/*
+node_modules/*
+!node_modules/docusaurus
+node_modules/docusaurus/examples/
