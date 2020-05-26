@@ -3,7 +3,7 @@ id: FAQ
 title: Frequently Asked Questions
 ---
 
-<img src="/documentation/img/undraw_ask_question.svg" style="max-height: 300px"/>
+<img src="img/undraw_ask_question.svg" style="max-height: 300px"/>
 
 ## Is Enklu Cloud free?
 Yes!  Anyone is free to use Enklu Cloud.  Feel free to create anything with an unlimited number of collaborators.  We do offer paid Enklu Pro Support and Enklu Enterprise Support packages for larger project/event needs.
