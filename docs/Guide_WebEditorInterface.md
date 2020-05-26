@@ -4,14 +4,14 @@ title: Web Editor Interface
 ---
 
 When designing experiences, you will spend most of your time in the Web Editor.
-![Web-Editor-Interface](/documentation/img/product/workspace.gif)
+![Web-Editor-Interface](/documentation/live/latest/img/product/workspace.gif)
 
 The Web Editor is where the magic happens. There are a lot of pieces here, but they'll soon become familiar.
 
 
 ## Menu Bar
 At the top of the page, you will see several drop down menus: Experience, Edit, Tools, and Help.
-![Web-Editor-Menu-Bar](/documentation/img/product/editor-nav-menu.gif)
+![Web-Editor-Menu-Bar](/documentation/live/latest/img/product/editor-nav-menu.gif)
 
 
 ### Experience
@@ -29,20 +29,20 @@ The Help drop down menu links to our Online Help documentation, our JS API Refer
 
 ## Hierarchy
 The hierarchy is essentially a tree view of your experience. Everything in your experience is part of this tree in one way or another: assets, lights, and scripts all become nodes on this tree.
-![Web-Editor-Hierarchy](/documentation/img/product/hierarchy.png)
+![Web-Editor-Hierarchy](/documentation/live/latest/img/product/hierarchy.png)
 
 Once an experience becomes a bit more complicated, this will be an easy way to make sense of the space.
-![Web-Editor-Hierarchy-Arrangement](/documentation/img/product/reparenting.gif)
+![Web-Editor-Hierarchy-Arrangement](/documentation/live/latest/img/product/reparenting.gif)
 
 These nodes may also be re-positioned on the tree (also called re-parenting) by simple drag and drop. This is useful not just for organization, but also informs position, rotation, and scale changes, as these are composed down the graph. The lock and visibility icons are also informed by the hierarchy.
 
 Finally, clicking on the ellipses will bring up the element menu from which you can perform several actions.
-![Web-Editor-Element-Menu](/documentation/img/product/element-menu.gif)
+![Web-Editor-Element-Menu](/documentation/live/latest/img/product/element-menu.gif)
 
 
 ## Library
 The library section enables you to manipulate all resources of the app. At the top, you can choose between categories of assets and scripts. Several categories of Public Assets are available.
-![Web-Editor-Library](/documentation/img/product/library.gif)
+![Web-Editor-Library](/documentation/live/latest/img/product/library.gif)
 
 
 The filter bar at the top of the library enables you to search through the assets.
@@ -54,14 +54,14 @@ To create and edit scripts, please see our Introduction to Scripting article.
 
 ## Inspector
 When you're ready to edit an element in the hierarchy, click on it. This will open up the inspector on the right hand side.
-![Web-Editor-Inspector](/documentation/img/product/inspector.png)
+![Web-Editor-Inspector](/documentation/live/latest/img/product/inspector.png)
 
 The inspector allows you to edit the properties of an element, as well as manage the attached asset and scripts. You can easily edit the name, description, and transform values here.
 
 
 ## Canvas
 The canvas is your 2D view into a 3D world. The canvas provides a preview of assets and scripts, basic asset manipulation controls, as well as controls to move a camera around the world.
-![Web-Editor-Canvas](/documentation/img/product/canvas.gif)
+![Web-Editor-Canvas](/documentation/live/latest/img/product/canvas.gif)
 
 You can select an object by using your mouse's **Left Click**. Selecting an object on the canvas will also highlight its location in the hierarchy and reveal its properties in the inspector. Position, rotation, and scale may be manipulated via the tools in the upper left corner of the canvas. There is also a fullscreen button in the upper right corner of the canvas.
 
