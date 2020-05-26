@@ -3,7 +3,7 @@ id: API_App
 title: App
 ---
 
-Testing build! In all scripts, there is a global <code>app</code> object. This object is useful for manipulating application-wide settings, scenes inside an experience, creating new elements via scripts, and networking.
+In all scripts, there is a global <code>app</code> object. This object is useful for manipulating application-wide settings, scenes inside an experience, creating new elements via scripts, and networking.
 
 ## Scene Object
 

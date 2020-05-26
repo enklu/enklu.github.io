@@ -20,9 +20,11 @@ const users = [
   },
 ];
 
-baseUrl = '/documentation/build/documentation/';
+baseUrl = '/documentation/live/latest/';
 
 const siteConfig = {
+  outDir: 'live',
+
   title: 'Enklu Documentation', // Title for your website.
   tagline: '',
   url: 'https://enklu.github.io', // Your website URL
@@ -33,7 +35,7 @@ const siteConfig = {
   docsUrl: 'docs',
 	disableTitleTagline: true,
   // Used for publishing and more
-  projectName: 'documentation',
+  projectName: 'latest',
   organizationName: 'Enklu',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
