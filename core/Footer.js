@@ -37,14 +37,14 @@ class Footer extends React.Component {
           </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started
-            </a>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
+            <a href={this.docUrl('Guide_WebEditorInterface.html')}>
               Guides
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
+            <a href={this.docUrl('API_ScriptingLanguages.html')}>
               API Reference
+            </a>
+            <a href={this.docUrl('FAQ.html')}>
+              FAQ
             </a>
           </div>
           <div>
@@ -76,7 +76,10 @@ class Footer extends React.Component {
           </div>
           <div style={{marginRight: '9em'}}>
             <h5>Community</h5>
-            <a href="https://github.com/enklu">GitHub</a>
+            <a href="https://github.com/enklu"
+              target='blank'>
+              GitHub
+            </a>
 						<a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw"
 							target="_blank">
 							Slack

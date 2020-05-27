@@ -1,7 +1,6 @@
 {
   "Guides": {
-    "Web Editor Basics": [
-    	"doc1", 
+    "Web Editor Basics": [ 
     	"Guide_WebEditorInterface"
     ],
     "Chapters Series": ["doc2"],
