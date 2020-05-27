@@ -22,25 +22,25 @@ function WebEditorBasics(props) {
 			title: `[The Web Editor](${siteConfig.baseUrl}docs/Guide_WebEditorInterface.html)`
     },
     {
-			content:`[Hardware and software recommendations for using the Web Editor.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Hardware and software recommendations for using the Web Editor.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Minimum Requirements](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Minimum Requirements](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Accessing and sharing experiences.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Accessing and sharing experiences.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Managing Your Experiences](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Managing Your Experiences](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`[Hotkeys for commons actions in the Web Editor.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Hotkeys for commons actions in the Web Editor.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Keyboard Shortcuts](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Keyboard Shortcuts](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 

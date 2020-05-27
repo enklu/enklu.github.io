@@ -15,32 +15,32 @@ function ChaptersSeries(props) {
 
   const chaptersSeriesLinks = [
     {
-			content:`[Learn how to use basic hierarchy and transform tools](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Learn how to use basic hierarchy and transform tools](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Chapter 1](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Chapter 1](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Build a small scene using transform tools](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Build a small scene using transform tools](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Chapter 2](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Chapter 2](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Add lighting and effects into a scene.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Add lighting and effects into a scene.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Chapter 3](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Chapter 3](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`[Learn how to add user interactions to a scene.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Learn how to add user interactions to a scene.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Chapter 4](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Chapter 4](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 

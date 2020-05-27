@@ -15,32 +15,32 @@ function Spaces(props) {
 
   const spacesLinks = [
     {
-			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Updating a space scan](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Updating a space scan](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 

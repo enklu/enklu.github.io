@@ -15,32 +15,32 @@ function Hololens(props) {
 
   const hololensLinks = [
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Voice Commands](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Voice Commands](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Live Preview](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Live Preview](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 

@@ -15,32 +15,32 @@ function Assets(props) {
 
   const assetLinks = [
     {
-			content:`[Upload 3D models, image assets, and audio files.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Upload 3D models, image assets, and audio files.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Import Your Own Assets](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Import Your Own Assets](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Using Enklu Cloud's public asset library.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Using Enklu Cloud's public asset library.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Public Assets](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Public Assets](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`["What are the recommended number of polygons for assets?"](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`["What are the recommended number of polygons for assets?"](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Scene Complexity Recommendations](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Scene Complexity Recommendations](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 

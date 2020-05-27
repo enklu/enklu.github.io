@@ -15,32 +15,32 @@ function Scripting(props) {
 
   const scriptingLinks = [
     {
-			content:`[Scripting basics.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Scripting basics.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Introduction to Scripting](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Introduction to Scripting](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Using VineML in Vine scripts.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Using VineML in Vine scripts.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Vine Script Basics](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Vine Script Basics](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Using JavaScript in Behavior scripts.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Using JavaScript in Behavior scripts.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Behavior Script Basics](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Behavior Script Basics](${siteConfig.baseUrl}docs/doc2.html)`
     },
 		{
-			content:`[Using Behavior scripts to control animations.](${siteConfig.baseUrl}docs/doc1.html)`,
+			content:`[Using Behavior scripts to control animations.](${siteConfig.baseUrl}docs/doc2.html)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc1.html`,
-			title: `[Controlling Animations](${siteConfig.baseUrl}docs/doc1.html)`
+			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
+			title: `[Controlling Animations](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
 
