@@ -50,6 +50,12 @@ const siteConfig = {
     //{blog: true, label: 'Blog'},
   ],
 
+	algolia: {
+    apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+    indexName: 'enklu',
+    algoliaOptions: {} 
+  },
+
   // If you have users set above, you add it here:
   users,
 
