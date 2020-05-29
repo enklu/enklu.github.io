@@ -84,6 +84,10 @@ class Footer extends React.Component {
 							target="_blank">
 							Slack
 						</a>
+						<a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7"
+							target="_blank">
+							User Feedback
+						</a>
             {this.props.config.twitterUsername && (
               <div className="social">
                 <a
