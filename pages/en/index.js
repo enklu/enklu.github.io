@@ -105,18 +105,16 @@ class Index extends React.Component {
       <Block id="try">
         {[
           {
-            content:
-              'To make your landing page more attractive, use illustrations! Check out ' +
-              '[**unDraw**](https://undraw.co/) which provides you with customizable illustrations which are free to use. ' +
-              'The illustrations you see on this page are from unDraw.',
+            content: `Scripting opens up limitless possibilities in Enklu Cloud.  Check out our scripting API Reference to learn about what APIs are currently supported and how you can utilize them for your projects.`,
             image: `${baseUrl}img/undraw_code_review.svg`,
             imageAlign: 'left',
-            title: 'Wonderful SVG Illustrations',
+						imageLink: `${siteConfig.baseUrl}docs/API_ScriptingLanguages`,
+            title: `<p align='center'>API Reference</p>`,
           },
         ]}
       </Block>
     );*/
-	/*
+		/*
     const Description = () => (
       <Block background="dark">
         {[
@@ -196,6 +194,20 @@ class Index extends React.Component {
 			</React.Fragment>
     );
 
+		const API_Ref = () => (
+      <div className= "apiSplash">
+				<a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}>
+					<img src={`${baseUrl}img/undraw_code_review.svg`} />
+				</a>
+				<div className="apiText">
+					<a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}>
+						<h2>API Reference</h2>
+					</a>
+					<p>Scripting opens up limitless possibilities in Enklu Cloud.  Check out our <a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}><strong>API Reference</strong></a> to see what APIs are currently supported, access code snippets that you can copy and paste into your own scripts, and learn about how you can utilize our APIs for your projects.</p>
+				</div>
+      </div>
+    );
+
     const Showcase = () => {
       if ((siteConfig.users || []).length === 0) {
         return null;
@@ -224,12 +236,13 @@ class Index extends React.Component {
         </div>
       );
     };
-	/*<LearnHow /> <Description /> <TryOut /> <FeatureCallout /> <Showcase />*/
+	/*<LearnHow />  <Description/> <FeatureCallout /> <Showcase />*/
     return (
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features/>
+					<API_Ref/>
         </div>
       </div>
     );
