@@ -46,7 +46,7 @@ const siteConfig = {
     {doc: 'Guide_WebEditorInterface', label: 'Guides'},
     {doc: 'API_ScriptingLanguages', label: 'API Reference'},
 		{doc: 'FAQ', label: 'FAQ'},
-    {page: 'help', label: 'Help'},
+    {page: 'contact', label: 'Contact'},
     //{blog: true, label: 'Blog'},
   ],
 
