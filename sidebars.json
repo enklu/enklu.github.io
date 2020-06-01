@@ -1,7 +1,10 @@
 {
   "Guides": {
     "Web Editor Basics": [ 
-    	"Guide_WebEditorInterface"
+    	"Guide_WebEditorInterface",
+      "Guide_MinimumRequirements",
+      "Guide_ManagingYourExperiences",
+      "Guide_KeyboardShortcuts"
     ],
     "Chapters Series": ["doc2"],
     "Assets": ["doc3"],
