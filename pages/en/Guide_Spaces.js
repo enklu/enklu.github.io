@@ -44,21 +44,21 @@ function Spaces(props) {
     },
   ];
 
+	const Title_Splash = () => (
+    <div className= "titleSplash">
+			<div className="titleText">
+				<h2>Spaces</h2>
+				<p>Guides related to creating and editing space scans, linking spaces to experiences, and downloading scans to use in Unity.</p>
+			</div>
+			<img src={`${baseUrl}img/undraw_working_late_spaces.svg`} />
+    </div>
+  );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undraw_working_late_spaces.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>Spaces</h1>
-              </header>
-              <p>Creating and editing space scans.</p>
-            </div>
-          </div>  
+					<Title_Splash/> 
           <GridBlock contents={spacesLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

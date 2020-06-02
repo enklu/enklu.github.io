@@ -44,21 +44,21 @@ function Assets(props) {
     },
   ];
 
+		const Title_Splash = () => (
+      <div className= "titleSplash">
+				<div className="titleText">
+					<h2>Assets</h2>
+					<p>Asset guides related to importing your own assets, using Enklu's public assets, adding animations, exporting Unity prefabs, and more.</p>
+				</div>
+				<img src={`${baseUrl}img/undraw_3d_modeling_h60h.svg`} />
+      </div>
+    );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undraw_3d_modeling_h60h.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>Assets</h1>
-              </header>
-              <p>Asset creation, management, and placement.</p>
-            </div>
-          </div>  
+					<Title_Splash/>  
           <GridBlock contents={assetLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

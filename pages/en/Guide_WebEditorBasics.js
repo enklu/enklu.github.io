@@ -44,21 +44,21 @@ function WebEditorBasics(props) {
     },
   ];
 
+	const Title_Splash = () => (
+    <div className= "titleSplash">
+			<div className="titleText">
+				<h2>Web Editor Basics</h2>
+				<p>Guides related to the Web Editor interface, creating and managing experiences, and using keyboard shortcuts.</p>
+			</div>
+			<img src={`${baseUrl}img/undraw_design_layout.svg`} />
+    </div>
+  );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undraw_design_layout.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>Web Editor Basics</h1>
-              </header>
-              <p>Getting started with Enklu Cloud.</p>
-            </div>
-          </div>
+					<Title_Splash/>
           <GridBlock contents={webEditorBasicsLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

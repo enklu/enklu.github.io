@@ -44,21 +44,21 @@ function Hololens(props) {
     },
   ];
 
+	const Title_Splash = () => (
+    <div className= "titleSplash">
+			<div className="titleText">
+				<h2>HoloLens</h2>
+				<p>Guides and features specific to HoloLens (1st gen) and HoloLens 2 including device operation, spatial scans, and live preview.</p>
+			</div>
+			<img src={`${baseUrl}img/undesk_augmented_reality01.svg`} />
+    </div>
+  );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undesk_augmented_reality01.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>HoloLens</h1>
-              </header>
-              <p>Guides and features specific to HoloLens.</p>
-            </div>
-          </div>  
+					<Title_Splash/>  
           <GridBlock contents={hololensLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

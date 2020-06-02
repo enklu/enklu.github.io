@@ -43,22 +43,22 @@ function ChaptersSeries(props) {
 			title: `[Chapter 4](${siteConfig.baseUrl}docs/doc2.html)`
     },
   ];
+	
+	const Title_Splash = () => (
+    <div className= "titleSplash">
+			<div className="titleText">
+				<h2>Chapters Series</h2>
+				<p>Tutorial guides for example scenes to walk through the basics of setting up simple vignettes and user interactions in Enklu Cloud. (More Chapters are in the works!)</p>
+			</div>
+			<img src={`${baseUrl}img/undraw_setup.svg`} />
+    </div>
+  );
 
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undraw_setup.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>Chapters Series</h1>
-              </header>
-              <p>Tutorial guides for example scenes.</p>
-            </div>
-          </div>  
+					<Title_Splash/> 
           <GridBlock contents={chaptersSeriesLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

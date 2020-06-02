@@ -44,21 +44,21 @@ function Scripting(props) {
     },
   ];
 
+	const Title_Splash = () => (
+    <div className= "titleSplash">
+			<div className="titleText">
+				<h2>Scripting</h2>
+				<p>How to script in Enklu Cloud using a combination of Vine and Behavior scripts to create custom user interfaces and interactions in AR.</p>
+			</div>
+			<img src={`${baseUrl}img/undraw_scripting.svg`} />
+    </div>
+  );
+
   return (
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-          <div className="postFlex">
-            <div className="postLogo">
-              <img src={`${baseUrl}img/undraw_scripting.svg`}/>
-            </div>
-            <div>
-              <header className="postHeader">
-                <h1>Scripting</h1>
-              </header>
-              <p>How to script in Enklu Cloud.</p>
-            </div>
-          </div>  
+					<Title_Splash/>
           <GridBlock contents={scriptingLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>
