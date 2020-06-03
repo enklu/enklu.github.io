@@ -15,11 +15,11 @@ function Hololens(props) {
 
   const hololensLinks = [
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup`,
+			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup)`
     },
     {
 			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc2.html)`,

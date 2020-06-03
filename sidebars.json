@@ -6,9 +6,9 @@
       "Guide_ManagingYourExperiences",
       "Guide_KeyboardShortcuts"
     ],
+    "HoloLens": ["Guide_HoloLens2Basics&Setup"],
     "Chapters Series": ["doc2"],
     "Assets": ["doc3"],
-		"HoloLens": ["doc3"],
 		"Scripting": ["doc3"]
   },
   "API": {
