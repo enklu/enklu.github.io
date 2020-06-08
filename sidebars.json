@@ -6,7 +6,10 @@
       "Guide_ManagingYourExperiences",
       "Guide_KeyboardShortcuts"
     ],
-    "HoloLens": ["Guide_HoloLens2Basics&Setup"],
+    "HoloLens": [
+      "Guide_HoloLens2Basics&Setup",
+      "Guide_VoiceCommands"
+    ],
     "Chapters Series": ["doc2"],
     "Assets": ["doc3"],
 		"Scripting": ["doc3"]

@@ -29,11 +29,11 @@ function Hololens(props) {
 			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/doc2.html)`
     },
     {
-			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/Guide_VoiceCommands)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Voice Commands](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Guide_VoiceCommands`,
+			title: `[Voice Commands](${siteConfig.baseUrl}docs/Guide_VoiceCommands)`
     },
 		{
 			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/doc2.html)`,
