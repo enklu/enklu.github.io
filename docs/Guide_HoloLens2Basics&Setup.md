@@ -23,7 +23,7 @@ Use a microfiber cloth to clean the device. Do not use alcohol based wipes or so
 
 When taking the device off, fully loosen the adjustment wheel. Attempting to remove the device without loosening may damage the internal ratchet mechanism and break the inner band.
 
-> If you need to setup your HoloLens 2 for the first time, please refer to [Microsoft's HoloLens 2 setup documentation](https://docs.microsoft.com/en-us/hololens/hololens2-start)
+> If you need to setup your HoloLens 2 for the first time, please refer to Microsoft's <a style="color:#0000ee" href="https://docs.microsoft.com/en-us/hololens/hololens2-start" target="\_blank"><u>Set up your HoloLens 2</u></a> guide.
 
 ### Gestures
 
@@ -65,7 +65,7 @@ After exploring the default scene, activate the **Login**\* button with your gaz
 
 > \*The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
 
-In a web browser, navigate to [cloud.enklu.com](https://cloud.enklu.com/). Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
+In a web browser, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
 On the top menu bar in the Web Editor, click the **Tools** drop down menu, then click **HoloLens Login**.
 ![Open Tools drop down menu to display HoloLens Login button.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_HoloLensLoginEditor.gif) 
