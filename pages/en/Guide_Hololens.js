@@ -22,11 +22,11 @@ function Hololens(props) {
 			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup)`
     },
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup`,
+			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup)`
     },
     {
 			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/Guide_VoiceCommands)`,

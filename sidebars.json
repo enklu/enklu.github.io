@@ -8,6 +8,7 @@
     ],
     "HoloLens": [
       "Guide_HoloLens2Basics&Setup",
+      "Guide_HoloLens1stGenBasics&Setup",
       "Guide_VoiceCommands"
     ],
     "Chapters Series": ["doc2"],
