@@ -15,32 +15,32 @@ function Spaces(props) {
 
   const spacesLinks = [
     {
-			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace`,
+			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace)`
     },
     {
-			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Updating a space scan](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace`,
+			title: `[Updating a space scan](${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace)`
     },
     {
-			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors`,
+			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors)`
     },
 		{
-			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan`,
+			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan)`
     },
   ];
 
@@ -58,7 +58,7 @@ function Spaces(props) {
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-					<Title_Splash/> 
+					<Title_Splash/>
           <GridBlock contents={spacesLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>
