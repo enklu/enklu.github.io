@@ -1,4 +1,4 @@
 ---
-id: Guide_AddingAnchors
+id: AddingAnchors
 title: Adding Anchors
 ---

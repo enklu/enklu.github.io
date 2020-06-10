@@ -1,4 +1,4 @@
 ---
-id: Guide_DownloadingScan
+id: DownloadingScan
 title: Downloading the Scan
 ---

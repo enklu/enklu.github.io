@@ -15,32 +15,32 @@ function Spaces(props) {
 
   const spacesLinks = [
     {
-			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace)`,
+			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace`,
-			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_CreatingSpace)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/CreatingSpace`,
+			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`
     },
     {
-			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace)`,
+			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace`,
-			title: `[Updating a space scan](${siteConfig.baseUrl}docs/Spaces/Guide_UpdatingSpace)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/UpdatingSpace`,
+			title: `[Updating a space scan](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`
     },
     {
-			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors)`,
+			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors`,
-			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/Spaces/Guide_AddingAnchors)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/AddingAnchors`,
+			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`
     },
 		{
-			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan)`,
+			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan`,
-			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/Spaces/Guide_DownloadingScan)`
+			imageLink: `${siteConfig.baseUrl}docs/Spaces/DownloadingScan`,
+			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`
     },
   ];
 

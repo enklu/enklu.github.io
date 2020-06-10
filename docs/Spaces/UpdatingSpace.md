@@ -1,4 +1,4 @@
 ---
-id: Guide_UpdatingSpace
+id: UpdatingSpace
 title: Updating a Space
 ---

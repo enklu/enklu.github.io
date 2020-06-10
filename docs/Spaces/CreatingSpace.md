@@ -1,5 +1,5 @@
 ---
-id: Guide_CreatingSpace
+id: CreatingSpace
 title: Creating a Space
 ---
 
