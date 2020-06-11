@@ -1,5 +1,5 @@
 ---
-id: API_System
+id: System
 title: System
 ---
 

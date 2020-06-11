@@ -196,14 +196,14 @@ class Index extends React.Component {
 
 		const API_Ref = () => (
       <div className= "apiSplash">
-				<a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}>
+				<a href={`${siteConfig.baseUrl}docs/APIReferenceOverview`}>
 					<img src={`${baseUrl}img/undraw_code_review.svg`} />
 				</a>
 				<div className="apiText">
-					<a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}>
+					<a href={`${siteConfig.baseUrl}docs/APIReferenceOverview`}>
 						<h2>API Reference</h2>
 					</a>
-					<p>Scripting opens up limitless possibilities in Enklu Cloud.  Check out our <a href={`${siteConfig.baseUrl}docs/API_ScriptingLanguages`}><strong>API Reference</strong></a> to see what APIs are currently supported, access code snippets that you can copy and paste into your own scripts, and learn about how you can utilize our APIs for your projects.</p>
+					<p>Scripting opens up limitless possibilities in Enklu Cloud.  Check out our <a href={`${siteConfig.baseUrl}docs/APIReferenceOverview`}><strong>API Reference</strong></a> to see what APIs are currently supported, access code snippets that you can copy and paste into your own scripts, and learn about how you can utilize our APIs for your projects.</p>
 				</div>
       </div>
     );
