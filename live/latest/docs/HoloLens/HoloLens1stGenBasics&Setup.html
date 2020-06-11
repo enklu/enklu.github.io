@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Hololens (1st gen) Basics &amp; Setup · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## Device Operation"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Hololens (1st gen) Basics &amp; Setup · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/live/latest/"/><meta property="og:description" content="## Device Operation"/><meta property="og:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/live/latest/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/documentation/live/latest/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/live/latest/js/code-block-buttons.js"></script><script src="/documentation/live/latest/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/live/latest/css/prism.css"/><link rel="stylesheet" href="/documentation/live/latest/css/main.css"/><link rel="stylesheet" href="/documentation/live/latest/css/code-block-buttons.css"/><script src="/documentation/live/latest/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/live/latest/"><img class="logo" src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/documentation/live/latest/docs/GuidesOverview" target="_self">Guides</a></li><li class=""><a href="/documentation/live/latest/docs/APIReferenceOverview" target="_self">API Reference</a></li><li class=""><a href="/documentation/live/latest/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/live/latest/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>HoloLens</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/GuidesOverview">Guides Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Web Editor Basics</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/WebEditorBasics/WebEditorInterface">Web Editor Interface</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/WebEditorBasics/MinimumRequirements">Minimum Requirements</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/WebEditorBasics/ManagingYourExperiences">Managing Your Experiences</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/WebEditorBasics/KeyboardShortcuts">Keyboard Shortcuts</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">HoloLens</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/HoloLens/HoloLens2Basics&amp;Setup">Hololens 2 Basics &amp; Setup</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/live/latest/docs/HoloLens/HoloLens1stGenBasics&amp;Setup">Hololens (1st gen) Basics &amp; Setup</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/HoloLens/VoiceCommands">Voice Commands</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Chapters Series</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/doc2">document number 2</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Scripting</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/doc3">This is document number 3</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Hololens (1st gen) Basics &amp; Setup</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="device-operation"></a><a href="#device-operation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Device Operation</h2>
+<h3><a class="anchor" aria-hidden="true" id="hardware"></a><a href="#hardware" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hardware</h3>
+<p>The HoloLens has five buttons: <strong>Audio +</strong>/<strong>-</strong>, <strong>Brightness +</strong>/<strong>-</strong>, and a <strong>Power</strong> button.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_VolumeBrightness.jpg" alt="Diagram of HoloLens (1st gen) hardware buttons."></p>
+<p>Nearby the power button is the charging port* and battery indicator. When turned on, each LED in the battery indicator represents roughly 20% of battery life remaining.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_Charging.png" alt="Diagram of HoloLens (1st gen) charging port."></p>
+<blockquote>
+<p>*When plugging in the device to charge, rotate the inner band of the HoloLens so that the device props itself up and the charging cable is able to connect easily.</p>
+</blockquote>
+<p>The HoloLens can be adjusted in a variety of ways. Before putting on the HoloLens, rotate the headband to its extent and loosen the adjustment wheel on the back.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_RotateHeadband.png" alt="Diagram of HoloLens (1st gen) headband rotation."></p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_AdjustmentWheel.gif" alt="Diagram of HoloLens (1st gen) headband adjustment wheel."></p>
+<p>The inner band can also slide forwards and backwards to move the device closer or farther from the user's eyes. We recommend sliding the band backwards before putting the device on a user with glasses.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_SlideHeadband.png" alt="Diagram of HoloLens (1st gen) headband sliding."></p>
+<h3><a class="anchor" aria-hidden="true" id="care--safe-handling"></a><a href="#care--safe-handling" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Care &amp; Safe Handling</h3>
+<p>Use a microfiber cloth to clean the device. Do not use alcohol based wipes or solvents on the display or sensors. The brow pad and headband may be cleaned using a microfiber cloth with mild soap and water. Never submerge the device in water or apply water directly to the device.</p>
+<p>When taking the device off, fully loosen the adjustment wheel. Attempting to remove the device without loosening may damage the internal ratchet mechanism and break the inner band.</p>
+<blockquote>
+<p>If you need to setup your HoloLens (1st gen) for the first time, please refer to Microsoft's <a style="color:#0000ee" href="https://docs.microsoft.com/en-us/hololens/hololens1-start" target="\_blank"><u>Set up your HoloLens (1st gen)</u></a> guide.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="gestures"></a><a href="#gestures" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestures</h3>
+<p>The HoloLens supports two basic gestures. <strong>Bloom</strong> and <strong>Air Tap</strong>. <strong>Bloom</strong> is used to open and close the <strong>Windows Start menu</strong>, as well as exiting a running fullscreen application.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_Bloom.gif" alt="All fingers touching then spreading to open hand palm upward."></p>
+<p><strong>Air Tap</strong> is used to select items in the <strong>Windows Start menu</strong> and other various Windows menus.</p>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_AirTap.gif" alt="Index finger and thumb touching."></p>
+<h2><a class="anchor" aria-hidden="true" id="enklu-app"></a><a href="#enklu-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enklu App</h2>
+<h3><a class="anchor" aria-hidden="true" id="installing-the-enklu-app"></a><a href="#installing-the-enklu-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installing the Enklu App</h3>
+<p><img src="/documentation/live/latest/img/product/HoloLens1stGenBasics&amp;Setup_StartMenu.png" alt="Menu of square tiles with Microsoft App Store tile selected."></p>
+<p>From the Start menu, locate and open the Microsoft Store app. Within the Microsoft Store app, use the search bar at the top to search &quot;Enklu&quot;.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_MSStoreEnklu.png" alt="Enklu App Store listing with Enklu logo and app description."></p>
+<p>Navigate to the Enklu app page and select <strong>Get</strong>. You may be prompted to sign in with your Microsoft account, then the Enklu app will begin installing. Once the Enklu app has finished installing, you may launch the app from either the Microsoft Store, or from the Windows Start menu.</p>
+<h3><a class="anchor" aria-hidden="true" id="launching-the-enklu-app"></a><a href="#launching-the-enklu-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Launching the Enklu App</h3>
+<p>A white application window will open momentarily before the display switches to fullscreen mode. An Enklu &quot;E&quot; logo appears when the application is starting. If an existing instance of the Enklu app is already running, the app will load into where the user left off when the app was last in use.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_DefaultScene.gif" alt="Hologram garden scene with a campfire."></p>
+<p>When launching the app for the first time*, the default demo experience will be loaded. Feel free to walk around the environment learning about what different elements of an experience can be built. All buttons in Enklu can be activated with your gaze by moving the center of the device to match with the center of the button. If the scene content isn't positioned nicely in front of you or is otherwise inaccessible, say the phrase &quot;<em>Debug</em>, <em>Origin</em>&quot; (with a slight pause between the words) to re-position the experience at the center of your view.</p>
+<blockquote>
+<p>*During the app's first launch or after updates, you may be prompted to accept permissions. Granting permission to use the device's microphone allows the app to process voice commands. Granting permission to use the device's camera allows the app to scan QR codes for login. These permissions can be updated at any time by going to <strong>Settings</strong> &gt; <strong>Privacy</strong> &gt; <strong>Speech</strong> and <strong>Settings</strong> &gt; <strong>Privacy</strong> &gt; <strong>Camera</strong>.</p>
+</blockquote>
+<p>After exploring the default scene, activate the <strong>Login</strong>* button with your gaze to start the QR code scanner.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_QR.png" alt="Hologram garden scene with a campfire."></p>
+<blockquote>
+<p>*The <strong>Login</strong> button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the <strong>Login</strong> button to find the user and position itself in the center of the user's field of view.</p>
+</blockquote>
+<p>In a web browser, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.</p>
+<p>On the top menu bar in the Web Editor, click the <strong>Tools</strong> drop down menu, then click <strong>HoloLens Login</strong>.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_HoloLensLoginEditor.gif" alt="Open Tools drop down menu to display HoloLens Login button."></p>
+<p>This will generate a QR code that the HoloLens can scan* to log the device into your account and load into the currently loaded experience in the web editor.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_HoloLensLoginQR.png" alt="Example QR code with text reading &quot;Point the holographic device camera directly ar the QR code&quot;."></p>
+<blockquote>
+<p>*If the device is unable to scan the QR code, first check that the device is connected to WiFi and has an internet connection. Next, the exterior of the device will illuminate a white LED when the camera is scanning for QR codes. If there is no illuminated LED, the camera permission could be denied. Check the camera's permission settings in <strong>Settings</strong> &gt; <strong>Privacy</strong> &gt; <strong>Camera</strong>. Restart the app and try scanning again.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="navigating-experiences"></a><a href="#navigating-experiences" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Navigating Experiences</h3>
+<p>Within an experience, using the voice command &quot;<em>Menu</em>&quot; will display the experience menu. This menu lets you exit the current experience, as well as enter <strong>Edit Mode</strong> on device. Activating the red back arrow will leave the current experience and let you browse the other experiences available to the logged in user.
+<img src="/documentation/live/latest/img/product/HoloLens2Basic&amp;Setup_MenuPopup.gif" alt="Floating hologram menu captured from a HoloLens."></p>
+<p>Activating the red back arrow once more will log the current user out and prompt a QR scan to log in a new user.
+<img src="/documentation/live/latest/img/product/HoloLens2Basics&amp;Setup_MenuLogout.gif" alt="Floating hologram menu triggering QR scan captured from a HoloLens."></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/HoloLens/HoloLens2Basics&amp;Setup"><span class="arrow-prev">← </span><span>Hololens 2 Basics &amp; Setup</span></a><a class="docs-next button" href="/documentation/live/latest/docs/HoloLens/VoiceCommands"><span>Voice Commands</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#device-operation">Device Operation</a><ul class="toc-headings"><li><a href="#hardware">Hardware</a></li><li><a href="#care--safe-handling">Care &amp; Safe Handling</a></li><li><a href="#gestures">Gestures</a></li></ul></li><li><a href="#enklu-app">Enklu App</a><ul class="toc-headings"><li><a href="#installing-the-enklu-app">Installing the Enklu App</a></li><li><a href="#launching-the-enklu-app">Launching the Enklu App</a></li><li><a href="#navigating-experiences">Navigating Experiences</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/Guide_WebEditorInterface.html">Guides</a><a href="/documentation/live/latest/docs/API_ScriptingLanguages.html">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

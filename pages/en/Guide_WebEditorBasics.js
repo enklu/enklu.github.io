@@ -15,32 +15,32 @@ function WebEditorBasics(props) {
 
   const webEditorBasicsLinks = [
     {
-			content:`[Enklu Cloud's Web Editor interface](${siteConfig.baseUrl}docs/Guide_WebEditorInterface)`,
+			content:`[Enklu Cloud's Web Editor interface](${siteConfig.baseUrl}docs/WebEditorBasics/WebEditorInterface)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_WebEditorInterface`,
-			title: `[The Web Editor](${siteConfig.baseUrl}docs/Guide_WebEditorInterface)`
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/WebEditorInterface`,
+			title: `[The Web Editor](${siteConfig.baseUrl}docs/WebEditorBasics/WebEditorInterface)`
     },
     {
-			content:`[Hardware and software recommendations for using the Web Editor.](${siteConfig.baseUrl}docs/Guide_MinimumRequirements)`,
+			content:`[Hardware and software recommendations for using the Web Editor.](${siteConfig.baseUrl}docs/WebEditorBasics/MinimumRequirements)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_MinimumRequirements`,
-			title: `[Minimum Requirements](${siteConfig.baseUrl}docs/Guide_MinimumRequirements)`
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/MinimumRequirements`,
+			title: `[Minimum Requirements](${siteConfig.baseUrl}docs/WebEditorBasics/inimumRequirements)`
     },
     {
-			content:`[Accessing and sharing experiences.](${siteConfig.baseUrl}docs/Guide_ManagingYourExperiences)`,
+			content:`[Accessing and sharing experiences.](${siteConfig.baseUrl}docs/WebEditorBasics/ManagingYourExperiences)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_ManagingYourExperiences`,
-			title: `[Managing Your Experiences](${siteConfig.baseUrl}docs/Guide_ManagingYourExperiences)`
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/ManagingYourExperiences`,
+			title: `[Managing Your Experiences](${siteConfig.baseUrl}docs/WebEditorBasics/ManagingYourExperiences)`
     },
 		{
-			content:`[Hotkeys for commons actions in the Web Editor.](${siteConfig.baseUrl}docs/Guide_KeyboardShortcuts)`,
+			content:`[Hotkeys for commons actions in the Web Editor.](${siteConfig.baseUrl}docs/WebEditorBasics/KeyboardShortcuts)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_KeyboardShortcuts`,
-			title: `[Keyboard Shortcuts](${siteConfig.baseUrl}docs/Guide_KeyboardShortcuts)`
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/KeyboardShortcuts`,
+			title: `[Keyboard Shortcuts](${siteConfig.baseUrl}docs/WebEditorBasics/KeyboardShortcuts)`
     },
   ];
 

@@ -15,25 +15,25 @@ function Hololens(props) {
 
   const hololensLinks = [
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup`,
-			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/Guide_HoloLens2Basics&Setup)`
+			imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup`,
+			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`
     },
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup)`,
+			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup`,
-			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/Guide_HoloLens1stGenBasics&Setup)`
+			imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup`,
+			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`
     },
     {
-			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/Guide_VoiceCommands)`,
+			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Guide_VoiceCommands`,
-			title: `[Voice Commands](${siteConfig.baseUrl}docs/Guide_VoiceCommands)`
+			imageLink: `${siteConfig.baseUrl}docs/HoloLens/VoiceCommands`,
+			title: `[Voice Commands](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`
     },
 		{
 			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/doc2.html)`,

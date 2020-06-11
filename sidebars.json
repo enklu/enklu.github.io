@@ -1,30 +1,32 @@
 {
   "Guides": {
+    " ": ["GuidesOverview"],
     "Web Editor Basics": [ 
-    	"Guide_WebEditorInterface",
-      "Guide_MinimumRequirements",
-      "Guide_ManagingYourExperiences",
-      "Guide_KeyboardShortcuts"
+    	"WebEditorBasics/WebEditorInterface",
+      "WebEditorBasics/MinimumRequirements",
+      "WebEditorBasics/ManagingYourExperiences",
+      "WebEditorBasics/KeyboardShortcuts"
     ],
     "HoloLens": [
-      "Guide_HoloLens2Basics&Setup",
-      "Guide_HoloLens1stGenBasics&Setup",
-      "Guide_VoiceCommands"
+      "HoloLens/HoloLens2Basics&Setup",
+      "HoloLens/HoloLens1stGenBasics&Setup",
+      "HoloLens/VoiceCommands"
     ],
     "Chapters Series": ["doc2"],
     "Assets": ["doc3"],
 		"Scripting": ["doc3"]
   },
   "API": {
+    " ": ["APIReferenceOverview"],
     "API Reference": [
-      "API_ScriptingLanguages", 
-      "API_Logging", 
-      "API_Math", 
-      "API_Random",
-      "API_Time",
-      "API_Elements",
-      "API_System",
-      "API_App"
+      "API/ScriptingLanguages", 
+      "API/Logging", 
+      "API/Math", 
+      "API/Random",
+      "API/Time",
+      "API/Elements",
+      "API/System",
+      "API/App"
     ]
   },
 	"Frequently Asked Questions":{

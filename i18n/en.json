@@ -12,6 +12,7 @@
       "Contact": "Contact"
     },
     "categories": {
+      " ": " ",
       "Web Editor Basics": "Web Editor Basics",
       "HoloLens": "HoloLens",
       "Chapters Series": "Chapters Series",
