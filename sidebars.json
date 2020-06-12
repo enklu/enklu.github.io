@@ -20,13 +20,15 @@
     " ": ["APIReferenceOverview"],
     "API Reference": [
       "API/ScriptingLanguages", 
-      "API/Logging", 
+      "API/Elements",
+      "API/Logging",
+      "API/System",
+      "API/App",
+      "API/Animator",
       "API/Math", 
       "API/Random",
-      "API/Time",
-      "API/Elements",
-      "API/System",
-      "API/App"
+      "API/Audio",
+      "API/Time"
     ]
   },
 	"Frequently Asked Questions":{
