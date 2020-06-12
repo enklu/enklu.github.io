@@ -2,7 +2,7 @@
   "Guides": {
     " ": ["GuidesOverview"],
     "Web Editor Basics": [ 
-    	"WebEditorBasics/WebEditorInterface",
+      "WebEditorBasics/WebEditorInterface",
       "WebEditorBasics/MinimumRequirements",
       "WebEditorBasics/ManagingYourExperiences",
       "WebEditorBasics/KeyboardShortcuts"
@@ -14,7 +14,7 @@
     ],
     "Chapters Series": ["doc2"],
     "Assets": ["doc3"],
-		"Scripting": ["doc3"]
+    "Scripting": ["doc3"]
   },
   "API": {
     " ": ["APIReferenceOverview"],
@@ -31,7 +31,7 @@
       "API/Time"
     ]
   },
-	"Frequently Asked Questions":{
-		"Enklu Cloud FAQ" : ["FAQ"]
+  "Frequently Asked Questions":{
+    "Enklu Cloud FAQ" : ["FAQ"]
 	}
 }
