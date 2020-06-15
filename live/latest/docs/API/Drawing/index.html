@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Drawing · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Drawing"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Drawing · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/live/latest/"/><meta property="og:description" content="# Drawing"/><meta property="og:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/live/latest/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/documentation/live/latest/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/live/latest/js/code-block-buttons.js"></script><script src="/documentation/live/latest/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/live/latest/css/prism.css"/><link rel="stylesheet" href="/documentation/live/latest/css/main.css"/><link rel="stylesheet" href="/documentation/live/latest/css/code-block-buttons.css"/><script src="/documentation/live/latest/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/live/latest/"><img class="logo" src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/live/latest/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/documentation/live/latest/docs/APIReferenceOverview" target="_self">API Reference</a></li><li class=""><a href="/documentation/live/latest/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/live/latest/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle"> </h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/APIReferenceOverview">API Reference Overview</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">API Reference</h3><ul class=""><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/ScriptingLanguages">Scripting Languages</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Random">Random</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/live/latest/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Animator">Animator</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Time">Time</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Checksum">Checksum</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Drawing</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="drawing"></a><a href="#drawing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Drawing</h1>
+<p>The drawing API is used to draw primitives. It can be used for debugging or as part of an experience.</p>
+<h2><a class="anchor" aria-hidden="true" id="registration-and-filtering"></a><a href="#registration-and-filtering" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Registration and Filtering</h2>
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> drawing <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'drawing'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// this is part of my experience</span>
+drawing<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'ex'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// this is another part of my experience</span>
+drawing<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'ex.touch'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// this is for debugging!</span>
+drawing<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'debugging'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// </span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>The <code>filter</code> method will include every drawing method registered that <em>starts with</em> the specified string.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript">debug<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// render everything</span>
+debug<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'ex'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// render all functions that start with "ex"</span>
+debug<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'ex.touch'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// render all functions that start with "ex.touch"</span>
+</code></pre>
+<p>To start rendering with the drawing API, register a function. This function will be called every frame until unregistered. This function is registered with a category that defines when the function will be used. The category can be used later to filter out different drawing methods.</p>
+<h2><a class="anchor" aria-hidden="true" id="context"></a><a href="#context" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Context</h2>
+<pre><code class="hljs css language-javascript">drawing<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token string">'ex'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">ctx</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx
+        <span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">line</span><span class="token punctuation">(</span><span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Each registered function will be called with a drawing context. This context object has many useful properties for debugging or creative coding. Each function on the context returns the context so that calls may be chained together.</p>
+<h2><a class="anchor" aria-hidden="true" id="matrices"></a><a href="#matrices" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Matrices</h2>
+<blockquote>
+<p>Make the existing matrix an identity matrix.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">resetMatrix</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>Push a new identity matrix onto the stack.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">pushMatrix</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p>Get rid of the current matrix and pop the previous one off the stack.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">popMatrix</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Before drawing, it's important to understand the matrix stack. This stack is used to transform primitives that are drawn. The current matrix transformation with be applied to any subsequent drawing calls.</p>
+<p>Each time a registered callback is called, the stack will be cleared and the current matrix will be reset.</p>
+<h2><a class="anchor" aria-hidden="true" id="building-a-matrix"></a><a href="#building-a-matrix" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building a Matrix</h2>
+<pre><code class="hljs css language-javascript">ctx
+    <span class="token punctuation">.</span><span class="token function">rotate</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">translate</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Building a matrix sounds hard but it's been made quite simple by the translation, rotation, and scale methods. These methods immediately transform the current matrix.</p>
+<h2><a class="anchor" aria-hidden="true" id="drawing-properties"></a><a href="#drawing-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Drawing Properties</h2>
+<pre><code class="hljs css language-javascript"><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token function">col4</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token function">stroke</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">)</span>
+<span class="token function">stroke</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span> g<span class="token punctuation">,</span> b<span class="token punctuation">,</span> a<span class="token punctuation">)</span>
+</code></pre>
+<p>Currently the only supported property is line color. The <code>stroke</code> methods set the color that all primitives will be drawn with.</p>
+<h2><a class="anchor" aria-hidden="true" id="lines"></a><a href="#lines" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Lines</h2>
+<blockquote>
+<p>The <code>line</code> functions draw a line from a start point to end point.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">line</span><span class="token punctuation">(</span><span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token function">line</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><code>lines</code> draws an array of line segments. These line segments must be specified with beginning and end.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">lines</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<blockquote>
+<p><code>linestrip</code> is useful for chains rather than segments. Instead of each line segment needing two points, each point draws a line to the next.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token function">linestrip</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Lines may be drawn using one of the three types of <code>line</code> methods.</p>
+<h2><a class="anchor" aria-hidden="true" id="3d-primitives"></a><a href="#3d-primitives" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>3D Primitives</h2>
+<blockquote>
+<p>Draw a wire box.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> width <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    height <span class="token operator">=</span> <span class="token number">7</span><span class="token punctuation">,</span>
+    depth <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span>
+    size <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">box</span><span class="token punctuation">(</span>width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> depth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">box</span><span class="token punctuation">(</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>Draw a unit sphere with configurable smoothness. Use matrices to scale. The smoothness parameter passed into <code>sphere</code> uses a subdivision method to construct the sphere geometry. In general a value higher than 2 or 3 will never be necessary as the number of vertices doubles each time.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="token comment">// default quality</span>
+ctx<span class="token punctuation">.</span><span class="token function">sphere</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// higher quality</span>
+ctx<span class="token punctuation">.</span><span class="token function">sphere</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">sphere</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">sphere</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>Draw an octohedron.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span><span class="token function">octohedron</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<blockquote>
+<p>Draw a dodecahedron.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span><span class="token function">dodecahedron</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Several types of 3D primitives are supported as well.</p>
+<h2><a class="anchor" aria-hidden="true" id="triangles"></a><a href="#triangles" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Triangles</h2>
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> verts <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> triangles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment">// construct the geo in some way</span>
+<span class="token function">constructGeo</span><span class="token punctuation">(</span>verts<span class="token punctuation">,</span> triangles<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+ctx<span class="token punctuation">.</span><span class="token function">triangles</span><span class="token punctuation">(</span>verts<span class="token punctuation">,</span> triangles<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>When drawing custom 3D shapes, it's best to use the <code>triangles</code> API rather than iterating and drawing triangles in JavaScript.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/API/Random"><span class="arrow-prev">← </span><span>Random</span></a><a class="docs-next button" href="/documentation/live/latest/docs/API/Animator"><span>Animator</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#registration-and-filtering">Registration and Filtering</a></li><li><a href="#context">Context</a></li><li><a href="#matrices">Matrices</a></li><li><a href="#building-a-matrix">Building a Matrix</a></li><li><a href="#drawing-properties">Drawing Properties</a></li><li><a href="#lines">Lines</a></li><li><a href="#3d-primitives">3D Primitives</a></li><li><a href="#triangles">Triangles</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/GuidesOverview">Guides</a><a href="/documentation/live/latest/docs/APIReferenceOverview">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
