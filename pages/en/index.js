@@ -64,9 +64,9 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
-            <Button href={docUrl('doc2.html')}>Lights</Button>
-            <Button href={docUrl('doc2.html')}>HoloLens 2 Basics & Setup</Button>
-            <Button href={docUrl('doc2.html')}>Import Your Own Assets</Button>
+            <Button href={docUrl('HoloLens/HoloLens2Basics&Setup')}>HoloLens 2 Basics & Setup</Button>
+            <Button href={docUrl('Spaces/CreatingSpace')}>Creating a Space Scan</Button>
+            <Button href={docUrl('HoloLens/LivePreview')}>Live Preview</Button>
           </PromoSection>
         </div>
       </SplashContainer>
