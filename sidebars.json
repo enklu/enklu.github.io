@@ -19,19 +19,20 @@
   "API": {
     " ": ["APIReferenceOverview"],
     "API Reference": [
-      "API/ScriptingLanguages", 
-      "API/Elements",
-      "API/Logging",
-      "API/System",
+      "API/Animator",
       "API/App",
+      "API/Audio",
+      "API/Checksum",
+      "API/Drawing",
+      "API/Elements",
+      "API/Gaze",
+      "API/Logging",
       "API/Math", 
       "API/Random",
-      "API/Drawing",
-      "API/Animator",
-      "API/Audio",
-      "API/Time",
       "API/SceneEditing",
-      "API/Checksum"
+      "API/ScriptingLanguages", 
+      "API/System",
+      "API/Time"
     ]
   },
   "Frequently Asked Questions":{
