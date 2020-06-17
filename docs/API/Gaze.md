@@ -37,7 +37,7 @@ function onFocusUpdated() {
 gaze.off('focusstopped');
 ```
 
-## Events
+## Module Events
 
 - `"glancestarted"`
 - `"glanceupdated"`

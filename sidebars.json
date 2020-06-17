@@ -33,6 +33,7 @@
       "API/Drawing",
       "API/Elements",
       "API/Gaze",
+      "API/Gestures",
       "API/Logging",
       "API/Math", 
       "API/Random",
