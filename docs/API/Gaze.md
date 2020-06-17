@@ -24,17 +24,17 @@ gaze.register(self, gaze.types.Glance);
 
 ## Events
 
-Gaze events are fired direcly from the `gaze` interface, just like any other event dispatcher. Events of this type will now be dispatched for this element. The event handlers receive no parameters. Instead, poll the gaze object's state. Handlers should be unregistered with the `off` method when no longer needed.
+Subscribe to Gaze events directly from the element. The event handlers receive no parameters. Instead, poll the gaze object's state. Handlers should be unregistered with the `off` method when no longer needed.
 
 ```javascript
-gaze.on('focusupdated', onFocusUpdated);
+this.on('focusupdated', onFocusUpdated);
 
 function onFocusUpdated() {
     var dir = gaze.glanceDirection;
     //
 }
 
-gaze.off('focusstopped');
+this.off('focusstopped');
 ```
 
 ## Module Events
