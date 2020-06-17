@@ -57,6 +57,12 @@ const siteConfig = {
   },
 
 	docsSideNavCollapsible: true,
+	scrollToTop: true,
+	scrollToTopOptions: {
+    diameter: 46,
+		scrollDuration: 120,
+		showWhenScrollTopIs: 32,
+  },
 
   // If you have users set above, you add it here:
   users,
