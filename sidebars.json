@@ -1,6 +1,6 @@
 {
   "Guides": {
-    " ": ["GuidesOverview"],
+    "Guides Overview": ["GuidesOverview"],
     "Web Editor Basics": [ 
       "WebEditorBasics/WebEditorInterface",
       "WebEditorBasics/MinimumRequirements",
@@ -24,7 +24,7 @@
     ]
   },
   "API": {
-    " ": ["APIReferenceOverview"],
+    "API Reference Overview": ["APIReferenceOverview"],
     "API Reference": [
       "API/Animator",
       "API/App",
