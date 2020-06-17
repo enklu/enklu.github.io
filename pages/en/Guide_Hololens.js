@@ -36,11 +36,11 @@ function Hololens(props) {
 			title: `[Voice Commands](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`
     },
 		{
-			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Live Preview](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/HoloLens/LivePreview`,
+			title: `[Live Preview](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`
     },
   ];
 

@@ -10,11 +10,18 @@
     "HoloLens": [
       "HoloLens/HoloLens2Basics&Setup",
       "HoloLens/HoloLens1stGenBasics&Setup",
-      "HoloLens/VoiceCommands"
+      "HoloLens/VoiceCommands",
+      "HoloLens/LivePreview"
     ],
-    "Chapters Series": ["doc2"],
+    "Chapters Series": ["ChaptersSeries/Chapter1"],
     "Assets": ["doc3"],
-    "Scripting": ["doc3"]
+    "Scripting": ["doc3"],
+    "Spaces" : [
+      "Spaces/CreatingSpace",
+      "Spaces/UpdatingSpace",
+      "Spaces/AddingAnchors",
+      "Spaces/DownloadingScan"
+    ]
   },
   "API": {
     " ": ["APIReferenceOverview"],

@@ -15,11 +15,11 @@ function ChaptersSeries(props) {
 
   const chaptersSeriesLinks = [
     {
-			content:`[Learn how to use basic hierarchy and transform tools](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Learn how to use basic hierarchy and transform tools](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter1)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Chapter 1](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/ChaptersSeries/Chapter1`,
+			title: `[Chapter 1: Intro to Enklu Cloud](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter1)`
     },
     {
 			content:`[Build a small scene using transform tools](${siteConfig.baseUrl}docs/doc2.html)`,
