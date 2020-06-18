@@ -23,11 +23,13 @@ The page will take several seconds to load everything. When the page has complet
 ![Web Editor interface with Chapter 1 scene loaded on canvas.](/documentation/live/latest/img/product/Chapter1_Main.png)
 
 ## 2) Adjusting the Camera
-Try adjusting the camera's position to better see all the pieces of the experience. You can zoom out using the scroll wheel on your mouse. You can pan the camera by pressing and holding the **scroll wheel** or **middle mouse** button while moving your cursor.
+Try adjusting the camera's position to better see all the pieces of the experience. You can zoom out using the **scroll wheel** on your mouse. You can pan the camera by pressing and holding the **scroll wheel** or **middle mouse button** while moving your cursor.
 
 ![Using mouse to move camera around](/documentation/live/latest/img/product/Chapter1_AdjustCamera.gif)
 
-In addition to zooming and panning, you can also rotate the camera by pressing and holding the **right mouse** button while moving your cursor.
+In addition to zooming and panning, you can also rotate the camera by pressing and holding the **right mouse button** while moving your cursor.
+
+![Using mouse to rotate camera](/documentation/live/latest/img/product/Chapter1_CameraRotate.gif)
 
 ## 3) Getting Started
 This tutorial is split up into 5 parts: Position, Rotation, Scale, Hierarchy Management, and Element Creation. You can complete each step in any order as they do not rely on each other. However, this guide will walk through these steps in the listed order.
