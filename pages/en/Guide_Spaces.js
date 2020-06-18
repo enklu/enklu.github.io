@@ -15,32 +15,32 @@ function Spaces(props) {
 
   const spacesLinks = [
     {
-			content:`[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`,
+			content:`[Creating new space scans using a HoloLens.](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`,
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Spaces/CreatingSpace`,
-			title: `[Creating a space scan.](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`
+			title: `[Creating Space Scans](${siteConfig.baseUrl}docs/Spaces/CreatingSpace)`
     },
     {
-			content:`[Updating a space scan.](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`,
+			content:`[Updating existing space scans.](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`,
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Spaces/UpdatingSpace`,
-			title: `[Updating a space scan](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`
+			title: `[Updating Space Scans](${siteConfig.baseUrl}docs/Spaces/UpdatingSpace)`
     },
     {
-			content:`[Manually adding anchors to a space.](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`,
+			content:`[Manually adding anchors to a space scan.](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`,
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Spaces/AddingAnchors`,
-			title: `[Manually adding anchors to a space](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`
+			title: `[Adding Anchors](${siteConfig.baseUrl}docs/Spaces/AddingAnchors)`
     },
 		{
-			content:`[Downloading a space scan.](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`,
+			content:`[Downloading space scans from the Web Editor.](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`,
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Spaces/DownloadingScan`,
-			title: `[Downloading a space scan](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`
+			title: `[Downloading Scans](${siteConfig.baseUrl}docs/Spaces/DownloadingScan)`
     },
   ];
 

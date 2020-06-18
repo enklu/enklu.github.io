@@ -13,14 +13,29 @@
       "HoloLens/VoiceCommands",
       "HoloLens/LivePreview"
     ],
-    "Chapters Series": ["ChaptersSeries/Chapter1"],
-    "Assets": ["doc3"],
-    "Scripting": ["doc3"],
+    "Chapters Series": [
+      "ChaptersSeries/Chapter1",
+      "ChaptersSeries/Chapter2",
+      "ChaptersSeries/Chapter3",
+      "ChaptersSeries/Chapter4"
+    ],
+    "Assets": [
+      "Assets/ImportYourOwnAssets",
+      "Assets/PublicAssets",
+      "Assets/AddingAnimationsFromUnity",
+      "Assets/SceneComplexityRecommendations"
+    ],
     "Spaces" : [
       "Spaces/CreatingSpace",
       "Spaces/UpdatingSpace",
       "Spaces/AddingAnchors",
       "Spaces/DownloadingScan"
+    ],
+    "Scripting": [
+      "Scripting/IntroductionToScripting",
+      "Scripting/VineScriptBasics",
+      "Scripting/BehaviorScriptBasics",
+      "Scripting/ControllingAnimations"
     ]
   },
   "API": {

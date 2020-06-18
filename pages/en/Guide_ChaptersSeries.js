@@ -22,25 +22,25 @@ function ChaptersSeries(props) {
 			title: `[Chapter 1: Intro to Enklu Cloud](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter1)`
     },
     {
-			content:`[Build a small scene using transform tools](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Build a small scene using transform tools](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter2)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Chapter 2](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/ChaptersSeries/Chapter2`,
+			title: `[Chapter 2: Thinking in 3D](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter2)`
     },
     {
-			content:`[Add lighting and effects into a scene.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Add lighting and effects into a scene.](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter3)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Chapter 3](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/ChaptersSeries/Chapter3`,
+			title: `[Chapter 3: Adding Lights & Effects](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter3)`
     },
 		{
-			content:`[Learn how to add user interactions to a scene.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Learn how to add user interactions to a scene.](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter4)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Chapter 4](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/ChaptersSeries/Chapter4`,
+			title: `[Chapter 4: Adding Interactions](${siteConfig.baseUrl}docs/ChaptersSeries/Chapter4)`
     },
   ];
 	

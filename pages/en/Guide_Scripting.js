@@ -15,32 +15,32 @@ function Scripting(props) {
 
   const scriptingLinks = [
     {
-			content:`[Scripting basics.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Scripting basics.](${siteConfig.baseUrl}docs/Scripting/IntroductionToScripting)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Introduction to Scripting](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/IntroductionToScripting`,
+			title: `[Introduction to Scripting](${siteConfig.baseUrl}docs/Scripting/IntroductionToScripting)`
     },
     {
-			content:`[Using VineML in Vine scripts.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Using VineML in Vine scripts.](${siteConfig.baseUrl}docs/Scripting/VineScriptBasics)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Vine Script Basics](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/VineScriptBasics`,
+			title: `[Vine Script Basics](${siteConfig.baseUrl}docs/Scripting/VineScriptBasics)`
     },
     {
-			content:`[Using JavaScript in Behavior scripts.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Using JavaScript in Behavior scripts.](${siteConfig.baseUrl}docs/Scripting/BehaviorScriptBasics)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Behavior Script Basics](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/BehaviorScriptBasics`,
+			title: `[Behavior Script Basics](${siteConfig.baseUrl}docs/Scripting/BehaviorScriptBasics)`
     },
 		{
-			content:`[Using Behavior scripts to control animations.](${siteConfig.baseUrl}docs/doc2.html)`,
+			content:`[Using Behavior scripts to control animations.](${siteConfig.baseUrl}docs/Scripting/ControllingAnimations)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/doc2.html`,
-			title: `[Controlling Animations](${siteConfig.baseUrl}docs/doc2.html)`
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/ControllingAnimations`,
+			title: `[Controlling Animations](${siteConfig.baseUrl}docs/Scripting/ControllingAnimations)`
     },
   ];
 
