@@ -39,8 +39,8 @@
     ]
   },
   "API": {
-    "API Reference Overview": ["APIReferenceOverview"],
     "API Reference": [
+      "APIReferenceOverview",
       "API/Animator",
       "API/App",
       "API/Audio",
