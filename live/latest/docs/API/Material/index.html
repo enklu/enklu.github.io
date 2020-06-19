@@ -1,0 +1,183 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Material · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Material API is available on Elements and is used to modify material variables. Material variables are passed into shaders, to allow for dynamic effects/visuals. It&#x27;s a good idea to null check first to ensure the target Element has support."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Material · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/live/latest/"/><meta property="og:description" content="The Material API is available on Elements and is used to modify material variables. Material variables are passed into shaders, to allow for dynamic effects/visuals. It&#x27;s a good idea to null check first to ensure the target Element has support."/><meta property="og:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/live/latest/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/documentation/live/latest/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/live/latest/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/documentation/live/latest/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/live/latest/css/prism.css"/><link rel="stylesheet" href="/documentation/live/latest/css/main.css"/><link rel="stylesheet" href="/documentation/live/latest/css/code-block-buttons.css"/><script src="/documentation/live/latest/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/live/latest/"><img class="logo" src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/live/latest/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/documentation/live/latest/docs/APIReferenceOverview" target="_self">API Reference</a></li><li class=""><a href="/documentation/live/latest/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/live/latest/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/APIReferenceOverview">API Reference Overview</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Animator">Animator</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Checksum">Checksum</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gaze">Gaze (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gestures">Gestures</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Hand">Hands</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Http">HTTP (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Kinect">Kinect (v2)</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/live/latest/docs/API/Material">Material</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Messages">Messages</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Multiplayer">Multiplayer</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Particles">Particles</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Physics">Physics</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Preprocessor">Preprocessor</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Proximity">Proximity</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Random">Random</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/ScriptingLanguages">Scripting Languages</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Time">Time</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Material</h1></header><article><div><span><p>The Material API is available on Elements and is used to modify material variables. Material variables are passed into shaders, to allow for dynamic effects/visuals. It's a good idea to null check first to ensure the target Element has support.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'Asset missing material support!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you have multiple instances of the same asset in an Experience but want to control only the material of one instance, you can individually make materials unique. Note that this will incur some performance overhead but in most cases is negligible.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">makeUnique</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="modifying-parameters"></a><a href="#modifying-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Modifying Parameters</h2>
+<p>Supported parameter types are: Float/Integer/Vec3/Col. All parameter types can be both retrieved and set.</p>
+<pre><code class="hljs css language-javascript"><span class="token comment">// Float</span>
+<span class="token keyword">function</span> <span class="token function">flipAlpha</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> alpha <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">getFloat</span><span class="token punctuation">(</span><span class="token string">'_FinalAlpha'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">setFloat</span><span class="token punctuation">(</span><span class="token string">'_FinalAlpha'</span><span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">-</span> alpha<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Integer</span>
+<span class="token keyword">function</span> <span class="token function">increaseTileCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> tiles <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token string">'_TileCount'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">setInt</span><span class="token punctuation">(</span><span class="token string">'_TileCount'</span><span class="token punctuation">,</span> tiles <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Vec3</span>
+<span class="token keyword">function</span> <span class="token function">inverseDirection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> direction <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">getVector</span><span class="token punctuation">(</span><span class="token string">'_WindDir'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">setVector</span><span class="token punctuation">(</span><span class="token string">'_WindDir'</span><span class="token punctuation">,</span> v<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>direction<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">// Col</span>
+<span class="token keyword">function</span> <span class="token function">cycleColor</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> color <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">getColor</span><span class="token punctuation">(</span><span class="token string">'_Color'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span><span class="token string">'_Color'</span><span class="token punctuation">,</span> <span class="token function">col</span><span class="token punctuation">(</span>color<span class="token punctuation">.</span>g<span class="token punctuation">,</span> color<span class="token punctuation">.</span>b<span class="token punctuation">,</span> color<span class="token punctuation">.</span>r<span class="token punctuation">,</span> color<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="renderqueue"></a><a href="#renderqueue" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RenderQueue</h2>
+<p>It's possible to change the default RenderQueue of a material if needed. Changing between Opaque and Transparent queues can have unintended side effects depending on the Asset's shader.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span>renderQueue <span class="token operator">=</span> <span class="token number">3001</span><span class="token punctuation">;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="tween-integration"></a><a href="#tween-integration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tween Integration</h2>
+<p>Material parameters can be tweened via the Tweening API. Currnetly, parameters have to be set before used for the internal integration to link them.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> Tween <span class="token operator">=</span> <span class="token function">requie</span><span class="token punctuation">(</span><span class="token string">'tween'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">fadeIn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>material<span class="token punctuation">.</span><span class="token function">setFloat</span><span class="token punctuation">(</span><span class="token string">'_Alpha'</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> twnAlpha <span class="token operator">=</span> tween<span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'material._Alpha'</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">to</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token punctuation">.</span><span class="token function">duration</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    twnAlpha<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="instance-properties"></a><a href="#instance-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance Properties</h2>
+<h3><a class="anchor" aria-hidden="true" id="renderqueue-int"></a><a href="#renderqueue-int" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>renderQueue &lt;int&gt;</code></h3>
+<p>The RenderQuest this material will use.</p>
+<h2><a class="anchor" aria-hidden="true" id="instance-methods"></a><a href="#instance-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Instance Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="makeunique"></a><a href="#makeunique" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>makeUnique()</code></h3>
+<p>Breaks the underlying shared material link, causing this material to be unique.</p>
+<h3><a class="anchor" aria-hidden="true" id="getfloatparam"></a><a href="#getfloatparam" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>getFloat(param)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+</ul>
+<p>Gets a float material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="setfloatparam-value"></a><a href="#setfloatparam-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>setFloat(param, value)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+<li><code>value &lt;float&gt;</code> The new value.</li>
+</ul>
+<p>Sets a float material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="getintparam"></a><a href="#getintparam" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>getInt(param)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+</ul>
+<p>Gets a integer material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="setintparam-value"></a><a href="#setintparam-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>setInt(param, value)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+<li><code>value &lt;int&gt;</code> The new value.</li>
+</ul>
+<p>Sets a integer material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="getvectorparam"></a><a href="#getvectorparam" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>getVector(param)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+</ul>
+<p>Gets a vector material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="setvectorparam-value"></a><a href="#setvectorparam-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>setVector(param, value)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+<li><code>value &lt;vec3&gt;</code> The new value.</li>
+</ul>
+<p>Sets a vector material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="getcolorparam"></a><a href="#getcolorparam" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>getColor(param)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+</ul>
+<p>Gets a color material property.</p>
+<h3><a class="anchor" aria-hidden="true" id="setcolorparam-value"></a><a href="#setcolorparam-value" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>setColor(param, value)</code></h3>
+<ul>
+<li><code>param &lt;string&gt;</code> The property's name.</li>
+<li><code>value &lt;col4&gt;</code> The new value.</li>
+</ul>
+<p>Sets a color material property.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/API/Kinect"><span class="arrow-prev">← </span><span>Kinect (v2)</span></a><a class="docs-next button" href="/documentation/live/latest/docs/API/Math"><span>Math</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#modifying-parameters">Modifying Parameters</a></li><li><a href="#renderqueue">RenderQueue</a></li><li><a href="#tween-integration">Tween Integration</a></li><li><a href="#instance-properties">Instance Properties</a><ul class="toc-headings"><li><a href="#renderqueue-int"><code>renderQueue &lt;int&gt;</code></a></li></ul></li><li><a href="#instance-methods">Instance Methods</a><ul class="toc-headings"><li><a href="#makeunique"><code>makeUnique()</code></a></li><li><a href="#getfloatparam"><code>getFloat(param)</code></a></li><li><a href="#setfloatparam-value"><code>setFloat(param, value)</code></a></li><li><a href="#getintparam"><code>getInt(param)</code></a></li><li><a href="#setintparam-value"><code>setInt(param, value)</code></a></li><li><a href="#getvectorparam"><code>getVector(param)</code></a></li><li><a href="#setvectorparam-value"><code>setVector(param, value)</code></a></li><li><a href="#getcolorparam"><code>getColor(param)</code></a></li><li><a href="#setcolorparam-value"><code>setColor(param, value)</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/GuidesOverview">Guides</a><a href="/documentation/live/latest/docs/APIReferenceOverview">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
