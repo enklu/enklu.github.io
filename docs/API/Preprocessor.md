@@ -32,18 +32,17 @@ This will inform the editor when building the editor field. Finally, you may als
 
 Sometimes it's useful to insert logic into a `VineML` document. In these cases, scripts can be embedded in a `VineML` document that will be executed by a JavaScript preprocessor before being handed off to the `VineML` parser. The value returned from the JS block is inserted into the `VineML` document.
 
-```html
+```
 <?Vine>
 
 <Menu>
-	{{
-		var elements = [];
-		for (var i = 0; i < 100; i++) {
-			elements.push("<Button label='" + i + "' />");
-		}
-
-		return elements.join('');
-	}}
+  ❴❴
+     var elements = [];
+     for (var i = 0; i < 100; i++) ❴
+       elements.push("<Button label='" + i + "' />");
+     ❵
+     return elements.join('');
+  ❵❵
 </Menu>
 ```
 
@@ -53,16 +52,16 @@ Both the schema and the JS preprocessors are applied to every `VineML` document 
 
 Here, we generate `VineML` with JS by using the schema prop, `numElements`. The schema value is injected before the JS executes.
 
-```javascript
+```
 <Menu>
-	{{
+  ❴❴
 		var result = [];
-		for (var i = 0; i < {[numElements:int = 10]}; i++) {
+		for (var i = 0; i < {[numElements:int = 10]}; i++) ❴
 			result.push("<Button label='" + i + "' />");
-		}
+		❵
 
 		return result.join('');
-	}}
+  ❵❵
 </Menu>
 ```
 
