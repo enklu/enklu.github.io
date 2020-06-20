@@ -3,12 +3,35 @@ id: IntroductionToScripting
 title: Introduction to Scripting
 ---
 
-## Coming Soon!
+Scripting opens up limitless possibilities in Enklu Cloud. Our scripting interface offers 2 types of scripts: **Behavior** scripts and **Vine** scripts. <a style="color:#0000ee" href="/documentation/live/latest/docs/Scripting/BehaviorScriptBasics"><u>Behavior scripts</u></a> utilize JavaScript. <a style="color:#0000ee" href="/documentation/live/latest/docs/Scripting/VineScriptBasics"><u>Vine script</u></a> utilize VineML. VineML is a markup language which strongly correlates to HTML with added features specifically for creating UI elements in AR.
 
-We work hard to create meaningful and thorough guides for our users.  This guide still needs a little more work, but it is on the way!
 
-<img src="/documentation/live/latest/img/undraw_building_blocks.svg" style="max-height: 300px;"/>
+## Creating a Script
 
-## Help Us Help You
+Select *Scripts* from the library drop down menu. Then click the **+** button next to Scripts. This will prompt for a **Name** to give the new script, a **Description** for the new script (this is optional), and a **Type** (Behavior or Vine) for the new script. Once these fields have been populated, click the **Create!** button at the bottom right of the library panel. This will create a new script in the script library with the selected name, description, and type.
 
-We are always looking to improve and expand our documentation.  If you see a guide that is unclear or you don't see a guide that you need, <a style="color:#0000ee" href="/documentation/live/latest/contact"><u>let us know</u></a>.
+![Name, type, and description fields to create a new script.](/documentation/live/latest/img/product/IntroductionToScripting_CreateNewScript.gif)
+
+## Attaching a Script
+
+Create or select an asset element you wish to attach a script to. At the bottom of its inspector you will see a box that says *Drop script here.* From the script library, **click and drag** your script to the script section of the inspector and place it on the target box.
+
+![Drag new script to script target box.](/documentation/live/latest/img/product/IntroductionToScripting_AssignNewScript.gif)
+
+## Editing Scripts
+
+To edit a script, either select the edit icon (pencil icon) on the script thumbnail or select the script and click the edit icon in the inspector panel. This will open the script editor which can be directly type into while still viewing the canvas.
+
+![Typing into script editor.](/documentation/live/latest/img/product/IntroductionToScripting_EditScript.gif)
+
+Once you have written or made changes to a script, you will have to save it to see its effects in the canvas. To save a script, click **File** > **Save**. Saving a script will cause the canvas to reload the script. 
+
+There is an *Autosave* toggle in the **File** menu that can be turned on which will periodically save the script and update the canvas. However *Autosave* is **not recommended** for use with Behavior scripts as saving an incomplete Behavior script is likely to cause more errors and unexpected behavior than saving an incomplete Vine script.
+
+You can use [**CTRL**] + [**Space**] to trigger autocomplete.
+
+![Scrolling list of possible words to add to the current cursor position.](/documentation/live/latest/img/product/IntroductionToScripting_Autocomplete.gif)
+
+Please note this autocomplete is *not* like IntelliSense. It does *not* attempt to fully analyze your code to give only intelligent suggestions or give you detailed parameter information. It will try to identify local keywords in your code as well as offer completion for common keywords and functions.
+
+For a complete JS API reference, see the <a style="color:#0000ee" href="/documentation/live/latest/docs/APIReferenceOverview"><u>API documentation</u></a>.
