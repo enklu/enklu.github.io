@@ -1,0 +1,4 @@
+liquid:
+  error_mode: lax
+  strict_variables: false
+  strict_filters: false
