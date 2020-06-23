@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Tween · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="The Tween API provides element tweening operations. These are **highly recommended** over tweening objects &quot;by hand&quot; inside of your own update loops. Not only does the tween API provide excellent easing functions and a terse API, it is implemented as part of the player runtime so it is highly optimized."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Tween · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/live/latest/"/><meta property="og:description" content="The Tween API provides element tweening operations. These are **highly recommended** over tweening objects &quot;by hand&quot; inside of your own update loops. Not only does the tween API provide excellent easing functions and a terse API, it is implemented as part of the player runtime so it is highly optimized."/><meta property="og:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/live/latest/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/documentation/live/latest/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/live/latest/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/documentation/live/latest/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/live/latest/css/prism.css"/><link rel="stylesheet" href="/documentation/live/latest/css/main.css"/><link rel="stylesheet" href="/documentation/live/latest/css/code-block-buttons.css"/><script src="/documentation/live/latest/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/live/latest/"><img class="logo" src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/live/latest/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/documentation/live/latest/docs/API/ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/documentation/live/latest/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/live/latest/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/ScriptingLanguages">Scripting Overview</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Vines">VineML</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Preprocessor">Preprocessor</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Animator">Animator</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Checksum">Checksum</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gaze">Gaze (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gestures">Gestures</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Hand">Hands</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Http">HTTP (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Kinect">Kinect</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Material">Material</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Messages">Messages</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Multiplayer">Multiplayer</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Particles">Particles</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Physics">Physics</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Proximity">Proximity</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Random">Random</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Score">Score (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Speech">Speech (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Storage">Storage (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Time">Time</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Timers">Timers</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Touch">Touch</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/live/latest/docs/API/Tween">Tween</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Voice">Voice</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Tween</h1></header><article><div><span><p>The Tween API provides element tweening operations. These are <strong>highly recommended</strong> over tweening objects &quot;by hand&quot; inside of your own update loops. Not only does the tween API provide excellent easing functions and a terse API, it is implemented as part of the player runtime so it is highly optimized.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> tw = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tween'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="creating-a-tween"></a><a href="#creating-a-tween" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating a Tween</h2>
+<p>Tweens are created specific to the <code>name</code> and <code>type</code> of prop they affect. To that end, we provide three types of tweens: <code>number</code>, <code>vec3</code>, and <code>col4</code>. The vector types are tweened component-wise.</p>
+<blockquote>
+<p>Neither the name nor the type of the prop may be changed after the tween has been created.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="hljs-comment">// get the element</span>
+<span class="hljs-keyword">var</span> el = <span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..tweener'</span>);
+
+<span class="hljs-comment">// create a tween on the vec3 'scale' prop</span>
+<span class="hljs-keyword">var</span> vectorTween = tw.vec3(el, <span class="hljs-string">'scale'</span>);
+
+<span class="hljs-comment">// create a tween on the col4 'color' prop</span>
+<span class="hljs-keyword">var</span> colorTween = tw.col4(el, <span class="hljs-string">'color'</span>);
+
+<span class="hljs-comment">// create a tween on the number 'alpha' prop</span>
+<span class="hljs-keyword">var</span> alphaTween = tw.number(el, <span class="hljs-string">'alpha'</span>);
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="configuring-a-tween"></a><a href="#configuring-a-tween" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring a tween</h2>
+<p>Each parameter on a tween is configured through a corresponding function on the tween. These functions can be chained to configure tweens very quickly and easily.</p>
+<blockquote>
+<p>Most parameters are <em>optional</em>. The only required parameter is <code>to</code>, which provides the value to tween to.</p>
+</blockquote>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> a = tw
+    .number(<span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..covering'</span>), <span class="hljs-string">'alpha'</span>)
+
+    <span class="hljs-comment">// (required) The value to tween to.</span>
+    .to(<span class="hljs-number">1</span>)
+
+    <span class="hljs-comment">// (optional) The starting value. If not specified, the starting value will be the current value.</span>
+    .from(<span class="hljs-number">0</span>)
+
+    <span class="hljs-comment">// (optional) The duration, in seconds, of the tween. Defaults to 1.</span>
+    .duration(<span class="hljs-number">2.5</span>)
+
+    <span class="hljs-comment">// (optional) The delay, in seconds, before the tween should start.</span>
+    .delay(<span class="hljs-number">1</span>)
+
+    <span class="hljs-comment">// (optional) The easing equation to use. Defaults to tw.easing.Linear.</span>
+    .easing(tw.easing.CubicOut)
+
+    <span class="hljs-comment">// (optional) A function to call when the tween is first started.</span>
+    .onStart(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ log.info(<span class="hljs-string">'Started!'</span>); })
+
+    <span class="hljs-comment">// (optional) A function to call after the tween has been completed</span>
+    .onComplete(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ log.info(<span class="hljs-string">'Complete!'</span>); });
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="tween-playback"></a><a href="#tween-playback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tween Playback</h2>
+<p>Once a tween is created, playback is controlled by functions on the tween itself. Note that once a tween has been started, the tween's configuration may not be changed. Note that none of these functions return the tween object. This is intentional as nothing may be configured after <code>start</code> has been called.</p>
+<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> a = tw.number(el, <span class="hljs-string">'foo'</span>).to(<span class="hljs-number">1</span>);
+
+<span class="hljs-comment">// starts the tween</span>
+a.start();
+
+<span class="hljs-comment">// pauses the tween at the current time</span>
+a.pause();
+
+<span class="hljs-comment">// resumes the tween from the paused state</span>
+a.resume();
+
+<span class="hljs-comment">// stops the tween</span>
+a.stop();
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="module-methods"></a><a href="#module-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="numberelement-prop"></a><a href="#numberelement-prop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>number(element, prop)</code></h3>
+<h3><a class="anchor" aria-hidden="true" id="vec3element-prop"></a><a href="#vec3element-prop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>vec3(element, prop)</code></h3>
+<h3><a class="anchor" aria-hidden="true" id="col4element-prop"></a><a href="#col4element-prop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>col4(element, prop)</code></h3>
+<ul>
+<li><code>element &lt;Element&gt;</code> The element to apply the tween to.</li>
+<li><code>prop &lt;string&gt;</code> The property to apply the tween to.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> A new <code>Tween</code> object.</li>
+</ul>
+<p>Creates a tween for a <code>number</code>, <code>vec3</code>, or <code>col4</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="tween-class-methods"></a><a href="#tween-class-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Tween</code> Class Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="totarget"></a><a href="#totarget" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>to(target)</code></h3>
+<ul>
+<li><code>target &lt;object&gt;</code> The target.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Sets the target value for the tween.</p>
+<h3><a class="anchor" aria-hidden="true" id="fromstart"></a><a href="#fromstart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>from(start)</code></h3>
+<ul>
+<li><code>start &lt;object&gt;</code> The initial value.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Sets the start value for the tween.</p>
+<h3><a class="anchor" aria-hidden="true" id="easingtype"></a><a href="#easingtype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>easing(type)</code></h3>
+<ul>
+<li><code>type &lt;string&gt;</code> The easing type.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Sets the easing type for the tween. Supported easing types:</p>
+<ul>
+<li><code>&quot;Linear&quot;</code></li>
+<li><code>&quot;BounceIn&quot;</code></li>
+<li><code>&quot;BounceOut&quot;</code></li>
+<li><code>&quot;BounceInOut&quot;</code></li>
+<li><code>&quot;CubicIn&quot;</code></li>
+<li><code>&quot;CubicOut&quot;</code></li>
+<li><code>&quot;CubicInOut&quot;</code></li>
+<li><code>&quot;ExpoIn&quot;</code></li>
+<li><code>&quot;ExpoOut&quot;</code></li>
+<li><code>&quot;ExpoInOut&quot;</code></li>
+<li><code>&quot;QuadraticIn&quot;</code></li>
+<li><code>&quot;QuadraticOut&quot;</code></li>
+<li><code>&quot;QuadraticInOut&quot;</code></li>
+<li><code>&quot;QuarticIn&quot;</code></li>
+<li><code>&quot;QuarticOut&quot;</code></li>
+<li><code>&quot;QuarticInOut&quot;</code></li>
+<li><code>&quot;QuinticIn&quot;</code></li>
+<li><code>&quot;QuinticOut&quot;</code></li>
+<li><code>&quot;QuinticInOut&quot;</code></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="durationseconds"></a><a href="#durationseconds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>duration(seconds)</code></h3>
+<ul>
+<li><code>seconds &lt;number&gt;</code> The duration of the tween in seconds.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Sets the duration of the tween in seconds.</p>
+<h3><a class="anchor" aria-hidden="true" id="delayseconds"></a><a href="#delayseconds" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>delay(seconds)</code></h3>
+<ul>
+<li><code>seconds</code> The delay duration in seconds.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Sets an amound of time, in seconds, to wait before the tween starts.</p>
+<h3><a class="anchor" aria-hidden="true" id="oncompletecallback"></a><a href="#oncompletecallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onComplete(callback)</code></h3>
+<ul>
+<li><code>callback &lt;function&gt;</code> Called when the tween completes.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code>.</li>
+</ul>
+<p>Registers a function that is called when the tween completes.</p>
+<h3><a class="anchor" aria-hidden="true" id="onstartcallback"></a><a href="#onstartcallback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onStart(callback)</code></h3>
+<ul>
+<li><code>callback &lt;function&gt;</code> Called when the tween starts.</li>
+<li>Returns: <code>&lt;Tween&gt;</code> The updated <code>Tween</code></li>
+</ul>
+<p>Registers a function that is called when the tween starts.</p>
+<h3><a class="anchor" aria-hidden="true" id="start"></a><a href="#start" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>start()</code></h3>
+<p>Starts the tween.</p>
+<h3><a class="anchor" aria-hidden="true" id="stop"></a><a href="#stop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>stop()</code></h3>
+<p>Stops and completes the tween.</p>
+<h3><a class="anchor" aria-hidden="true" id="pause"></a><a href="#pause" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>pause()</code></h3>
+<p>Stops the tween while preserving state so it may be started again.</p>
+<h3><a class="anchor" aria-hidden="true" id="resume"></a><a href="#resume" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>resume()</code></h3>
+<p>Resumes a paused tween.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/API/Touch"><span class="arrow-prev">← </span><span>Touch</span></a><a class="docs-next button" href="/documentation/live/latest/docs/API/Voice"><span>Voice</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#creating-a-tween">Creating a Tween</a></li><li><a href="#configuring-a-tween">Configuring a tween</a></li><li><a href="#tween-playback">Tween Playback</a></li><li><a href="#module-methods">Module Methods</a><ul class="toc-headings"><li><a href="#numberelement-prop"><code>number(element, prop)</code></a></li><li><a href="#vec3element-prop"><code>vec3(element, prop)</code></a></li><li><a href="#col4element-prop"><code>col4(element, prop)</code></a></li></ul></li><li><a href="#tween-class-methods"><code>Tween</code> Class Methods</a><ul class="toc-headings"><li><a href="#totarget"><code>to(target)</code></a></li><li><a href="#fromstart"><code>from(start)</code></a></li><li><a href="#easingtype"><code>easing(type)</code></a></li><li><a href="#durationseconds"><code>duration(seconds)</code></a></li><li><a href="#delayseconds"><code>delay(seconds)</code></a></li><li><a href="#oncompletecallback"><code>onComplete(callback)</code></a></li><li><a href="#onstartcallback"><code>onStart(callback)</code></a></li><li><a href="#start"><code>start()</code></a></li><li><a href="#stop"><code>stop()</code></a></li><li><a href="#pause"><code>pause()</code></a></li><li><a href="#resume"><code>resume()</code></a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/GuidesOverview">Guides</a><a href="/documentation/live/latest/docs/APIReferenceOverview">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>

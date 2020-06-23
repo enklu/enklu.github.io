@@ -1,0 +1,486 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>VineML · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="`VineML` is a powerful markup language designed to be very familiar to anyone that has used HTML. It is useful for creating any type of element hierarchy in a scene and assigning values to those elements. A combination of `VineML` and `Behavior` scripts can be used to create rich applications in Enklu."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="VineML · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/documentation/live/latest/"/><meta property="og:description" content="`VineML` is a powerful markup language designed to be very familiar to anyone that has used HTML. It is useful for creating any type of element hierarchy in a scene and assigning values to those elements. A combination of `VineML` and `Behavior` scripts can be used to create rich applications in Enklu."/><meta property="og:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/documentation/live/latest/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/documentation/live/latest/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/documentation/live/latest/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/documentation/live/latest/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/documentation/live/latest/js/scrollSpy.js"></script><link rel="stylesheet" href="/documentation/live/latest/css/prism.css"/><link rel="stylesheet" href="/documentation/live/latest/css/main.css"/><link rel="stylesheet" href="/documentation/live/latest/css/code-block-buttons.css"/><script src="/documentation/live/latest/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/documentation/live/latest/"><img class="logo" src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/documentation/live/latest/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/documentation/live/latest/docs/API/ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/documentation/live/latest/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/documentation/live/latest/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/ScriptingLanguages">Scripting Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/documentation/live/latest/docs/API/Vines">VineML</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Preprocessor">Preprocessor</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Animator">Animator</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Checksum">Checksum</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gaze">Gaze (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Gestures">Gestures</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Hand">Hands</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Http">HTTP (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Kinect">Kinect</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Material">Material</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Messages">Messages</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Multiplayer">Multiplayer</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Particles">Particles</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Physics">Physics</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Proximity">Proximity</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Random">Random</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Score">Score (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Speech">Speech (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Storage">Storage (Preview)</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Time">Time</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Timers">Timers</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Touch">Touch</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Tween">Tween</a></li><li class="navListItem"><a class="navItem" href="/documentation/live/latest/docs/API/Voice">Voice</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">VineML</h1></header><article><div><span><p><code>VineML</code> is a powerful markup language designed to be very familiar to anyone that has used HTML. It is useful for creating any type of element hierarchy in a scene and assigning values to those elements. A combination of <code>VineML</code> and <code>Behavior</code> scripts can be used to create rich applications in Enklu.</p>
+<h2><a class="anchor" aria-hidden="true" id="language-quickstart"></a><a href="#language-quickstart" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Language QuickStart</h2>
+<pre><code class="hljs css language-jsx"><span class="token comment">/* A vine header is optional.*/</span>
+<span class="token operator">&lt;</span><span class="token operator">?</span>Vine<span class="token operator">></span>
+
+<span class="token comment">/* Documents can have only a single root element. */</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Float</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+    /* Tags can be self closing like this button. */
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Button</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>Hello World!<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span><span class="token plain-text">
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Float</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<blockquote>
+<p>Note that <code>VineML</code> supports C-style block comments.</p>
+</blockquote>
+<p><code>VineML</code> files are called <em>documents</em>. These documents are made up of a hierarchy of nested <code>tags</code>, starting from a single root element. Each tag can have zero or more attributes. To create your first <code>VineML</code> document, it's easiest to jump right in with an example.</p>
+<h2><a class="anchor" aria-hidden="true" id="tags"></a><a href="#tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tags</h2>
+<p>This is not valid <code>VineML</code>.</p>
+<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Container</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+</span></code></pre>
+<p>These are both valid options.</p>
+<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Container</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Container</span></span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Container</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p>This is not valid <code>VineML</code>.</p>
+<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Caption</span></span><span class="token punctuation">></span></span><span class="token plain-text">Hello World</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Caption</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<p>Instead we use attributes.</p>
+<pre><code class="hljs css language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Caption</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>Hello World<span class="token punctuation">'</span></span> <span class="token punctuation">/></span></span>
+</code></pre>
+<p>Tags follow XHTML conventions, i.e. every tag must be closed. In HTML, we can write <code>&lt;br&gt;</code>, but in <code>VineML</code> this is invalid. Every tag must have a closing tag or it must be a self closing tag.</p>
+<p>In addition, tags may not have raw text inside of them. All values are passed to tags through attributes.</p>
+<h2><a class="anchor" aria-hidden="true" id="attributes"></a><a href="#attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attributes</h2>
+<pre><code class="hljs css language-jsx"><span class="token operator">&lt;</span>Caption
+    label<span class="token operator">=</span><span class="token string">'Hello'</span>
+    visible<span class="token operator">=</span><span class="token boolean">false</span> 
+    font<span class="token punctuation">.</span>size<span class="token operator">=</span><span class="token number">100</span>
+    width<span class="token operator">=</span><span class="token number">1000.5</span>
+    position<span class="token operator">=</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+<p>While tags define the object structure, attributes define the object properties. <code>VineML</code> has support for string, boolean, number, and vector literals. Any property of an element may be passed through element attributes.</p>
+<h1><a class="anchor" aria-hidden="true" id="built-in-tags"></a><a href="#built-in-tags" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Built In Tags</h1>
+<p>VineML supports several built in elements that you can use to build complex interactions for your experience. All tag elements share a core set of attributes.</p>
+<h3><a class="anchor" aria-hidden="true" id="base-schema-attributes"></a><a href="#base-schema-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Base Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td><code>string</code></td><td>A generated <code>guid</code></td><td>An ID that is unique to the experience.</td></tr>
+<tr><td>name</td><td><code>string</code></td><td>The tag name (i.e, <code>&quot;Button&quot;</code>)</td><td>A descriptive name.</td></tr>
+<tr><td>visible</td><td><code>bool</code></td><td><code>true</code></td><td>Whether the element is visible in the scene.</td></tr>
+<tr><td>postition</td><td><code>vec3</code></td><td><code>vec3(0,0,0)</code></td><td>The relative position of the element.</td></tr>
+<tr><td>rotation</td><td><code>vec3</code></td><td><code>vec3(0,0,0)</code></td><td>The element's rotation.</td></tr>
+<tr><td>scale</td><td><code>vec3</code></td><td><code>vec3(1,1,1)</code></td><td>The element's scale.</td></tr>
+<tr><td>color</td><td><code>col4</code></td><td><code>col4(1,1,1,1)</code></td><td>The base color of the element.</td></tr>
+<tr><td>virtualColor</td><td><code>string</code></td><td><code>&quot;None&quot;</code></td><td>A tint applied to the widget.</td></tr>
+<tr><td>alpha</td><td><code>float</code></td><td><code>1.0</code></td><td>The transparency of the element.</td></tr>
+<tr><td>colorMode</td><td><code>int</code></td><td><code>0 (WidgetColorMode.InheritColor)</code></td><td>How the element's color is affected by the color of its parent.</td></tr>
+<tr><td>tweenIn</td><td><code>int</code></td><td><code>1 (TweenType.Responsive)</code></td><td>The type of tween applied when fading in.</td></tr>
+<tr><td>tweenOut</td><td><code>int</code></td><td><code>1 (TweenType.Responsive)</code></td><td>The type of tween applied when fading out.</td></tr>
+<tr><td>layerMode</td><td><code>int</code></td><td><code>0 (LayerMode.Default)</code></td><td>Determines whether an element is considered to be in the front, middle, or back.</td></tr>
+<tr><td>autoDestroy</td><td><code>bool</code></td><td><code>false</code></td><td>Wheter an element should be detstroyed when it is no longer visible.</td></tr>
+<tr><td>face</td><td><code>string</code></td><td><code>&quot;Describes whether the element should always face a certain direction&quot;</code></td><td></td></tr>
+</tbody>
+</table>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="container"></a><a href="#container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Container&gt;</code></h2>
+<p>An invisible element used for organization, often as the root tag of a <code>VineML</code> script.</p>
+<h2><a class="anchor" aria-hidden="true" id="button"></a><a href="#button" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Button&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="image"></a><a href="#image" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Image&gt;</code></h2>
+<p>Displays an image.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes"></a><a href="#additional-schema-attributes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>src</td><td><code>string</code></td><td><code>null</code></td><td>A url for locating an image. In addition to <code>http</code>/<code>https</code>, the protocols <code>res://</code> and <code>icon://</code> are supported. The former loads an image from the Resources directory of a <a href="https://github.com/enklu/enkluplayer">custom build of the Enklu Player</a>. The later loads one of the supported <a href="#icon-names">Icons</a>.</td></tr>
+<tr><td>width</td><td><code>float</code></td><td><code>0</code></td><td>The image width.</td></tr>
+<tr><td>height</td><td><code>float</code></td><td><code>0</code></td><td>The image height.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="text"></a><a href="#text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Text&gt;</code></h2>
+<p>An element for displaying text.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-1"></a><a href="#additional-schema-attributes-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>label</td><td><code>string</code></td><td><code>null</code></td><td>The text to display.</td></tr>
+<tr><td>font</td><td><code>string</code></td><td><code>OpenSans-Regular</code></td><td></td></tr>
+<tr><td>fontSize</td><td><code>int</code></td><td><code>80</code></td><td>The size of the text.</td></tr>
+<tr><td>fontColor</td><td><code>string</code></td><td><code>null</code></td><td>The color of the text.</td></tr>
+<tr><td>alignment</td><td><code>string</code></td><td><code>&quot;MidRight&quot;</code></td><td>The alignment of the text. See <a href="#text-alignment-values">Text Alignment Values</a> below for all acceptable values.</td></tr>
+<tr><td>display</td><td><code>string</code></td><td><code>&quot;Overlay&quot;</code></td><td>Controls how the text is displayed in the environment. See <a href="#text-display-values">Text Display Value</a> below for all acceptable values.</td></tr>
+<tr><td>width</td><td><code>float</code></td><td><code>1500</code></td><td>The maximum width of a line of text.</td></tr>
+<tr><td>height</td><td><code>float</code></td><td><code>0</code></td><td>The height of the text display.</td></tr>
+<tr><td>lineSpacing</td><td><code>float</code></td><td><code>1</code></td><td>How much space is between lines of text.</td></tr>
+<tr><td>overflow</td><td><code>string</code></td><td><code>Overflow</code></td><td>Horizontal wrapping behavior. See <a href="#horizontal-wrap-value">Horizontal Wrap Values</a> below.</td></tr>
+<tr><td>verticalOverflow</td><td><code>string</code></td><td><code>Overflow</code></td><td>Vertical wrapping behavior. See <a href="#vertical-wrap-values">Vertical Wrap Values</a> below.</td></tr>
+<tr><td>text.shadow.color</td><td><code>col4</code></td><td><code>null</code></td><td>Text shadow color</td></tr>
+<tr><td>text.shadow.offset</td><td><code>vec3</code></td><td><code>null</code></td><td>Text shadow offset</td></tr>
+<tr><td>text.outline.color</td><td><code>col4</code></td><td><code>null</code></td><td>Text outline color</td></tr>
+<tr><td>text.outline.offset</td><td><code>vec3</code></td><td><code>null</code></td><td>Text outline offset</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="caption"></a><a href="#caption" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Caption&gt;</code></h2>
+<p>An alias for <code>&lt;Text&gt;</code></p>
+<h2><a class="anchor" aria-hidden="true" id="menu"></a><a href="#menu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Menu&gt;</code></h2>
+<p>A paginated display for menu options. The menu options are comprised of the tag's children.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-2"></a><a href="#additional-schema-attributes-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>title</td><td><code>string</code></td><td><code>null</code></td><td>The menu's title.</td></tr>
+<tr><td>description</td><td><code>string</code></td><td><code>null</code></td><td>A description of the menu.</td></tr>
+<tr><td>fontSize</td><td><code>int</code></td><td><code>80</code></td><td>The font size of indivual menu items</td></tr>
+<tr><td>title.fontSize</td><td><code>int</code></td><td><code>80</code></td><td>The font size of the title. Falls back to <code>fontSize</code> if not set.</td></tr>
+<tr><td>description.fontSize</td><td><code>int</code></td><td><code>80</code></td><td>The font size of the description. Falls back to <code>fontSize</code> if not set.</td></tr>
+<tr><td>layout</td><td><code>string</code></td><td><code>&quot;Radial&quot;</code></td><td>The visual arrangement of menu elements. Currently, only <code>&quot;Radial&quot;</code> is supported.</td></tr>
+<tr><td>layout.degrees</td><td><code>float</code></td><td><code>25</code></td><td>Degrees offset between menu options.</td></tr>
+<tr><td>layout.radius</td><td><code>float</code></td><td><code>0.8</code></td><td>Distance of menu options from the central hub.</td></tr>
+<tr><td>header.width</td><td><code>int</code></td><td><code>700</code></td><td>The width of the title and description header.</td></tr>
+<tr><td>header.padding</td><td><code>int</code></td><td><code>0</code></td><td>The distance between the header and the menu options.</td></tr>
+<tr><td>showBackButton</td><td><code>bool</code></td><td><code>false</code></td><td>If true, shows a back button to the left of the menu header.</td></tr>
+<tr><td>divider.offset</td><td><code>float</code></td><td><code>0</code></td><td>Offsets the divider between header and menu options.</td></tr>
+<tr><td>divider.visible</td><td><code>bool</code></td><td><code>false</code></td><td>If true, shows a divider between header and menu options.</td></tr>
+<tr><td>page.size</td><td><code>int</code></td><td><code>4</code></td><td>How many options are visible on a single page.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="submenu"></a><a href="#submenu" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;SubMenu&gt;</code></h2>
+<p>Secondary menu display with icon.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-3"></a><a href="#additional-schema-attributes-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<p>Inherits all <a href="#menu"><code>&lt;Menu&gt;</code></a> properties.</p>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>label</td><td><code>string</code></td><td><code>null</code></td><td>The label displayed on the button while the menu is collapsed.</td></tr>
+<tr><td>icon</td><td><code>string</code></td><td><code>null</code></td><td>The name of the icon as specified in <a href="#icon-names">Icons</a> documentation.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="cursor"></a><a href="#cursor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Cursor&gt;</code></h2>
+<p>Renders a cursor for the user.</p>
+<h2><a class="anchor" aria-hidden="true" id="textcrawl-experimental"></a><a href="#textcrawl-experimental" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;TextCrawl&gt;</code> [Experimental]</h2>
+<p>Presents text and then scrolls out of sight.</p>
+<h2><a class="anchor" aria-hidden="true" id="float"></a><a href="#float" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Float&gt;</code></h2>
+<p>A layout element that stays within a user's field of view.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-4"></a><a href="#additional-schema-attributes-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>focus</td><td><code>vec3</code></td><td><code>(0,0,2)</code></td><td>The location of the focus sphere relative to the Float.</td></tr>
+<tr><td>focus.visible</td><td><code>bool</code></td><td><code>true</code></td><td>Determines whether or not the focus sphere is visible.</td></tr>
+<tr><td>fov.reorient</td><td><code>float</code></td><td><code>1.5</code></td><td>Determines how far outside the user's frame of view the Float can get before it reorients itself.</td></tr>
+<tr><td>fov.distance</td><td><code>float</code></td><td><code>1.0</code></td><td>How far from the center of the Float a user's gaze may get before it reorients itself.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="screen"></a><a href="#screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Screen&gt;</code></h2>
+<p>Layout element that locks children to be in front of the user's gaze.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-5"></a><a href="#additional-schema-attributes-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>distance</td><td><code>float</code></td><td><code>1</code></td><td>Determines how far away from the camera the element will be locked.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="toggle"></a><a href="#toggle" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Toggle&gt;</code></h2>
+<p>A button element with on/off states.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-6"></a><a href="#additional-schema-attributes-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<p>Inherits all <code>Button</code> properties and overrides <code>icon</code> for internal use.</p>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>value</td><td><code>bool</code></td><td><code>false</code></td><td>True if the toggle is checked.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="slider"></a><a href="#slider" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Slider&gt;</code></h2>
+<p>Basic slider control.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-7"></a><a href="#additional-schema-attributes-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>length</td><td><code>float</code></td><td><code>0.1</code></td><td>How long the slider should be.</td></tr>
+<tr><td>axis</td><td><code>string</code></td><td><code>&quot;x&quot;</code></td><td>Determines the axis of the slider: <code>&quot;x&quot;</code>, <code>&quot;y&quot;</code>, or <code>&quot;z&quot;</code>.</td></tr>
+<tr><td>tooltip</td><td><code>bool</code></td><td><code>false</code></td><td>Determines whether or not a tooltip should be displayed for this slider.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="select"></a><a href="#select" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Select&gt;</code></h2>
+<p>Simple selection widget where child elements are displayed as options.</p>
+<h3><a class="anchor" aria-hidden="true" id="additional-schema-attributes-8"></a><a href="#additional-schema-attributes-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Additional Schema Attributes</h3>
+<table>
+<thead>
+<tr><th>name</th><th>type</th><th>default</th><th>description</th></tr>
+</thead>
+<tbody>
+<tr><td>fontSize</td><td><code>int</code></td><td><code>80</code></td><td>The size of the text.</td></tr>
+<tr><td>fontColor</td><td><code>string</code></td><td><code>null</code></td><td>The color of the text.</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="grid"></a><a href="#grid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Grid&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="option"></a><a href="#option" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Option&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="optiongroup"></a><a href="#optiongroup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;OptionGroup&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="content"></a><a href="#content" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Content&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="light"></a><a href="#light" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Light&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="scaletransition"></a><a href="#scaletransition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;ScaleTransition&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="transition"></a><a href="#transition" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Transition&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="worldanchor"></a><a href="#worldanchor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;WorldAnchor&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="qranchor"></a><a href="#qranchor" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;QrAnchor&gt;</code></h2>
+<h2><a class="anchor" aria-hidden="true" id="trail"></a><a href="#trail" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>&lt;Trail&gt;</code></h2>
+<h1><a class="anchor" aria-hidden="true" id="icon-names"></a><a href="#icon-names" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Icon Names</h1>
+<ul>
+<li><code>&quot;102-01&quot;</code></li>
+<li><code>&quot;113-01&quot;</code></li>
+<li><code>&quot;115-01&quot;</code></li>
+<li><code>&quot;125-01&quot;</code></li>
+<li><code>&quot;23-01&quot;</code></li>
+<li><code>&quot;24-01&quot;</code></li>
+<li><code>&quot;61-01&quot;</code></li>
+<li><code>&quot;84-01&quot;</code></li>
+<li><code>&quot;anchor&quot;</code></li>
+<li><code>&quot;arrow-big-down&quot;</code></li>
+<li><code>&quot;arrow-big-left&quot;</code></li>
+<li><code>&quot;arrow-big-right&quot;</code></li>
+<li><code>&quot;arrow-big-up&quot;</code></li>
+<li><code>&quot;arrow-double-vertical&quot;</code></li>
+<li><code>&quot;arrow-double-z&quot;</code></li>
+<li><code>&quot;arrow-double&quot;</code></li>
+<li><code>&quot;arrow-down&quot;</code></li>
+<li><code>&quot;arrow-fat-down&quot;</code></li>
+<li><code>&quot;arrow-fat-left&quot;</code></li>
+<li><code>&quot;arrow-fat-right&quot;</code></li>
+<li><code>&quot;arrow-fat-up&quot;</code></li>
+<li><code>&quot;arrow-left&quot;</code></li>
+<li><code>&quot;arrow-right&quot;</code></li>
+<li><code>&quot;arrow-rotate&quot;</code></li>
+<li><code>&quot;arrow-up&quot;</code></li>
+<li><code>&quot;arrow-z&quot;</code></li>
+<li><code>&quot;asterisk&quot;</code></li>
+<li><code>&quot;bell&quot;</code></li>
+<li><code>&quot;briefcase&quot;</code></li>
+<li><code>&quot;bug&quot;</code></li>
+<li><code>&quot;bullseye&quot;</code></li>
+<li><code>&quot;buy&quot;</code></li>
+<li><code>&quot;calendar-add&quot;</code></li>
+<li><code>&quot;calendar-remove&quot;</code></li>
+<li><code>&quot;calendar&quot;</code></li>
+<li><code>&quot;call&quot;</code></li>
+<li><code>&quot;camera&quot;</code></li>
+<li><code>&quot;cancel&quot;</code></li>
+<li><code>&quot;chat&quot;</code></li>
+<li><code>&quot;check&quot;</code></li>
+<li><code>&quot;clock-2&quot;</code></li>
+<li><code>&quot;clock-alarm-2&quot;</code></li>
+<li><code>&quot;clock-alarm&quot;</code></li>
+<li><code>&quot;clock&quot;</code></li>
+<li><code>&quot;cloud&quot;</code></li>
+<li><code>&quot;contrast&quot;</code></li>
+<li><code>&quot;disk&quot;</code></li>
+<li><code>&quot;display&quot;</code></li>
+<li><code>&quot;download-2&quot;</code></li>
+<li><code>&quot;download&quot;</code></li>
+<li><code>&quot;duplicate&quot;</code></li>
+<li><code>&quot;edit&quot;</code></li>
+<li><code>&quot;ellipses&quot;</code></li>
+<li><code>&quot;exclamation&quot;</code></li>
+<li><code>&quot;eye-2&quot;</code></li>
+<li><code>&quot;eye&quot;</code></li>
+<li><code>&quot;facebook&quot;</code></li>
+<li><code>&quot;fast-forward&quot;</code></li>
+<li><code>&quot;female&quot;</code></li>
+<li><code>&quot;film-strip&quot;</code></li>
+<li><code>&quot;folder&quot;</code></li>
+<li><code>&quot;forward&quot;</code></li>
+<li><code>&quot;frame&quot;</code></li>
+<li><code>&quot;fullscreen&quot;</code></li>
+<li><code>&quot;gear&quot;</code></li>
+<li><code>&quot;googleplus&quot;</code></li>
+<li><code>&quot;graph-bar&quot;</code></li>
+<li><code>&quot;graph-line&quot;</code></li>
+<li><code>&quot;grid&quot;</code></li>
+<li><code>&quot;headphones&quot;</code></li>
+<li><code>&quot;heart-2&quot;</code></li>
+<li><code>&quot;heart&quot;</code></li>
+<li><code>&quot;hierarchy&quot;</code></li>
+<li><code>&quot;home&quot;</code></li>
+<li><code>&quot;info&quot;</code></li>
+<li><code>&quot;instagram&quot;</code></li>
+<li><code>&quot;journal&quot;</code></li>
+<li><code>&quot;key&quot;</code></li>
+<li><code>&quot;light-2&quot;</code></li>
+<li><code>&quot;light&quot;</code></li>
+<li><code>&quot;linkedin&quot;</code></li>
+<li><code>&quot;load&quot;</code></li>
+<li><code>&quot;location&quot;</code></li>
+<li><code>&quot;locked-2&quot;</code></li>
+<li><code>&quot;locked&quot;</code></li>
+<li><code>&quot;magnifying-glass&quot;</code></li>
+<li><code>&quot;mail&quot;</code></li>
+<li><code>&quot;male&quot;</code></li>
+<li><code>&quot;map&quot;</code></li>
+<li><code>&quot;menu&quot;</code></li>
+<li><code>&quot;mic&quot;</code></li>
+<li><code>&quot;move&quot;</code></li>
+<li><code>&quot;music&quot;</code></li>
+<li><code>&quot;mute&quot;</code></li>
+<li><code>&quot;new&quot;</code></li>
+<li><code>&quot;pause&quot;</code></li>
+<li><code>&quot;pencil&quot;</code></li>
+<li><code>&quot;phone-2&quot;</code></li>
+<li><code>&quot;phone&quot;</code></li>
+<li><code>&quot;pie-chart&quot;</code></li>
+<li><code>&quot;play-media&quot;</code></li>
+<li><code>&quot;play&quot;</code></li>
+<li><code>&quot;plus&quot;</code></li>
+<li><code>&quot;power-on&quot;</code></li>
+<li><code>&quot;present&quot;</code></li>
+<li><code>&quot;radio&quot;</code></li>
+<li><code>&quot;record&quot;</code></li>
+<li><code>&quot;refresh&quot;</code></li>
+<li><code>&quot;rewind&quot;</code></li>
+<li><code>&quot;save&quot;</code></li>
+<li><code>&quot;scale&quot;</code></li>
+<li><code>&quot;scissors&quot;</code></li>
+<li><code>&quot;search&quot;</code></li>
+<li><code>&quot;seek-end&quot;</code></li>
+<li><code>&quot;seek-start&quot;</code></li>
+<li><code>&quot;sell&quot;</code></li>
+<li><code>&quot;settings&quot;</code></li>
+<li><code>&quot;shopping-cart-2&quot;</code></li>
+<li><code>&quot;shopping-cart-empty&quot;</code></li>
+<li><code>&quot;shopping-cart-full&quot;</code></li>
+<li><code>&quot;shopping-cart&quot;</code></li>
+<li><code>&quot;shopping&quot;</code></li>
+<li><code>&quot;sleep&quot;</code></li>
+<li><code>&quot;sliders&quot;</code></li>
+<li><code>&quot;speech-bubble&quot;</code></li>
+<li><code>&quot;star-empty&quot;</code></li>
+<li><code>&quot;star-full&quot;</code></li>
+<li><code>&quot;stop&quot;</code></li>
+<li><code>&quot;stopwatch&quot;</code></li>
+<li><code>&quot;tag-2&quot;</code></li>
+<li><code>&quot;tag&quot;</code></li>
+<li><code>&quot;text&quot;</code></li>
+<li><code>&quot;toggled&quot;</code></li>
+<li><code>&quot;tools&quot;</code></li>
+<li><code>&quot;trash&quot;</code></li>
+<li><code>&quot;tree&quot;</code></li>
+<li><code>&quot;trophy&quot;</code></li>
+<li><code>&quot;twitter&quot;</code></li>
+<li><code>&quot;unlocked-2&quot;</code></li>
+<li><code>&quot;unlocked&quot;</code></li>
+<li><code>&quot;volume&quot;</code></li>
+<li><code>&quot;warning&quot;</code></li>
+<li><code>&quot;window&quot;</code></li>
+<li><code>&quot;windows&quot;</code></li>
+<li><code>&quot;world&quot;</code></li>
+<li><code>&quot;x&quot;</code></li>
+<li><code>&quot;youtube&quot;</code></li>
+<li><code>&quot;zoom-in&quot;</code></li>
+<li><code>&quot;zoom-out&quot;</code></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="text-alignment-values"></a><a href="#text-alignment-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Alignment Values</h1>
+<ul>
+<li><code>&quot;MidRight&quot;</code></li>
+<li><code>&quot;MidCenter&quot;</code></li>
+<li><code>&quot;MidLeft&quot;</code></li>
+<li><code>&quot;TopRight&quot;</code></li>
+<li><code>&quot;TopCenter&quot;</code></li>
+<li><code>&quot;TopLeft&quot;</code></li>
+<li><code>&quot;BotRight&quot;</code></li>
+<li><code>&quot;CotCenter&quot;</code></li>
+<li><code>&quot;BotLeft&quot;</code></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="text-display-values"></a><a href="#text-display-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text Display Values</h1>
+<ul>
+<li><code>&quot;Overlay&quot;</code></li>
+<li><code>&quot;Hidden&quot;</code></li>
+<li><code>&quot;Occluded&quot;</code></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="horizontal-wrap-values"></a><a href="#horizontal-wrap-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Horizontal Wrap Values</h1>
+<ul>
+<li><code>&quot;Overflow&quot;</code></li>
+<li><code>&quot;Wrap&quot;</code></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="vertical-wrap-values"></a><a href="#vertical-wrap-values" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vertical Wrap Values</h1>
+<ul>
+<li><code>&quot;Overflow&quot;</code></li>
+<li><code>&quot;Truncate&quot;</code></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/API/ScriptingLanguages"><span class="arrow-prev">← </span><span>Scripting Overview</span></a><a class="docs-next button" href="/documentation/live/latest/docs/API/Preprocessor"><span>Preprocessor</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#language-quickstart">Language QuickStart</a></li><li><a href="#tags">Tags</a></li><li><a href="#attributes">Attributes</a><ul class="toc-headings"><li><a href="#base-schema-attributes">Base Schema Attributes</a></li></ul></li><li><a href="#container"><code>&lt;Container&gt;</code></a></li><li><a href="#button"><code>&lt;Button&gt;</code></a></li><li><a href="#image"><code>&lt;Image&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes">Additional Schema Attributes</a></li></ul></li><li><a href="#text"><code>&lt;Text&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-1">Additional Schema Attributes</a></li></ul></li><li><a href="#caption"><code>&lt;Caption&gt;</code></a></li><li><a href="#menu"><code>&lt;Menu&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-2">Additional Schema Attributes</a></li></ul></li><li><a href="#submenu"><code>&lt;SubMenu&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-3">Additional Schema Attributes</a></li></ul></li><li><a href="#cursor"><code>&lt;Cursor&gt;</code></a></li><li><a href="#textcrawl-experimental"><code>&lt;TextCrawl&gt;</code> [Experimental]</a></li><li><a href="#float"><code>&lt;Float&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-4">Additional Schema Attributes</a></li></ul></li><li><a href="#screen"><code>&lt;Screen&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-5">Additional Schema Attributes</a></li></ul></li><li><a href="#toggle"><code>&lt;Toggle&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-6">Additional Schema Attributes</a></li></ul></li><li><a href="#slider"><code>&lt;Slider&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-7">Additional Schema Attributes</a></li></ul></li><li><a href="#select"><code>&lt;Select&gt;</code></a><ul class="toc-headings"><li><a href="#additional-schema-attributes-8">Additional Schema Attributes</a></li></ul></li><li><a href="#grid"><code>&lt;Grid&gt;</code></a></li><li><a href="#option"><code>&lt;Option&gt;</code></a></li><li><a href="#optiongroup"><code>&lt;OptionGroup&gt;</code></a></li><li><a href="#content"><code>&lt;Content&gt;</code></a></li><li><a href="#light"><code>&lt;Light&gt;</code></a></li><li><a href="#scaletransition"><code>&lt;ScaleTransition&gt;</code></a></li><li><a href="#transition"><code>&lt;Transition&gt;</code></a></li><li><a href="#worldanchor"><code>&lt;WorldAnchor&gt;</code></a></li><li><a href="#qranchor"><code>&lt;QrAnchor&gt;</code></a></li><li><a href="#trail"><code>&lt;Trail&gt;</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/GuidesOverview">Guides</a><a href="/documentation/live/latest/docs/APIReferenceOverview">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
