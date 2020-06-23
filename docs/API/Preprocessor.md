@@ -32,7 +32,8 @@ This will inform the editor when building the editor field. Finally, you may als
 
 Sometimes it's useful to insert logic into a `VineML` document. In these cases, scripts can be embedded in a `VineML` document that will be executed by a JavaScript preprocessor before being handed off to the `VineML` parser. The value returned from the JS block is inserted into the `VineML` document.
 
-{% raw %}
+<!--- {% raw %} -->
+
 ```jsx
 <?Vine>
 
@@ -46,7 +47,8 @@ Sometimes it's useful to insert logic into a `VineML` document. In these cases, 
   }}
 </Menu>
 ```
-{% endraw %}
+
+<!--- {% endraw %} -->
 
 ## Advanced Usage
 
@@ -54,7 +56,8 @@ Both the schema and the JS preprocessors are applied to every `VineML` document 
 
 Here, we generate `VineML` with JS by using the schema prop, `numElements`. The schema value is injected before the JS executes.
 
-{% raw %}
+<!--- {% raw %} -->
+
 ```jsx
 <?Vine>
 
@@ -69,4 +72,5 @@ Here, we generate `VineML` with JS by using the schema prop, `numElements`. The 
   }}
 </Menu>
 ```
-{% endraw %}
+
+<!--- {% endraw %} -->
