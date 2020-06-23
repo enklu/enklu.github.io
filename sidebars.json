@@ -40,7 +40,9 @@
   },
   "API": {
     "API Reference": [
-      "APIReferenceOverview",
+      "API/ScriptingLanguages", 
+      "API/Vines",
+      "API/Preprocessor", 
       "API/Animator",
       "API/App",
       "API/Audio",
@@ -59,13 +61,18 @@
       "API/Multiplayer", 
       "API/Particles", 
       "API/Physics", 
-      "API/Preprocessor", 
       "API/Proximity", 
       "API/Random",
       "API/SceneEditing",
-      "API/ScriptingLanguages", 
+      "API/Score",
+      "API/Speech",
+      "API/Storage",
       "API/System",
-      "API/Time"
+      "API/Time",
+      "API/Timers",
+      "API/Touch",
+      "API/Tween",
+      "API/Voice"
     ]
   },
   "Frequently Asked Questions":{

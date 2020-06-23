@@ -1,6 +1,6 @@
 ---
 id: Kinect
-title: Kinect (v2)
+title: Kinect
 ---
 
 The Kinect API comes in two flavors, depending on which Kinect hardware is used. The `kinect` require works with the Kinect v2, which originally shipped with the Xbox One. The `azure-kinect-preview` require works with the Azure Kinect. This API is still in preview and may change. Kinect v1 is unsupported.

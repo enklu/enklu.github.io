@@ -1,6 +1,6 @@
 ---
 id: ScriptingLanguages
-title: Scripting Languages
+title: Scripting Overview
 ---
 
 Enklu Cloud's scripting interface offers 2 types of scripts: Behavior scripts and Vine scripts. Behavior scripts utilize JavaScript while Vine scripts utilize VineML.
@@ -11,7 +11,7 @@ Vine scripts are written using VineML.  VineML is a markup language which strong
 
 VineML files are called *documents*. These documents are made up of a hierarchy of nested *tags* which start from a single root element. Each tag can have zero or more attributes. Let's look at an example Vine script:
 
-```xml
+```jsx
 /* A vine header is optional.*/
 <?Vine>
 
@@ -22,44 +22,38 @@ VineML files are called *documents*. These documents are made up of a hierarchy 
 ```
 This example shows an opening and closing *Float* tags <code>\<Float>\</Float></code> which create the root element. Within the *Float* tags is a self closing *Button* tag <code>\<Button /></code>. Note that VineML supports C-style block comments.  It is best practice to avoid using comments between an opening and closing tag.
 
-<br>
-
 ### Tags
 
 Tags follow XHTML conventions, i.e. every tag must be closed. In HTML, we can write <code>\<br></code>, but in VineML this is invalid. Every tag must have a closing tag or it must be a self closing tag.
 
 This is not valid VineML:
-```xml
+```jsx
 <Container>
 /* Do not use this */
 ```
 These are both valid options.
-```xml
+```jsx
 <Container></Container>
 
 <Container />
 ```
 
-<br>
-
 In addition, tags may not have raw text inside of them. All values are passed to tags through attributes.
 
 This is not valid VineML:
-```xml
+```jsx
 <Caption>Hello World</Caption>
 /* Do not use this */
 ```
 Instead we use attributes:
-```xml
+```jsx
 <Caption label='Hello World' />
 ```
-
-<br>
 
 ### Attributes
 
 While tags define the object structure, attributes define the object properties. VineML has support for string, boolean, number, and vector literals. Any property of an element may be passed through element attributes.
-```xml
+```jsx
 <Caption
     label = 'Hello'
     visible = false 
@@ -69,13 +63,9 @@ While tags define the object structure, attributes define the object properties.
 />
 ```
 
-<br>
-
 ## Behavior Scripts
 
 The entry point into scripting with Enklu is the Behavior script which utilizes JavaScript. Many Behavior scripts may be attached to elements throughout the hierarchy. They can manipulate the object graph, work with central systems, or send messages to scripts on other elements.
-
-<br>
 
 ### Lifecycle Functions
 
@@ -97,8 +87,6 @@ function onOkActivated() {
 }
 ```
 
-<br>
-
 An update function may also be defined, which will be called every frame. This function is guaranteed to be called after enter is called, though an enter function is not required for update to be called.
 ```js
 var acc = 0;
@@ -116,16 +104,12 @@ function update() {
 }
 ```
 
-<br>
-
 Finally, an exit function may be defined which is called right before the object is destroyed.
 ```js
 function exit() {
     okBtn.off('activated', onOkActivated);
 }
 ```
-
-<br>
 
 ## Scripts as Modules
 
@@ -142,8 +126,6 @@ var module_1 = { };
     log.debug('Hello World!');
 })(module_1);
 ```
-
-<br>
 
 The runtime will use the specific module's exports to call any lifecycle functions as well any functions to expose to other scripts. Be sure to expose these methods via <code>module.exports</code>. For example:
 ```js
@@ -166,27 +148,21 @@ module.exports = {
 };
 ```
 
-<br>
-
 ## Preprocessors
 A powerful preprocessor is included as part of the Behavior and VineML execution pipeline. The preprocessor can process two types of blocks: schema and js blocks. The former allows injecting schema data, while the latter allows generating VineML or JavaScript via... JavaScript.
-
-<br>
 
 ### Schema Preprocessor
 It is very useful to insert schema data into a VineML document or a Behavior script. This allows for scripts to be reused with different data on different elements. While <code>{{ }}</code> allow you to include JS, <code>{[ ]}</code> blocks allow you to include Prop Definitions. These definitions define the type of data needed, which expose inspector fields in Enklu editors.
 
 Values can be pulled from an element's schema:
-```js
+```jsx
 <Button label='{[label]}' />
 ````
 This will expose a 'label' string field in the editors and store the 'label' data in a prop on the element. A type may be specified as well:
-```js
+```jsx
 <Button label='{[amount:float]}' />
 ```
 This will inform the editor when building the editor field. Finally, you may also specify a default value. If a default value is specified, the type is required:
-```js
+```jsx
 <Button label='{[label:String = "Push Me!"]}' />
 ```
-
-<br>

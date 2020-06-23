@@ -44,7 +44,7 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'GuidesOverview', label: 'Guides'},
-    {doc: 'APIReferenceOverview', label: 'API Reference'},
+    {doc: 'API/ScriptingLanguages', label: 'API Reference'},
 		{doc: 'FAQ', label: 'FAQ'},
     {page: 'contact', label: 'Contact'},
     //{blog: true, label: 'Blog'},
@@ -104,7 +104,7 @@ const siteConfig = {
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Enklu, Inc.`,
-	usePrism: true,
+	usePrism: ['jsx'],
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'railscasts',
