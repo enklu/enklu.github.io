@@ -61,35 +61,35 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Touch</h1></header><article><div><span><p>The <code>touch</code> system is a higher-level system that combines elements and gestures. It is useful for registering for determining if a user touches an element with their finger.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> <span class="hljs-keyword">const</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">'touch'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> <span class="token keyword">const</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'touch'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <blockquote>
 <p>This API is available only on HoloLens.</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="registration"></a><a href="#registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Registration</h2>
 <p>Registering an element for touch events is very simple. Simply require the touch system and call register. Touch events are only supported on asset elements.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> <span class="hljs-keyword">const</span> = <span class="hljs-built_in">require</span>(<span class="hljs-string">'touch'</span>);
-touch.register(<span class="hljs-keyword">this</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> <span class="token keyword">const</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'touch'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+touch<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// some time later</span>
+<span class="token comment">// some time later</span>
 
-touch.unregister(<span class="hljs-keyword">this</span>);
+touch<span class="token punctuation">.</span><span class="token function">unregister</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The underlying API will reject registrations from non-asset Elements.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> success = touch.register(<span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..(@type=LightWidget)'</span>));
-<span class="hljs-keyword">if</span> (!success) {
-  log.warn(<span class="hljs-string">'Unable to register Element for touch!'</span>);
-}
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> success <span class="token operator">=</span> touch<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@type=LightWidget)'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'Unable to register Element for touch!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>Registering an element with the <code>touch</code> system will cause that element to dispatch events when touched. These can be listened to just like any other event dispatched from an element: with <code>on</code>. The payload passed into touch callback will contain the <code>position</code> and <code>normal</code> of the hit.</p>
-<pre><code class="hljs css language-javascript">touch.register(<span class="hljs-keyword">this</span>);
+<pre><code class="hljs css language-javascript">touch<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// dispatched when a touch has started</span>
-<span class="hljs-keyword">this</span>.on(<span class="hljs-string">'touchstarted'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">hit</span>) </span>{
-  log.info(<span class="hljs-string">'Touch detected!'</span>);
-  log.info(<span class="hljs-string">'  Position: '</span> + hit.position);
-  log.info(<span class="hljs-string">'  Normal: '</span> + hit.normal);
-});
+<span class="token comment">// dispatched when a touch has started</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'touchstarted'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">hit</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Touch detected!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'  Position: '</span> <span class="token operator">+</span> hit<span class="token punctuation">.</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'  Normal: '</span> <span class="token operator">+</span> hit<span class="token punctuation">.</span>normal<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-events"></a><a href="#module-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Events</h2>
 <ul>

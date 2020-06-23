@@ -70,18 +70,18 @@
 <p>When <code>azure.speech.enable</code> is <code>true</code>, the experience will send audio to you LUIS app when running on a device. The other three values for <code>azure.speech.appid</code>, <code>azure.speech.appkey</code>, <code>azure.speech.region</code> should match the App Id, App Key, and region for your LUIS app.</p>
 <h2><a class="anchor" aria-hidden="true" id="api"></a><a href="#api" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>API</h2>
 <p>Once configuration is complete, register for events from the <code>speech-preview</code> api. Register for either intent events, which are data structures that understand what a user <em>wants</em>, or speech events, which provide raw text data when LUIS cannot determine an intent.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> speech = <span class="hljs-built_in">require</span>(<span class="hljs-string">'speech-preview'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> speech <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'speech-preview'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// speech is not currently available on all platforms</span>
-<span class="hljs-keyword">if</span> (speech.isAvailable()) {
-    speech.on(<span class="hljs-string">'onintent'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
-        <span class="hljs-comment">// an intent was recognized!</span>
-    });
+<span class="token comment">// speech is not currently available on all platforms</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>speech<span class="token punctuation">.</span><span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    speech<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'onintent'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// an intent was recognized!</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    speech.on(<span class="hljs-string">'onspeech'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">speech</span>) </span>{
-        <span class="hljs-comment">// an intent was not recognized but speech was</span>
-    });
-}
+    speech<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'onspeech'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">speech</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// an intent was not recognized but speech was</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="module-events"></a><a href="#module-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Events</h3>
 <ul>

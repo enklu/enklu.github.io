@@ -62,9 +62,9 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Kinect</h1></header><article><div><span><p>The Kinect API comes in two flavors, depending on which Kinect hardware is used. The <code>kinect</code> require works with the Kinect v2, which originally shipped with the Xbox One. The <code>azure-kinect-preview</code> require works with the Azure Kinect. This API is still in preview and may change. Kinect v1 is unsupported.</p>
 <p>Full example scripts for both types of Kinect may be found in the public script library.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> kinect = <span class="hljs-built_in">require</span>(<span class="hljs-string">'kinect'</span>);
-<span class="hljs-comment">// or</span>
-<span class="hljs-keyword">const</span> kinect = <span class="hljs-built_in">require</span>(<span class="hljs-string">'azure-kinect'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> kinect <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'kinect'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// or</span>
+<span class="token keyword">const</span> kinect <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'azure-kinect'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="scene-setup"></a><a href="#scene-setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scene Setup</h2>
 <p>The Kinect JS API is designed to be very simple. A connected Kinect will track bodies in the scene and automatically create and attach elements to joints of detected bodies. Each joint can be configured with a specific attached asset.</p>
@@ -74,87 +74,87 @@
 <p>To use the Kinect, you will need to add a small script to the <em>parent</em> of the Kinect element. This script will turn on the Kinect.</p>
 <p>All actions take place through an object called the context. The context should be created on script initialization or on enter. When a script is destroyed or reloaded, the context will automatically be destroyed or pooled, but will not leak.</p>
 <p>First, create a context.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> ctx = kinect.context();
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> ctx <span class="token operator">=</span> kinect<span class="token punctuation">.</span><span class="token function">context</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>The context can be queried to show if the platform supports Kinect.</p>
-<pre><code class="hljs css language-javascript">log.info(ctx.isSupported);
+<pre><code class="hljs css language-javascript">log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>ctx<span class="token punctuation">.</span>isSupported<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Next, start the kinect by passing in the element the Kinect should attach elements to. On exit, the kinect context should generally be stopped.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> self = <span class="hljs-keyword">this</span>;
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
 
-<span class="hljs-built_in">module</span>.exports = {
-    <span class="hljs-attr">enter</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        ctx.startTracking(self);
-    },
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">enter</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">startTracking</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
 
-    <span class="hljs-attr">exit</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
-        ctx.stopTracking();
-    }
-};
+    <span class="token function-variable function">exit</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">stopTracking</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
 <p>The Kinect API will dispatch events when a new body is recognized or when a recognized body has been lost. These events correspond to people entering and exiting the camera feed.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onBodyDetected</span>(<span class="hljs-params">element</span>) </span>{
-    <span class="hljs-comment">// element</span>
-}
+<pre><code class="hljs css language-javascript"><span class="token keyword">function</span> <span class="token function">onBodyDetected</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// element</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onBodyLost</span>(<span class="hljs-params">element</span>) </span>{
-    <span class="hljs-comment">// elided</span>
-}
+<span class="token keyword">function</span> <span class="token function">onBodyLost</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// elided</span>
+<span class="token punctuation">}</span>
 
-ctx.on(<span class="hljs-string">'bodyfound'</span>, onBodyDetected);
-ctx.on(<span class="hljs-string">'bodylost'</span>, onBodyLost);
+ctx<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'bodyfound'</span><span class="token punctuation">,</span> onBodyDetected<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'bodylost'</span><span class="token punctuation">,</span> onBodyLost<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-...
+<span class="token operator">...</span>
 
-ctx.off(<span class="hljs-string">'bodyfound'</span>);
-ctx.off(<span class="hljs-string">'bodylost'</span>;
+ctx<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'bodyfound'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'bodylost'</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="mirror"></a><a href="#mirror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mirror</h2>
 <p>The Kinect API will composite the camera feed into the scene using real depth. However, depending on whether the user is looking at themselves in a display or other people are watching the user through a display, you may want to mirror the composite image. This is done by simply setting the <code>mirrorComposite</code> field on the context.</p>
-<pre><code class="hljs css language-javascript">ctx.startTracking(self);
-ctx.mirrorComposite = <span class="hljs-literal">true</span>;
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span><span class="token function">startTracking</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>mirrorComposite <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="debugging"></a><a href="#debugging" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Debugging</h2>
 <p>Sometimes it can be useful to visualize the depth feed coming from the Kinect. Setting <code>debugDepth</code> to true will show a black and white depth feed instead of Color data.</p>
-<pre><code class="hljs css language-javascript">ctx.debugDepth = <span class="hljs-literal">true</span>;
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span>debugDepth <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="azure-kinect-specifics"></a><a href="#azure-kinect-specifics" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Azure Kinect Specifics</h2>
 <p>The Azure Kinect has a few additional APIs that the Kinect V2 does not have. Since the depth image used for compositing refreshes at a slower rate than the screen, use <code>depthDecay</code> to effectively blur the depth in between frames. This is measured in seconds.</p>
-<pre><code class="hljs css language-javascript">context.depthDecay = <span class="hljs-number">0.2</span>;
+<pre><code class="hljs css language-javascript">context<span class="token punctuation">.</span>depthDecay <span class="token operator">=</span> <span class="token number">0.2</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Use <code>maxDepth</code> to control the maximum distance the Kinect feed can render overtop AR content. This can be helpful when trying to show AR content as a backdrop.</p>
-<pre><code class="hljs css language-javascript">context.maxDepth = <span class="hljs-number">5</span>;
+<pre><code class="hljs css language-javascript">context<span class="token punctuation">.</span>maxDepth <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Use <code>maxDepthEllipse</code> to provide greater control over <code>maxDepth</code>. Separate values can be exposed for controlling the maximums for height vs depth, realtive to the camera.</p>
-<pre><code class="hljs css language-javascript">context.maxDepthEllipse = v.create(<span class="hljs-number">10</span>, <span class="hljs-number">10</span>, <span class="hljs-number">0</span>);
+<pre><code class="hljs css language-javascript">context<span class="token punctuation">.</span>maxDepthEllipse <span class="token operator">=</span> v<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="post-processing-azure-kinect"></a><a href="#post-processing-azure-kinect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Post Processing (Azure Kinect)</h2>
 <p>PostProcessing basics can be controlled and configured through the context. A default PostProcessing profile exists, so not every example control listed needs to be set.</p>
 <p>Control the overall PostProcessing layer.</p>
-<pre><code class="hljs css language-javascript">ctx.postProcessing.enabled = <span class="hljs-literal">true</span>;
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Control Bloom and its related settings.</p>
-<pre><code class="hljs css language-javascript">ctx.postProcessing.bloom.enabled = <span class="hljs-literal">true</span>;
-ctx.postProcessing.bloom.intensity = <span class="hljs-number">6</span>;
-ctx.postProcessing.bloom.threshold = <span class="hljs-number">3.5</span>;
-ctx.postProcessing.bloom.softKnee = <span class="hljs-number">2</span>;
-ctx.postProcessing.bloom.diffusion = <span class="hljs-number">5</span>;
-ctx.postProcessing.bloom.color = col(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.6</span>, <span class="hljs-number">0.4</span>, <span class="hljs-number">1</span>);
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>intensity <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>threshold <span class="token operator">=</span> <span class="token number">3.5</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>softKnee <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>diffusion <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>bloom<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token function">col</span><span class="token punctuation">(</span><span class="token number">0.2</span><span class="token punctuation">,</span> <span class="token number">0.6</span><span class="token punctuation">,</span> <span class="token number">0.4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Control the Vignette and its related settings.</p>
-<pre><code class="hljs css language-javascript">ctx.postProcessing.vignette.enabled = <span class="hljs-literal">true</span>;
-ctx.postProcessing.vignette.color = col(<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
-ctx.postProcessing.vignette.center = vec3(<span class="hljs-number">0.5</span>, <span class="hljs-number">0.5</span>, <span class="hljs-number">0</span>);
-ctx.postProcessing.vignette.intensity = <span class="hljs-number">6</span>;
-ctx.postProcessing.vignette.rounded = <span class="hljs-literal">true</span>;
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>vignette<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>vignette<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token function">col</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>vignette<span class="token punctuation">.</span>center <span class="token operator">=</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>vignette<span class="token punctuation">.</span>intensity <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>vignette<span class="token punctuation">.</span>rounded <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
 </code></pre>
 <p>Control Auto Exposure related settings.</p>
-<pre><code class="hljs css language-javascript">ctx.postProcessing.exposure.enabled = <span class="hljs-literal">true</span>;
-ctx.postProcessing.exposure.filtering = vec3(<span class="hljs-number">0.6</span>, <span class="hljs-number">0.9</span>, <span class="hljs-number">0</span>);
-ctx.postProcessing.exposure.maximum = <span class="hljs-number">3</span>;
-ctx.postProcessing.exposure.minimum = <span class="hljs-number">6.5</span>;
-ctx.postProcessing.exposure.compensation = <span class="hljs-number">5</span>;
+<pre><code class="hljs css language-javascript">ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>exposure<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>exposure<span class="token punctuation">.</span>filtering <span class="token operator">=</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0.6</span><span class="token punctuation">,</span> <span class="token number">0.9</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>exposure<span class="token punctuation">.</span>maximum <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>exposure<span class="token punctuation">.</span>minimum <span class="token operator">=</span> <span class="token number">6.5</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>postProcessing<span class="token punctuation">.</span>exposure<span class="token punctuation">.</span>compensation <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-methods"></a><a href="#module-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Methods</h2>
 <h3><a class="anchor" aria-hidden="true" id="contextid"></a><a href="#contextid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>context([id])</code></h3>

@@ -62,7 +62,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Gestures</h1></header><article><div><span><p>The Gestures API allows callbacks to be invoked when gestures are detected and lost.</p>
 <p><b>Note:</b> Gestures are only supported on the Hololens currently. Callbacks will not be called in the web editor.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> gestures = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gestures'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> gestures <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gestures'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
 <p>Gesture events can be listened for via <code>on</code> and <code>off</code>.</p>
@@ -71,29 +71,29 @@
 <li><code>pointerended</code> - Dispatched when a pointer has been lost.</li>
 </ul>
 <p><b>Note:</b> The underlying gesture tracking may detect new pointers before an existing pointer has ended. It is recommended to use the most recent gesture id provided.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> pointerId;
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> pointerId<span class="token punctuation">;</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPointerStarted</span>(<span class="hljs-params">id</span>) </span>{
-  log.info(<span class="hljs-string">'New pointer detected: '</span>, id);
-  pointerId = id;
-}
+<span class="token keyword">function</span> <span class="token function">onPointerStarted</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'New pointer detected: '</span><span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  pointerId <span class="token operator">=</span> id<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onPointerEnded</span>(<span class="hljs-params">id</span>) </span>{
-  log.info(<span class="hljs-string">'Pointer lost: '</span>, id);
-}
+<span class="token keyword">function</span> <span class="token function">onPointerEnded</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Pointer lost: '</span><span class="token punctuation">,</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-gestures.on(<span class="hljs-string">'pointerstarted'</span>, onPointerStarted);
-gestures.on(<span class="hljs-string">'pointerended'</span>, onPointerEnded);
+gestures<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'pointerstarted'</span><span class="token punctuation">,</span> onPointerStarted<span class="token punctuation">)</span><span class="token punctuation">;</span>
+gestures<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'pointerended'</span><span class="token punctuation">,</span> onPointerEnded<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="pose"></a><a href="#pose" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pose</h2>
 <p>Using a pointer id, the Gestures API can be queried for the latest pose data. Every field on each Pose will return either the current pointer data or a default value.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">update</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-keyword">if</span> (pointerId) {
-    <span class="hljs-keyword">var</span> pose = gestures.pose(pointerId);
+<pre><code class="hljs css language-javascript"><span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>pointerId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> pose <span class="token operator">=</span> gestures<span class="token punctuation">.</span><span class="token function">pose</span><span class="token punctuation">(</span>pointerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    log.info(<span class="hljs-string">'Pointer position:'</span>, pose.origin);
-  }
-}
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Pointer position:'</span><span class="token punctuation">,</span> pose<span class="token punctuation">.</span>origin<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-events"></a><a href="#module-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Events</h2>
 <ul>

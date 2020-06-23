@@ -61,25 +61,25 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Gaze (Preview)</h1></header><article><div><span><p>The Gaze API provides eye tracking details for supported platforms.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> gaze = <span class="hljs-built_in">require</span>(<span class="hljs-string">'gaze-preview'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> gaze <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'gaze-preview'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="gaze-types"></a><a href="#gaze-types" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gaze Types</h2>
 <p>There are two types of gaze: glance and focus. Glance is used to describe an element currently being looked at by a user, while focus is when a user's eyes remain settled on an element. Both types can be refered to via the <code>gaze.types</code> object. <strong><em>[Currently, only <code>types.Glance</code> is supported]</em></strong></p>
 <h2><a class="anchor" aria-hidden="true" id="registration"></a><a href="#registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Registration</h2>
 <p>Before we can capture gaze events, we need to register elements for gaze tracking.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> self = <span class="hljs-keyword">this</span>;
-gaze.register(self, gaze.types.Glance);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+gaze<span class="token punctuation">.</span><span class="token function">register</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> gaze<span class="token punctuation">.</span>types<span class="token punctuation">.</span>Glance<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
 <p>Subscribe to Gaze events directly from the element. The event handlers receive no parameters. Instead, poll the gaze object's state. Handlers should be unregistered with the <code>off</code> method when no longer needed.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">this</span>.on(<span class="hljs-string">'focusupdated'</span>, onFocusUpdated);
+<pre><code class="hljs css language-javascript"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'focusupdated'</span><span class="token punctuation">,</span> onFocusUpdated<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onFocusUpdated</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-keyword">var</span> dir = gaze.glanceDirection;
-    <span class="hljs-comment">//</span>
-}
+<span class="token keyword">function</span> <span class="token function">onFocusUpdated</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> dir <span class="token operator">=</span> gaze<span class="token punctuation">.</span>glanceDirection<span class="token punctuation">;</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span>
 
-<span class="hljs-keyword">this</span>.off(<span class="hljs-string">'focusstopped'</span>);
+<span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'focusstopped'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-events"></a><a href="#module-events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Events</h2>
 <ul>

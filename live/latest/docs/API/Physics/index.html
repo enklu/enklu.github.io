@@ -61,19 +61,19 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Physics</h1></header><article><div><span><p>The Physics API provides access to simple raycasting. In time, they'll be more functionality available.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> physics = <span class="hljs-built_in">require</span>(<span class="hljs-string">'physics'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> physics <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'physics'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="raycasting"></a><a href="#raycasting" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Raycasting</h2>
 <p>A raycast can be used to see if a ray intersects with a specific Element.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> element = <span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..(@name=Cube)'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> element <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@name=Cube)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">var</span> hit = physics.raycast(v.zero, v.forward, element);
+<span class="token keyword">var</span> hit <span class="token operator">=</span> physics<span class="token punctuation">.</span><span class="token function">raycast</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>zero<span class="token punctuation">,</span> v<span class="token punctuation">.</span>forward<span class="token punctuation">,</span> element<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-keyword">if</span> (hit) {
-    log.info(<span class="hljs-string">'Hit! '</span> + hit);
-} <span class="hljs-keyword">else</span> {
-    log.info(<span class="hljs-string">'Miss :('</span>);
-}
+<span class="token keyword">if</span> <span class="token punctuation">(</span>hit<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Hit! '</span> <span class="token operator">+</span> hit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Miss :('</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-methods"></a><a href="#module-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Methods</h2>
 <h3><a class="anchor" aria-hidden="true" id="raycaststart-direction-element"></a><a href="#raycaststart-direction-element" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>raycast(start, direction, element)</code></h3>

@@ -61,69 +61,69 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Tween</h1></header><article><div><span><p>The Tween API provides element tweening operations. These are <strong>highly recommended</strong> over tweening objects &quot;by hand&quot; inside of your own update loops. Not only does the tween API provide excellent easing functions and a terse API, it is implemented as part of the player runtime so it is highly optimized.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">const</span> tw = <span class="hljs-built_in">require</span>(<span class="hljs-string">'tween'</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> tw <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'tween'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="creating-a-tween"></a><a href="#creating-a-tween" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating a Tween</h2>
 <p>Tweens are created specific to the <code>name</code> and <code>type</code> of prop they affect. To that end, we provide three types of tweens: <code>number</code>, <code>vec3</code>, and <code>col4</code>. The vector types are tweened component-wise.</p>
 <blockquote>
 <p>Neither the name nor the type of the prop may be changed after the tween has been created.</p>
 </blockquote>
-<pre><code class="hljs css language-javascript"><span class="hljs-comment">// get the element</span>
-<span class="hljs-keyword">var</span> el = <span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..tweener'</span>);
+<pre><code class="hljs css language-javascript"><span class="token comment">// get the element</span>
+<span class="token keyword">var</span> el <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..tweener'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// create a tween on the vec3 'scale' prop</span>
-<span class="hljs-keyword">var</span> vectorTween = tw.vec3(el, <span class="hljs-string">'scale'</span>);
+<span class="token comment">// create a tween on the vec3 'scale' prop</span>
+<span class="token keyword">var</span> vectorTween <span class="token operator">=</span> tw<span class="token punctuation">.</span><span class="token function">vec3</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> <span class="token string">'scale'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// create a tween on the col4 'color' prop</span>
-<span class="hljs-keyword">var</span> colorTween = tw.col4(el, <span class="hljs-string">'color'</span>);
+<span class="token comment">// create a tween on the col4 'color' prop</span>
+<span class="token keyword">var</span> colorTween <span class="token operator">=</span> tw<span class="token punctuation">.</span><span class="token function">col4</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> <span class="token string">'color'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// create a tween on the number 'alpha' prop</span>
-<span class="hljs-keyword">var</span> alphaTween = tw.number(el, <span class="hljs-string">'alpha'</span>);
+<span class="token comment">// create a tween on the number 'alpha' prop</span>
+<span class="token keyword">var</span> alphaTween <span class="token operator">=</span> tw<span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> <span class="token string">'alpha'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="configuring-a-tween"></a><a href="#configuring-a-tween" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuring a tween</h2>
 <p>Each parameter on a tween is configured through a corresponding function on the tween. These functions can be chained to configure tweens very quickly and easily.</p>
 <blockquote>
 <p>Most parameters are <em>optional</em>. The only required parameter is <code>to</code>, which provides the value to tween to.</p>
 </blockquote>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> a = tw
-    .number(<span class="hljs-keyword">this</span>.findOne(<span class="hljs-string">'..covering'</span>), <span class="hljs-string">'alpha'</span>)
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> tw
+    <span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..covering'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'alpha'</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (required) The value to tween to.</span>
-    .to(<span class="hljs-number">1</span>)
+    <span class="token comment">// (required) The value to tween to.</span>
+    <span class="token punctuation">.</span><span class="token function">to</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) The starting value. If not specified, the starting value will be the current value.</span>
-    .from(<span class="hljs-number">0</span>)
+    <span class="token comment">// (optional) The starting value. If not specified, the starting value will be the current value.</span>
+    <span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) The duration, in seconds, of the tween. Defaults to 1.</span>
-    .duration(<span class="hljs-number">2.5</span>)
+    <span class="token comment">// (optional) The duration, in seconds, of the tween. Defaults to 1.</span>
+    <span class="token punctuation">.</span><span class="token function">duration</span><span class="token punctuation">(</span><span class="token number">2.5</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) The delay, in seconds, before the tween should start.</span>
-    .delay(<span class="hljs-number">1</span>)
+    <span class="token comment">// (optional) The delay, in seconds, before the tween should start.</span>
+    <span class="token punctuation">.</span><span class="token function">delay</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) The easing equation to use. Defaults to tw.easing.Linear.</span>
-    .easing(tw.easing.CubicOut)
+    <span class="token comment">// (optional) The easing equation to use. Defaults to tw.easing.Linear.</span>
+    <span class="token punctuation">.</span><span class="token function">easing</span><span class="token punctuation">(</span>tw<span class="token punctuation">.</span>easing<span class="token punctuation">.</span>CubicOut<span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) A function to call when the tween is first started.</span>
-    .onStart(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ log.info(<span class="hljs-string">'Started!'</span>); })
+    <span class="token comment">// (optional) A function to call when the tween is first started.</span>
+    <span class="token punctuation">.</span><span class="token function">onStart</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Started!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
 
-    <span class="hljs-comment">// (optional) A function to call after the tween has been completed</span>
-    .onComplete(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{ log.info(<span class="hljs-string">'Complete!'</span>); });
+    <span class="token comment">// (optional) A function to call after the tween has been completed</span>
+    <span class="token punctuation">.</span><span class="token function">onComplete</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Complete!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="tween-playback"></a><a href="#tween-playback" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tween Playback</h2>
 <p>Once a tween is created, playback is controlled by functions on the tween itself. Note that once a tween has been started, the tween's configuration may not be changed. Note that none of these functions return the tween object. This is intentional as nothing may be configured after <code>start</code> has been called.</p>
-<pre><code class="hljs css language-javascript"><span class="hljs-keyword">var</span> a = tw.number(el, <span class="hljs-string">'foo'</span>).to(<span class="hljs-number">1</span>);
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> a <span class="token operator">=</span> tw<span class="token punctuation">.</span><span class="token function">number</span><span class="token punctuation">(</span>el<span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">to</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// starts the tween</span>
-a.start();
+<span class="token comment">// starts the tween</span>
+a<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// pauses the tween at the current time</span>
-a.pause();
+<span class="token comment">// pauses the tween at the current time</span>
+a<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// resumes the tween from the paused state</span>
-a.resume();
+<span class="token comment">// resumes the tween from the paused state</span>
+a<span class="token punctuation">.</span><span class="token function">resume</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// stops the tween</span>
-a.stop();
+<span class="token comment">// stops the tween</span>
+a<span class="token punctuation">.</span><span class="token function">stop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="module-methods"></a><a href="#module-methods" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Module Methods</h2>
 <h3><a class="anchor" aria-hidden="true" id="numberelement-prop"></a><a href="#numberelement-prop" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>number(element, prop)</code></h3>

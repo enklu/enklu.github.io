@@ -64,38 +64,38 @@
 <h2><a class="anchor" aria-hidden="true" id="hierarchy"></a><a href="#hierarchy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hierarchy</h2>
 <p>An element may have zero to many children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.</p>
 <p>An element's children are accessible via the readonly children field.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> children = element.children;
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>, len = children.length; i &lt; len; i++) {
-    <span class="hljs-keyword">var</span> child = children[i];
-}
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> children <span class="token operator">=</span> element<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> children<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> child <span class="token operator">=</span> children<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><br></p>
 <p>Child elements may be added and removed.</p>
-<pre><code class="hljs css language-js">a.children;        <span class="hljs-comment">// []</span>
-a.addChild(b);     <span class="hljs-comment">// [b]</span>
-a.removeChild(b);  <span class="hljs-comment">// []</span>
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span>children<span class="token punctuation">;</span>        <span class="token comment">// []</span>
+a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// [b]</span>
+a<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// []</span>
 </code></pre>
 <p><br></p>
 <p>Adding an element as a child to one element will remove it from another.</p>
-<pre><code class="hljs css language-js">a.addChild(b);  <span class="hljs-comment">// a.children = [b]</span>
-c.addChild(b);  <span class="hljs-comment">// a.children = [], c.children = [b]</span>
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// a.children = [b]</span>
+c<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// a.children = [], c.children = [b]</span>
 </code></pre>
 <p><br></p>
 <p>Adding an element to its parent will reorder the children.</p>
-<pre><code class="hljs css language-js">a.addChild(a);      <span class="hljs-comment">// [a]</span>
-a.addChild(c);      <span class="hljs-comment">// [a, c]</span>
-a.addChild(a);      <span class="hljs-comment">// [c, a]</span>
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [a]</span>
+a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [a, c]</span>
+a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [c, a]</span>
 </code></pre>
 <p><br></p>
 <p>Relationships can be tested explicitly or with helpers.</p>
-<pre><code class="hljs css language-js">b.parent === a;   <span class="hljs-comment">// True</span>
-b.isChildOf(a);   <span class="hljs-comment">// True</span>
+<pre><code class="hljs css language-js">b<span class="token punctuation">.</span>parent <span class="token operator">===</span> a<span class="token punctuation">;</span>   <span class="token comment">// True</span>
+b<span class="token punctuation">.</span><span class="token function">isChildOf</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// True</span>
 </code></pre>
 <p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="destroy"></a><a href="#destroy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Destroy</h2>
 <p>Elements can easily be destroyed.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// Destroys element and all children</span>
-element.destroy();
+<pre><code class="hljs css language-js"><span class="token comment">// Destroys element and all children</span>
+element<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="schema"></a><a href="#schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schema</h2>
@@ -103,200 +103,200 @@ element.destroy();
 <p><br></p>
 <h3><a class="anchor" aria-hidden="true" id="get--set"></a><a href="#get--set" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get &amp; Set</h3>
 <p>Use get and set methods to retrieve properties for primitive types.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// strings</span>
-element.schema.setString(<span class="hljs-string">'foo'</span>, <span class="hljs-string">'This is foo.'</span>);
-element.schema.getString(<span class="hljs-string">'foo'</span>);   <span class="hljs-comment">// This is foo.</span>
+<pre><code class="hljs css language-js"><span class="token comment">// strings</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'This is foo.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// This is foo.</span>
 
-<span class="hljs-comment">// numbers</span>
-element.schema.setNumber(<span class="hljs-string">'bar'</span>, <span class="hljs-number">12</span>);
-element.schema.getNumber(<span class="hljs-string">'bar'</span>);   <span class="hljs-comment">// 12</span>
+<span class="token comment">// numbers</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// 12</span>
 
-<span class="hljs-comment">// bools</span>
-element.schema.setBool(<span class="hljs-string">'fizz'</span>, <span class="hljs-literal">true</span>);
-element.schema.getBool(<span class="hljs-string">'fizz'</span>);    <span class="hljs-comment">// true</span>
+<span class="token comment">// bools</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setBool</span><span class="token punctuation">(</span><span class="token string">'fizz'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getBool</span><span class="token punctuation">(</span><span class="token string">'fizz'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// true</span>
 </code></pre>
 <p><br></p>
 <p>If an element doesn't already have a value, it returns a value up the graph. In this circumstance, the property of b is bound to the property of a.</p>
-<pre><code class="hljs css language-js">a.addChild(b);
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-a.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">12</span>);
-b.getNumber(<span class="hljs-string">'foo'</span>);         <span class="hljs-comment">// 12</span>
+a<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 12</span>
 
-a.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">17</span>);
-b.getNumber(<span class="hljs-string">'foo'</span>);         <span class="hljs-comment">// 17</span>
+a<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+b<span class="token punctuation">.</span><span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 17</span>
 </code></pre>
 <p><br></p>
 <p>Once the child changes its value, the binding is broken.</p>
-<pre><code class="hljs css language-js">b.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">-7</span>);
+<pre><code class="hljs css language-js">b<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-a.getNumber(<span class="hljs-string">'foo'</span>);         <span class="hljs-comment">// 17</span>
-b.getNumber(<span class="hljs-string">'foo'</span>);         <span class="hljs-comment">// -7</span>
+a<span class="token punctuation">.</span><span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 17</span>
+b<span class="token punctuation">.</span><span class="token function">getNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// -7</span>
 </code></pre>
 <p><br></p>
 <p>Values can be taken from an element with explicitly avoiding searching up the graph. A default value for the data type will be set &amp; returned if unprovided.</p>
-<pre><code class="hljs css language-js">b.getOwnNumber(<span class="hljs-string">'foo'</span>);         <span class="hljs-comment">// 0</span>
-b.getOwnNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">12</span>);     <span class="hljs-comment">// 12</span>
+<pre><code class="hljs css language-js">b<span class="token punctuation">.</span><span class="token function">getOwnNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// 0</span>
+b<span class="token punctuation">.</span><span class="token function">getOwnNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// 12</span>
 
-b.getOwnString(<span class="hljs-string">'bar'</span>);         <span class="hljs-comment">// &lt;empty string&gt;</span>
-b.getOwnString(<span class="hljs-string">'bar'</span>, <span class="hljs-string">'flip'</span>); <span class="hljs-comment">// flip</span>
+b<span class="token punctuation">.</span><span class="token function">getOwnString</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">// &lt;empty string></span>
+b<span class="token punctuation">.</span><span class="token function">getOwnString</span><span class="token punctuation">(</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'flip'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// flip</span>
 
-b.getOwnBool(<span class="hljs-string">'fizz'</span>);          <span class="hljs-comment">// false</span>
-b.getOwnBool(<span class="hljs-string">'fizz'</span>, <span class="hljs-literal">true</span>);    <span class="hljs-comment">// true</span>
+b<span class="token punctuation">.</span><span class="token function">getOwnBool</span><span class="token punctuation">(</span><span class="token string">'fizz'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>          <span class="token comment">// false</span>
+b<span class="token punctuation">.</span><span class="token function">getOwnBool</span><span class="token punctuation">(</span><span class="token string">'fizz'</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// true</span>
 </code></pre>
 <p><br></p>
 <h3><a class="anchor" aria-hidden="true" id="watch--unwatch"></a><a href="#watch--unwatch" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Watch &amp; Unwatch</h3>
 <p>Properties may also be watched for changes.</p>
-<pre><code class="hljs css language-js">element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">-1</span>);
-element.watchNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">prev, next</span>) </span>{
-    log.info(
-        <span class="hljs-string">'Value changed from {0} -&gt; {1}'</span>,
-        prev,
-        next);
-});
+<pre><code class="hljs css language-js">element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span><span class="token function">watchNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>
+        <span class="token string">'Value changed from {0} -> {1}'</span><span class="token punctuation">,</span>
+        prev<span class="token punctuation">,</span>
+        next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// Value changed from -1 -&gt; 5</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Value changed from -1 -> 5</span>
 </code></pre>
 <p><br></p>
 <p>Watched properties can be unwatched.</p>
-<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onChange</span>(<span class="hljs-params">prev, next</span>)</span>{
-  log.info(<span class="hljs-string">'Value changes from {0} -&gt; {1}'</span>,
-    prev,
-    next);
-}
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">onChange</span><span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Value changes from {0} -> {1}'</span><span class="token punctuation">,</span>
+    prev<span class="token punctuation">,</span>
+    next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">-1</span>);
-element.watchNumber(<span class="hljs-string">'foo'</span>, onChange);
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">2</span>);  <span class="hljs-comment">// Value changes from -1 -&gt; 2</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span><span class="token function">watchNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> onChange<span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Value changes from -1 -> 2</span>
 
-element.unwatchNumber(<span class="hljs-string">'foo'</span>, onChange);
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">2</span>);  <span class="hljs-comment">// &lt;no output&gt;</span>
+element<span class="token punctuation">.</span><span class="token function">unwatchNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> onChange<span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &lt;no output></span>
 </code></pre>
 <p><br></p>
 <p>Properties can be watched explicitly for one change.</p>
-<pre><code class="hljs css language-js">element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">-1</span>);
-element.watchNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">prev, next</span>) </span>{
-    log.info(
-        <span class="hljs-string">'Value changed from {0} -&gt; {1}'</span>,
-        prev,
-        next);
-});
+<pre><code class="hljs css language-js">element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span><span class="token function">watchNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>
+        <span class="token string">'Value changed from {0} -> {1}'</span><span class="token punctuation">,</span>
+        prev<span class="token punctuation">,</span>
+        next<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">5</span>);  <span class="hljs-comment">// Value changed from -1 -&gt; 5</span>
-element.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">8</span>);  <span class="hljs-comment">// &lt;no output&gt;</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// Value changed from -1 -> 5</span>
+element<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// &lt;no output></span>
 
 </code></pre>
 <p><br></p>
 <p>Watchers are also called for bound properties.</p>
-<pre><code class="hljs css language-js">b.watchNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">prev, next</span>) </span>{
-    log.info(<span class="hljs-string">'Changed!'</span>);
-});
-a.setNumber(<span class="hljs-string">'foo'</span>, <span class="hljs-number">12</span>);     <span class="hljs-comment">// Changed!</span>
+<pre><code class="hljs css language-js">b<span class="token punctuation">.</span><span class="token function">watchNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">prev<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'Changed!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+a<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// Changed!</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="queries"></a><a href="#queries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Queries</h2>
 <p>It can become taxing to iterate the element graph to find the elements you need, particularly as it grows dynamically. For this reason, elements have a built-in query language that can be used to filter and find collections of elements that you need.</p>
 <p>Using <code>findOne()</code> retrieves a child with matching id.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// a    &lt;-parent</span>
-<span class="hljs-comment">//  -b  &lt;- child</span>
-<span class="hljs-keyword">var</span> b = a.findOne(<span class="hljs-string">'b'</span>);
+<pre><code class="hljs css language-js"><span class="token comment">// a    &lt;-parent</span>
+<span class="token comment">//  -b  &lt;- child</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'b'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>You can search for immediate children with the dot <code>(.)</code> operator.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// a</span>
-<span class="hljs-comment">//  -b</span>
-<span class="hljs-comment">//    -c</span>
-<span class="hljs-comment">//  -d</span>
-<span class="hljs-comment">//    -e</span>
-<span class="hljs-comment">//      -f</span>
-<span class="hljs-keyword">var</span> f = a.findOne(<span class="hljs-string">'d.e.f'</span>);
+<pre><code class="hljs css language-js"><span class="token comment">// a</span>
+<span class="token comment">//  -b</span>
+<span class="token comment">//    -c</span>
+<span class="token comment">//  -d</span>
+<span class="token comment">//    -e</span>
+<span class="token comment">//      -f</span>
+<span class="token keyword">var</span> f <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'d.e.f'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>Sometimes you may not know intermediate children. For a recursive search, use the double dot <code>(..)</code> operator.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> f = a.findOne(<span class="hljs-string">'..f'</span>);
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> f <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..f'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>These operators can be used in combination with each other.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// a</span>
-<span class="hljs-comment">//  -b</span>
-<span class="hljs-comment">//    ...</span>
-<span class="hljs-comment">//       -z</span>
-<span class="hljs-keyword">var</span> q = a.findOne(<span class="hljs-string">'b..f..p.q'</span>);
+<pre><code class="hljs css language-js"><span class="token comment">// a</span>
+<span class="token comment">//  -b</span>
+<span class="token comment">//    ...</span>
+<span class="token comment">//       -z</span>
+<span class="token keyword">var</span> q <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'b..f..p.q'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>Any element property can be used to filter by using the <code>@</code> operator.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> big = a.findOne(<span class="hljs-string">'..(@size==10)'</span>);
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> big <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@size==10)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>Finally, a collection of matching objects can be retrieved by using find.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> allBig = a.find(<span class="hljs-string">'b..q.(@size==10)'</span>);
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> allBig <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'b..q.(@size==10)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="transform"></a><a href="#transform" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Transform</h2>
 <p>Several shortcuts are provided, not least of which is the <code>transform</code> object. While <code>localPosition</code>, <code>localRotation</code>, and <code>localScale</code> may all be set via the schema system, the <code>transform</code> object also provides these as raw fields.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// These two are equivalent</span>
-element.schema.setVec3(<span class="hljs-string">'position'</span>, vec3(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>));
-element.transform.position = vec3(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+<pre><code class="hljs css language-js"><span class="token comment">// These two are equivalent</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setVec3</span><span class="token punctuation">(</span><span class="token string">'position'</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// These two are equivalent</span>
-element.schema.setVec3(<span class="hljs-string">'scale'</span>, vec3(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>));
-element.transform.scale = vec3(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>);
+<span class="token comment">// These two are equivalent</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setVec3</span><span class="token punctuation">(</span><span class="token string">'scale'</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>scale <span class="token operator">=</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// These two are equivalent</span>
-element.schema.setVec3(<span class="hljs-string">'rotation'</span>, vec3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>)); <span class="hljs-comment">// Internally stored as Euler values.</span>
-element.transform.rotation = q.euler(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>);
+<span class="token comment">// These two are equivalent</span>
+element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setVec3</span><span class="token punctuation">(</span><span class="token string">'rotation'</span><span class="token punctuation">,</span> <span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Internally stored as Euler values.</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>rotation <span class="token operator">=</span> q<span class="token punctuation">.</span><span class="token function">euler</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>World space values exist, though they should be used with care. On HoloLens, world space values include any transform changes an Anchor uses to locate its place in a space.</p>
-<pre><code class="hljs css language-js">element.transform.worldPosition;
-element.transform.worldRotation;
-element.transform.worldScale;
+<pre><code class="hljs css language-js">element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>worldPosition<span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>worldRotation<span class="token punctuation">;</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>worldScale<span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>Helper functions exist to manage conversions between world &amp; local coordinate systems.</p>
-<pre><code class="hljs css language-js"><span class="hljs-comment">// Transforms a Vec3 from local space to world space</span>
-element.transform.localToWorld(vec3(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">1</span>));
+<pre><code class="hljs css language-js"><span class="token comment">// Transforms a Vec3 from local space to world space</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span><span class="token function">localToWorld</span><span class="token punctuation">(</span><span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// Transforms a Vec3 from world space to local space</span>
-element.transform.worldToLocal(vec3(<span class="hljs-number">10</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>));
+<span class="token comment">// Transforms a Vec3 from world space to local space</span>
+element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span><span class="token function">worldToLocal</span><span class="token punctuation">(</span><span class="token function">vec3</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>A transform's local forward direction can be used.</p>
-<pre><code class="hljs css language-js">element.transform.forward;
+<pre><code class="hljs css language-js">element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span>forward<span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <p>An element can be rotated to look towards a given direction.</p>
-<pre><code class="hljs css language-js">element.transform.lookAt(v.up);
+<pre><code class="hljs css language-js">element<span class="token punctuation">.</span>transform<span class="token punctuation">.</span><span class="token function">lookAt</span><span class="token punctuation">(</span>v<span class="token punctuation">.</span>up<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="events"></a><a href="#events" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Events</h2>
 <p>Many elements dispatch events. These events can be listened for using <code>on</code> and <code>off</code> functions, which attach a callback to a specific event. It is good practice to attach events on <code>enter</code> and remove them in <code>exit</code>.</p>
-<pre><code class="hljs css language-js">a.on(<span class="hljs-string">'activated'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">evt</span>) </span>{
-    <span class="hljs-comment">//</span>
-});
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'activated'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">evt</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">//</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-a.off(<span class="hljs-string">'activated'</span>, onActivated);
+a<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token string">'activated'</span><span class="token punctuation">,</span> onActivated<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
 <p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="message-passing"></a><a href="#message-passing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Message Passing</h2>
 <p>Messages may be passed to elements. The message consists of a function name and any number of parameters. The receiving element then calls the function by name on all attached scripts with the passed in parameters.</p>
-<pre><code class="hljs css language-js"><span class="hljs-keyword">var</span> menu = <span class="hljs-keyword">this</span>.find(<span class="hljs-string">'..menu-new'</span>);
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> menu <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'..menu-new'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-<span class="hljs-comment">// sends 'open' message to all attached scripts</span>
-menu.send(<span class="hljs-string">'open'</span>);  <span class="hljs-comment">// open()</span>
-menu.send(<span class="hljs-string">'register'</span>, <span class="hljs-string">'foo'</span>, <span class="hljs-string">'bar'</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">// register('foo', 'bar', 5);</span>
+<span class="token comment">// sends 'open' message to all attached scripts</span>
+menu<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'open'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// open()</span>
+menu<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token string">'register'</span><span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// register('foo', 'bar', 5);</span>
 </code></pre>
 <p><br></p>
 <p>If a Behavior script cannot handle a message the message is discarded. However, a special function may be defined which receives all discarded events.</p>
-<pre><code class="hljs css language-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">msgMissing</span>(<span class="hljs-params">type, args</span>) </span>{
-    log.info(type + <span class="hljs-string">' was called but I could not handle it.'</span>);
-}
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">msgMissing</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>type <span class="token operator">+</span> <span class="token string">' was called but I could not handle it.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="miscellaneous"></a><a href="#miscellaneous" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Miscellaneous</h2>
 <p>The Elements API has a few other miscellaneous usages for scripting.</p>
-<pre><code class="hljs css language-js">a.id;             <span class="hljs-comment">// Read-only. Gets the element's ID</span>
+<pre><code class="hljs css language-js">a<span class="token punctuation">.</span>id<span class="token punctuation">;</span>             <span class="token comment">// Read-only. Gets the element's ID</span>
 
-a.type;           <span class="hljs-comment">// Read-only. Gets the element's type</span>
+a<span class="token punctuation">.</span>type<span class="token punctuation">;</span>           <span class="token comment">// Read-only. Gets the element's type</span>
 
-a.visible = <span class="hljs-literal">true</span>; <span class="hljs-comment">// Gets or sets this element's visibility</span>
+a<span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// Gets or sets this element's visibility</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/documentation/live/latest/docs/API/Drawing"><span class="arrow-prev">← </span><span>Drawing</span></a><a class="docs-next button" href="/documentation/live/latest/docs/API/Gaze"><span>Gaze (Preview)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#hierarchy">Hierarchy</a></li><li><a href="#destroy">Destroy</a></li><li><a href="#schema">Schema</a><ul class="toc-headings"><li><a href="#get--set">Get &amp; Set</a></li><li><a href="#watch--unwatch">Watch &amp; Unwatch</a></li></ul></li><li><a href="#queries">Queries</a></li><li><a href="#transform">Transform</a></li><li><a href="#events">Events</a></li><li><a href="#message-passing">Message Passing</a></li><li><a href="#miscellaneous">Miscellaneous</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/documentation/live/latest/" class="nav-home"><img src="/documentation/live/latest/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/documentation/live/latest/docs/GuidesOverview">Guides</a><a href="/documentation/live/latest/docs/APIReferenceOverview">API Reference</a><a href="/documentation/live/latest/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/documentation/live/latest/js/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

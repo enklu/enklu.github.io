@@ -83,7 +83,7 @@ VineML supports several built in elements that you can use to build complex inte
 |rotation|`vec3`|`vec3(0,0,0)`| The element's rotation. |
 |scale|`vec3`|`vec3(1,1,1)`| The element's scale. |
 |color|`col4`|`col4(1,1,1,1)`| The base color of the element. |
-|virtualColor|`string`|`"None"`| A tint applied to the widget. |
+|virtualColor|`string`|`"None"`| A [Virtual Color](#virtual-colors) tint applied to the widget. |
 |alpha|`float`|`1.0`| The transparency of the element. |
 |colorMode|`int`|`0 (WidgetColorMode.InheritColor)`| How the element's color is affected by the color of its parent. |
 |tweenIn|`int`|`1 (TweenType.Responsive)`| The type of tween applied when fading in. |
@@ -99,6 +99,42 @@ VineML supports several built in elements that you can use to build complex inte
 An invisible element used for organization, often as the root tag of a `VineML` script.
 
 ## `<Button>`
+
+Basic button element.
+
+### Additional Schema Attributes
+
+A `<Button>` element contains a `<Text>`, so the attributes of a `<Text> element may also be applied.`
+
+| name | type | default | description |
+|------|------|---------|-------------|
+| src                     | `string` | `null`          | URL for icon.                                                |
+| icon                    | `string` | `null`        | Name of icon, as given in icon list.                         |
+| label                   | `string` | `null`         | The button's label.                                          |
+| font                    | `string` | `OpenSans-Regular` | A supported [Font](#fonts) |
+| label.padding           | `int`    | `60`           | Determines distance between center of circle and label.      |
+| fontSize                | `int`    | `80`           | Determines the font size of the button's label.              |
+| icon.scale              | `float`  | `1`            | Icon scale multiplier.                                       |
+| voiceActivator          | `string` | `null`           | If set to a keyword, adds voice recognition for activating a button.|
+| layout                  | `string` | `"horizontal"`  | Describes how the button is laid out. Can be set to *horizontal* or *vertical*. If set to anything other than *vertical*, the layout will be *horizontal*. |
+| aim.multiplier          | `float`  | `1`            | Scalar for aim, which is used to determine how a button is activated. |
+| stability.multiplier    | `float`  | `1`            | Scalar for stability, which is used to determine how a button is activated. |
+| fill.duration.multiplier| `float`  | `1`            | Scalar for fill duration, used to extend or shorten how long it takes to activate a button. |
+| ready.frameScale        | `float`  | `1`            | Scale of the button's frame while in the ready state.        |
+| activating.frameScale   | `float`  | `1`            | Scale of the button's frame while in the activating state.   |
+| activated.frameScale    | `float`  | `1`            | Scale of the button's frame while in the activated state.    |
+| ready.scale             | `vec3`   | `(1,1,1)`       | Scale of the button in the ready state.  |
+| activating.scale        | `vec3`   | `(1.1,1.1,1.1)` | Scale of the button in activating state. |
+| activated.scale         | `vec3`   | `(1,1,1)`       | Scale of the button in activated state.  |
+| ready.color             | `string` | `"Ready"`       | The [Virtual Color](#virtual-colors) of the button's ready state.                |
+| ready.captionColor      | `string` | `"Primary"`     | The [Virtual Color](#virtual-colors) of the button label in ready state.         |
+| ready.tween             | `string` | `"Responsive"`  | The [Tween Type](Tween#easingtype) of the button in ready state.                  |
+| activating.color        | `string` | `"Interacting"` | The [Virtual Color](#virtual-colors) of the button's activating state.           |
+| activating.captionColor | `string` | `"Interacting"` | The [Virtual Color](#virtual-colors) of the button label in activating state.    |
+| activating.tween        | `string` | `"Responsive"`  | The [Tween Type](Tween#easingtype) of the button in activating state.             |
+| activated.color         | `string` | `"Interacting"` | The [Virtual Color](#virtual-colors) of the button's activated state.            |
+| activated.captionColor  | `string` | `"Interacting"` | The [Virtual Color](#virtual-colors) of the button label in activated state.     |
+| activated.tween         | `string` | `"Responsive"`  | The [Tween Type](Tween#easingtype) of the button in activated state.              |
 
 ## `<Image>`
 
@@ -121,9 +157,9 @@ An element for displaying text.
 | name | type | default | description |
 |------|------|---------|-------------|
 | label | `string` | `null` | The text to display. |
-| font | `string` | `OpenSans-Regular` ||
+| font | `string` | `OpenSans-Regular` | A supported [Font](#fonts) |
 | fontSize | `int` | `80` | The size of the text. |
-| fontColor | `string` | `null` | The color of the text. |
+| fontColor | `string` | `White` | The [Virtual Color](#virtual-colors) color of the text. |
 | alignment |`string`|`"MidRight"`| The alignment of the text. See [Text Alignment Values](#text-alignment-values) below for all acceptable values. |
 | display |`string`|`"Overlay"`| Controls how the text is displayed in the environment. See [Text Display Value](#text-display-values) below for all acceptable values. |
 | width |`float`|`1500`| The maximum width of a line of text. |
@@ -179,7 +215,7 @@ Inherits all [`<Menu>`](#menu) properties.
 
 Renders a cursor for the user.
 
-## `<TextCrawl>` [Experimental]
+## `<TextCrawl>` [Preview]
 
 Presents text and then scrolls out of sight.
 
@@ -218,7 +254,7 @@ Inherits all `Button` properties and overrides `icon` for internal use.
 | ------ | ------ | -------- | ------------------------------- |
 | value  | `bool` | `false`  | True if the toggle is checked. |
 
-## `<Slider>`
+## `<Slider>` [Preview]
 
 Basic slider control.
 
@@ -242,17 +278,154 @@ Simple selection widget where child elements are displayed as options.
 | fontColor | `string` | `null` | The color of the text. |
 
 ## `<Grid>`
+
+Displays buttons in a grid format.
+
+### Additional Schema Attributes
+
+| name | type | default | description |
+|------|------|---------|-------------|
+| padding.vertical   | `float` | `0.325`  | Determines vertical space between elements in the grid.     |
+| padding.horizontal | `float` | `0.2`    | Determines horizontal spacing between elements in the grid. |
+
 ## `<Option>`
+
+Provides an abstraction for displaying a label that represents a different value.
+
+### Additional Schema Attributes
+
+| name          | type      | default | description |
+| ------------- | --------- | ------- | -------------------------------------- |
+| label         | `string`  |`null`   | The label used in parent elements.     |
+| value         | `string`  |`null`   | The value associated with this option. |
+
 ## `<OptionGroup>`
+
+An organization abstraction for displaying multiple `<Option>` elements.
+
+### Additional Schema Attributes
+
+| name          | type      | default | description |
+| ------------- | --------- | ------- | -------------------------------------- |
+| label         | `string`  |`null`   | The label used in parent elements.     |
+| value         | `string`  |`null`   | The value associated with this option. |
+
 ## `<Content>`
+
+An element that can hold an asset and scripts. Because `<Content>` elements are so common, the recommended way to create and interact with them is through the hierarchy.
+
+### Additional Schema Attributes
+
+| name     | type     | default | description |
+| -------- | -------- | ------- | --------------------------------------- |
+| assetSrc | `string` | `null`  | Id of an asset.                         |
+| scripts  | `string` | `"[]"`  | A serialized string containing a comma delimited list of script ids. |
+
 ## `<Light>`
+
+Represents a light source.
+
+### Additional Schema Attributes
+
+| name     | type     | default | description |
+| -------- | -------- | ------- | --------------------------------------- |
+| lightType     | `string` | `"Directional"`| The type of light: `"Point"`, `"Spot"`, or `"Directional"`.              |
+| intensity     | `float`  | `1`            | The intensity of the light.                                  |
+| shadows       | `string` | `"None"`       | The type of shadows this light should cast: `"None"`, `"Soft"`, or `"Hard"`. |
+| color         | `col4`   | `(1, 1, 1, 1)` | The color of the light.                                      |
+| point.range   | `float`  | `1`            | The range of a point light.                                  |
+| spot.range    | `float`  | `1`            | The range of a spot light.                                   |
+| spot.angle    | `float`  | `30`           | The angle of spot light.                                     |
+
 ## `<ScaleTransition>`
+
+Applies a scale transition when elements are added.
+
 ## `<Transition>`
+
+Applies a transition when based on another attribute when elements are added.
+
+### Additional Schema Attributes
+
+| name     | type     | default | description |
+| -------- | -------- | ------- | --------------------------------------- |
+| prop          | `string` | `"alpha"`      | The name of the prop to tween from start to end.             |
+| start         | `float`  | `0`            | The value at which to start the tween.                       |
+| end           | `float`  | `1`            | The value at which to end the tween.                         |
+| tween         | `string` | `"Pronounced"` | The [Tween Type](Tween#easingtype) to apply                  | 
+
 ## `<WorldAnchor>`
-## `<QrAnchor>`
+
+Places a spatial anchor within a scanned space.
+
+## `<QrAnchor>` [Preview]
+
+An element that receives and event when a QR code is recognized.
+
+### Additional Schema Attributes
+
+| name     | type     | default | description |
+| -------- | -------- | ------- | --------------------------------------- |
+| qr_value  | `string`| `null`  | The string encoded QR that should be recognized             |
+| exclusive | `bool`  | `false` | Whether all other QR anchors should be hidden with it is recognized |
+
 ## `<Trail>`
 
+Renders a trail.
+
+### Additional Schema Attributes
+
+| name                | type     | default     | description |
+| ------------------- | -------- | ----------- | --------------------------------------- |
+| tail.width          | `float`  | `0.1`       | The width of the mesh trail. |
+| tail.color          | `col4`   | `(1,1,1,1)` | The color of the mesh trail. |
+| tail.distThreshold  | `float`  | `0.1`       | Maximum distance before a new segment is created. |
+| tail.destroy        | `bool`   | `false`     | Whether the trail should automatically decay. |
+| tail.decayTime      | `float`  | `2.0`       | How long, in seconds, the decay transition lasts. |
+| tail.segments       | `int`    | `4`         | The number of vertices per segment. |
+
+
+# Virtual Colors
+
+Enklu Cloud supports a built in color palette. These color names can be used for any schema attribute that expects a virtual color.
+
+- `"Ready"`
+- `"Interacting"`
+- `"Disabled"`
+- `"Primary"`
+- `"Secondary"`
+- `"Tertiary"`
+- `"Positive"`
+- `"Negative"`
+- `"Highlight"`
+- `"Highlight1"`
+- `"Highlight2"`
+- `"Highlight3"`
+- `"Highlight4"`
+- `"Highlight5"`
+- `"Highlight6"`
+- `"Highlight7"`
+- `"LightText"`
+- `"DarkText"`
+- `"LightAccent"`
+- `"SecondaryLightAccent"`
+
+> Instead of a virtual color string you can provide a 3-, 6-, or 8-digit hex color. Rgb and rgba color formats are also accepted.
+> ```js
+> // hex strings
+> "#fff"
+> "#ffffff"
+> "#ffffffff"
+>
+> // css style colors
+> "rgb(1.0, 1.0, 1.0)"
+> "rgba(1.0, 1.0, 1.0, 1.0)"
+> ```
+
 # Icon Names
+
+A collection of standard icons is available for use in your experience. These icons can be assigned to the `icon`
+attribute. In addition, icons can be passed as url using the format `"icon://<icon-name>"`.
 
 - `"102-01"`
 - `"113-01"`
