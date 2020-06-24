@@ -34,4 +34,4 @@ You can use [**CTRL**] + [**Space**] to trigger autocomplete.
 
 Please note this autocomplete is *not* like IntelliSense. It does *not* attempt to fully analyze your code to give only intelligent suggestions or give you detailed parameter information. It will try to identify local keywords in your code as well as offer completion for common keywords and functions.
 
-For a complete JS API reference, see the <a style="color:#0000ee" href="/documentation/live/latest/docs/APIReferenceOverview"><u>API documentation</u></a>.
+For a complete JS API reference, see the <a style="color:#0000ee" href="/documentation/live/latest/docs/API/ScriptingLanguages"><u>API documentation</u></a>.

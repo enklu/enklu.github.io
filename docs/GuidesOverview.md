@@ -17,7 +17,7 @@ Guides are more like walkthroughs. A guide takes a larger concept and breaks it 
 
 ### API Reference
 
-The <a style="color:#0000ee" href="/documentation/live/latest/docs/APIReferenceOverview"><u>API Reference</u></a> is meant for specific pieces of our API. The API Reference docs are less similar to walkthroughs and focus more on details and showing code examples.
+The <a style="color:#0000ee" href="/documentation/live/latest/docs/API/ScriptingLanguages"><u>API Reference</u></a> is meant for specific pieces of our API. The API Reference docs are less similar to walkthroughs and focus more on details and showing code examples.
 
 ## Who Can Use Enklu's Guides?
 
