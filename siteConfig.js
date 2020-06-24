@@ -20,10 +20,10 @@ const users = [
   },
 ];
 
-baseUrl = '/live/latest/';
+baseUrl = '/';
 
 const siteConfig = {
-  outDir: 'live',
+  outDir: 'build',
 
   title: 'Enklu Documentation', // Title for your website.
   tagline: '',
@@ -35,8 +35,10 @@ const siteConfig = {
   docsUrl: 'docs',
 	disableTitleTagline: true,
   // Used for publishing and more
-  projectName: 'latest',
-  organizationName: 'Enklu',
+  projectName: 'enklu.github.io',
+  organizationName: 'enklu',
+  gitUser: 'Enklu',
+  useSsh: true,
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -53,7 +55,7 @@ const siteConfig = {
 	algolia: {
     apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
     indexName: 'enklu',
-    algoliaOptions: {} 
+    algoliaOptions: {}
   },
 
 	docsSideNavCollapsible: true,
@@ -88,20 +90,20 @@ const siteConfig = {
 
   fonts: {
     primaryFont: [
-      "Cairo", 
-			"Open Sans", 
-			"Helvetica", 
-			"Arial", 
+      "Cairo",
+			"Open Sans",
+			"Helvetica",
+			"Arial",
 			"sans-serif"
     ],
     secondaryFont: [
-      "Open Sans", 
-			"Helvetica", 
-			"Arial", 
+      "Open Sans",
+			"Helvetica",
+			"Arial",
 			"sans-serif"
     ]
   },
-  
+
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
   copyright: `Copyright © ${new Date().getFullYear()} Enklu, Inc.`,
