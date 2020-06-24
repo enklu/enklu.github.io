@@ -77,7 +77,8 @@ const siteConfig = {
     primaryColor: '#000000',
     secondaryColor: '#FF00FF',
 		enkluBrandColor: '#33DED2',
-		backgroundColor: '#FFFFFF',
+    linkColor: '#35947c',
+    backgroundColor: '#FFFFFF',
 		textColor: '#000000',
 		backgroundColorDark: '#232323',
 		textColorDark: '#FFFFFF'
