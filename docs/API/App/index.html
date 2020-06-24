@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>App · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In all scripts, there is a global &lt;code&gt;app&lt;/code&gt; object. This object is useful for manipulating application-wide settings, scenes inside an experience, creating new elements via scripts, and networking."/><meta name="docsearch:language" content="en"/><meta property="og:title" content="App · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/"/><meta property="og:description" content="In all scripts, there is a global &lt;code&gt;app&lt;/code&gt; object. This object is useful for manipulating application-wide settings, scenes inside an experience, creating new elements via scripts, and networking."/><meta property="og:image" content="https://enklu.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/API/ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">API Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/API/ScriptingLanguages">Scripting Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Vines">VineML</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Preprocessor">Preprocessor</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Animator">Animator</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Checksum">Checksum</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Gaze">Gaze (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Gestures">Gestures</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Hand">Hands</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Http">HTTP (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Kinect">Kinect</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Material">Material</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Messages">Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Multiplayer">Multiplayer</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Particles">Particles</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Physics">Physics</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Proximity">Proximity</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Random">Random</a></li><li class="navListItem"><a class="navItem" href="/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Score">Score (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Speech">Speech (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Storage">Storage (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Time">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Timers">Timers</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Touch">Touch</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Tween">Tween</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Voice">Voice</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">App</h1></header><article><div><span><p>In all scripts, there is a global <code>app</code> object. This object is useful for manipulating application-wide settings, scenes inside an experience, creating new elements via scripts, and networking.</p>
+<h2><a class="anchor" aria-hidden="true" id="scene-object"></a><a href="#scene-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scene Object</h2>
+<p>The <code>scenes</code> object has functions for manipulating multi-scene experiences.</p>
+<p>Retrieves ids of all scenes:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> all <span class="token operator">=</span> app<span class="token punctuation">.</span>scenes<span class="token punctuation">.</span>all<span class="token punctuation">;</span>
+</code></pre>
+<p>Returns root element of a specific scene:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> root <span class="token operator">=</span> app<span class="token punctuation">.</span>scenes<span class="token punctuation">.</span><span class="token function">root</span><span class="token punctuation">(</span><span class="token string">'myScene'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="elements-object"></a><a href="#elements-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Elements Object</h2>
+<p>The <code>elements</code> object can be used to query all scenes for an element, create elements, or destroy them.</p>
+<p>Retrieves element:</p>
+<pre><code class="hljs css language-js">button <span class="token operator">=</span> app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">byId</span><span class="token punctuation">(</span><span class="token string">'specific-id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<p>Creates element as a child of another:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> <span class="token string">'Button'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> b <span class="token operator">=</span> app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token string">'Button'</span><span class="token punctuation">,</span> <span class="token string">'specific-id'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<p>Creates elements from a vine, as a child of <code>a</code>:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> c <span class="token operator">=</span> app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">createFromVine</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token string">'&lt;Menu>&lt;Button />&lt;/Menu>'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<p>Destroys an element:</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
+<h2><a class="anchor" aria-hidden="true" id="sai-object"></a><a href="#sai-object" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SAI Object</h2>
+<p>The <code>sai</code> object can be used to control the <em>Spatial Artificial Intelligence</em> familiar. Use SAI to communicate essential information about a scene or direct a player's attention toward an important element.</p>
+<pre><code class="hljs css language-js"><span class="token comment">// Enables SAI</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="movement"></a><a href="#movement" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Movement</h3>
+<p>SAI can be focused on an element. An optional callback can be provided that will be invoked when SAI reaches the target element.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span>button<span class="token punctuation">,</span> onComplete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Unfocusing SAI removes the exising focus target and tells SAI to follow the player instead.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">unfocus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>The magnet tolerance of SAI when it is unfocused can be adjusted through its <code>magnetTolerance</code> schema value. SAI will readjust its position only when the gaze spot is beyond the specified threshold.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'magnetTolerance'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>SAI can teleport directly to an element or back to the player.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">teleport</span><span class="token punctuation">(</span>button<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">teleport</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="text"></a><a href="#text" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Text</h3>
+<p>SAI can display text.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">"Hello world."</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>An optional timeout can be provided that will clear the text when it expires. If the timeout is set, a callback can also be provided that will be invoked when the timeout expires.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">"Hello world."</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> timeoutMs<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> timeoutMs<span class="token punctuation">,</span> onComplete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>SAI can display a timed sequence of text. If a callback is provided, it will be invoked after the final text times out.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> dialog <span class="token operator">=</span> <span class="token punctuation">{</span>
+  script<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      text<span class="token operator">:</span> <span class="token string">"Hi, I'm SAI."</span><span class="token punctuation">,</span>
+      timeoutMs<span class="token operator">:</span> <span class="token number">2000</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      text<span class="token operator">:</span> <span class="token string">"It's great to meet you."</span><span class="token punctuation">,</span>
+      timeoutMs<span class="token operator">:</span> <span class="token number">3000</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>dialog<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>dialog<span class="token punctuation">,</span> onComplete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>SAI's text font size is controlled through its <code>fontSize</code> schema value.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'fontSize'</span><span class="token punctuation">,</span> <span class="token number">70</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="speech"></a><a href="#speech" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Speech</h3>
+<p>SAI speaks in plain text or SSML. An optional callback can be provided that will be invoked after speech synthesis playback completes.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span>message<span class="token punctuation">,</span> onComplete<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="animations"></a><a href="#animations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Animations</h3>
+<p>SAI has several built-in animations that can be used. Currently supported values are <code>Happy</code>, <code>Sad</code>, <code>Idle</code>, <code>Move</code>, <code>Pulse</code>, <code>Talk</code>, <code>Scan</code>, <code>Highlight</code>, and <code>Work</code>.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token string">'Happy'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sai-schema"></a><a href="#sai-schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SAI Schema</h3>
+<p>Many aspects of SAI can be adjusted through its schema. Here is a list of all of its schemas and a brief description:</p>
+<h4><a class="anchor" aria-hidden="true" id="booleans"></a><a href="#booleans" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Booleans</h4>
+<p><code>visible</code>: toggles visibility</p>
+<p><code>attract.enabled</code>: toggles whether SAI is attracted to camera</p>
+<p><code>logging</code>: toggles SAI state change logging</p>
+<h4><a class="anchor" aria-hidden="true" id="numbers"></a><a href="#numbers" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numbers</h4>
+<p><code>fontSize</code>: sets the font size for SAI's text display</p>
+<p><code>lineSpacing</code>: sets the line spacing for SAI's text display</p>
+<p><code>text.width</code>: sets the width for SAI's text display</p>
+<p><code>text.height</code>: sets height for SAI's text display</p>
+<p><code>text.transitionDuration</code>: sets the transition duration between SAI text changes</p>
+<p><code>attract.delay</code>: sets how long SAI waits before the user's focus</p>
+<p><code>attract.pause</code>: sets how long SAI waits before returning to the waypoint</p>
+<p><code>springConstant</code>: sets how fast SAI moves</p>
+<p><code>magnetTolerance</code>: sets the threshold distance that when surpassed, SAI repositions itself in front of the camera</p>
+<h4><a class="anchor" aria-hidden="true" id="strings"></a><a href="#strings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strings</h4>
+<p><code>font</code>: sets the font for SAI's text display</p>
+<p><code>text.horizontalOverflow</code>: sets the horizontal overflow(Overflow or Wrap) for SAI's text display</p>
+<p><code>text.verticalOverflow</code>: sets the vertical overflow(Overflow or Wrap) for SAI's text display</p>
+<p><code>text.alignment</code>: sets the alignment for SAI's text display</p>
+<h4><a class="anchor" aria-hidden="true" id="colors"></a><a href="#colors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Colors</h4>
+<p><code>text.shadow.color</code>: sets the shadow color for SAI's text display</p>
+<h4><a class="anchor" aria-hidden="true" id="vectors"></a><a href="#vectors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vectors</h4>
+<p><code>text.shadow.offset</code>: sets the shadow offset for SAI's text display</p>
+<h3><a class="anchor" aria-hidden="true" id="sai-buttons"></a><a href="#sai-buttons" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SAI Buttons</h3>
+<p>The prompt command can be used to let SAI prompt button options for the player to choose from. The first argument is a callback function, the second is the question, the following are chained questions.</p>
+<p><code>prompt(Function callback, String Question, String option1, String option2, ...)</code></p>
+<p>The callback has a payload that indicates which button has been selected.</p>
+<pre><code class="hljs css language-js">app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span>enabled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  app<span class="token punctuation">.</span>sai<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span>onClicked<span class="token punctuation">,</span> <span class="token string">"How are you?"</span><span class="token punctuation">,</span> <span class="token string">"Great"</span><span class="token punctuation">,</span> <span class="token string">"Just ok"</span><span class="token punctuation">,</span> <span class="token string">"Awful"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//call back function to handle button selection</span>
+<span class="token keyword">function</span> <span class="token function">onClicked</span><span class="token punctuation">(</span><span class="token parameter">buttonSelected</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">switch</span><span class="token punctuation">(</span>buttonSelected<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">case</span> <span class="token number">1</span><span class="token operator">:</span>
+      <span class="token comment">// first button selected</span>
+      sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Glad to hear that!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token keyword">case</span> <span class="token number">2</span><span class="token operator">:</span>
+      <span class="token comment">// second button selected</span>
+      sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Hope your day will brighten up!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">case</span> <span class="token number">3</span><span class="token operator">:</span>
+      <span class="token comment">// third button selected</span>
+      sai<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"Oh no what happened?"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">break</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="sai-buttons-schema"></a><a href="#sai-buttons-schema" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SAI Buttons Schema</h3>
+<p>SAI buttons' schema is separate from that of SAI. To make alterations, we use <code>app.sai.buttonSchema</code>. Here is a list of the button schema descriptions and a short description:</p>
+<h4><a class="anchor" aria-hidden="true" id="boolean"></a><a href="#boolean" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Boolean</h4>
+<p><code>visible</code>: toggles SAI buttons visibility</p>
+<h4><a class="anchor" aria-hidden="true" id="numbers-1"></a><a href="#numbers-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Numbers</h4>
+<p><code>fontSize</code>: sets the font size for the text on SAI's buttons</p>
+<p><code>lineSpacing</code>: sets the line spacing for the text on SAI's buttons</p>
+<p><code>text.height</code>: sets the height for the text on SAI's buttons</p>
+<p><code>text.width</code>: sets the width for the text on SAI's buttons</p>
+<h4><a class="anchor" aria-hidden="true" id="strings-1"></a><a href="#strings-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Strings</h4>
+<p><code>font</code>: sets the font for the text on SAI's buttons</p>
+<p><code>text.horizontalOverflow</code>: sets the horizontal overflow (Overflow or Wrap) for the text on SAI's buttons</p>
+<p><code>text.verticalOverflow</code>: sets the vertical overflow (Overflow or *Wrap) for the text on SAI's buttons</p>
+<h4><a class="anchor" aria-hidden="true" id="color"></a><a href="#color" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Color</h4>
+<p><code>text.shadow.color</code>: sets the shadow color for the text on SAI's buttons</p>
+<h4><a class="anchor" aria-hidden="true" id="vector"></a><a href="#vector" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Vector</h4>
+<p><code>text.shadow.offset</code>: sets the shadow offset for the text on SAI's buttons</p>
+<h4><a class="anchor" aria-hidden="true" id="notes-on-vertical-and-horizontal-overflow-properties"></a><a href="#notes-on-vertical-and-horizontal-overflow-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>*Notes on vertical and horizontal overflow properties</h4>
+<p>By default, the horizontal overflow is Wrap and the vertical overflow is Overflow. Setting text.width will only take effect when the horizontal overflow is set to Wrap
+Assuming that horizontal overflow is wrap:</p>
+<ul>
+<li><p>Setting vertical overflow to Overflow: the buttons' text height will not be affected by text.height and will grow according to text length and the number of lines. Their positions will also adjust and make sure to have the same padding from end-to-end.</p></li>
+<li><p>Setting verical overflow to Wrap: the buttons' text height will limited by text.height. The text box's size will be fixed and all buttons will be of same distance from each other.</p></li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/API/Animator"><span class="arrow-prev">← </span><span>Animator</span></a><a class="docs-next button" href="/docs/API/Audio"><span>Audio</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#scene-object">Scene Object</a></li><li><a href="#elements-object">Elements Object</a></li><li><a href="#sai-object">SAI Object</a><ul class="toc-headings"><li><a href="#movement">Movement</a></li><li><a href="#text">Text</a></li><li><a href="#speech">Speech</a></li><li><a href="#animations">Animations</a></li><li><a href="#sai-schema">SAI Schema</a></li><li><a href="#sai-buttons">SAI Buttons</a></li><li><a href="#sai-buttons-schema">SAI Buttons Schema</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/GuidesOverview">Guides</a><a href="/docs/API/ScriptingLanguages">API Reference</a><a href="/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
