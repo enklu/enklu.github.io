@@ -20,7 +20,7 @@ const users = [
   },
 ];
 
-baseUrl = '/documentation/live/latest/';
+baseUrl = '/live/latest/';
 
 const siteConfig = {
   outDir: 'live',
