@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "node node_modules/docusaurus/lib/start-server.js",
-    "build": "node node_modules/docusaurus/lib/build-files.js"
+    "build": "node node_modules/docusaurus/lib/build-files.js",
+    "publish": "node node_modules/docusaurus/lib/publish-gh-pages.js"
   },
   "devDependencies": {
     "docusaurus": "^1.14.4"
