@@ -42,6 +42,27 @@ function WebEditorBasics(props) {
 			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/KeyboardShortcuts`,
 			title: `[Keyboard Shortcuts](${siteConfig.baseUrl}docs/WebEditorBasics/KeyboardShortcuts)`
     },
+		{
+			content:`[How to use and position your assets in the canvas.](${siteConfig.baseUrl}docs/WebEditorBasics/PlacingAnAssetInTheScene)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/PlacingAnAssetInTheScene`,
+			title: `[Placing an Asset in the Scene](${siteConfig.baseUrl}docs/WebEditorBasics/PlacingAnAssetInTheScene)`
+    },
+		{
+			content:`[How to create and use directional, point, and spot lights.](${siteConfig.baseUrl}docs/WebEditorBasics/Lights)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/Lights`,
+			title: `[Lights](${siteConfig.baseUrl}docs/WebEditorBasics/Lights)`
+    },
+		{
+			content:`[How to adjust texture, lighting, and other quality settings.](${siteConfig.baseUrl}docs/WebEditorBasics/SceneSettings)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/SceneSettings`,
+			title: `[Scene Settings](${siteConfig.baseUrl}docs/WebEditorBasics/SceneSettings)`
+    },
   ];
 
 	const Title_Splash = () => (

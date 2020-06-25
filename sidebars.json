@@ -5,7 +5,10 @@
       "WebEditorBasics/WebEditorInterface",
       "WebEditorBasics/MinimumRequirements",
       "WebEditorBasics/ManagingYourExperiences",
-      "WebEditorBasics/KeyboardShortcuts"
+      "WebEditorBasics/KeyboardShortcuts",
+      "WebEditorBasics/PlacingAnAssetInTheScene",
+      "WebEditorBasics/Lights",
+      "WebEditorBasics/SceneSettings"
     ],
     "HoloLens": [
       "HoloLens/HoloLens2Basics&Setup",
@@ -22,11 +25,11 @@
     "Assets": [
       "Assets/ImportYourOwnAssets",
       "Assets/PublicAssets",
-      "Assets/PlacingAnAssetInTheScene",
-      "Assets/Lights",
+      "Assets/ExportingUnityPrefabs",
+      "Assets/AddingAnimationsFromUnity",
       "Assets/SceneComplexityRecommendations",
       "Assets/Audio",
-      "Assets/AddingAnimationsFromUnity"
+      "Assets/PBRPipeline"
     ],
     "Spaces" : [
       "Spaces/CreatingSpace",

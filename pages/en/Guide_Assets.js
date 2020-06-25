@@ -28,22 +28,22 @@ function Assets(props) {
 			imageLink: `${siteConfig.baseUrl}docs/Assets/PublicAssets`,
 			title: `[Public Assets](${siteConfig.baseUrl}docs/Assets/PublicAssets)`
     },
-    {
-			content:`[How to use and position your assets in the Canvas.](${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene)`,
+		{
+			content:`[How to use Unity Prefabs with Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/ExportingUnityPrefabs)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene`,
-			title: `[Placing an Asset in the Scene](${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene)`
+			imageLink: `${siteConfig.baseUrl}docs/Assets/ExportingUnityPrefabs`,
+			title: `[ExportingUnityPrefabs](${siteConfig.baseUrl}docs/Assets/ExportingUnityPrefabs)`
     },
 		{
-			content:`[How to create and use directional, point, and spot lights.](${siteConfig.baseUrl}docs/Assets/Lights)`,
+			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Assets/Lights`,
-			title: `[Lights](${siteConfig.baseUrl}docs/Assets/Lights)`
+			imageLink: `${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity`,
+			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`
     },
 		{
-			content:`["What are the recommended number of polygons for assets?"](${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations)`,
+			content:`["What is the recommended number of polygons for assets?"](${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations)`,
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations`,
@@ -57,11 +57,11 @@ function Assets(props) {
 			title: `[Audio](${siteConfig.baseUrl}docs/Assets/Audio)`
     },
 		{
-			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`,
+			content:`[How to use Physically Based Shading (PBR) in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/PBRPipeline)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity`,
-			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`
+			imageLink: `${siteConfig.baseUrl}docs/Assets/PBRPipeline`,
+			title: `[PBR Pipeline](${siteConfig.baseUrl}docs/Assets/PBRPipeline)`
     },
   ];
 
