@@ -22,8 +22,11 @@
     "Assets": [
       "Assets/ImportYourOwnAssets",
       "Assets/PublicAssets",
-      "Assets/AddingAnimationsFromUnity",
-      "Assets/SceneComplexityRecommendations"
+      "Assets/PlacingAnAssetInTheScene",
+      "Assets/Lights",
+      "Assets/SceneComplexityRecommendations",
+      "Assets/Audio",
+      "Assets/AddingAnimationsFromUnity"
     ],
     "Spaces" : [
       "Spaces/CreatingSpace",

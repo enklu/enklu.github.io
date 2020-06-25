@@ -29,11 +29,18 @@ function Assets(props) {
 			title: `[Public Assets](${siteConfig.baseUrl}docs/Assets/PublicAssets)`
     },
     {
-			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`,
+			content:`[How to use and position your assets in the Canvas.](${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene)`,
 			image: '',
 			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity`,
-			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`
+			imageLink: `${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene`,
+			title: `[Placing an Asset in the Scene](${siteConfig.baseUrl}docs/Assets/PlacingAnAssetInTheScene)`
+    },
+		{
+			content:`[How to create and use directional, point, and spot lights.](${siteConfig.baseUrl}docs/Assets/Lights)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/Assets/Lights`,
+			title: `[Lights](${siteConfig.baseUrl}docs/Assets/Lights)`
     },
 		{
 			content:`["What are the recommended number of polygons for assets?"](${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations)`,
@@ -41,6 +48,20 @@ function Assets(props) {
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations`,
 			title: `[Scene Complexity Recommendations](${siteConfig.baseUrl}docs/Assets/SceneComplexityRecommendations)`
+    },
+		{
+			content:`[How to add and use audio in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/Audio)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/Assets/Audio`,
+			title: `[Audio](${siteConfig.baseUrl}docs/Assets/Audio)`
+    },
+		{
+			content:`[Using assets with animations in Enklu Cloud.](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity`,
+			title: `[Adding Animations from Unity](${siteConfig.baseUrl}docs/Assets/AddingAnimationsFromUnity)`
     },
   ];
 
