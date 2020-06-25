@@ -5,7 +5,7 @@ title: Guides Overview
 
 Welcome to Enklu's guides!  It does not matter if you are an augmented reality industry veteran, or someone who is just starting to embark on their AR journey, our guides are here to help.
 
-<img src="/documentation/live/latest/img/undraw_steps.svg" style="max-height: 300px"/>
+<img src="/img/undraw_steps.svg" style="max-height: 300px"/>
 
 ## Guides vs API Reference
 
@@ -17,7 +17,7 @@ Guides are more like walkthroughs. A guide takes a larger concept and breaks it 
 
 ### API Reference
 
-The <a style="color:#0000ee" href="/documentation/live/latest/docs/API/ScriptingLanguages"><u>API Reference</u></a> is meant for specific pieces of our API. The API Reference docs are less similar to walkthroughs and focus more on details and showing code examples.
+The <a style="color:#0000ee" href="/docs/API/ScriptingLanguages"><u>API Reference</u></a> is meant for specific pieces of our API. The API Reference docs are less similar to walkthroughs and focus more on details and showing code examples.
 
 ## Who Can Use Enklu's Guides?
 
@@ -27,4 +27,4 @@ Enklu's guides cover a range of topics varying in complexity.  However, they are
 
 ## Help Us Help You
 
-We are always looking to improve and expand our documentation.  If you see a guide that is unclear or you don't see a guide that you need, <a style="color:#0000ee" href="/documentation/live/latest/contact"><u>let us know</u></a>.
+We are always looking to improve and expand our documentation.  If you see a guide that is unclear or you don't see a guide that you need, <a style="color:#0000ee" href="/contact"><u>let us know</u></a>.

@@ -7,7 +7,7 @@ title: Hololens 2 Basics & Setup
 
 ### Hardware
 
-![Diagram of HoloLens 2 hardware features.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_HL2Diagram.png)
+![Diagram of HoloLens 2 hardware features.](/img/product/HoloLens2Basics&Setup_HL2Diagram.png)
 
 1. **Adjustment wheel** - Turning the adjustment wheel counterclockwise extends the headband. Turning the adjustment wheel clockwise tightens the headband.
 2. **Power button** - Pressing the power button turns the device on. Pressing the power button while the device is on causes it to sleep. To turn the device off, press and hold the power button for 5 seconds or until all 5 LED indicators fade out.
@@ -29,7 +29,7 @@ When taking the device off, fully loosen the adjustment wheel. Attempting to rem
 
 #### Windows Start Menu
 
-![Hand pointing at wrist with Microsoft Logo hologram. A separate hand touching tips thumb and index finger together.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_Gestures.png)
+![Hand pointing at wrist with Microsoft Logo hologram. A separate hand touching tips thumb and index finger together.](/img/product/HoloLens2Basics&Setup_Gestures.png)
 
 There are 2 ways to open the Windows Start menu: a two-handed Start gesture and a one-handed Start gesture.
 
@@ -42,10 +42,10 @@ There are 2 ways to open the Windows Start menu: a two-handed Start gesture and 
 
 ### Installing the Enklu App
 
-![Menu of square tiles with Microsoft App Store tile selected.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_StartMenu.png)
+![Menu of square tiles with Microsoft App Store tile selected.](/img/product/HoloLens2Basics&Setup_StartMenu.png)
 
 From the Start menu, locate and open the Microsoft Store app. Within the Microsoft Store app, use the search bar at the top to search "Enklu".
-![Enklu App Store listing with Enklu logo and app description.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_MSStoreEnklu.png) 
+![Enklu App Store listing with Enklu logo and app description.](/img/product/HoloLens2Basics&Setup_MSStoreEnklu.png) 
 
 
 Navigate to the Enklu app page and select **Get**. You may be prompted to sign in with your Microsoft account, then the Enklu app will begin installing. Once the Enklu app has finished installing, you may launch the app from either the Microsoft Store, or from the Windows Start menu.
@@ -53,7 +53,7 @@ Navigate to the Enklu app page and select **Get**. You may be prompted to sign i
 ### Launching the Enklu App
 
 A white application window will open momentarily before the display switches to fullscreen mode. An Enklu "E" logo appears when the application is starting. If an existing instance of the Enklu app is already running, the app will load into where the user left off when the app was last in use.
-![Hologram garden scene with a campfire.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_DefaultScene.gif) 
+![Hologram garden scene with a campfire.](/img/product/HoloLens2Basics&Setup_DefaultScene.gif) 
 
 When launching the app for the first time\*, the default demo experience will be loaded. Feel free to walk around the environment learning about what different elements of an experience can be built. All buttons in Enklu can be activated with your gaze by moving the center of the device to match with the center of the button. If the scene content isn't positioned nicely in front of you or is otherwise inaccessible, say the phrase "*Debug*, *Origin*" (with a slight pause between the words) to re-position the experience at the center of your view.
 
@@ -61,17 +61,17 @@ When launching the app for the first time\*, the default demo experience will be
 > \*During the app's first launch or after updates, you may be prompted to accept permissions. Granting permission to use the device's microphone allows the app to process voice commands. Granting permission to use the device's camera allows the app to scan QR codes for login. These permissions can be updated at any time by going to **Settings** > **Privacy** > **Speech** and **Settings** > **Privacy** > **Camera**.
 
 After exploring the default scene, activate the **Login**\* button with your gaze to start the QR code scanner.
-![Hologram garden scene with a campfire.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_QR.png) 
+![Hologram garden scene with a campfire.](/img/product/HoloLens2Basics&Setup_QR.png) 
 
 > \*The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
 
 In a web browser, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
 On the top menu bar in the Web Editor, click the **Tools** drop down menu, then click **HoloLens Login**.
-![Open Tools drop down menu to display HoloLens Login button.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_HoloLensLoginEditor.gif) 
+![Open Tools drop down menu to display HoloLens Login button.](/img/product/HoloLens2Basics&Setup_HoloLensLoginEditor.gif) 
 
 This will generate a QR code that the HoloLens can scan\* to log the device into your account and load into the currently loaded experience in the web editor.
-![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/documentation/live/latest/img/product/HoloLens2Basics&Setup_HoloLensLoginQR.png) 
+![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/HoloLens2Basics&Setup_HoloLensLoginQR.png) 
 
 
 > \*If the device is unable to scan the QR code, first check that the device is connected to WiFi and has an internet connection. Next, the exterior of the device will illuminate a white LED when the camera is scanning for QR codes. If there is no illuminated LED, the camera permission could be denied. Check the camera's permission settings in **Settings** > **Privacy** > **Camera**. Restart the app and try scanning again.
@@ -79,7 +79,7 @@ This will generate a QR code that the HoloLens can scan\* to log the device into
 ### Navigating Experiences
 
 Within an experience, using the voice command "*Menu*" will display the experience menu. This menu lets you exit the current experience, as well as enter **Edit Mode** on device. Activating the red back arrow will leave the current experience and let you browse the other experiences available to the logged in user.
-![Floating hologram menu captured from a HoloLens.](/documentation/live/latest/img/product/HoloLens2Basic&Setup_MenuPopup.gif) 
+![Floating hologram menu captured from a HoloLens.](/img/product/HoloLens2Basic&Setup_MenuPopup.gif) 
 
 Activating the red back arrow once more will log the current user out and prompt a QR scan to log in a new user.
-![Floating hologram menu triggering QR scan captured from a HoloLens.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_MenuLogout.gif) 
+![Floating hologram menu triggering QR scan captured from a HoloLens.](/img/product/HoloLens2Basics&Setup_MenuLogout.gif) 

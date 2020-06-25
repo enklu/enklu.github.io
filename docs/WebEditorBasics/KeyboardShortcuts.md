@@ -13,13 +13,13 @@ When using the Web Editor, there are several keyboard shortcuts avialable to per
 ## Element Transforms
 
 [**Q**] \(while an element is selected) - Enables the Position gizmo
-<img src="/documentation/live/latest/img/product/KeyboardShortcuts_PositionGizmo.png" alt="3 colored arrows representing X, Y, and Z axis connected at a center point" style="max-height: 120px; margin-left: 0"/>
+<img src="/img/product/KeyboardShortcuts_PositionGizmo.png" alt="3 colored arrows representing X, Y, and Z axis connected at a center point" style="max-height: 120px; margin-left: 0"/>
 
 [**W**] \(while an element is selected) - Enables the Rotation gizmo
-<img src="/documentation/live/latest/img/product/KeyboardShortcuts_RotationGizmo.png" alt="3 colored circles representing X, Y, and Z axis around center point created a sphere" style="max-height: 120px; margin-left: 0"/>
+<img src="/img/product/KeyboardShortcuts_RotationGizmo.png" alt="3 colored circles representing X, Y, and Z axis around center point created a sphere" style="max-height: 120px; margin-left: 0"/>
 
 [**E**] \(while an element is selected) - Enables the Scale gizmo
-<img src="/documentation/live/latest/img/product/KeyboardShortcuts_ScaleGizmo.png" alt="3 colored cubes representing X, Y, and Z axis connected by lines to a center grey cube" style="max-height: 120px; margin-left: 0"/>
+<img src="/img/product/KeyboardShortcuts_ScaleGizmo.png" alt="3 colored cubes representing X, Y, and Z axis connected by lines to a center grey cube" style="max-height: 120px; margin-left: 0"/>
 
 [**R**] \(while an element is selected) - Toggles gizmos between world and local space
 

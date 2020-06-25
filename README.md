@@ -84,7 +84,7 @@ The final path to the image you should use in the markdown file will end up bein
 
 > For example:\
 The `WebEditorInterface_Hierarchy.png` saved in `documentation/static/img/product` should be referenced in a markdown file as
-`![List of items nested under items](/documentation/live/latest/img/
+`![List of items nested under items](/img/
 product/WebEditorInterface_Hierarchy.png)`
 
 ## Doc Sidebars

@@ -23,25 +23,25 @@ function Contact(props) {
     {
       content: `Let's talk.  Send us an email and we will get back to you as soon as we can. We are here to help. <br> [**contact@enklu.com**](mailto:contact@enklu.com)
 				<div style='display: flex; justify-content: space-evenly'>
-					<a href="mailto:contact@enklu.com" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/icon_mail.svg" style='height:50px'></a>
+					<a href="mailto:contact@enklu.com" target="_blank" style="margin: 0 8px;"><img src="/img/icon_mail.svg" style='height:50px'></a>
 				</div>`,
       title: 'Send Us an Email',
     },
     {
       content: `Engage with the Enklu Team and other users in our [**Community Slack**](https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw).  Or take a deeper dive into our open-source player and [**contribute to our Github**](https://github.com/enklu/enkluplayer/blob/master/CONTRIBUTING.md).
 				<div style='display: flex; justify-content: space-evenly;'>
-					<a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_slack.svg" style='height:50px'></a>
-					<a href="https://github.com/enklu/enkluplayer/blob/master/CONTRIBUTING.md" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_github.svg" style='height:50px'></a>
+					<a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank" style="margin: 0 8px;"><img src="/img/social_slack.svg" style='height:50px'></a>
+					<a href="https://github.com/enklu/enkluplayer/blob/master/CONTRIBUTING.md" target="_blank" style="margin: 0 8px;"><img src="/img/social_github.svg" style='height:50px'></a>
 				</div>`,
       title: 'Join Our Community',
     },
     {
       content: `Follow Enklu on social media to stay up to date with our current projects and Enklu Cloud's latest features.
 				<div style='display: flex; justify-content: space-evenly'>
-					<a href="https://www.facebook.com/Enklu" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_facebook.svg" style='height:50px'></a>
-					<a href="https://www.instagram.com/experience_enklu/" target="_blank"  style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_instagram.svg" style='height:50px'></a>
-					<a href="https://www.linkedin.com/company/enklu" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_linkedin.svg" style='height:50px'></a>
-					<a href="https://twitter.com/experienceenklu" target="_blank" style="margin: 0 8px;"><img src="/documentation/live/latest/img/social_twitter.svg" style='height:50px'></a>
+					<a href="https://www.facebook.com/Enklu" target="_blank" style="margin: 0 8px;"><img src="/img/social_facebook.svg" style='height:50px'></a>
+					<a href="https://www.instagram.com/experience_enklu/" target="_blank"  style="margin: 0 8px;"><img src="/img/social_instagram.svg" style='height:50px'></a>
+					<a href="https://www.linkedin.com/company/enklu" target="_blank" style="margin: 0 8px;"><img src="/img/social_linkedin.svg" style='height:50px'></a>
+					<a href="https://twitter.com/experienceenklu" target="_blank" style="margin: 0 8px;"><img src="/img/social_twitter.svg" style='height:50px'></a>
 				</div>`,
       title: 'Stay Connected',
     },

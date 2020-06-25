@@ -11,8 +11,8 @@ The asset library is located below the canvas.  On the left side of the asset li
 
 Our team is always adding to the available public assets, so keep a lookout for more!
 
-![Grid view of assets cycling through different categories.](/documentation/live/latest/img/product/PublicAssets_AssetLibrary.gif)
+![Grid view of assets cycling through different categories.](/img/product/PublicAssets_AssetLibrary.gif)
 
 ## Help Us Help You
 
-If you have suggestions of assets we should add to our public asset library or if you encounter an issue with a public asset, <a style="color:#0000ee" href="/documentation/live/latest/contact"><u>let us know</u></a>.
+If you have suggestions of assets we should add to our public asset library or if you encounter an issue with a public asset, <a style="color:#0000ee" href="/contact"><u>let us know</u></a>.
