@@ -3,13 +3,13 @@ id: Chapter1
 title: Chapter 1: Intro to Enklu Cloud
 ---
 
-This is the first guide in our Chapters Series. If this is your first time using Enklu Cloud, check out our <a style="color:#0000ee" href="/docs/WebEditorBasics/WebEditorInterface" target="\_blank"><u>Web Editor Interface</u></a> guide to become familiar with the pieces of the Web Editor. It is recommended to complete this **Chapter 1** guide prior to embarking on Chapter 2. 
+This is the first guide in our Chapters Series. If this is your first time using Enklu Cloud, check out our [Web Editor Interface](/docs/WebEditorBasics/WebEditorInterface) guide to become familiar with the pieces of the Web Editor. It is recommended to complete this **Chapter 1** guide prior to embarking on [Chapter 2](/docs/ChaptersSeries/Chapter2). 
 
 In this guide, you will learn how to create, select, and position elements in Enklu Cloud—including how to navigate and manage the element hierarchy.
 
 
 ## 1) Locate and Launch Chapter 1
-To get started, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
+To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
 
 ![Enter email and password to login to Enklu Cloud.](/img/product/Chapter1_Login.gif)
 

@@ -3,13 +3,13 @@ id: Chapter3
 title: Chapter 3: Adding Lights & Effects
 ---
 
-This is the third guide in our Chapters Series. It is recommended to complete the <a style="color:#0000ee" href="/docs/ChaptersSeries/Chapter2" target="\_blank"><u>Chapter 2</u></a> guide prior to embarking on this **Chapter 3** guide.
+This is the third guide in our Chapters Series. It is recommended to complete the [Chapter 2](/docs/ChaptersSeries/Chapter2) guide prior to embarking on this **Chapter 3** guide.
 
 Chapter 2 taught how to search within the hierarchy, fine-tune transformations, and toggle element visibility. In this guide, you will practice using these skills to implement lighting and effects into a scene.
 
 ## 1) Locate and Launch Chapter 3
 
-To get started, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 3** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 3** in your experience menu, contact Enklu support to be granted access.)
+To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 3** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 3** in your experience menu, contact Enklu support to be granted access.)
 
 ![List of experiences with name, description, and load button.](/img/product/Chapter3_MyExperiences.png)
 
@@ -29,7 +29,7 @@ In addition to zooming and panning, you can also rotate the camera by pressing a
 
 ## 3) Getting Started
 
-First, expand the nodes in the hierarchy on the left by clicking the triangles. There are 5 main hierarchy elements you will use: *Lighting*, *Vignette 1*, *Vignette 2*, *Interaction Point*, and *Effect Bank*. Expand the **Lighting** element to see the 3 light elements nested within. All 3 of these lights are *Directional Lights*. To learn more about Directional Lights, check out our Lights doc. You will see *Key Light*, *Fill Light*, and *Back Light* elements. Each of these light elements has its visibility toggled off. You can turn these lights on by clicking on their visibility icons (eye icon), or by opening their element menu and selecting **Show**.
+First, expand the nodes in the hierarchy on the left by clicking the triangles. There are 5 main hierarchy elements you will use: *Lighting*, *Vignette 1*, *Vignette 2*, *Interaction Point*, and *Effect Bank*. Expand the **Lighting** element to see the 3 light elements nested within. All 3 of these lights are *Directional Lights*. To learn more about Directional Lights, check out our [Lights](/docs/Assets/Lights) doc. You will see *Key Light*, *Fill Light*, and *Back Light* elements. Each of these light elements has its visibility toggled off. You can turn these lights on by clicking on their visibility icons (eye icon), or by opening their element menu and selecting **Show**.
 
 ![Clicking on visibility icons to show and hide elements in canvas.](/img/product/Chapter3_HierarchyVisibility.gif)
 
@@ -55,7 +55,7 @@ Expand the *Vignette 1* and *Vignette 2* elements. Nested inside each you will s
 
 ![Choosing effect from asset library.](/img/product/Chapter3_AssetEffect.gif)
 
-Once you've chosen an effect, select the *Light* element that was nested with your *EFFECT* element. This *Light* element is a *Point Light*. To learn more about *Point Lights*, check out our Lights doc. This Light element will be used to make your chosen effect look as though it is emitting light. Change the color of the *Light* element to match your effect. Then choose an intensity that makes sense for your effect. Since this is a point light, it also has a **Range** you can adjust. Adjust the range so the light extends to your liking.
+Once you've chosen an effect, select the *Light* element that was nested with your *EFFECT* element. This *Light* element is a *Point Light*. To learn more about *Point Lights*, check out our [Lights](/docs/Assets/Lights) doc. This Light element will be used to make your chosen effect look as though it is emitting light. Change the color of the *Light* element to match your effect. Then choose an intensity that makes sense for your effect. Since this is a point light, it also has a **Range** you can adjust. Adjust the range so the light extends to your liking.
 
 ![Adding a green point light.](/img/product/Chapter3_LightEffect.gif)
 

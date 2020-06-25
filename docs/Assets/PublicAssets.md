@@ -15,4 +15,4 @@ Our team is always adding to the available public assets, so keep a lookout for 
 
 ## Help Us Help You
 
-If you have suggestions of assets we should add to our public asset library or if you encounter an issue with a public asset, <a style="color:#0000ee" href="/contact"><u>let us know</u></a>.
+If you have suggestions of assets we should add to our public asset library or if you encounter an issue with a public asset, [let us know](/contact).

@@ -5,7 +5,7 @@ title: Voice Commands
 
 The Enklu app has several voice commands\* available to display additional menus and in-app information. These voice commands function the same for both HoloLens (1st Gen) and HoloLens 2.  
 
-> \*If you are looking for voice commands for the HoloLens, not related to the Enklu app, see Microsoft's <a style="color:#0000ee" href="https://docs.microsoft.com/en-us/hololens/hololens-cortana" target="\_blank"><u>Use your voice to operate HoloLens</u></a> documentation. 
+> \*If you are looking for voice commands for the HoloLens, not related to the Enklu app, see Microsoft's <a style="color:#35947c" href="https://docs.microsoft.com/en-us/hololens/hololens-cortana" target="\_blank"><u>Use your voice to operate HoloLens</u></a> documentation. 
 
 
 ## App Permissions

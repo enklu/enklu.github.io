@@ -54,7 +54,7 @@ Our scripting interface offers 2 types of scripts: Behavior scripts and Vine scr
 
 
 ## Would our team be able to build off of the Enklu player?
-Of course! We believe that open source is an opportunity to build better software together. Check out our GitHub <span><a style="color:#0000ee" href="https://github.com/enklu" target="_blank"><u>here</u></a></span>.
+Of course! We believe that open source is an opportunity to build better software together. Check out our GitHub <span><a style="color:#35947c" href="https://github.com/enklu" target="_blank"><u>here</u></a></span>.
 
 
 ## Can users collaborate remotely?
@@ -66,4 +66,4 @@ Yes, animated 3D models are supported.
 
 
 ## What does Enklu use for multiplayer optimization?
-<p>Enklu uses an in-house multiplayer server built on top of&nbsp;<span><a style="color:#0000ee" href="https://getakka.net/" target="_blank"><u>Akka.NET</u></a></span>.  We transfer data in byte buffers and use hashes where needed to slim down our I/O payloads as much as possible.  When clients join/reconnect, they receive a delta of everything that has occurred from the initial scene state, so getting initial game state is also very fast.</p>
+<p>Enklu uses an in-house multiplayer server built on top of&nbsp;<span><a style="color:#35947c" href="https://getakka.net/" target="_blank"><u>Akka.NET</u></a></span>.  We transfer data in byte buffers and use hashes where needed to slim down our I/O payloads as much as possible.  When clients join/reconnect, they receive a delta of everything that has occurred from the initial scene state, so getting initial game state is also very fast.</p>

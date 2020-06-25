@@ -3,7 +3,7 @@ id: BehaviorScriptBasics
 title: Behavior Script Basics
 ---
 
-Enklu Cloud's scripting interface offers 2 types of scripts: **Behavior** scripts and **Vine** scripts. This article will focus on Behavior scripts. For more information on Vine scripts, please check out our <a style="color:#0000ee" href="/docs/Scripting/VineScriptBasics"><u>Vine Script Basics</u></a> article.
+Enklu Cloud's scripting interface offers 2 types of scripts: **Behavior** scripts and **Vine** scripts. This article will focus on Behavior scripts. For more information on Vine scripts, please check out our [Vine Script Basics](/docs/Scripting/VineScriptBasics) article.
 
 Behavior scripts utilize JavaScript to make things happen. They can manipulate the object graph, work with central systems, as well as send and receive messages between other scripts.
 

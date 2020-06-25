@@ -3,13 +3,13 @@ id: Chapter2
 title: Chapter 2: Thinking in 3D
 ---
 
-This is the second guide in our Chapters Series. It is recommended to complete the <a style="color:#0000ee" href="/docs/ChaptersSeries/Chapter1" target="\_blank"><u>Chapter 1</u></a> guide prior to embarking on this **Chapter 2** guide.
+This is the second guide in our Chapters Series. It is recommended to complete the [Chapter 1](/docs/ChaptersSeries/Chapter1) guide prior to embarking on this **Chapter 2** guide.
 
 Chapter 1 taught how to use basic transform tools such as position, rotation, and scale. In this guide, you will practice using these transform tools to place assets in target locations and complete the vignettes. You will use assets from the provided asset bank to achieve this goal.
 
 ## 1) Locate and Launch Chapter 2
 
-To get started, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
+To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
 
 ![Enter email and password to login to Enklu Cloud.](/img/product/Chapter2_Login.gif)
 

@@ -3,13 +3,13 @@ id: Chapter4
 title: Chapter 4: Adding Interactions
 ---
 
-This is the fourth guide in our Chapters Series. It is recommended to complete the <a style="color:#0000ee" href="/docs/ChaptersSeries/Chapter3" target="\_blank"><u>Chapter 3</u></a> guide prior to embarking on this **Chapter 4** guide.
+This is the fourth guide in our Chapters Series. It is recommended to complete the [Chapter 3](/docs/ChaptersSeries/Chapter3) guide prior to embarking on this **Chapter 4** guide.
 
 Chapter 3 taught how to lock and unlock hierarchy elements, change light properties, add effects to a scene, and adjust global settings. In this guide, you will practice using these skills to implement interactions into a scene.
 
 ## 1) Locate and Launch Chapter 4
 
-To get started, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 4** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 4** in your experience menu, contact Enklu support to be granted access.)
+To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 4** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 4** in your experience menu, contact Enklu support to be granted access.)
 
 ![List of experiences with name, description, and load button.](/img/product/Chapter4_MyExperiences.png)
 

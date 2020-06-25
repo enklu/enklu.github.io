@@ -3,7 +3,7 @@ id: IntroductionToScripting
 title: Introduction to Scripting
 ---
 
-Scripting opens up limitless possibilities in Enklu Cloud. Our scripting interface offers 2 types of scripts: **Behavior** scripts and **Vine** scripts. <a style="color:#0000ee" href="/docs/Scripting/BehaviorScriptBasics"><u>Behavior scripts</u></a> utilize JavaScript. <a style="color:#0000ee" href="/docs/Scripting/VineScriptBasics"><u>Vine script</u></a> utilize VineML. VineML is a markup language which strongly correlates to HTML with added features specifically for creating UI elements in AR.
+Scripting opens up limitless possibilities in Enklu Cloud. Our scripting interface offers 2 types of scripts: **Behavior** scripts and **Vine** scripts. [Behavior scripts](/docs/Scripting/BehaviorScriptBasics) utilize JavaScript. [Vine script](/docs/Scripting/VineScriptBasics) utilize VineML. VineML is a markup language which strongly correlates to HTML with added features specifically for creating UI elements in AR.
 
 
 ## Creating a Script
