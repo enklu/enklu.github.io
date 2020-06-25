@@ -8,7 +8,6 @@ This is the first guide in our Chapters Series. If this is your first time using
 In this guide, you will learn how to create, select, and position elements in Enklu Cloud—including how to navigate and manage the element hierarchy.
 
 
-
 ## 1) Locate and Launch Chapter 1
 To get started, navigate to <a style="color:#0000ee" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
 

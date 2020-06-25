@@ -60,7 +60,7 @@ Navigate to the Enklu app page and select **Get**. You may be prompted to sign i
 
 ### Launching the Enklu App
 
-A white application window will open momentarily before the display switches to fullscreen mode. An Enklu "E" logo appears when the application is starting. If an existing instance of the Enklu app is already running, the app will load into where the user left off when the app was last in use.
+A white application window will open momentarily before the display switches to fullscreen mode. An Enklu "E" logo appears when the application is starting. If an existing instance of the Enklu app is already running, the app will load back into where the user left off when the app was last in use.
 ![Hologram garden scene with a campfire.](/documentation/live/latest/img/product/HoloLens2Basics&Setup_DefaultScene.gif) 
 
 When launching the app for the first time\*, the default demo experience will be loaded. Feel free to walk around the environment learning about what different elements of an experience can be built. All buttons in Enklu can be activated with your gaze by moving the center of the device to match with the center of the button. If the scene content isn't positioned nicely in front of you or is otherwise inaccessible, say the phrase "*Debug*, *Origin*" (with a slight pause between the words) to re-position the experience at the center of your view.

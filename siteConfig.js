@@ -37,8 +37,6 @@ const siteConfig = {
   // Used for publishing and more
   projectName: 'enklu.github.io',
   organizationName: 'enklu',
-  gitUser: 'Enklu',
-  useSsh: true,
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
