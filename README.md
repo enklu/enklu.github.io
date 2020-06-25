@@ -1,16 +1,22 @@
 # Enklu Documentation
 
-[Enklu's documentation website](https://enklu.github.io/documentation) was created using [Docusaurus](https://docusaurus.io/) and is hosted on [GitHub Pages](https://pages.github.com/).  This website contains guides and API Reference for the Enklu Cloud [Web Editor](https://cloud.enklu.com/) and [HoloLens app](https://www.microsoft.com/en-us/p/enklu/9pkhwgcx8f3n). 
+[Enklu's documentation website](https://enklu.github.io) was created using [Docusaurus](https://docusaurus.io/) and is hosted on [GitHub Pages](https://pages.github.com/).  This website contains guides and API Reference for the Enklu Cloud [Web Editor](https://cloud.enklu.com/) and [HoloLens app](https://www.microsoft.com/en-us/p/enklu/9pkhwgcx8f3n). 
 
 ## Getting Started
 
-To make changes to the documentation website, you will first need to clone the repo `https://github.com/enklu/documentation`
+To make changes to the documentation website, you will first need to clone the repo `https://github.com/enklu/enklu.github.io/tree/release`
+
+### Branches
+
+The `release` branch contains all the markdown, JSON, React, etc files that are used to build the `build` folder.  But the `release` branch does not contain the `build` folder.
+
+The `master` branch is what actually hosts GitHub pages.  The live website is built from the contents of the `build` folder.
 
 ### Docusaurus Scripts
 
-In the main `/documentation` directory, you can use the command  `npm start` to run the website locally.
+In the main directory, you can use the command `npm start` to run the website locally.
 
-In the main `/documentation` directory, you can use the command  `npm run build`  to build the `live` folder.  You will need to do this before committing any changes.  But you do not need to build to see changes locally when using the `npm start` command.
+In the main directory, you can use the command `npm run publish` to build the `build` folder and push the `build` folder to master.  You will need to do this to publish changes to the live website.  But you do not need to build to see changes locally when using the `npm start` command.
 
 ## Document Types
 
@@ -24,7 +30,7 @@ All document files should end with `.md` to save them as markdown files.  The fi
 A guide doc titled: `Hololens (1st gen) Basics & Setup` \
 Should have the file name: `HoloLens1stGenBasics&Setup.md`
 
-All markdown files should be saved within `documentation/docs` which is the highest level docs folder, not the one in live/latest (it’s the one with all the markdown files in it).  
+All markdown files should be saved within `docs` which is the highest level docs folder, not the one in live/latest (it’s the one with all the markdown files in it).  
 
 All guide docs should be saved in a folder based on what category the doc falls in: 
 
@@ -35,9 +41,9 @@ All guide docs should be saved in a folder based on what category the doc falls 
 - Spaces
 - Scripting
 
-> For example a guide doc related to `Web Editor Basics` should be saved in `documentation/docs/WebEditorBasics`.
+> For example a guide doc related to `Web Editor Basics` should be saved in `docs/WebEditorBasics`.
 
-All API Reference docs should be saved in `documentation/docs/API`. 
+All API Reference docs should be saved in `docs/API`. 
 
 ## Document Writing
 
@@ -67,10 +73,10 @@ When naming an image file, use the title of the document where the image is bein
 > For example:\
 A png image of the hierarchy being used in the Web Editor Interface guide should be named: `WebEditorInterface_Hierarchy.png`
 
-All images should be located within `documentation/static/img`.  There is a `logo` folder and a `product` folder within the `img` folder.  The `logo` folder should contain any and all Enklu logo images used.  Not images that have the logo in it, specifically standalone logo images.  The `product` folder should contain any images or diagrams related to the web editor or in lens captures.  Other images such as generic icons or pictures that do not relate specifically to our product can be saved inside `img`, but outside the `logo` and `product` folders.
+All images should be located within `static/img`.  There is a `logo` folder and a `product` folder within the `img` folder.  The `logo` folder should contain any and all Enklu logo images used.  Not images that have the logo in it, specifically standalone logo images.  The `product` folder should contain any images or diagrams related to the web editor or in lens captures.  Other images such as generic icons or pictures that do not relate specifically to our product can be saved inside `img`, but outside the `logo` and `product` folders.
 
 > For example:\
-The `WebEditorInterface_Hierarchy.png` should be saved in `documentation/static/img/product`.
+The `WebEditorInterface_Hierarchy.png` should be saved in `static/img/product`.
 
 To include images within a markdown document, you’ll need to use this markdown syntax:
 
@@ -80,12 +86,11 @@ To include images within a markdown document, you’ll need to use this markdown
 
 > **"Do I have to include an image alt text?"**  Yes, unless it is unnecessary. Alternative text for images is an important part of improving website accessibility.  Please follow these [guidelines for image alt text](https://webaim.org/techniques/alttext/).
 
-The final path to the image you should use in the markdown file will end up being `documentation/live/latest/img` instead of using the static folder path where the image is originally saved.
+The final path to the image you should use in the markdown file will end up being `img` instead of using the static folder path where the image is originally saved.
 
 > For example:\
-The `WebEditorInterface_Hierarchy.png` saved in `documentation/static/img/product` should be referenced in a markdown file as
-`![List of items nested under items](/img/
-product/WebEditorInterface_Hierarchy.png)`
+The `WebEditorInterface_Hierarchy.png` saved in `static/img/product` should be referenced in a markdown file as
+`![List of items nested under items](img/product/WebEditorInterface_Hierarchy.png)`
 
 ## Doc Sidebars
 
@@ -93,12 +98,12 @@ The left sidebar contains a list of document links for quick access.  The right 
 
 ### Adding Documents to a Sidebar
 
-In the main `/documentation` folder there is a `sidebars.json` file which controls the documents in the left sidebar.  Guides and API Reference docs have separate sidebars: `"Guides"` and `"API"`. Within the `"Guides"` sidebar, there are sections for each category: `"Web Editor Basics"`, `"HoloLens"`, etc.
+In the main directory there is a `sidebars.json` file which controls the documents in the left sidebar.  Guides and API Reference docs have separate sidebars: `"Guides"` and `"API"`. Within the `"Guides"` sidebar, there are sections for each category: `"Web Editor Basics"`, `"HoloLens"`, etc.
 
-To add a document to a sidebar, you need to add the `id` used in the document's header prepended by any folder within the `documentation/docs` where the document is located.
+To add a document to a sidebar, you need to add the `id` used in the document's header prepended by any folder within the `docs` where the document is located.
 
 > For example: \
-A doc with the id `KeyboardShortcuts` is located in `documentation/docs/WebEditorBasics`.  To add this doc to the Web Editor Basics sidebar you would add `"WebEditorBasics/KeyboardShortcuts"`.  The resulting `sidebars.json` file would look something like this:
+A doc with the id `KeyboardShortcuts` is located in `docs/WebEditorBasics`.  To add this doc to the Web Editor Basics sidebar you would add `"WebEditorBasics/KeyboardShortcuts"`.  The resulting `sidebars.json` file would look something like this:
 >```
 >{
 >  "Guides": {
