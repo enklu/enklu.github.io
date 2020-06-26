@@ -3,7 +3,7 @@ id: Lights
 title: Lights
 ---
 
-![Day and night cycle of a tree with a campfire.](/img/product/Lights_LightCycle.png)
+![Day and night cycle of a tree with a campfire.](/img/product/Lights_LightCycle.gif)
 
 There are 3 different types of light elements you can create in Enklu Cloud: **Directional** lights, **Point** lights, and **Spot** lights.
 
