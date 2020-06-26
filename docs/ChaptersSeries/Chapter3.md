@@ -29,7 +29,7 @@ In addition to zooming and panning, you can also rotate the camera by pressing a
 
 ## 3) Getting Started
 
-First, expand the nodes in the hierarchy on the left by clicking the triangles. There are 5 main hierarchy elements you will use: *Lighting*, *Vignette 1*, *Vignette 2*, *Interaction Point*, and *Effect Bank*. Expand the **Lighting** element to see the 3 light elements nested within. All 3 of these lights are *Directional Lights*. To learn more about Directional Lights, check out our [Lights](/docs/Assets/Lights) doc. You will see *Key Light*, *Fill Light*, and *Back Light* elements. Each of these light elements has its visibility toggled off. You can turn these lights on by clicking on their visibility icons (eye icon), or by opening their element menu and selecting **Show**.
+First, expand the nodes in the hierarchy on the left by clicking the triangles. There are 5 main hierarchy elements you will use: *Lighting*, *Vignette 1*, *Vignette 2*, *Interaction Point*, and *Effect Bank*. Expand the **Lighting** element to see the 3 light elements nested within. All 3 of these lights are *Directional Lights*. To learn more about Directional Lights, check out our [Lights](/docs/WebEditorBasics/Lights#directional-lights) doc. You will see *Key Light*, *Fill Light*, and *Back Light* elements. Each of these light elements has its visibility toggled off. You can turn these lights on by clicking on their visibility icons (eye icon), or by opening their element menu and selecting **Show**.
 
 ![Clicking on visibility icons to show and hide elements in canvas.](/img/product/Chapter3_HierarchyVisibility.gif)
 
@@ -55,7 +55,7 @@ Expand the *Vignette 1* and *Vignette 2* elements. Nested inside each you will s
 
 ![Choosing effect from asset library.](/img/product/Chapter3_AssetEffect.gif)
 
-Once you've chosen an effect, select the *Light* element that was nested with your *EFFECT* element. This *Light* element is a *Point Light*. To learn more about *Point Lights*, check out our [Lights](/docs/Assets/Lights) doc. This Light element will be used to make your chosen effect look as though it is emitting light. Change the color of the *Light* element to match your effect. Then choose an intensity that makes sense for your effect. Since this is a point light, it also has a **Range** you can adjust. Adjust the range so the light extends to your liking.
+Once you've chosen an effect, select the *Light* element that was nested with your *EFFECT* element. This *Light* element is a *Point Light*. To learn more about *Point Lights*, check out our [Lights](/docs/WebEditorBasics/Lights#point-lights) doc. This Light element will be used to make your chosen effect look as though it is emitting light. Change the color of the *Light* element to match your effect. Then choose an intensity that makes sense for your effect. Since this is a point light, it also has a **Range** you can adjust. Adjust the range so the light extends to your liking.
 
 ![Adding a green point light.](/img/product/Chapter3_LightEffect.gif)
 
