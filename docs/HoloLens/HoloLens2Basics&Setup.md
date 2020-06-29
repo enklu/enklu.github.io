@@ -23,7 +23,7 @@ Use a microfiber cloth to clean the device. Do not use alcohol based wipes or so
 
 When taking the device off, fully loosen the adjustment wheel. Attempting to remove the device without loosening may damage the internal ratchet mechanism and break the inner band.
 
-> If you need to setup your HoloLens 2 for the first time, please refer to Microsoft's <a style="color:#35947c" href="https://docs.microsoft.com/en-us/hololens/hololens2-start" target="\_blank"><u>Set up your HoloLens 2</u></a> guide.
+> If you need to setup your HoloLens 2 for the first time, please refer to Microsoft's <a style="color:#3AB29B" href="https://docs.microsoft.com/en-us/hololens/hololens2-start" target="\_blank"><u>Set up your HoloLens 2</u></a> guide.
 
 ### Gestures
 

@@ -9,7 +9,7 @@ In this guide, you will learn how to create, select, and position elements in En
 
 
 ## 1) Locate and Launch Chapter 1
-To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
+To get started, navigate to <a style="color:#3AB29B" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
 
 ![Enter email and password to login to Enklu Cloud.](/img/product/Chapter1_Login.gif)
 

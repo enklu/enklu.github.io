@@ -74,10 +74,10 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#000000',
+    primaryColor: '#39484F',
     secondaryColor: '#FF00FF',
 		enkluBrandColor: '#33DED2',
-    linkColor: '#35947c',
+    linkColor: '#3AB29B',
     backgroundColor: '#FFFFFF',
 		textColor: '#000000',
 		backgroundColorDark: '#232323',

@@ -9,7 +9,7 @@ Chapter 3 taught how to lock and unlock hierarchy elements, change light propert
 
 ## 1) Locate and Launch Chapter 4
 
-To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 4** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 4** in your experience menu, contact Enklu support to be granted access.)
+To get started, navigate to <a style="color:#3AB29B" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account. Select **Chapter 4** from the experience menu. Then press **Load!** to launch Enklu Cloud into the experience. (If you do not see **Chapter 4** in your experience menu, contact Enklu support to be granted access.)
 
 ![List of experiences with name, description, and load button.](/img/product/Chapter4_MyExperiences.png)
 

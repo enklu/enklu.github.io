@@ -9,7 +9,7 @@ Chapter 1 taught how to use basic transform tools such as position, rotation, an
 
 ## 1) Locate and Launch Chapter 2
 
-To get started, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
+To get started, navigate to <a style="color:#3AB29B" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a> in your web browser and log into your Enklu Cloud account.
 
 ![Enter email and password to login to Enklu Cloud.](/img/product/Chapter2_Login.gif)
 
