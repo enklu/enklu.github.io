@@ -3,12 +3,34 @@ id: AddingAnchors
 title: Adding Anchors
 ---
 
-## Coming Soon!
+## Adding Anchors
 
-We work hard to create meaningful and thorough guides for our users.  This guide still needs a little more work, but it is on the way!
+A Space is not complete without anchors. Anchors guide the device in positioning content relative to the physical world.
+By default, every Space has anchors automatically generated at the end of the scan process. Anchors can be added, moved, or deleted as needed.
 
-<img src="/img/undraw_building_blocks.svg" style="max-height: 300px;"/>
+### Creating a new anchor
 
-## Help Us Help You
+While editing a Space, a new anchor can be created from the floating UI display.
 
-We are always looking to improve and expand our documentation.  If you see a guide that is unclear or you don't see a guide that you need, [let us know](/contact).
+[TODO: Gif/Still - Adding an anchor]
+
+It's recommended to place an anchor near a surface that won't move. Walls and large pieces of furniture are great options.
+It's not advised to place an anchor on something likely to move, like a chair or door. 
+
+### Modifying an existing anchor
+
+An anchor can be repositioned after it is created. 
+Simply select it, and choose the move option.
+
+[TODO: Gif moving anchor]
+
+After an anchor has been moved, it will need to be uploaded again before the Space is ready.
+
+To delete an anchor, select it and choose the delete option from its menu.
+
+### Auto generating
+
+It's possible to auto generate anchors again for a space. This process will remove all the existing anchors and create new ones. 
+To auto generate anchors, select the <b>Auto Generate</b> option from the Space's UI menu.
+
+[TODO: Gif/Still!]
