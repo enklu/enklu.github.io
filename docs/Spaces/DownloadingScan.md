@@ -10,7 +10,7 @@ All of the Spaces associated with your account are shown here. To download a sca
 
 This will download the space as a <b>.mesh</b> file.
 
-[TODO: Gif]
+![SpacesMenu](../../img/product/spaces/MeshDownload.gif)
 
 ## Using the mesh
 
@@ -27,11 +27,15 @@ Once you have added the package, you are ready to either import the mesh directl
 To create a game object representing the mesh in your Unity scene, use the Enklu > Mesh > Import Meshes menu command. 
 After selecting the file you just downloaded, it will appear in your scene.
 
-[TODO: Steal Grant's gif]
+![SpacesMenu](../../img/product/spaces/import-mesh.gif)
 
 ### Converting to a Wavefront .obj
 
 While creating Unity Game Objects is convenient, you may want to convert into a more general format for use in animation or modelling software. 
 For this, you can convert the mesh to an .obj file by using the Enklu > Mesh > Convert Mesh to OBJ command.
 
-[TODO: Steal Grant's other gif]
+![SpacesMenu](../../img/product/spaces/convert-mesh.gif)
+
+The converted .obj file can then be used in any standard 3d modeling/editing application like Maya or Blender.
+
+![SpacesMenu](../../img/product/spaces/blender-mesh.gif)
