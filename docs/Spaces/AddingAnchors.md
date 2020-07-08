@@ -22,15 +22,17 @@ It's not advised to place an anchor on something likely to move, like a chair or
 An anchor can be repositioned after it is created. 
 Simply select it, and choose the move option.
 
-[TODO: Gif moving anchor]
+![SpacesMenu](../../img/product/spaces/AnchorMove.gif)
 
 After an anchor has been moved, it will need to be uploaded again before the Space is ready.
 
 To delete an anchor, select it and choose the delete option from its menu.
+
+![SpacesMenu](../../img/product/spaces/AnchorDelete.gif)
 
 ### Auto generating
 
 It's possible to auto generate anchors again for a space. This process will remove all the existing anchors and create new ones. 
 To auto generate anchors, select the <b>Auto Generate</b> option from the Space's UI menu.
 
-[TODO: Gif/Still!]
+![SpacesMenu](../../img/product/spaces/AnchorAuto.gif)

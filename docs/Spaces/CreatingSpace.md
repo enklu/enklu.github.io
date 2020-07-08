@@ -15,18 +15,18 @@ Once in Edit Mode, activate the floating menu and select <b>Spaces</b>.
 
 Select <b>Create New Space</b>. A Space will be created, and scanning will begin automatically.
 
-[TODO: Gif/Still - Edit Mode Menu -> Spaces]
+![SpacesMenu](../../img/product/spaces/CreateFlow.gif)
 
 ### Scanning your environment
 
-[TODO: Gif showing scan process]
+![SpacesMenu](../../img/product/spaces/Scanning.gif)
 
 While the device is scanning, the scan it creates will be shown. Walk around your environment at a comfortable pace. As the device refines its understanding of the environment, the scan you see will update in real time.
 
 Continue moving until all of the environment you want included in your experience is visible. The edges of the scan will have a red border, as well as any holes in the scan. 
 A prompt will appear automatically confirming whether you are finished scanning or still need more time.
 
-[TODO: Still showing scan finalization prompt]
+![SpacesMenu](../../img/product/spaces/ScanningFinalize.gif)
 
 Be sure to capture major features in your environment, such as the corners of walls and large furniture that will not move. 
 The scan is used both in the Cloud Editor and for occlusion on device. More time spent making a better scan will result in easier development and increased immersion.
