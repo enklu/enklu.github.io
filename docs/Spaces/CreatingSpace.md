@@ -45,7 +45,7 @@ The anchor upload progress will be displayed below the floating menu. Once the u
 
 Anchors can be moved around, as well as manually created. More information can be found in our article about <a href='/docs/Spaces/AddingAnchors'>Adding Anchors</a>.
 
-In the uncommon event of an error, the anchors will change to red. If you see this, try autogenerating the anchors again from the available menu. If the issue persists, please contact support@enklu.com.
+In the uncommon event of an error, the anchors will change to red. If you see this, try auto-generating the anchors again or re-scanning the space from the available menu. If the issue persists, please contact support@enklu.com.
 
 ## Removing a Space
 
@@ -53,7 +53,7 @@ When an Experience is using a Space, it can be switched back to Free Floating in
 
 ![Switch to free floating menu in HoloLens.](../../img/product/spaces/UnlinkUWP.gif)
 
-In the cloud editor, the inspector includes a <b>Space Management</b> section. This will let you change the current Experience to use a different Space, or none.
+In the cloud editor, the inspector includes a <b>Space Management</b> section. This will let you change the current Experience to use a different Space or no Space.
 
 ![Web Unlink](../../img/product/spaces/UnlinkWeb.gif)
 
