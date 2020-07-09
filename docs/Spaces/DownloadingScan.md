@@ -16,9 +16,9 @@ This will download the space as a <b>.mesh</b> file.
 
 ### Install EnkluPlayer into Unity
 
-At the core of Enklu Cloud is the open source Enklu Player project, a Unity package that is hosted on Github. 
+At the core of Enklu Cloud is the open source [EnkluPlayer](https://github.com/enklu/enkluplayer) project, a Unity package that is hosted on GitHub. 
 To convert a mesh, the first step is to add this package to a new or existing Unity project. 
-Instructions for installing the package are available in the Enklu Player Readme or in Unity's documentation on installing a package from Github.
+Instructions for installing the package are available in the EnkluPlayer Readme or in Unity's documentation on installing a package from GitHub.
 
 Once you have added the package, you are ready to either import the mesh directly into your Unity project or convert it to a Wavefront .obj file.
 

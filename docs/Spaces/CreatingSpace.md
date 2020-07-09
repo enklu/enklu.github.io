@@ -6,14 +6,14 @@ title: Creating a Space
 A Space anchors your AR content to the physical world. Everything you create in Enklu Cloud will perfectly line up with the environment around you, enabling multiple users to view holograms in the same location.
 A single Space can be used in multiple experiences to help build worlds of adventure in your environment as quickly as possible.
 
-<b>Note:</b> An active internet connection is required to create a Space.
+> <b>Note:</b> An active internet connection is required to create a Space.
 
 ## Getting Started
 
-By default, all new experiences are Free Floating. All content loads infront of the user, but isn't tied to any specific areas of the room. 
+By default, all new experiences are Free Floating. Since free floating content starts relative to the device's position, the experience will appear in different locations between sessions. 
 
 To create a new Space, using your HoloLens 1 or HoloLens 2 device, enter Edit Mode by saying "edit experience". 
-Once in Edit Mode, activate the floating menu and select <b>Spaces</b>.
+Once in Edit Mode, activate the floating menu and select <b>Spaces</b>. To activate the menu, focus your gaze cursor on the button with the grid icon.
 
 Select <b>Create New</b>. A Space will be created, and scanning will begin automatically.
 
@@ -55,7 +55,7 @@ In the cloud editor, the inspector includes a <b>Space Management</b> section. T
 
 [TODO: Still showing web unlinking]
 
-<b>Note:</b> When a Space is not in use, it still exists and can be re-used at any time in the future. A Space can be permanently deleted through the device or Enklu Cloud.
+> <b>Note:</b> When a Space is not in use, it still exists and can be re-used at any time in the future. A Space can be permanently deleted through the device or Enklu Cloud.
 In Enklu Cloud, click <b>Space Management</b> followed by the trash can icon next to a space's name.
 On your HoloLens, from the Space menu in Edit Mode, select <b>Manage All</b> and navigate to the Space you wish to delete. Once loaded, it can be deleted from the options menu floating nearby.  
 
