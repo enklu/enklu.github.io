@@ -23,18 +23,18 @@ Select <b>Create New</b>. A Space will be created, and scanning will begin autom
 
 While the device is scanning, the scan it creates will be shown. Walk around your environment at a comfortable pace. As the device refines its understanding of the environment, the scan you see will update in real time.
 
-![SpacesMenu](../../img/product/spaces/Scanning.gif)
+![Space Scanning](../../img/product/spaces/Scanning.gif)
 
 Continue moving until all of the environment you want included in your experience is visible. The edges of the scan will have a red border, as well as any holes in the scan. 
 A prompt will appear automatically confirming whether you are finished scanning or still need more time.
 
-![SpacesMenu](../../img/product/spaces/ScanningFinalize.gif)
+![Scan Finalize](../../img/product/spaces/ScanningFinalize.gif)
 
 Be sure to capture major features in your environment, such as the corners of walls and large furniture that will not move. 
 The scan is used both in the Cloud Editor and for occlusion on device. More time spent making a better scan will result in easier development and increased immersion.
 If you have the cloud editor open, you'll be able to see the visualization update in real time as you scan.
 
-![SpacesMenu](../../img/product/spaces/EditorScan.gif)
+![Editor Scan](../../img/product/spaces/EditorScan.gif)
 
 ### Anchor Uploading
 
@@ -53,7 +53,7 @@ When an Experience is using a Space, it can be switched back to Free Floating in
 
 In the cloud editor, the inspector includes a <b>Space Management</b> section. This will let you change the current Experience to use a different Space, or none.
 
-[TODO: Still showing web unlinking]
+![Web Unlink](../../img/product/spaces/UnlinkWeb.gif)
 
 > <b>Note:</b> When a Space is not in use, it still exists and can be re-used at any time in the future. A Space can be permanently deleted through the device or Enklu Cloud.
 In Enklu Cloud, click <b>Space Management</b> followed by the trash can icon next to a space's name.
@@ -63,7 +63,7 @@ On your HoloLens, from the Space menu in Edit Mode, select <b>Manage All</b> and
 
 An experience can use an existing Space through both the HoloLens and the cloud editor. The HoloLens can view available spaces and activate an existing one from the menu in Edit Mode.
 
-[TODO: Gif showing hololens linking]
+![Web Unlink](../../img/product/spaces/LinkWeb.gif)
 
 Similarly, the cloud editor will display available spaces in its <b>Space Management</b> section. Selecting a space will preview it. Clicking <b>Use Space</b> will confirm the change and update other devices actively using the space.
 
