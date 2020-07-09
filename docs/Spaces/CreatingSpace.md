@@ -15,9 +15,11 @@ By default, all new experiences are Free Floating. Since free floating content s
 To create a new Space, using your HoloLens 1 or HoloLens 2 device, enter Edit Mode by saying "edit experience". 
 Once in Edit Mode, activate the floating menu and select <b>Spaces</b>. To activate the menu, focus your gaze cursor on the button with the grid icon.
 
+![Opening Edit menu with several categories.](../../img/product/spaces/EditMenu.gif)
+
 Select <b>Create New</b>. A Space will be created, and scanning will begin automatically.
 
-![SpacesMenu](../../img/product/spaces/CreateFlow.gif)
+![Selecting create new space button.](../../img/product/spaces/CreateNewSpace.gif)
 
 ### Scanning your environment
 
@@ -28,7 +30,7 @@ While the device is scanning, the scan it creates will be shown. Walk around you
 Continue moving until all of the environment you want included in your experience is visible. The edges of the scan will have a red border, as well as any holes in the scan. 
 A prompt will appear automatically confirming whether you are finished scanning or still need more time.
 
-![Scan Finalize](../../img/product/spaces/ScanningFinalize.gif)
+!["Are you finished scanning?" screen.](../../img/product/spaces/FinishScanning.gif)
 
 Be sure to capture major features in your environment, such as the corners of walls and large furniture that will not move. 
 The scan is used both in the Cloud Editor and for occlusion on device. More time spent making a better scan will result in easier development and increased immersion.
@@ -49,7 +51,7 @@ In the uncommon event of an error, the anchors will change to red. If you see th
 
 When an Experience is using a Space, it can be switched back to Free Floating in one of two ways. With your HoloLens, you can enter Edit Mode, select <b>Spaces</b>, then <b>Switch to Free Floating</b>. 
 
-[TODO: Still showing hololens unlinking]
+![Switch to free floating menu in HoloLens.](../../img/product/spaces/UnlinkUWP.gif)
 
 In the cloud editor, the inspector includes a <b>Space Management</b> section. This will let you change the current Experience to use a different Space, or none.
 
@@ -63,8 +65,8 @@ On your HoloLens, from the Space menu in Edit Mode, select <b>Manage All</b> and
 
 An experience can use an existing Space through both the HoloLens and the cloud editor. The HoloLens can view available spaces and activate an existing one from the menu in Edit Mode.
 
-![Web Unlink](../../img/product/spaces/LinkWeb.gif)
+![List of available spaces in HoloLens.](../../img/product/spaces/LinkUWP.gif)
 
 Similarly, the cloud editor will display available spaces in its <b>Space Management</b> section. Selecting a space will preview it. Clicking <b>Use Space</b> will confirm the change and update other devices actively using the space.
 
-[TODO: Show experience previewing/selecting]
+![Web Unlink](../../img/product/spaces/LinkWeb.gif)
