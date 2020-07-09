@@ -17,13 +17,15 @@ Once in Edit Mode, activate the floating menu and select <b>Spaces</b>.
 
 Select <b>Edit Space</b> to start editing the current Space.
 
-[TODO: Gif/Still - Edit Mode Menu -> Spaces -> Edit Space]
+![Edit Space](../../img/product/spaces/EditSpace.gif)
 
 ## Update the scan
 
 > <b>Note:</b> If the environment had changed significantly, the Space may not be lined up when visualizing the stored scan.
 
 Start the scanning process by selecting the menu in the Space's floating UI, and selecting <b>Re-scan</b>.
+
+![Rescan Space](../../img/product/spaces/RescanSpace.gif)
 
 The scan process will begin, and similar to initial scanning, you can walk around and capture as much of the environment as needed.
 A prompt will appear asking you to finalize the space. After the scan has finished, anchors will be automatically generated again.
