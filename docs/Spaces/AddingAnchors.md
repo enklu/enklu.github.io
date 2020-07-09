@@ -10,7 +10,7 @@ By default, every Space has anchors automatically generated at the end of the sc
 
 While editing a Space, a new anchor can be created from the floating UI display.
 
-[TODO: Gif/Still - Adding an anchor]
+![Create Anchor](../../img/product/spaces/AnchorCreate.gif)
 
 It's recommended to place an anchor near a surface that won't move. Walls and large pieces of furniture are great options.
 It's not advised to place an anchor on something likely to move, like a chair or door. 
@@ -20,17 +20,17 @@ It's not advised to place an anchor on something likely to move, like a chair or
 An anchor can be repositioned after it is created. 
 Simply select it, and choose the move option.
 
-![SpacesMenu](../../img/product/spaces/AnchorMove.gif)
+![Move Anchor](../../img/product/spaces/AnchorMove.gif)
 
 After an anchor has been moved, it will need to be uploaded again before the Space is ready.
 
 To delete an anchor, select it and choose the delete option from its menu.
 
-![SpacesMenu](../../img/product/spaces/AnchorDelete.gif)
+![Delete Anchor](../../img/product/spaces/AnchorDelete.gif)
 
 ## Auto generating
 
 It's possible to auto generate anchors again for a space. This process will remove all the existing anchors and create new ones. 
 To auto generate anchors, select the <b>Auto Generate Anchors</b> option from the Space's UI menu.
 
-![SpacesMenu](../../img/product/spaces/AnchorAuto.gif)
+![Auto Anchor](../../img/product/spaces/AnchorAuto.gif)
