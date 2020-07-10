@@ -48,7 +48,7 @@ function Spaces(props) {
     <div className= "titleSplash">
 			<div className="titleText">
 				<h2>Spaces</h2>
-				<p>Guides related to creating and editing space scans, linking spaces to experiences, and downloading scans to use in Unity.</p>
+				<p>Learn how to anchor content to your physical environment. Information on creating Spaces, updating them, and exporting the mesh data can be found here.</p>
 			</div>
 			<img src={`${baseUrl}img/undraw_working_late_spaces.svg`} />
     </div>
