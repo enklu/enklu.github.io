@@ -100,11 +100,11 @@ If an element doesn't already have a value, it returns a value up the graph. In 
 ```js
 a.addChild(b);
 
-a.setNumber('foo', 12);
-b.getNumber('foo');         // 12
+a.schema.setNumber('foo', 12);
+b.schema.getNumber('foo');         // 12
 
-a.setNumber('foo', 17);
-b.getNumber('foo');         // 17
+a.schema.setNumber('foo', 17);
+b.schema.getNumber('foo');         // 17
 ```
 
 <br>
@@ -112,10 +112,10 @@ b.getNumber('foo');         // 17
 Once the child changes its value, the binding is broken.
 
 ```js
-b.setNumber('foo', -7);
+b.schema.setNumber('foo', -7);
 
-a.getNumber('foo');         // 17
-b.getNumber('foo');         // -7
+a.schema.getNumber('foo');         // 17
+b.schema.getNumber('foo');         // -7
 ```
 
 <br>
@@ -123,14 +123,14 @@ b.getNumber('foo');         // -7
 Values can be taken from an element with explicitly avoiding searching up the graph. A default value for the data type will be set & returned if unprovided.
 
 ```js
-b.getOwnNumber('foo');         // 0
-b.getOwnNumber('foo', 12);     // 12
+b.schema.getOwnNumber('foo');         // 0
+b.schema.getOwnNumber('foo', 12);     // 12
 
-b.getOwnString('bar');         // <empty string>
-b.getOwnString('bar', 'flip'); // flip
+b.schema.getOwnString('bar');         // <empty string>
+b.schema.getOwnString('bar', 'flip'); // flip
 
-b.getOwnBool('fizz');          // false
-b.getOwnBool('fizz', true);    // true
+b.schema.getOwnBool('fizz');          // false
+b.schema.getOwnBool('fizz', true);    // true
 ```
 
 <br>
@@ -140,15 +140,15 @@ b.getOwnBool('fizz', true);    // true
 Properties may also be watched for changes.
 
 ```js
-element.setNumber('foo', -1);
-element.watchNumber('foo', function (prev, next) {
+element.schema.setNumber('foo', -1);
+element.schema.watchNumber('foo', function (prev, next) {
     log.info(
         'Value changed from {0} -> {1}',
         prev,
         next);
 });
 
-element.setNumber('foo', 5); // Value changed from -1 -> 5
+element.schema.setNumber('foo', 5); // Value changed from -1 -> 5
 ```
 
 <br>
@@ -162,12 +162,12 @@ function onChange(prev, next){
     next);
 }
 
-element.setNumber('foo', -1);
-element.watchNumber('foo', onChange);
-element.setNumber('foo', 2);  // Value changes from -1 -> 2
+element.schema.setNumber('foo', -1);
+element.schema.watchNumber('foo', onChange);
+element.schema.setNumber('foo', 2);  // Value changes from -1 -> 2
 
-element.unwatchNumber('foo', onChange);
-element.setNumber('foo', 2);  // <no output>
+element.schema.unwatchNumber('foo', onChange);
+element.schema.setNumber('foo', 2);  // <no output>
 ```
 
 <br>
@@ -175,16 +175,16 @@ element.setNumber('foo', 2);  // <no output>
 Properties can be watched explicitly for one change.
 
 ```js
-element.setNumber('foo', -1);
-element.watchNumber('foo', function (prev, next) {
+element.schema.setNumber('foo', -1);
+element.schema.watchNumber('foo', function (prev, next) {
     log.info(
         'Value changed from {0} -> {1}',
         prev,
         next);
 });
 
-element.setNumber('foo', 5);  // Value changed from -1 -> 5
-element.setNumber('foo', 8);  // <no output>
+element.schema.setNumber('foo', 5);  // Value changed from -1 -> 5
+element.schema.setNumber('foo', 8);  // <no output>
 
 ```
 
@@ -193,10 +193,10 @@ element.setNumber('foo', 8);  // <no output>
 Watchers are also called for bound properties.
 
 ```js
-b.watchNumber('foo', function(prev, next) {
+b.schema.watchNumber('foo', function(prev, next) {
     log.info('Changed!');
 });
-a.setNumber('foo', 12);     // Changed!
+a.schema.setNumber('foo', 12);     // Changed!
 ```
 
 ## Queries 
