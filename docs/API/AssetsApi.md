@@ -5,7 +5,7 @@ title: Assets Web API
 
 *[Note: Access to this API requires a Studio Subscription. [Contact us](/contact) for details.]*
 
-While the standard workflow for importing assets into Enklu Cloud is to do so through using the [Web Editor](https://cloud.enklu.com), it is also possible to use the Asset API.
+While the standard workflow for importing assets into Enklu Cloud is with the [Web Editor](https://cloud.enklu.com), users with a Studio Subscription may also use the Asset Web API.
 
 
 ## Importing and Updating Assets
