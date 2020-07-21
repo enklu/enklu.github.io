@@ -13,7 +13,7 @@ While the standard workflow for importing assets into Enklu Cloud is with the [W
 To import or update an asset, first ensure you have a valide JWT token by authenticating against the authoring API:
 
 
-```curl
+```bash
 curl -X POST 'https://cloud.enklu.com:10001/v1/email/signin' \
      -H 'Content-Type: application/json' \
      -d '{ "email": "roland@druida.com", "password": "12345"}'
@@ -38,7 +38,7 @@ If succesful, the response will contain your token:
 
 Then, you can upload new assets or update new assets:
 
-```curl
+```bash
 curl -X POST 'https://assets.enklu.com:9091/v1/asset'
      --header 'Authorization: Bearer '${jwt}''
      --header 'app: '${appId}''
