@@ -5,7 +5,7 @@ title: Assets Web API
 
 *[Note: Access to this API requires a Studio Subscription. [Contact us](/contact) for details.]*
 
-While the standard workflow for importing assets into Enklu Cloud is with the [Web Editor](https://cloud.enklu.com), users with a Studio Subscription may also use the Asset Web API.
+While the standard workflow for importing assets into Enklu Cloud is with the [Web Editor](https://cloud.enklu.com), users with a Studio Subscription may also use the Assets Web API.
 
 
 ## Importing and Updating Assets
@@ -36,7 +36,7 @@ If succesful, the response will contain your token:
 }
 ```
 
-Then, you can upload new assets or update new assets:
+Then, you can upload a new asset or update an existing one:
 
 ```bash
 curl -X POST 'https://assets.enklu.com:9091/v1/asset'
