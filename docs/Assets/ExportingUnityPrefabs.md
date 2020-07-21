@@ -3,12 +3,10 @@ id: ExportingUnityPrefabs
 title: Exporting Unity Prefabs
 ---
 
-## Coming Soon!
+Unity prefabs are supported with some restrictions. All of Unity's built-in components are supported, but we cannot import custom C# scripts. These scripts can generally be rewritten in JS using our JS API.
 
-We work hard to create meaningful and thorough guides for our users.  This guide still needs a little more work, but it is on the way!
+To export a prefab from Unity, download and import our [Unity package](https://s3-us-west-2.amazonaws.com/bits.and.bobs/Enklu-Unity.0.2.1.unitypackage). Right click on the prefab you wish to export in the Project View and select Export. This will export a .zip in the exports directory. Simply drag this file into the asset upload dialog in the Enklu Editor to import.
 
-<img src="/img/undraw_building_blocks.svg" style="max-height: 300px;"/>
+### Known Issues
 
-## Help Us Help You
-
-We are always looking to improve and expand our documentation.  If you see a guide that is unclear or you don't see a guide that you need, [let us know](/contact).
+- Shaders using .cginc files may not be exported properly. As a temporary workaround you may copy the .cginc into the zip.
