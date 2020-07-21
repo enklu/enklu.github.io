@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Assets Web API · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="*[Note: Access to this API requires a Studio Subscription. [Contact us](/contact) for details.]*"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Assets Web API · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/"/><meta property="og:description" content="*[Note: Access to this API requires a Studio Subscription. [Contact us](/contact) for details.]*"/><meta property="og:image" content="https://enklu.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/GuidesOverview" target="_self">Guides</a></li><li class="siteNavGroupActive"><a href="/docs/API/ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Assets Web API</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Scripting Reference<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/API/ScriptingLanguages">Scripting Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Vines">VineML</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Preprocessor">Preprocessor</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Animator">Animator</a></li><li class="navListItem"><a class="navItem" href="/docs/API/App">App</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Audio">Audio</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Checksum">Checksum</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Drawing">Drawing</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Elements">Elements</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Gaze">Gaze (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Gestures">Gestures</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Hand">Hands</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Http">HTTP (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Logging">Logging</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Kinect">Kinect</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Material">Material</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Math">Math</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Messages">Messages</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Multiplayer">Multiplayer</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Particles">Particles</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Physics">Physics</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Proximity">Proximity</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Random">Random</a></li><li class="navListItem"><a class="navItem" href="/docs/API/SceneEditing">Scene Editing</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Score">Score (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Speech">Speech (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Storage">Storage (Preview)</a></li><li class="navListItem"><a class="navItem" href="/docs/API/System">System</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Time">Time</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Timers">Timers</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Touch">Touch</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Tween">Tween</a></li><li class="navListItem"><a class="navItem" href="/docs/API/Voice">Voice</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Assets Web API<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem navListItemActive"><a class="navItem" href="/docs/API/AssetsApi">Assets Web API</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Assets Web API</h1></header><article><div><span><p><em>[Note: Access to this API requires a Studio Subscription. <a href="/contact">Contact us</a> for details.]</em></p>
+<p>While the standard workflow for importing assets into Enklu Cloud is to do so through using the <a href="https://cloud.enklu.com">Web Editor</a>, it is also possible to use the Asset API.</p>
+<h2><a class="anchor" aria-hidden="true" id="importing-and-updating-assets"></a><a href="#importing-and-updating-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Importing and Updating Assets</h2>
+<p>To import or update an asset, first ensure you have a valide JWT token by authenticating against the authoring API:</p>
+<pre><code class="hljs css language-curl">curl -X POST <span class="hljs-symbol">'https</span>://cloud.enklu.com:<span class="hljs-number">10001</span>/v1/email/signin' \
+     -H <span class="hljs-symbol">'Content</span>-<span class="hljs-keyword">Type</span>: application/json' \
+     -d '{ <span class="hljs-string">"email"</span>: <span class="hljs-string">"roland@druida.com"</span>, <span class="hljs-string">"password"</span>: <span class="hljs-string">"12345"</span>}'
+</code></pre>
+<p>If succesful, the response will contain your token:</p>
+<pre><code class="hljs css language-json"><span class="token punctuation">{</span>
+  <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"error"</span><span class="token operator">:</span> <span class="token string">"None"</span><span class="token punctuation">,</span>
+  <span class="token property">"body"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"user"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"email"</span><span class="token operator">:</span> <span class="token string">"roland@druidia.com"</span><span class="token punctuation">,</span>
+            <span class="token property">"displayName"</span><span class="token operator">:</span> <span class="token string">"roland"</span><span class="token punctuation">,</span>
+            <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"00000000-0000-0000-0000-000000000000"</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token property">"token"</span><span class="token operator">:</span> <span class="token string">"..."</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Then, you can upload new assets or update new assets:</p>
+<pre><code class="hljs css language-curl">curl -X POST 'https://assets.enklu.com:9091/v1/asset'
+     -<span class="ruby">-header <span class="hljs-string">'Authorization: Bearer '</span>${jwt}<span class="hljs-string">''</span>
+</span>     -<span class="ruby">-header <span class="hljs-string">'app: '</span>${appId}<span class="hljs-string">''</span>
+</span>     -<span class="ruby">-header <span class="hljs-string">'Accept: application/json'</span>
+</span>     -<span class="ruby">-form <span class="hljs-string">'qqfilename="'</span>${fileName}<span class="hljs-string">'"'</span>
+</span>     -<span class="ruby">-form <span class="hljs-string">'qquuid="'</span>${guid}<span class="hljs-string">'"'</span>
+</span>     -<span class="ruby">-form <span class="hljs-string">'qqfile=@'</span>${pathToFile}<span class="hljs-string">''</span>
+</span></code></pre>
+<h3><a class="anchor" aria-hidden="true" id="request-parameters"></a><a href="#request-parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request Parameters</h3>
+<ul>
+<li><code>jwt</code> The authentication token received in the login response.</li>
+<li><code>appId</code> A valid experience id. This can be copied from the &quot;My Experiences&quot; screen in the <a href="http://cloud.enklu.com">Enklu Cloud Web Editor</a></li>
+<li><code>fileName</code> The display name of the file to be imported or updated.</li>
+<li><code>guid</code> A unique id for the asset. If the provided id represents an existing asset associated with your account, the asset will up be updated with a new version.</li>
+<li><code>pathToFile</code> The path to the file on the local file sytem.</li>
+</ul>
+<p>A successful response will contain the asset id. This Id can be used in future requests to update the same asset.</p>
+<pre><code class="hljs css language-json"><span class="token punctuation">{</span>
+  <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"error"</span><span class="token operator">:</span> <span class="token string">"None"</span><span class="token punctuation">,</span>
+  <span class="token property">"body"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"11111111-1111-1111-1111-111111111111"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="resources"></a><a href="#resources" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Resources</h2>
+<p>For more on importing assets, including supported formats, see our guide <a href="/docs/Assets/ImportYourOwnAssets">Importing Your Own Assets</a>. For information on preparing Unity prefabs for import, see our guide to <a href="/docs/Assets/ExportingUnityPrefabs">Exporting Unity Prefabs</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/API/Voice"><span class="arrow-prev">← </span><span>Voice</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#importing-and-updating-assets">Importing and Updating Assets</a><ul class="toc-headings"><li><a href="#request-parameters">Request Parameters</a></li></ul></li><li><a href="#resources">Resources</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/GuidesOverview">Guides</a><a href="/docs/API/ScriptingLanguages">API Reference</a><a href="/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2020 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
