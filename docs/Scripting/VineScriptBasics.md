@@ -43,7 +43,7 @@ Another difference from HTML, Vine tags must begin with an uppercase letter: `<B
 
 ### Attributes
 
-In addition, tags may not have raw text inside of them. `<Text>Hello!</Text>` would be invalid. All values are passed to tags through attributes: `<Text label = 'Hello!'></Text>`. While tags define the object structure, attributes define the object properties. VineML has support for string, boolean, number, and vector literals. Any property of an element may be passed through element attributes.  For a more complete list of attributes that can be used please see our <a style="color:#35947c" href="https://github.com/enklu/enkluplayer/blob/master/Documentation~/element.schema.properties.md" target="_blank" rel="noopener"><u>Element Schema Properties</u></a> document on our Github.
+In addition, tags may not have raw text inside of them. `<Text>Hello!</Text>` would be invalid. All values are passed to tags through attributes: `<Text label = 'Hello!'></Text>`. While tags define the object structure, attributes define the object properties. VineML has support for string, boolean, number, and vector literals. Any property of an element may be passed through element attributes.  For a more complete list of attributes that can be used please see our <a style="color:#35947c" href="/docs/API/Vines"><u>VineML reference page</u></a>.
 
 
 ## Button Example Script

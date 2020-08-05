@@ -144,7 +144,7 @@ Displays an image.
 
 | name | type | default | description |
 |------|------|---------|-------------|
-| src | `string` | `null` | A url for locating an image. In addition to `http`/`https`, the protocols `res://` and `icon://` are supported. The former loads an image from the Resources directory of a [custom build of the Enklu Player](https://github.com/enklu/enkluplayer). The later loads one of the supported [Icons](#icon-names). |
+| src | `string` | `null` | A url for locating an image. In addition to `http`/`https`, the protocols `res://` and `icon://` are supported. The former loads an image from the Resources directory of a custom build of the Enklu Player. The later loads one of the supported [Icons](#icon-names). |
 | width | `float` | `0` | The image width. |
 | height | `float` | `0` | The image height. |
 
