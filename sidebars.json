@@ -1,7 +1,7 @@
 {
   "Guides": {
     "Guides Overview": ["GuidesOverview"],
-    "Web Editor Basics": [ 
+    "Web Editor Basics": [
       "WebEditorBasics/WebEditorInterface",
       "WebEditorBasics/MinimumRequirements",
       "WebEditorBasics/ManagingYourExperiences",
@@ -46,9 +46,9 @@
   },
   "API": {
     "Scripting Reference": [
-      "API/ScriptingLanguages", 
+      "API/ScriptingLanguages",
       "API/Vines",
-      "API/Preprocessor", 
+      "API/Preprocessor",
       "API/Animator",
       "API/App",
       "API/Audio",
@@ -57,17 +57,18 @@
       "API/Elements",
       "API/Gaze",
       "API/Gestures",
+      "API/Graphics",
       "API/Hand",
       "API/Http",
       "API/Logging",
       "API/Kinect",
       "API/Material",
-      "API/Math", 
-      "API/Messages", 
-      "API/Multiplayer", 
-      "API/Particles", 
-      "API/Physics", 
-      "API/Proximity", 
+      "API/Math",
+      "API/Messages",
+      "API/Multiplayer",
+      "API/Particles",
+      "API/Physics",
+      "API/Proximity",
       "API/Random",
       "API/SceneEditing",
       "API/Score",
