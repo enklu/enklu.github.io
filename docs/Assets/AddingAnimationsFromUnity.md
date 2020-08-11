@@ -3,7 +3,7 @@ id: AddingAnimationsFromUnity
 title: Adding Animations from Unity
 ---
 
-Assets that have animations can be used with Enklu. The platform supports animations that play on their own or are driven through scripting. This guide will teach you how to configure an Animator Controller in Unity to be used in your experiences. It's recommended to have a basic familiarity with Unity, and to have already read the Import Your Own Assets guide. If you'd like to follow along with this guide, you can get the assets used [here](https://drive.google.com/open?id=1UQf4itC82pBmFmgFO_yYLgCPdgy_KznN).
+Assets that have animations can be used with Enklu. The platform supports animations that play on their own or are driven through scripting. This guide will teach you how to configure an Animator Controller in Unity to be used in your experiences. It's recommended to have a basic familiarity with Unity, and to have already read the Import Your Own Assets guide. If you'd like to follow along with this guide, you can get the assets used <a target="_blank" href="https://drive.google.com/open?id=1UQf4itC82pBmFmgFO_yYLgCPdgy_KznN">here</a>.
 
 ## Importing into Unity
 
