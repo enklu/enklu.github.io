@@ -19,7 +19,7 @@ Enklu currently supports ES5 syntax, so the [async and await](https://developer.
 http.send(
     'https://cloud.enklu.com:10001/v1/versions/web',
     { method: 'GET' })
-  .then(res => {
+  .then(function(res) {
     var json = JSON.parse(res.text());
 
     log.info('Current web version is ' + json.body.version);
