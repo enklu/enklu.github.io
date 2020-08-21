@@ -5,10 +5,6 @@ title: Frequently Asked Questions
 
 <img src="/img/undraw_ask_question.svg" style="max-height: 300px"/>
 
-## Is Enklu Cloud free?
-Yes!  Anyone is free to use Enklu Cloud.  Feel free to create anything with an unlimited number of collaborators.  We do offer paid Enklu Pro Support and Enklu Enterprise Support packages for larger project/event needs.
-
-
 ## Do I need to download Enklu Cloud?
 Nope! Build AR experiences with Enklu Cloud directly in your web browser.
 
@@ -51,10 +47,6 @@ Enklu currently supports the Microsoft HoloLens 1 & HoloLens 2.
 
 ## What programming language does Enklu Cloud use?
 Our scripting interface offers 2 types of scripts: Behavior scripts and Vine scripts. Behavior scripts utilize JavaScript. Vine scripts utilize VineML. VineML is a markup language which strongly correlates to HTML with added features specifically for creating UI elements in AR.
-
-
-## Would our team be able to build off of the Enklu player?
-Of course! We believe that open source is an opportunity to build better software together. Check out our GitHub <span><a style="color:#35947c" href="https://github.com/enklu" target="_blank"><u>here</u></a></span>.
 
 
 ## Can users collaborate remotely?
