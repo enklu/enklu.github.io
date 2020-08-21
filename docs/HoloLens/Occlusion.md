@@ -10,7 +10,7 @@ Each occlusion option can be configured on a per-experience basis, through the e
 
 ### Space Occlusion
 
-When an experience is using a <Space>, the mesh visible in the Cloud Editor can be used for occlusion.
+When an experience is using a <a href='/Guide_Spaces.html'>Space</a>, the mesh visible in the Cloud Editor can be used for occlusion.
 This is useful in scenarios where multiple rooms are filled with content and a user isn't meant to see through walls, thus increasing immersion.
 
 This feature starts <b>enabled</b> by default, and may be beneficial to disable in experience that are meant to display large content that is physically too big to fit in a room normally.
