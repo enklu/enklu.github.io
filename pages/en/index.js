@@ -66,7 +66,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             <Button href={docUrl('HoloLens/HoloLens2Basics&Setup')}>HoloLens 2 Basics & Setup</Button>
             <Button href={docUrl('Spaces/CreatingSpace')}>Creating a Space Scan</Button>
-            <Button href={docUrl('HoloLens/LivePreview')}>Live Preview</Button>
+            <Button href={docUrl('HoloLens/VideoRecording')}>Video Recording</Button>
           </PromoSection>
         </div>
       </SplashContainer>

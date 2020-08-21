@@ -15,42 +15,63 @@ function Hololens(props) {
 
   const hololensLinks = [
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`,
-			image: '',
-			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup`,
-			title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`
+      content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`,
+      image: '',
+      imageAlign: 'top',
+      imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup`,
+      title: `[HoloLens 2 Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens2Basics&Setup)`
     },
     {
-			content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`,
-			image: '',
-			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup`,
-			title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`
+      content:`[Device operation and Enklu app installation.](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`,
+      image: '',
+      imageAlign: 'top',
+      imageLink: `${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup`,
+      title: `[HoloLens (1st gen) Basics & Setup](${siteConfig.baseUrl}docs/HoloLens/HoloLens1stGenBasics&Setup)`
     },
     {
-			content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`,
-			image: '',
-			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/HoloLens/VoiceCommands`,
-			title: `[Voice Commands](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`
+      content:`[Enklu app voice commands and app permissions.](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`,
+      image: '',
+      imageAlign: 'top',
+      imageLink: `${siteConfig.baseUrl}docs/HoloLens/VoiceCommands`,
+      title: `[Voice Commands](${siteConfig.baseUrl}docs/HoloLens/VoiceCommands)`
     },
-		{
-			content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`,
-			image: '',
-			imageAlign: 'top',
-			imageLink: `${siteConfig.baseUrl}docs/HoloLens/LivePreview`,
-			title: `[Live Preview](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`
+	{
+      content:`[Display live preview of in-lens content using Microsoft Connect app.](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`,
+      image: '',
+      imageAlign: 'top',
+      imageLink: `${siteConfig.baseUrl}docs/HoloLens/LivePreview`,
+      title: `[Live Preview](${siteConfig.baseUrl}docs/HoloLens/LivePreview)`
     },
+	{
+	  content:`[Effortlessly record videos that get automatically sent to you.](${siteConfig.baseUrl}docs/HoloLens/VideoRecording)`,
+	  image: '',
+	  imageAlign: 'top',
+	  imageLink: `${siteConfig.baseUrl}docs/HoloLens/VideoRecording`,
+	  title: `[Video Recording](${siteConfig.baseUrl}docs/HoloLens/VideoRecording)`
+	},
+	{
+	  content:`[Learn how to debug an experience running on a device through the Cloud Editor.](${siteConfig.baseUrl}docs/HoloLens/RemoteDebugging)`,
+	  image: '',
+	  imageAlign: 'top',
+	  imageLink: `${siteConfig.baseUrl}docs/HoloLens/RemoteDebugging`,
+	  title: `[Remote Debugging](${siteConfig.baseUrl}docs/HoloLens/RemoteDebugging)`
+	},
+	{
+	  content:`[Control what the device will use as occlusion.](${siteConfig.baseUrl}docs/HoloLens/Occlusion)`,
+	  image: '',
+	  imageAlign: 'top',
+	  imageLink: `${siteConfig.baseUrl}docs/HoloLens/Occlusion`,
+	  title: `[Occlusion](${siteConfig.baseUrl}docs/HoloLens/Occlusion)`
+	},
   ];
 
 	const Title_Splash = () => (
     <div className= "titleSplash">
-			<div className="titleText">
-				<h2>HoloLens</h2>
-				<p>Guides and features specific to HoloLens (1st gen) and HoloLens 2 including device operation, spatial scans, and live preview.</p>
-			</div>
-			<img src={`${baseUrl}img/undesk_augmented_reality01.svg`} />
+	  <div className="titleText">
+		<h2>HoloLens</h2>
+		<p>Guides and features specific to HoloLens (1st gen) and HoloLens 2 including device operation, spatial scans, and live preview.</p>
+	  </div>
+	  <img src={`${baseUrl}img/undesk_augmented_reality01.svg`} />
     </div>
   );
 
@@ -58,7 +79,7 @@ function Hololens(props) {
     <div className="docMainWrapper wrapper">
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
-					<Title_Splash/>  
+		  <Title_Splash/>
           <GridBlock contents={hololensLinks} layout="fourColumn" align="center"/>
         </div>
       </Container>

@@ -14,7 +14,10 @@
       "HoloLens/HoloLens2Basics&Setup",
       "HoloLens/HoloLens1stGenBasics&Setup",
       "HoloLens/VoiceCommands",
-      "HoloLens/LivePreview"
+      "HoloLens/LivePreview",
+      "HoloLens/VideoRecording",
+      "HoloLens/RemoteDebugging",
+      "HoloLens/Occlusion"
     ],
     "Chapters Series": [
       "ChaptersSeries/Chapter1",
