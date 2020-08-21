@@ -14,6 +14,7 @@ No more fussing with cables to export videos off your device anymore.
 
 1. Open the experience menu by saying "menu".
 2. Select "Record" with your gaze, and follow the prompt.
+3. While waiting for the countdown, make sure you're positioning is good.
 
 While recording is active, the HoloLens will display a recording icon in the upper left corner of the screen. This is not visible in your recordings.
 
