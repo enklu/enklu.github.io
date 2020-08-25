@@ -30,7 +30,6 @@ Check your email, where your video will be sent to you shortly.
 
 ### Making the best recording
 
-When making a recording, be mindful that the viewer isn't in control of the device. 
-Sharp and sudden movements will appear disorienting when viewing the video.
+When making a recording, be mindful that sharp and sudden movements may be disorienting for the user viewing the video.
 
 The best videos often involve slow, comfortable walking and turning speeds.
