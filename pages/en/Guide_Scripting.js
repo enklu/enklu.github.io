@@ -42,6 +42,13 @@ function Scripting(props) {
 			imageLink: `${siteConfig.baseUrl}docs/Scripting/ControllingAnimations`,
 			title: `[Controlling Animations](${siteConfig.baseUrl}docs/Scripting/ControllingAnimations)`
     },
+		{
+			content:`[Connecting to multiplayer via nodejs.](${siteConfig.baseUrl}docs/Scripting/NodeSDK)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/NodeSDK`,
+			title: `[Multiplayer SDK](${siteConfig.baseUrl}docs/Scripting/NodeSDK)`
+		},
   ];
 
 	const Title_Splash = () => (
@@ -59,7 +66,7 @@ function Scripting(props) {
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
 					<Title_Splash/>
-          <GridBlock contents={scriptingLinks} layout="fourColumn" align="center"/>
+          <GridBlock contents={scriptingLinks} layout="threeColumn" align="center"/>
         </div>
       </Container>
     </div>
