@@ -44,7 +44,8 @@
       "Scripting/IntroductionToScripting",
       "Scripting/VineScriptBasics",
       "Scripting/BehaviorScriptBasics",
-      "Scripting/ControllingAnimations"
+      "Scripting/ControllingAnimations",
+      "Scripting/NodeSDK"
     ]
   },
   "API": {
