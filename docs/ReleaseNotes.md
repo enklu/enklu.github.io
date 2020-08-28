@@ -15,14 +15,14 @@ Dark Mode has arrived! All the power of Enklu in a sleeker, more accessible inte
 
 #### Video Capture
 
-We've made it much easier to capture videos of your experiences -- no code required. You can now start a recording from the main menu (say "Menu" while an experience is playing) or by simply saying "record." Once you've finished, the video
+We've made it much easier to [capture videos of your experiences](HoloLens/VideoRecording) -- no code required. You can now start a recording from the main menu (say "Menu" while an experience is playing) or by simply saying "record." Once you've finished, the video
 will be delivered to your inbox.
 
 <img src="https://cdn.enklu.com/web-assets/video-recording.gif" width="100%" alt="Video Capture"/>
 
 #### Remote Logging
 
-You can now stream logs from your HoloLens to the Enklu Cloud web editor. This greatly improves your ability to debug experiences in real time.
+You can now [stream logs from your HoloLens](HoloLens/RemoteDebugging) to the Enklu Cloud web editor. This greatly improves your ability to debug experiences in real time.
 
 <img src="https://cdn.enklu.com/web-assets/remote-logging.gif" width="100%" alt="Remote Logging"/>
 
