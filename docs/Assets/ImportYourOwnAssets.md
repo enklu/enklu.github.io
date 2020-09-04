@@ -11,7 +11,7 @@ Currently, Enklu Cloud supports two 3D model formats: OBJ and FBX, though more s
 
 To import a model, navigate to the Asset Library, click the **+** (plus) icon, and drag your file into the *Drop files here* section. Then click **Upload!** This will upload your asset to Enklu Cloud which will automatically package it for all target platforms. Depending on the size and complexity of your asset, this can take anywhere from several seconds to several minutes.
 
-![Drag asset file from dektop to Web Editor.  Drag uploaded file onto element to see it appear in the canvas.](/img/product/ImportYourOwnAssets_UploadAsset.gif)
+![Drag asset file from dektop to Web Editor.  Drag uploaded file onto element to see it appear in the canvas.](/img/product/editor/UploadAsset.gif)
 
 Once your model has been uploaded successfully, you will see notifications in the top right corner indicating which platform(s) it has completed processing. In the experience section of the Asset Library, you will see a thumbnail for your newly uploaded asset. Then your model is ready to be used! From here, read about how to [place an asset in the scene](/docs/Assets/PlacingAnAssetInTheScene).
 
