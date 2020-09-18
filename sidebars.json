@@ -8,7 +8,8 @@
       "WebEditorBasics/KeyboardShortcuts",
       "WebEditorBasics/PlacingAnAssetInTheScene",
       "WebEditorBasics/Lights",
-      "WebEditorBasics/SceneSettings"
+      "WebEditorBasics/SceneSettings",
+      "WebEditorBasics/PostProcessing"
     ],
     "HoloLens": [
       "HoloLens/HoloLens2Basics&Setup",

@@ -63,6 +63,13 @@ function WebEditorBasics(props) {
 			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/SceneSettings`,
 			title: `[Scene Settings](${siteConfig.baseUrl}docs/WebEditorBasics/SceneSettings)`
     },
+		{
+			content:`[Adding effects to fine tune your visuals.](${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing`,
+			title: `[Post Processing](${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing)`
+		},
   ];
 
 	const Title_Splash = () => (
