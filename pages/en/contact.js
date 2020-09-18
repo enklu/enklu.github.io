@@ -28,10 +28,9 @@ function Contact(props) {
       title: 'Send Us an Email',
     },
     {
-      content: `Engage with the Enklu Team and other users in our [**Community Slack**](https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw).  Or take a deeper dive into our open-source player and [**contribute to our Github**](https://github.com/enklu/enkluplayer/blob/master/CONTRIBUTING.md).
+      content: `Engage with the Enklu Team and other users in our [**Community Slack**](https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw)..
 				<div style='display: flex; justify-content: space-evenly;'>
 					<a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank" style="margin: 0 8px;"><img src="/img/social_slack.svg" style='height:50px'></a>
-					<a href="https://github.com/enklu/enkluplayer/blob/master/CONTRIBUTING.md" target="_blank" style="margin: 0 8px;"><img src="/img/social_github.svg" style='height:50px'></a>
 				</div>`,
       title: 'Join Our Community',
     },
