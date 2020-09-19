@@ -68,7 +68,7 @@ function WebEditorBasics(props) {
 			image: '',
 			imageAlign: 'top',
 			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing`,
-			title: `[Post Processing](${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing)`
+			title: `[Post-Processing](${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing)`
 		},
   ];
 
