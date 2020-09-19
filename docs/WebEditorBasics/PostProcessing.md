@@ -19,7 +19,7 @@ Bloom is an effect widely used in media.
 It adds color to already bright areas of the screen while mixing in a blurred glow effect. 
 
 Used sparingly, it can be effective in highlighting important areas of your experience or creating more realistic reflections. 
-It can also be used excessively to create illusions such as dreamscapes or fantasy worlds.
+It can also be used to create illusions such as dreamscapes or fantasy worlds.
 
 ![Bloom](/img/product/editor/Bloom.gif)
 
