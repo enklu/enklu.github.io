@@ -3,7 +3,7 @@ id: ControllingAnimations
 title: Controlling Animations
 ---
 
-Animations on Assets can be easily controlled through scripting. If you haven't read through the [Adding Animations](/docs/sAssets/AddingAnimationsFromUnity) from Unity guide yet, it's a great starting point for learning how to prepare assets. A completed version of the wolf asset can be found [here](https://drive.google.com/open?id=1g45k0hf16caYwJoNwTqIu98SuaeZYez4).
+Animations on Assets can be easily controlled through scripting. If you haven't read through the [Adding Animations](/docs/Assets/AddingAnimationsFromUnity) from Unity guide yet, it's a great starting point for learning how to prepare assets. A completed version of the wolf asset can be found [here](https://drive.google.com/open?id=1g45k0hf16caYwJoNwTqIu98SuaeZYez4).
 
 ## Checking an Animator Exists
 
