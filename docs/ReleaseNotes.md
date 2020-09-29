@@ -15,7 +15,7 @@ New to Enklu Cloud this release is our first in-editor, post-processing shader: 
 
 For more information on Bloom, check out our official guide [here](WebEditorBasics/PostProcessing).
 
-<img src="https://cdn.enklu.com/web-assets/bloom.gif" width="100%" alt="Bloom"/>
+![Bloom](/img/product/releases/2020.9/bloom.gif)
 
 ### Improvements
 
@@ -23,17 +23,17 @@ For more information on Bloom, check out our official guide [here](WebEditorBasi
 
 Finding and editing a script in Enklu Cloud has never been easier with our improved Scripting UI! There’s now a dedicated tab for your Scripts right next to your Assets.
 
-<img src="https://cdn.enklu.com/web-assets/script_tab.gif" width="100%" alt="Script Tab"/>
+![Script Tab](/img/product/releases/2020.9/script_tab.gif)
 
 We’ve also reduced the clicks it takes to edit your script, making it even easier to alter your asset’s scripts. Click the thumbnail of the script on an asset, and it will pull it up on the Script tab on the left sidebar of the editor!
 
-<img src="https://cdn.enklu.com/web-assets/script_edit.gif" width="100%" alt="Script Preview"/>
+![Script Preview](/img/product/releases/2020.9/script_edit.gif)
 
 #### Scene Settings
 
 Along with Bloom comes a UI revamp of the Scene Settings tab on the Hierarchy Window. We’ve placed each section in their own collapsable menu. This will allow you to find the scene settings you want to change without having to scroll too far.
 
-<img src="https://cdn.enklu.com/web-assets/scene_settings.gif" width="100%" alt="Scene Settings"/>
+![Scene Settings](/img/product/releases/2020.9/scene_settings.gif)
 
 #### Rendering Performance
 
