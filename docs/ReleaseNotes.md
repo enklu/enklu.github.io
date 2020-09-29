@@ -3,6 +3,60 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2020.9.0 - 9/29/2020
+
+### New Features
+
+#### Post-Processing: Bloom
+
+Have you always wanted to add a satisfying glow to your experiences? Or make your scene look like something out of Tron or a video game? Well, you’re in luck! 
+
+New to Enklu Cloud this release is our first in-editor, post-processing shader: **Bloom**! You can access Bloom settings in your project by navigating to the Scene Settings tab, on the left sidebar of the editor.  
+
+For more information on Bloom, check out our official guide [here](WebEditorBasics/PostProcessing).
+
+![Bloom](/img/product/releases/2020.9/bloom.gif)
+
+### Improvements
+
+#### Scripting UI/UX
+
+Finding and editing a script in Enklu Cloud has never been easier with our improved Scripting UI! There’s now a dedicated tab for your Scripts right next to your Assets.
+
+![Script Tab](/img/product/releases/2020.9/script_tab.gif)
+
+We’ve also reduced the clicks it takes to edit your script, making it even easier to alter your asset’s scripts. Click the thumbnail of the script on an asset, and it will pull it up on the Script tab on the left sidebar of the editor!
+
+![Script Preview](/img/product/releases/2020.9/script_edit.gif)
+
+#### Scene Settings
+
+Along with Bloom comes a UI revamp of the Scene Settings tab on the Hierarchy Window. We’ve placed each section in their own collapsable menu. This will allow you to find the scene settings you want to change without having to scroll too far.
+
+![Scene Settings](/img/product/releases/2020.9/scene_settings.gif)
+
+#### Rendering Performance
+
+Experiences with a very large amount of assets should now see a performance boost! Before, rendering performance would degrade as scene density increased. Now, it will no longer add extra rendering complexity past the expected rendering cost of your asset (which is based on mesh or shader complexity).
+
+### Fixes
+
+#### Live Update
+
+We've fixed a bug that would’ve disrupted live updating after a device reconnects to Enklu Cloud after getting disconnected from the internet. Users are now notified upon reconnection if any changes have been made while they were offline.
+
+#### Misc. Bug Fixes
+
+- **Logging**: Introduced the ability to log `null`, and raw json without exceptions.
+- **TouchJs**: Adjusted hit.position and hit.normal so that they are now proper Vec3s.
+- **Avatar icons**: Fixed an issue that caused leaked icons, missing device thumbnails, and empty abbreviations for the user.
+- Fixed a bug that caused the Articulated Hand controller to fail at app start.
+- Null scripts are no longer saved in the editor.
+- New scripts from collaborators are now acknowledged in the project file.
+- Fixed a bug that caused exceptions while using SAI after switching experiences.
+
+***
+
 ## 2020.8.0 - 8/26/2020
 
 ### New Features
@@ -54,6 +108,8 @@ interpolation.
 - We have fixed several conditions that might lead to the user being stuck in the Loading screen.
 - Voice commands will continue to work after the app has been in the background for awhile.
 
+***
+
 ## 0.50.0 - 8/13/2020
 
 ### Improvements
@@ -66,6 +122,8 @@ interpolation.
 - If an email address has a special character like "+", it will now show up in collaborator searches.
 - Updates to asset thumbnails are reflected immediately.
 - Fixed an incorrect link to documentation.
+
+***
 
 ## 0.49.0 - 7/9/2020
 
@@ -91,6 +149,8 @@ interpolation.
 - Hidden buttons no longer can activate with voice commands (an audible bloop is still heard currently however).
 - Leaked GameObjects are cleaned up when exiting edit mode.
 
+***
+
 ## 0.48.0 - 7/6/2020
 
 ### Improvements
@@ -104,6 +164,8 @@ interpolation.
 - Experience loading screen might start behind user.
 - Some menus couldn't be closed.
 - Experiences sometimes didn't load if an asset failed to load.
+
+***
 
 ## 0.47.0 - 4/30/2020
 
@@ -120,6 +182,8 @@ interpolation.
 
 - Fixed an error that occasionally appears when an Undo action removes an element.
 
+***
+
 ## 0.46.0 - 4/16/2020
 
 ### New Features
@@ -135,6 +199,8 @@ interpolation.
 ### Fixes
 
 - Fixed error where calling undo resulted in an error
+
+***
 
 ## 0.45.0 - 4/2/2020
 
