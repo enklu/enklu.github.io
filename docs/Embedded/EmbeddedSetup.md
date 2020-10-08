@@ -3,18 +3,34 @@ id: EmbeddedSetup
 title: Installing Enklu Embedded
 ---
 
-_\[Note: Access to this feature requires a [Studio Subscription](https://enklu.com/pricing). [Contact us](/contact) for details.\]_
-
 ![Enklu Embedded](/img/undraw_embedded.svg)
 
-Enklu Embedded enables Unity Developers to embed Enklu Cloud content within Unity scenes as well as sync 3D Assets to Enklu Cloud directly from Unity. With Enklu Embedded, Unity Developers enjoy the freedom of Unity and the rapid iteration and real-time synchronization of Enklu Cloud. Enklu Embedded works for all Unity projects, but is specifically optimized to improve workflows for immersive augmented reality developers.
+Enklu Embedded enables Unity Developers to embed Enklu Cloud content within Unity scenes and sync 3D Assets to Enklu Cloud directly from Unity. With Enklu Embedded, Unity Developers enjoy the freedom of Unity and the rapid iteration and real-time synchronization of Enklu Cloud. Enklu Embedded works for all Unity projects, but is specifically optimized to improve workflows for immersive augmented reality developers.
 
 ## Installing
 
-Enklu Embedded is comprised of two [Unity Packages](https://docs.unity3d.com/Manual/PackagesList.html) and is distributed as a pair of tarball archives. Installing the packages is a straightforward process, but it can vary depending on your version of Unity.
+Enklu Embedded is distributed as a [Unity Package](https://docs.unity3d.com/Manual/PackagesList.html) and can be installed with Unity's Package Manager. To register the Enklu package repository with the Package Manager, add an entry to the `scopedRegistries` section of the package manifest in your project. 
 
-> If your project uses the unity package available on our guide [Exporting Unity Prefabs](/docs/Assets/ExportingUnityPrefabs), remove it before insalling the Enklu Embedded packages.
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "Enklu",
+      "url": "http://nexus.enklu.com/repository/upm/",
+      "scopes": [
+        "com.enklu"
+      ]
+    }
+  ]
+}
+```
 
-For Unity version greater than 2018.1, the Package Manger is included with the Editor and is accessible via the Window > Package Manager menu command. From there, find the + button and select either "Add package from tarball..." (Unity version 2019.3 and greater) or "Add package from disk..." In th latter case, you can use a tool such as 7-zip to decompress the tarball archive. Be sure to install both the `com.enklu.core` and `com.enklu.embedded` packages.
+If your project does not have a package manifest, create one at `Packages/manifest.json` with the above contents. For more information about scoped registries, see [Unity's documentation](https://docs.unity3d.com/Manual/upm-scoped.html).
 
-> We recommend installing the `com.enklu.core` package first.
+> If your project uses the Unity package available on our guide [Exporting Unity Prefabs](/docs/Assets/ExportingUnityPrefabs), remove it before installing the Enklu Embedded packages.
+
+For Unity version greater than 2018.1, the Package Manger is included with the Editor and is accessible via the `Window > Package Manager` menu command. After editing the package manifest in the previous step, Enklu packages should be availble for installation. Find the Enklu Embedded package and click Install.
+
+![Enklu Embedded](/img/product/embedded/PackageManager.png)
+
+> The package "Enklu Core" will also be available. Enklu Embedded includes it as a dependency, so there is no need to install it manually.

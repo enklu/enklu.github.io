@@ -48,7 +48,7 @@
       "Scripting/ControllingAnimations",
       "Scripting/NodeSDK"
     ],
-    "Enklu Embedded (Preview)": [
+    "Enklu Embedded": [
       "Embedded/EmbeddedSetup",
       "Embedded/EnkluVolume",
       "Embedded/AssetSync"
