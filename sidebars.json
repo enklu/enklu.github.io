@@ -47,6 +47,11 @@
       "Scripting/BehaviorScriptBasics",
       "Scripting/ControllingAnimations",
       "Scripting/NodeSDK"
+    ],
+    "Enklu Embedded": [
+      "Embedded/EmbeddedSetup",
+      "Embedded/EnkluVolume",
+      "Embedded/AssetSync"
     ]
   },
   "API": {
