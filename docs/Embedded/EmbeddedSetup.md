@@ -29,7 +29,7 @@ If your project does not have a package manifest, create one at `Packages/manife
 
 > If your project uses the Unity package available on our guide [Exporting Unity Prefabs](/docs/Assets/ExportingUnityPrefabs), remove it before installing the Enklu Embedded packages.
 
-For Unity version 2018.1 and later, the Package Manger is included with the Editor and is accessible via the `Window > Package Manager` menu command. After editing the package manifest in the previous step, Enklu packages should be availble for installation. Find the Enklu Embedded package and click Install.
+For Unity version 2018.1 and later, the Package Manager is included with the Editor and is accessible via the `Window > Package Manager` menu command. After editing the package manifest in the previous step, Enklu packages should be availble for installation. Find the Enklu Embedded package and click Install.
 
 ![Enklu Embedded](/img/product/embedded/PackageManager.png)
 
