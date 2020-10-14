@@ -17,7 +17,7 @@ To make getting started as seamless as possible, we have created an installer th
 
 [`EnkluEmbeddedInstaller.unitypackage`](https://cdn.enklu.com/web-assets/packages/EnkluEmbeddedInstaller.unitypackage)
 
-To run the installer, simply drag it into you Unity project or import it from the `Asset > Import Package > Custom Package...` menu and confirm the two files to import.
+To run the installer, simply drag it into your Unity project or import it from the `Asset > Import Package > Custom Package...` menu and confirm the two files to import.
 
 ![Importing the Installer](/img/product/embedded/Installer.png)
 
