@@ -11,6 +11,6 @@ After you've logged in, use the inspector tab to set up your Enklu Volume. You c
 
 > Every Enklu Experience has an element named "root." If you select the "root" element, the entire experience will be included in your Volume.
 
-After selecting an experience and an element from the inspector, enter Play Mode by clicking the Play button on the Toolbar. The EnkluVolume will fetch the latest version of the Enkl experience and begin receiving real-time updates. The content will load alongside anything already existing in the Unity scene.
+After selecting an experience and an element from the inspector, enter Play Mode by clicking the Play button on the Toolbar. The EnkluVolume will fetch the latest version of the Enklu experience and begin receiving real-time updates. The content will load alongside anything already existing in the Unity scene.
 
 ![Enklu Volume](/img/product/embedded/VolumeUpdates.gif)
