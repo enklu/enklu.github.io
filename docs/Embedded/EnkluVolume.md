@@ -7,10 +7,10 @@ To embed an Enklu Cloud experience in your Unity project, add an EnkluVolume pre
 
 ![Enklu Volume](/img/product/embedded/VolumeImport.gif)
 
-After you've logged in, use the inspector tab to set up your Enklu Volume. You can embed an entire experience or just part of one. Select an element from the dropdown menus to choose which part.
+After you've logged in, use the inspector tab to set up your Enklu Volume. You can embed an entire experience or just part of one. Select an element from the dropdown menu to choose which part of the experience you would like to embed.
 
 > Every Enklu Experience has an element named "root." If you select the "root" element, the entire experience will be included in your Volume.
 
-After selecting an experience and an element from the inspector, enter Play Mode by clicking the Play button on the Toolbar. The EnkluVolume will fetch the latest version of the Enklu experience and begin receiving real-time updates. The content will load alongside anything already existing in the Unity scene.
+After selecting an experience and an element from the inspector, enter Play Mode by clicking the Play button on the Toolbar. The EnkluVolume will fetch the latest version of the Enklu experience and begin receiving real-time updates. The content will load alongside anything that already exists in the Unity scene.
 
 ![Enklu Volume](/img/product/embedded/VolumeUpdates.gif)

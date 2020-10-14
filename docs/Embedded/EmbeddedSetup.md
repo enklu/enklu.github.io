@@ -21,9 +21,9 @@ To run the installer, simply drag it into your Unity project or import it from t
 
 ![Importing the Installer](/img/product/embedded/Installer.png)
 
-Once the files have been added to the project, the installer will import the Enklu Embedded package, if necessary. Please note that the process can take several minutes. It will perform this check every time you launch your Unity project. It is also possible to run the `Enklu > Install Enklu Embedded...` menu command. 
+Once the files have been added to the project, the installer will import the Enklu Embedded package. Please note that the process can take several minutes. It is also possible to run the `Enklu > Install Enklu Embedded...` menu command. 
 
-> After installation, it is safe to remove the installer. The files are located in the `Assets/Enklu/Editor` directory.
+> After installation, it is safe to remove the installer. The files are located in the `Assets/Enklu/Editor` directory. If you keep the installer in your project, it will ensure Enklu Embedded has been imported every time you launch Unity.
 
 ## Using the Package Manager
 
