@@ -27,6 +27,8 @@ Once the files have been added to the project, the installer will import the Enk
 
 ## Using the Package Manager
 
+***\[Note: We strongly recommend [using the installer](#using-the-installer) instead of the manual setup outlined in this section.\]***
+
 The Enklu Embedded package can be downloaded from Enklu's package repository using Unity's Package Manager. But first, it's necessary to add an entry to the `scopedRegistries` section of the package manifest in your project. This makes it possible for the Package Manager to find third-party packages like Enklu Embedded. 
 
 ```json
