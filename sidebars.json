@@ -5,6 +5,7 @@
       "WebEditorBasics/WebEditorInterface",
       "WebEditorBasics/MinimumRequirements",
       "WebEditorBasics/ManagingYourExperiences",
+	  "WebEditorBasics/SharingExperiences",
       "WebEditorBasics/KeyboardShortcuts",
       "WebEditorBasics/PlacingAnAssetInTheScene",
       "WebEditorBasics/Lights",
