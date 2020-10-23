@@ -24,7 +24,7 @@ If a collaborator's email address is not currently associated with an Enklu acco
 
 ![Collaborator email not found](/img/product/editor/sharing/sharing_non_enklu_users.gif)
 
-### Removing a Collaborator
+## Removing a Collaborator
 
 In order to remove a collaborator from your project, click on the drop down menu next to their name in the main modal dialog and select "Remove." You will then be prompted with a confirmation message, at which point you can either cancel your request or confirm their removal.
 
@@ -33,7 +33,7 @@ In order to remove a collaborator from your project, click on the drop down menu
 > **Note:** You can only remove collaborators up to your permission level (i.e. Editors cannot remove Admins).
 
 
-### Other Tips
+## Other Tips
 
 Need to add a lot of collaborators at once? No problem! You can add multiple people in one invite, regardless of if they have an Enklu account or not.
 
