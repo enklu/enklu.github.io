@@ -10,11 +10,11 @@ To add a collaborator, click on the **Share** button in the top right corner of 
 
 ![Modal Dialog](/img/product/editor/sharing/share_button_and_modal.gif)
 
-This modal dialog box will display not only the current collaborators on the project, but also their [permission level](#changing-permissions).
+This modal dialog box will display the current collaborators on the project and their [permission levels](#changing-permissions).
 
 ### Inviting Enklu Users
 
-At the top of the dialog box is a search bar, where you can type an individual's email address to add them to your project. If the entered email does have an associated Enklu account, it will display the associated username for you to confirm the correct collaborator. Make sure to only share your experiences with people you trust.
+At the top of the dialog box is a search bar, where you can type an individual's email address to add them to your project. If the entered email already has an associated Enklu account, it will display their username for you to confirm the correct collaborator. Make sure to only share your experiences with people you trust.
 
 ![Collaborator email found](/img/product/editor/sharing/sharing_enklu_users.png)
 
