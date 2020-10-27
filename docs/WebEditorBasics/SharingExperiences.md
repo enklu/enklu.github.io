@@ -20,7 +20,7 @@ At the top of the dialog box is a search bar, where you can type an individual's
 
 ### Inviting Non-Enklu Users
 
-If a collaborator's email address is not currently associated with an Enklu account, you will be able to send an email invite. This email invite will allow the recipient to create an Enklu account and share your selected experience with them once their account has been created.
+If a collaborator's email address is not currently associated with an Enklu account, you will be able to send an email invite. This email invite will allow the recipient to create an Enklu account and your experience will be shared with them once their account has been created.
 
 ![Collaborator email not found](/img/product/editor/sharing/sharing_non_enklu_users.gif)
 
@@ -52,4 +52,4 @@ You will then be able to select the following permission levels for that collabo
 > - **Editor:** Able to edit content, and can add or remove Viewers or Editors.
 > - **Admin:** Highest permission level, can do everything an Editor can, as well as delete an experience entirely.
 
-You can only change a person's permission level up to your own level of permissions. This means that while an Editor cannot elevate a Viewer to Admin, but an Admin can promote a Viewer or Editor to Admin status.
+You can only change a person's permission level up to your own level of permissions. This means that while an Editor cannot elevate a Viewer to Admin, an Admin can promote a Viewer or Editor to Admin status.
