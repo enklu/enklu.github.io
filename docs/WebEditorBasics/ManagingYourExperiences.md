@@ -21,20 +21,3 @@ To create a new experience, click the + button on the bottom left of the My Expe
 
 
 Once you have filled in the name and description fields, you can press the **Create!** button to create your new experience. It will load into your new blank experience. Once the new experience has loaded, you can open *My Experiences* and see your newly created experience in the experience list on the left.
-
-## Collaborators
-If you would like to share an experience for others to view or edit, you can add them as *Collaborators*. In *My Experiences*, select the experience you wish to share and click the **+** button under the *Collaborators* section.
-![My Experiences plus button to add collaborator](/img/product/ManagingYourExperiences_MyExpAddCollab.png)
-
-You can search for collaborators to add using their email address. If their email address is not currently associated with an Enklu account, you will be able to send an email invite.
-![Collaborator email not found](/img/product/ManagingYourExperiences_InviteCollab.png)
-
-This email invite, invites the recipient to create an Enklu account and will share your selected experience (after you've assigned permissions) once their account has been created.
-
-If the entered email does have an associated Enklu account, it will display the associated username for you to confirm the correct collaborator. Make sure to only share your experiences with people you trust.
-![Collaborator email found](/img/product/ManagingYourExperiences_InviteCollab02.png)
-
-If the information is correct, you can click the + button next to their email to assign permission for the collaborator.
-![Collaborator permission settings with "View", "Edit", and "Delete" options](/img/product/ManagingYourExperiences_InviteCollabPerms.png)
-
-You can select which permission you would like to give this collaborator by clicking on the checkboxes. Once you have chosen the permission levels, click the checkmark button at the bottom to confirm sharing the experience with this collaborator. The shared experience will be available in your collaborator's *My Experience* list as well as your own.
