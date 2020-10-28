@@ -24,7 +24,7 @@ For more information on Enklu Embedded, check out our official guide [here](Embe
 
 #### Web Play Mode
 
-New to Enklu Cloud is Web Play Mode! Web Play Mode allows you to test your experience directly from the web editor, without needing to wear a headset. You can switch to Web Play Mode via the Play button at the top of the canvas.
+New to Enklu Cloud is [Web Play Mode](WebEditorBasics/WebPlayMode)! Web Play Mode allows you to test your experience directly from the web editor, without needing to wear a headset. You can switch to Web Play Mode via the Play button at the top of the canvas.
 
 Web Play Mode comes in two varieties: Popup and Embedded. You can toggle which one you prefer via the Editor Settings tab (Popup is enabled by default).
 
