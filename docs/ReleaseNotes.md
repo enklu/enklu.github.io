@@ -3,6 +3,74 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2020.10.0 - 10/27/2020
+
+### New Features
+
+#### Enklu Embedded
+
+Does your current workflow make you bounce between Unity and the web editor? Have you dreamt of a world where editing an asset in Unity would also edit that asset in the web editor?
+
+Introducing Enklu Embedded in 2020.10.0! Enklu Embedded allows for users to embed Enklu Cloud content into their Unity scenes. It also enables Unity developers the ability to sync 3D assets from Unity back to Enklu Cloud.
+
+With Enklu Embedded, Unity developers can enjoy the freedom of Unity with the rapid iteration and real-time synchronization of Enklu Cloud (talk about having your cake and eating it too!).
+
+For more information on Enklu Embedded, check out our official guide [here](Embedded/EmbeddedSetup).
+
+
+![Enklu Embedded](/img/product/embedded/VolumeUpdates.gif)
+
+
+
+#### Web Play Mode
+
+New to Enklu Cloud is Web Play Mode! Web Play Mode allows you to test your experience directly from the web editor, without needing to wear a headset. You can switch to Web Play Mode via the Play button at the top of the canvas.
+
+Web Play Mode comes in two varieties: Popup and Embedded. You can toggle which one you prefer via the Editor Settings tab (Popup is enabled by default).
+
+
+![Web Play Mode](/img/product/releases/webplay.gif)
+
+
+### Improvements
+
+#### Sharing Experiences
+
+Adding collaborators to your project should be easier than ever with our new sharing experiences UX! We've added a new Share button next to your user portrait that will allow you to add, remove, and adjust the permissions for all collaborators on a project.
+
+For more tips on editing collaborators and permissions, check out our [official guide](WebEditorBasics/SharingExperiences) on sharing your experiences!
+
+![Sharing Experiences](/img/product/editor/sharing/share_button_and_modal.gif)
+
+#### Loading Screen
+
+Say goodbye to ambiguous black screens! We've added a loading screen to your project window when initializing a project.
+
+![Loading Screen](/img/product/releases/loading_screen.gif)
+
+#### IUX Button Styles
+
+Alongside Web Play Mode, you now have the option to toggle between two button styles in the Scene Settings tab: Default and Web. While Default uses the button style found in the HoloLens, Web displays a more web-friendly format in Web Play Mode. Feel free to try both and see which feels best for you!
+
+![IUX Button Styles](/img/product/releases/IUX_button_style.gif)
+
+#### HoloLens Editor IUX Tweaks
+
+Starting with 2020.10.0, we'll be rolling out improvements to our HoloLens editor IUX. In 2020.10, we've made selecting buttons via gaze in-lens more ergonomic than ever before! Your gaze should now "stick" to a button when your gaze reticle is close to it. Additionally, you will now experience less gaze "wobble" than before!
+
+### Fixes
+
+#### Misc. Bug Fixes
+
+- Fixed a bug where refreshing a script did not update it for all collaborators in the project.
+    - Removed the refresh button entirely, scripts now refresh automatically.
+- Fixed an issue where users could make internal schema properties throw exceptions.
+- Users can no longer undo changes made in a previous experience after switching to a different project.
+
+
+***
+
+
 ## 2020.9.0 - 9/29/2020
 
 ### New Features
