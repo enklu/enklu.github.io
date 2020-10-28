@@ -24,12 +24,12 @@ For more information on Enklu Embedded, check out our official guide [here](Embe
 
 #### Web Play Mode
 
-New to Enklu Cloud is Web Play Mode! Web Play Mode allows you to test your experience directly from the web editor, without needing to don a headset. You can switch to Web Play Mode via the Play button at the top of the project window.
+New to Enklu Cloud is Web Play Mode! Web Play Mode allows you to test your experience directly from the web editor, without needing to don a headset. You can switch to Web Play Mode via the Play button at the top of the canvas.
 
-Web Play Mode comes in two varieties: Pop-up and Embedded. You can toggle which one you prefer via the Editor Settings tab (Embedded is enabled by default).
+Web Play Mode comes in two varieties: Pop-up and Embedded. You can toggle which one you prefer via the Editor Settings tab (Pop-up is enabled by default).
 
 
-![Web Play Mode](/img/product/releases/webplay_embeddedv2.gif)
+![Web Play Mode](/img/product/releases/webplay.gif)
 
 
 ### Improvements
@@ -61,6 +61,7 @@ Say goodbye to ambiguous black screens! We've added a loading screen to your pro
 - Fixed an issue where refreshing a script did not update it for all collaborators in the project.
     - Removed the refresh button entirely, scripts now refresh automatically.
 - Fixed an issue where users could make internal schema properties throw exceptions.
+- Users can no longer undo changes made in a previous experience after switching to a different project.
 
 
 ***
