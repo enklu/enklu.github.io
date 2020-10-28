@@ -10,7 +10,8 @@
       "WebEditorBasics/PlacingAnAssetInTheScene",
       "WebEditorBasics/Lights",
       "WebEditorBasics/SceneSettings",
-      "WebEditorBasics/PostProcessing"
+      "WebEditorBasics/PostProcessing",
+      "WebEditorBasics/WebPlayMode"
     ],
     "HoloLens": [
       "HoloLens/HoloLens2Basics&Setup",

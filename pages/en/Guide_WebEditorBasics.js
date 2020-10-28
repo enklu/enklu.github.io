@@ -70,6 +70,13 @@ function WebEditorBasics(props) {
 			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing`,
 			title: `[Post-Processing](${siteConfig.baseUrl}docs/WebEditorBasics/PostProcessing)`
 		},
+		{
+			content:`[Iterate faster without leaving your browser.](${siteConfig.baseUrl}docs/WebEditorBasics/WebPlayMode)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/WebEditorBasics/WebPlayMode`,
+			title: `[Web Play Mode](${siteConfig.baseUrl}docs/WebEditorBasics/WebPlayMode)`
+		},
   ];
 
 	const Title_Splash = () => (
@@ -87,7 +94,7 @@ function WebEditorBasics(props) {
       <Container className="mainContainer documentContainer postContainer">
         <div className="post">
 					<Title_Splash/>
-          <GridBlock contents={webEditorBasicsLinks} layout="fourColumn" align="center"/>
+          <GridBlock contents={webEditorBasicsLinks} layout="threeColumn" align="center"/>
         </div>
       </Container>
     </div>
