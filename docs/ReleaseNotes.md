@@ -58,7 +58,7 @@ Say goodbye to ambiguous black screens! We've added a loading screen to your pro
 
 #### Misc. Bug Fixes
 
-- Fixed an issue where refreshing a script did not update it for all collaborators in the project.
+- Fixed a bug where refreshing a script did not update it for all collaborators in the project.
     - Removed the refresh button entirely, scripts now refresh automatically.
 - Fixed an issue where users could make internal schema properties throw exceptions.
 - Users can no longer undo changes made in a previous experience after switching to a different project.
