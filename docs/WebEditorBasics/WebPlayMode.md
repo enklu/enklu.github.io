@@ -23,7 +23,7 @@ A new window will open and begin loading the experience. The existing editor win
 
 ### Embedded Web Play Mode
 
-If you prefer to work in one window, you can toggle Embedded Web Play mode in the Editor Settings tab.
+If you prefer to work in one window, you can toggle Embedded Web Play Mode in the Editor Settings tab.
 With this setting active, the existing canvas will load into play mode when the Play button is used. 
 Clicking the Play button again will return the canvas to edit mode.
 
