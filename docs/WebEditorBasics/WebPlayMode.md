@@ -47,4 +47,4 @@ For any experience designed primarily for Web Play Mode, the visuals used by the
 From the Scene Settings tab, change the IUX Visual Style option to update the display type the experience will use. 
 Changes to this setting will appear after reloading the editor.
 
-
+![Web Visuals](/img/product/editor/WebIUX.png)
