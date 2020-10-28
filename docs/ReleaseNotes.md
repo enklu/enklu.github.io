@@ -24,7 +24,7 @@ For more information on Enklu Embedded, check out our official guide [here](Embe
 
 #### Web Play Mode
 
-New to Enklu Cloud is [Web Play Mode](Embedded/Embedded/Setup)! Web Play Mode allows you to test your experience directly from the web editor, without needing to don a headset. You can switch to Web Play Mode via the Play button at the top of the project window.
+New to Enklu Cloud is Web Play Mode! Web Play Mode allows you to test your experience directly from the web editor, without needing to don a headset. You can switch to Web Play Mode via the Play button at the top of the project window.
 
 Web Play Mode comes in two varieties: Pop-up and Embedded. You can toggle which one you prefer via the Editor Settings tab (Embedded is enabled by default).
 
@@ -39,7 +39,7 @@ Web Play Mode comes in two varieties: Pop-up and Embedded. You can toggle which 
 Adding collaborators to your project should be easier than ever with our new sharing experiences UX! We've added a new Share button next to your user portrait that will allow you to add, remove, and adjust the permissions for all collaborators on a project.
 
 For more tips on editing collaborators and permissions, check out our [official guide](WebEditorBasics/SharingExperiences) on sharing your experiences!
-s
+
 ![Sharing Experiences](/img/product/editor/sharing/share_button_and_modal.gif)
 
 
