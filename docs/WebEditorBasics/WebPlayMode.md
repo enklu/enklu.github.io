@@ -24,13 +24,15 @@ While in Web Play Mode, edits made by you or other collaborators will update liv
 To start viewing your experience in Play Mode, click on the Play icon above the canvas. 
 A new window will open and begin loading the experience. The existing editor window can still be used to develop side by side with Play Mode.
 
-// TODO: Still image centered on Play button.
+![Play Button](/img/product/editor/ControlBar.png)
 
 ### Use Embedded Web Play Mode
 
 For users who prefer to work in one window, the Editor settings has an option for using an embedded play mode.
 With this setting active, the existing canvas will load into play mode when the Play button is used. 
 Clicking the Play button again will return the canvas to edit mode.
+
+![General Settings](/img/product/editor/GeneralSettings.png)
 
 > Note: Depending on your computer specs, this setting may lead to increased performance compared to using the popup.
 
@@ -48,4 +50,4 @@ For any experience designed primarily for Web Play Mode, the visuals used by the
 From the Scene settings, use the IUX Visual Style option to update the display type the experience will use. 
 Changes to this setting will appear after reloading the editor.
 
-// TODO: Still image of visual style dropdown.
+![IUX Settings](/img/product/editor/IUXSettings.png)
