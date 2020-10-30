@@ -160,13 +160,19 @@ Creates a builder for adding elements synced to all clients in the multiplayer s
 
 Subscribes to a multiplayer event.
 
+### `off(event, callback)`
+- `event <string>` The event to subscribe to.
+- `event <string>` The event previously subscribed to.
+
 ### `off(event)`
 - `event <string>` The event previously subscribed to.
 
 Unsubscribes from a multiplayer event.
 
-### `broadcast(event, payload)`
+### `broadcast(event)`
+- `event <string>` Name of the event.
 
+### `broadcast(event, payload)`
 - `event <string>` Name of the event.
 - `payload <string>` Data to send to subscribers.
 
