@@ -69,7 +69,7 @@ You can also upload audio files. Uploading audio files works the same as uploadi
 
 ## Uploading Video Files
 
-Enklu cloud support directly importing video files as well. Uploading video files works the same way as uploading other asset types. The video file extensions Enklu Cloud supports are:
+Enklu Cloud supports importing video files as well. Uploading a video works the same way as uploading any other asset type (See the instructions for [uploading 3D models](#uploading-3d-models) for details). The video file extensions Enklu Cloud supports are:
 
 - .asf
 - .avi
