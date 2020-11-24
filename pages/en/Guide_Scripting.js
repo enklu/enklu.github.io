@@ -15,6 +15,13 @@ function Scripting(props) {
 
   const scriptingLinks = [
     {
+			content:`[Using Enklu Cloud's public script library.](${siteConfig.baseUrl}docs/Scripting/PublicScripts)`,
+			image: '',
+			imageAlign: 'top',
+			imageLink: `${siteConfig.baseUrl}docs/Scripting/PublicScripts`,
+			title: `[Public Scripts](${siteConfig.baseUrl}docs/Scripting/PublicScripts)`
+    },
+    {
 			content:`[Scripting basics.](${siteConfig.baseUrl}docs/Scripting/IntroductionToScripting)`,
 			image: '',
 			imageAlign: 'top',

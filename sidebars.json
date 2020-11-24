@@ -44,6 +44,7 @@
       "Spaces/DownloadingScan"
     ],
     "Scripting": [
+      "Scripting/PublicScripts",
       "Scripting/IntroductionToScripting",
       "Scripting/VineScriptBasics",
       "Scripting/BehaviorScriptBasics",
