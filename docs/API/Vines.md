@@ -600,7 +600,7 @@ attribute. In addition, icons can be passed as url using the format `"icon://<ic
 - `"TopCenter"`
 - `"TopLeft"`
 - `"BotRight"`
-- `"CotCenter"`
+- `"BotCenter"`
 - `"BotLeft"`
 
 # Text Display Values
