@@ -50,12 +50,10 @@ Aside from CAD support, we've also added better video support in 2020.11. You ca
 
 You can also directly embed video URLs into your projects [using VineML](API/Vines.md#video).
 
-> **Note:** Videos currently will not play in the web editor, but they will play as expected on supported devices.
-
 
 ![Better Video Support](/img/product/releases/2020.11/video_asset_support.gif)
 
-
+> **Note:** Videos currently will not play in the web editor, but they will play as expected on supported devices.
 
 ### Improvements
 
@@ -74,16 +72,14 @@ Finally, we've also added the ability to sort your experiences by either Name or
 
 We've added a bunch of new Public Scripts in 2020.11 that makes building interactions easier than ever! These Drag & Drop scripts allow even the least technical of folks to create complex simulations or immersive content. 
 
-To use one of these scripts, create a new asset and drag one of these  over to the Script section of the Inspector. You can then adjust different parameters, like the icon or color of a button, in the Variable window. Most importantly, you can also decide what message an interactable takes, and what message it sends on completion.  You could create a button that pulls apart a motor, or a proximity trigger that reveals a hidden message! 
-
-For more on Drag & Drop scripts, check out our official guide [here]().
+To use one of these scripts, create a new asset and drag one of these  over to the Script section of the Inspector. You can then adjust different parameters, like the icon or color of a button, in the Variable window. Most importantly, you can also decide what event an interactive element reacts to and what event it broadcasts on completion. You could create a button that pulls apart a motor, or a proximity trigger that reveals a hidden message! 
 
 ![Drag & Drop Scripts](/img/product/releases/2020.11/drag_and_drop_scripts.gif)
 
 
 #### Web Play Mode: Hand Interactions
 
-Building on its official debut in 2020.10, we've added a new feature to Web Play mode: hand interactions! You can now simulate grabbing particles (or fingerpainting) without needing to put on a HoloLens.
+Building on its official debut in 2020.10, we've added a new feature to Web Play mode: hand interactions! You can now simulate basic hand interactions directly in your browser without needing to put on a HoloLens.
 
 ![Hand Interactions](/img/product/releases/2020.11/fingerpainting.gif)
 
@@ -108,7 +104,7 @@ User portraits have also seen an overhaul in 2020.11. Collaborators on an experi
 
 #### Misc. Bug Fixes
 
-- Fixed a bug that caused the web editor to crash when editing multiple scripts.
+- Fixed a bug that caused the web editor to crash when entering and exiting the script editor multiple times.
 - Resolved multiplayer connections issues for the HoloLens.
 - Users can no longer refresh the whole editor when hitting enter in script variables.
 - Fixed a bug with the adjustment sliders in the HoloLens editor.
