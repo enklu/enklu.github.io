@@ -19,7 +19,7 @@ To use a public script, simply select the element you want to attach it to, then
 
 ### Inspector Variables
 
-Using the **Variables** tab in the inspector is a quick and easy way to change script parameters without needed to open the script or do any coding.  Not every script will have variables exposed to the inspector in this way.  Particularly for custome scripts you write yourself, you would have to intentionally include syntax to expose variables to the inspector.  But most public scripts will have variables that can be modified from the inspector.
+Using the **Variables** tab in the inspector is a quick and easy way to change script parameters without needed to open the script or do any coding.  Not every script will have variables exposed to the inspector in this way.  Particularly for custom scripts you write yourself, you would have to intentionally include syntax to expose variables to the inspector.  But most public scripts will have variables that can be modified from the inspector.
 
 Some examples of what kinds of variables public scripts may use:
 
