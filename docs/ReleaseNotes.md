@@ -3,6 +3,114 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2020.11.0 - 11/24/2020
+
+### New Features
+
+#### CAD and Video Asset Support
+
+##### Uploading CAD Files
+Do you use Enklu Cloud for your rapid prototyping needs? Are you interested in editing your CAD files in the web editor, without the extra hassle of exporting them from Unity?
+
+Starting with 2020.11, Enklu Cloud now supports direct imports for the following CAD formats:
+- .asm 
+- .sldasm, .sldasm.1 (in a .zip file with any dependencies)
+- .prt, .prt.1
+- .sldprt, .sldprt.1
+- .dwg
+- .dxf
+- .fbx
+- .obj
+- .pxz (in a .zip file with any dependencies)
+- .gltf
+- .3dm
+- .stl 
+
+And this is only the beginning! We'll be continuing to update Enklu Cloud to accommodate more and more CAD formats as time goes on. So if you use a format that isn't represented above, please [contact us](/contact)!
+
+![CAD Assets](/img/product/releases/2020.11/CAD_asset_support.gif)
+
+
+##### Better Video Support
+
+Aside from CAD support, we've also added better video support in 2020.11. You can now upload the following video format directly to Enklu Cloud:
+
+ - .asf
+ - .avi
+ - .dv
+ - .m4v
+ - .mov
+ - .mp4
+ - .mpg
+ - .mpeg
+ - .ogv
+ - .vp8
+ - .webm
+ - .wmv 
+
+You can also directly embed video URLs into your projects [using VineML](API/Vines.md#video).
+
+
+![Better Video Support](/img/product/releases/2020.11/video_asset_support.gif)
+
+> **Note:** Videos currently will not play in the web editor, but they will play as expected on supported devices.
+
+### Improvements
+
+#### My Experiences Screen
+
+In this update, we've revamped the entire My Experiences screen, making it faster than ever to find and create experiences! Not only can you create new projects and modify existing ones, but you can also search for them directly.
+
+We've also added user portraits on each experience card to tell you who has access to a file (you can check their names on mouseover). 
+
+Finally, we've also added the ability to sort your experiences by either Name or Recent Activity. No more are the days of spending minutes chasing down a file you just started working on!
+
+![My Experience Screen](/img/product/releases/2020.11/my_experiences_screen.gif)
+
+
+#### Drag & Drop Scripts
+
+We've added a bunch of new [Public Scripts](Scripting/PublicScripts) in 2020.11 that makes building interactions easier than ever! These Drag & Drop scripts allow even the least technical of folks to create complex simulations or immersive content. 
+
+To use one of these scripts, create a new asset and drag one of these  over to the Script section of the Inspector. You can then adjust different parameters, like the icon or color of a button, in the Variable window. Most importantly, you can also decide what event an interactive element reacts to and what event it broadcasts on completion. You could create a button that pulls apart a motor, or a proximity trigger that reveals a hidden message! 
+
+![Drag & Drop Scripts](/img/product/releases/2020.11/drag_and_drop_scripts.gif)
+
+
+#### Web Play Mode: Hand Interactions
+
+Building on its official debut in 2020.10, we've added a new feature to Web Play mode: hand interactions! You can now simulate basic hand interactions directly in your browser without needing to put on a HoloLens.
+
+![Hand Interactions](/img/product/releases/2020.11/fingerpainting.gif)
+
+
+#### Quality of Life Changes
+
+##### Script Tab: Script Names
+
+As of 2020.11, the names of a script now appears on the same line as the **File** button, right under the Script tab.
+
+![Script Names](/img/product/releases/2020.11/script_names.png)
+
+
+##### Web Editor User Portraits
+
+User portraits have also seen an overhaul in 2020.11. Collaborators on an experience can now be identified by the first letter of their first name, as well as by a randomly assigned color.
+
+![User Portraits](/img/product/releases/2020.11/user_portraits.png)
+
+
+### Fixes
+
+#### Misc. Bug Fixes
+
+- Fixed a bug that caused the web editor to crash when entering and exiting the script editor multiple times.
+- Resolved multiplayer connections issues for the HoloLens.
+- Users can no longer refresh the whole editor when hitting enter in script variables.
+- Fixed a bug with the adjustment sliders in the HoloLens editor.
+
+***
+
 ## 2020.10.0 - 10/27/2020
 
 ### New Features
@@ -29,7 +137,7 @@ New to Enklu Cloud is [Web Play Mode](WebEditorBasics/WebPlayMode)! Web Play Mod
 Web Play Mode comes in two varieties: Popup and Embedded. You can toggle which one you prefer via the Editor Settings tab (Popup is enabled by default).
 
 
-![Web Play Mode](/img/product/releases/webplay.gif)
+![Web Play Mode](/img/product/releases/2020.10/webplay.gif)
 
 
 ### Improvements
@@ -46,13 +154,13 @@ For more tips on editing collaborators and permissions, check out our [official 
 
 Say goodbye to ambiguous black screens! We've added a loading screen to your project window when initializing a project.
 
-![Loading Screen](/img/product/releases/loading_screen.gif)
+![Loading Screen](/img/product/releases/2020.10/loading_screen.gif)
 
 #### IUX Button Styles
 
 Alongside Web Play Mode, you now have the option to toggle between two button styles in the Scene Settings tab: Default and Web. While Default uses the button style found in the HoloLens, Web displays a more web-friendly format in Web Play Mode. Feel free to try both and see which feels best for you!
 
-![IUX Button Styles](/img/product/releases/IUX_button_style.gif)
+![IUX Button Styles](/img/product/releases/2020.10/IUX_button_style.gif)
 
 #### HoloLens Editor IUX Tweaks
 

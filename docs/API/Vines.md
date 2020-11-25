@@ -384,6 +384,20 @@ Renders a trail.
 | tail.decayTime      | `float`  | `2.0`       | How long, in seconds, the decay transition lasts. |
 | tail.segments       | `int`    | `4`         | The number of vertices per segment. |
 
+## `<Video>`
+
+Embeds a video using a url. When a video is loaded, the element automatically adjusts its size according the video's aspect ratio.
+
+> Currently, videos will not play in the Enklu Cloud editor, but they will display on supported devices.
+
+### Additional Schema Attributes
+
+| name                | type     | default     | description |
+| ------------------- | -------- | ----------- | --------------------------------------- |
+| src                 | `string` | `null`      | A url that points to a video file to play. | 
+| play                | `bool`   | `true`      | Whether the video should start playing immediately. If `false`, it will start playing when set to `true` | 
+| loop                | `bool`   | `false`     | Whether video playback should repeat. | 
+| time                | `float`  | `0.0`       | The time, in seconds, at which to start playback. If the video is not playing, this will display the frame at that time. If the video is playing, it will immediately seek to the given time. | 
 
 # Virtual Colors
 
@@ -586,7 +600,7 @@ attribute. In addition, icons can be passed as url using the format `"icon://<ic
 - `"TopCenter"`
 - `"TopLeft"`
 - `"BotRight"`
-- `"CotCenter"`
+- `"BotCenter"`
 - `"BotLeft"`
 
 # Text Display Values
