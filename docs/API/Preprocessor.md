@@ -24,7 +24,7 @@ This will expose a 'label' string field in the editors and store the 'label' dat
 This will inform the editor when building the editor field. Finally, you may also specify a default value. If a default value is specified, the type is required.
 
 ```html
-<Button label='{[label:String = "Push Me!"]}' />
+<Button label='{[label:string = "Push Me!"]}' />
 ```
 
 

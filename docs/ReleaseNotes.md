@@ -70,7 +70,7 @@ Finally, we've also added the ability to sort your experiences by either Name or
 
 #### Drag & Drop Scripts
 
-We've added a bunch of new Public Scripts in 2020.11 that makes building interactions easier than ever! These Drag & Drop scripts allow even the least technical of folks to create complex simulations or immersive content. 
+We've added a bunch of new [Public Scripts](Scripting/PublicScripts) in 2020.11 that makes building interactions easier than ever! These Drag & Drop scripts allow even the least technical of folks to create complex simulations or immersive content. 
 
 To use one of these scripts, create a new asset and drag one of these  over to the Script section of the Inspector. You can then adjust different parameters, like the icon or color of a button, in the Variable window. Most importantly, you can also decide what event an interactive element reacts to and what event it broadcasts on completion. You could create a button that pulls apart a motor, or a proximity trigger that reveals a hidden message! 
 

@@ -62,7 +62,7 @@ this.material.renderQueue = 3001;
 Material parameters can be tweened via the Tweening API. Currnetly, parameters have to be set before used for the internal integration to link them.
 
 ```javascript
-const Tween = requie('tween')
+const tween = require('tween')
 
 function fadeIn() {
 	this.material.setFloat('_Alpha', 0);
