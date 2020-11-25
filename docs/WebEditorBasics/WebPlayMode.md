@@ -3,7 +3,7 @@ id: WebPlayMode
 title: Web Play Mode
 ---
 
-![Web Play Mode](/img/product/releases/webplay.gif)
+![Web Play Mode](/img/product/releases/2020.10/webplay.gif)
 
 Web Play Mode is where your experience comes to life, without the extra weight of the editor tools. 
 When loading an experience on a device such as the HoloLens, this is the default mode. 
