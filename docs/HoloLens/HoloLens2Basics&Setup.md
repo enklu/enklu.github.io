@@ -36,7 +36,7 @@ There are 2 ways to open the Windows Start menu: a two-handed Start gesture and 
 1. Holding out one hand with the palm facing the device will cause the Start icon to appear on the wrist. Tapping the Start icon with the other hand will open the Start menu.
 2. Holding out hand with palm facing the device will display Start icon on wrist. Looking\* at the Start icon will cause dots to spin around the icon. While the dots are spinning, touching the index finger and thumb together will open the Start menu.
 
-> \*Note*: The device must be calibrated to the user's eyes for the one-handed Start gesture to function correctly. If looking at the Start icon does not cause dots to spin around the icon, this is an indication that the device should be re-calibrated. To calibrate the device, go to **Settings** > **System** > **Calibration**, then select **Run eye calibration**.
+> \***Note**: The device must be calibrated to the user's eyes for the one-handed Start gesture to function correctly. If looking at the Start icon does not cause dots to spin around the icon, this is an indication that the device should be re-calibrated. To calibrate the device, go to **Settings** > **System** > **Calibration**, then select **Run eye calibration**.
 
 ## Enklu App
 
@@ -63,12 +63,12 @@ When launching the app for the first time\*, the default demo experience will be
 After exploring the default scene, activate the **Login**\* button with your gaze to start the QR code scanner.
 ![Hologram garden scene with a campfire.](/img/product/HoloLens2Basics&Setup_QR.png) 
 
-> \*The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
+> The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
 
 In a web browser, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
-On the top menu bar in the Web Editor, click the **Tools** drop down menu, then click **HoloLens Login**.
-![Open Tools drop down menu to display HoloLens Login button.](/img/product/hololens/hololens_login.gif) 
+On the top left of the web editor next to the experience name, click the **Experience** tab and select **HoloLens Login**.
+![Click the Experience tab to display HoloLens Login button.](/img/product/hololens/hololens_login.gif) 
 
 This will generate a QR code that the HoloLens can scan\* to log the device into your account and load into the currently loaded experience in the web editor.
 ![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/hololens/hololens_QR_modal_closer.png) 
@@ -78,7 +78,9 @@ This will generate a QR code that the HoloLens can scan\* to log the device into
 
 ### Navigating Experiences
 
-Within an experience, using the voice command "*Menu*" will display the experience menu. This menu lets you exit the current experience, as well as enter **Edit Mode** on device. Activating the red back arrow will leave the current experience and let you browse the other experiences available to the logged in user.
+Within an experience, using the voice command "*Menu*" will display the experience menu. This menu lets you exit the current experience, as well as enter **Edit Mode** on device. 
+
+Activating the red back arrow will leave the current experience and let you browse the other experiences available to the logged in user.
 ![Floating hologram menu captured from a HoloLens.](/img/product/HoloLens2Basic&Setup_MenuPopup.gif) 
 
 Activating the red back arrow once more will log the current user out and prompt a QR scan to log in a new user.
