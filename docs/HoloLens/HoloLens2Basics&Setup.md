@@ -36,7 +36,7 @@ There are 2 ways to open the Windows Start menu: a two-handed Start gesture and 
 1. Holding out one hand with the palm facing the device will cause the Start icon to appear on the wrist. Tapping the Start icon with the other hand will open the Start menu.
 2. Holding out hand with palm facing the device will display Start icon on wrist. Looking\* at the Start icon will cause dots to spin around the icon. While the dots are spinning, touching the index finger and thumb together will open the Start menu.
 
-> \*Note that the device must be calibrated to the user's eyes for the one-handed Start gesture to function correctly. If looking at the Start icon does not cause dots to spin around the icon, this is an indication that the device should be re-calibrated. To calibrate the device, go to **Settings** > **System** > **Calibration**, then select **Run eye calibration**.
+> \*Note*: The device must be calibrated to the user's eyes for the one-handed Start gesture to function correctly. If looking at the Start icon does not cause dots to spin around the icon, this is an indication that the device should be re-calibrated. To calibrate the device, go to **Settings** > **System** > **Calibration**, then select **Run eye calibration**.
 
 ## Enklu App
 
@@ -45,7 +45,7 @@ There are 2 ways to open the Windows Start menu: a two-handed Start gesture and 
 ![Menu of square tiles with Microsoft App Store tile selected.](/img/product/HoloLens2Basics&Setup_StartMenu.png)
 
 From the Start menu, locate and open the Microsoft Store app. Within the Microsoft Store app, use the search bar at the top to search "Enklu".
-![Enklu App Store listing with Enklu logo and app description.](/img/product/HoloLens2Basics&Setup_MSStoreEnklu.png) 
+![Enklu App Store listing with Enklu logo and app description.](/img/product/hololens/hololens_store_page_v2.png) 
 
 
 Navigate to the Enklu app page and select **Get**. You may be prompted to sign in with your Microsoft account, then the Enklu app will begin installing. Once the Enklu app has finished installing, you may launch the app from either the Microsoft Store, or from the Windows Start menu.
