@@ -68,10 +68,10 @@ After exploring the default scene, activate the **Login**\* button with your gaz
 In a web browser, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
 On the top menu bar in the Web Editor, click the **Tools** drop down menu, then click **HoloLens Login**.
-![Open Tools drop down menu to display HoloLens Login button.](/img/product/HoloLens2Basics&Setup_HoloLensLoginEditor.gif) 
+![Open Tools drop down menu to display HoloLens Login button.](/img/product/hololens/hololens_login.gif) 
 
 This will generate a QR code that the HoloLens can scan\* to log the device into your account and load into the currently loaded experience in the web editor.
-![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/HoloLens2Basics&Setup_HoloLensLoginQR.png) 
+![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/hololens/hololens_QR_modal_closer.png) 
 
 
 > \*If the device is unable to scan the QR code, first check that the device is connected to WiFi and has an internet connection. Next, the exterior of the device will illuminate a white LED when the camera is scanning for QR codes. If there is no illuminated LED, the camera permission could be denied. Check the camera's permission settings in **Settings** > **Privacy** > **Camera**. Restart the app and try scanning again.
