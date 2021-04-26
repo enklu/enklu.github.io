@@ -1,6 +1,6 @@
 ---
 id: HoloLens2Basics&Setup
-title: Hololens 2 Basics & Setup
+title: HoloLens 2 Basics & Setup
 ---
 
 ## HoloLens 2 Device Operation
@@ -63,7 +63,7 @@ When launching the app for the first time\*, the default demo experience will be
 After exploring the default scene, activate the **Login**\* button with your gaze to start the QR code scanner.
 ![Hologram garden scene with a campfire.](/img/product/HoloLens2Basics&Setup_QR.png) 
 
-> The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
+> *The **Login** button will change its location in an attempt to follow the user as they explore the scene. If you cannot find it, turn 90 degrees either left or right, then don't move for about one or two seconds. This will prompt the **Login** button to find the user and position itself in the center of the user's field of view.
 
 In a web browser, navigate to <a style="color:#35947c" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
