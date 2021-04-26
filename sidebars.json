@@ -22,6 +22,10 @@
       "HoloLens/RemoteDebugging",
       "HoloLens/Occlusion"
     ],
+    "Oculus Quest": [
+      "Quest/QuestSetup",
+      "Quest/Interactions"
+    ],
     "Chapters Series": [
       "ChaptersSeries/Chapter1",
       "ChaptersSeries/Chapter2",
