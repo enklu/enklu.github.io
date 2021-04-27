@@ -1,6 +1,6 @@
 ---
 id: HoloLens1stGenBasics&Setup
-title: Hololens (1st gen) Basics & Setup
+title: HoloLens 1 Basics & Setup
 ---
 
 ## Device Operation
@@ -53,7 +53,7 @@ The HoloLens supports two basic gestures. **Bloom** and **Air Tap**. **Bloom** i
 ![Menu of square tiles with Microsoft App Store tile selected.](/img/product/HoloLens1stGenBasics&Setup_StartMenu.png)
 
 From the Start menu, locate and open the Microsoft Store app. Within the Microsoft Store app, use the search bar at the top to search "Enklu".
-![Enklu App Store listing with Enklu logo and app description.](/img/product/HoloLens2Basics&Setup_MSStoreEnklu.png) 
+![Enklu App Store listing with Enklu logo and app description.](/img/product/hololens/hololens_store_page_v2.png)
 
 
 Navigate to the Enklu app page and select **Get**. You may be prompted to sign in with your Microsoft account, then the Enklu app will begin installing. Once the Enklu app has finished installing, you may launch the app from either the Microsoft Store, or from the Windows Start menu.
@@ -75,11 +75,11 @@ After exploring the default scene, activate the **Login**\* button with your gaz
 
 In a web browser, navigate to <a style="color:#3AB29B" href="https://cloud.enklu.com/" target="\_blank"><u>cloud.enklu.com</u></a>. Log in to your Enklu account or create a new account if you do not already have one. New accounts are given their own copy of a few Chapters demo experiences.
 
-On the top menu bar in the Web Editor, click the **Tools** drop down menu, then click **HoloLens Login**.
-![Open Tools drop down menu to display HoloLens Login button.](/img/product/HoloLens2Basics&Setup_HoloLensLoginEditor.gif) 
+On the top left of the web editor next to the experience name, click the **Experience** tab and select **HoloLens Login**.
+![Click the Experience tab to display HoloLens Login button.](/img/product/hololens/hololens_login.gif) 
 
 This will generate a QR code that the HoloLens can scan\* to log the device into your account and load into the currently loaded experience in the web editor.
-![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/HoloLens2Basics&Setup_HoloLensLoginQR.png) 
+![Example QR code with text reading "Point the holographic device camera directly ar the QR code".](/img/product/hololens/hololens_QR_modal_closer.png) 
 
 
 > \*If the device is unable to scan the QR code, first check that the device is connected to WiFi and has an internet connection. Next, the exterior of the device will illuminate a white LED when the camera is scanning for QR codes. If there is no illuminated LED, the camera permission could be denied. Check the camera's permission settings in **Settings** > **Privacy** > **Camera**. Restart the app and try scanning again.
