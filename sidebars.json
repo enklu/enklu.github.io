@@ -24,7 +24,7 @@
     ],
     "Oculus Quest": [
       "Quest/QuestSetup",
-      "Quest/Interactions"
+      "Quest/QuestInteractions"
     ],
     "Chapters Series": [
       "ChaptersSeries/Chapter1",

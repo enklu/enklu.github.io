@@ -3,7 +3,7 @@ id: QuestSetup
 title: Oculus Quest Basics and Setup
 ---
 
-## HoloLens 2 Device Operation
+## Oculus Quest 2 Device Operation
 
 ### Hardware
 
@@ -16,3 +16,22 @@ title: Oculus Quest Basics and Setup
 5. **Overhead strap** - The overhead strap is adjustable and may also be detached.
 6. **Brightness buttons** - The front brightness button increases display brightness. The other brightness button decreases display brightness.
 7. **Volume buttons** - The front volume button increases device volume. The other volume button decreases device volume.
+
+## Enklu App
+
+### Installing the Enklu App
+
+![Image of Enklu App.]()
+
+From the Start menu, locate and open the Microsoft Store app. Within the Microsoft Store app, use the search bar at the top to search "Enklu".
+![Enklu App Oculus listing with Enklu logo and app description.]() 
+
+
+Navigate to the Enklu app page and select **Get**. You may be prompted to sign in with your Microsoft account, then the Enklu app will begin installing. Once the Enklu app has finished installing, you may launch the app from either the Microsoft Store, or from the Windows Start menu.
+
+### Launching the Enklu App
+
+A white application window will open momentarily before the display switches to fullscreen mode. An Enklu "E" logo appears when the application is starting. If an existing instance of the Enklu app is already running, the app will load into where the user left off when the app was last in use.
+![Login screen.]() 
+
+When launching the app for the first time\*, the default demo experience will be loaded. Feel free to walk around the environment learning about what different elements of an experience can be built. All buttons in Enklu can be activated with your gaze by moving the center of the device to match with the center of the button. If the scene content isn't positioned nicely in front of you or is otherwise inaccessible, say the phrase "*Debug*, *Origin*" (with a slight pause between the words) to re-position the experience at the center of your view.
