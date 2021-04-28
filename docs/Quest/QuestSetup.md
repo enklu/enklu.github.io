@@ -23,8 +23,20 @@ For more advice on how to take care of your Quest 2, check out Oculus's official
 
 > **Note**: The Enklu Cloud App on the Oculus Quest is currently at an early stage of development. As a result, you won't be able to find it on the Oculus Store just yet. If you'd like to check out the Quest Port, please [reach out](/contact) and we'll give you access ASAP!
 
-Once granted access, 
+Once granted access, put on the Quest and go to your library. The Enklu VR preview app should be displayed alongside the other apps and games in your library.
 
+If you do not see the Enklu app in your library, navigate to the Oculus Store inside the headset. Select the "Featured" tab, and scroll all the way to the bottom of the screen. There will be a section called "My Previews" with a thumbnail of the Enklu App underneath. Clicking this thumbnail will bring you to the Enklu Store page, and you will have the option to download the app from there.
+
+Alternatively, you can also download the app via the Oculus mobile app. Like in the headset, navigate to the "Store" tab and scroll all the way to the bottom. The "My Preview Apps" section will be found there, with the thumbnail of the Enklu app underneath.
 
 ### Launching the Enklu App
+
+From your library (either inside the headset or while using the mobile app), open the Enklu app. An Enklu "E" will momentarily appear as the application is starting. Once finished loading, the app will bring you to a white grid with a black background. 
+
+There will also be a login panel hovering above the grid, where you can enter your credentials to access all of your experiences.
+
+### Navigating Experiences
+
+After logging in, you will be greeted with a radial menu of all your experiences. This is the **Experience Menu**. 
+> If you have used the HoloLens Enklu app previously, you will be familiar with the overall UX.
 
