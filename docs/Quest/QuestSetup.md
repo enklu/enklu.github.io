@@ -21,13 +21,21 @@ For more advice on how to take care of your Quest 2, check out Oculus's official
 
 ### Accessing the Enklu App
 
+[insert image here]
+
 > **Note**: The Enklu Cloud App on the Oculus Quest is currently at an early stage of development. As a result, you won't be able to find it on the Oculus Store just yet. If you'd like to check out the Quest Port, please [reach out](/contact) and we'll give you access ASAP!
 
 Once granted access, put on the Quest and go to your library. The Enklu VR preview app should be displayed alongside the other apps and games in your library.
 
+[insert image here]
+
 If you do not see the Enklu app in your library, navigate to the Oculus Store inside the headset. Select the "Featured" tab, and scroll all the way to the bottom of the screen. There will be a section called "My Previews" with a thumbnail of the Enklu App underneath. Clicking this thumbnail will bring you to the Enklu Store page, and you will have the option to download the app from there.
 
+[insert image here]
+
 Alternatively, you can also download the app via the Oculus mobile app. Like in the headset, navigate to the "Store" tab and scroll all the way to the bottom. The "My Preview Apps" section will be found there, with the thumbnail of the Enklu app underneath.
+
+[insert image here]
 
 ### Launching the Enklu App
 
@@ -35,9 +43,15 @@ From your library (either inside the headset or while using the mobile app), ope
 
 There will also be a login panel hovering above the grid, where you can enter your credentials to access all of your experiences.
 
+[insert image here]
+
 ### Navigating Experiences
 
-After logging in, you will be greeted with a radial menu of all your experiences. This is the **Experience Menu**. 
+After logging in, you will be greeted with a radial menu of all your experiences. This is the **My Experiences** browser.
+
+For more information on interacting with the UI and other elements inside the app, please read  
+
+[insert image here]
 
 > If you have used the HoloLens Enklu app previously, you will be familiar with the overall UX.
 
