@@ -1,15 +1,15 @@
 ---
 id: QuestSetup
-title: Oculus Quest 2 Basics & Setup
+title: Oculus Quest Basics & Setup
 ---
 
-## Oculus Quest 2 Device Operation
+## Oculus Quest 1 & 2 Device Operation
 
 ### Care & Safe Handling
 
 Keep your device away from direct sunlight to avoid damaging the lens. Exposure to direct sunlight for less than a minute can cause serious damage to your headset. 
 
-When putting on the device, first adjust the lenses by shifting them until they are in a position that allows you to see clearly. Adjust the side straps by moving the two sliders on either side of the top strap. Once these are set, adjust the top strap by pulling apart the velcro and reattaching it until comfortable and the screen is in full view. When removing the device, 
+When putting on the device, first adjust the lenses by shifting them until they are in a position that allows you to see clearly. Adjust the side straps by moving the two sliders on either side of the headset. Next, adjust the top strap by pulling apart the velcro and reattaching it until comfortable and the screen is in full view.
 
 Use a microfiber cloth to the clean your headset and controllers. Do not use alcohol based wipes or solvents on the display or sensors. The Quest 2 headstrap may be cleaned using a microfiber cloth with mild soap and cold water. Never submerge the device in water or apply water directly to the device.
 
@@ -35,7 +35,7 @@ If you do not see the Enklu app in your library, navigate to the Oculus Store in
 
 Alternatively, you can also download the app via the Oculus mobile app. Like in the headset, navigate to the "Store" tab and scroll all the way to the bottom. The "My Preview Apps" section will be found there, with the thumbnail of the Enklu app underneath.
 
-[insert image here]
+<img src="/img/product/quest/oculus_mobile_app.png" alt="Enklu on the Oculus mobile app" width="300"/>
 
 ### Launching the Enklu App
 
@@ -47,11 +47,8 @@ There will also be a login panel hovering above the grid, where you can enter yo
 
 ### Navigating Experiences
 
-After logging in, you will be greeted with a radial menu of all your experiences. This is the **My Experiences** browser.
-
-For more information on interacting with the UI and other elements inside the app, please read  
+After logging in, you will be greeted with a radial menu of all your experiences. This is the **My Experiences** browser. Activating the back "Sign Out" arrow will bring you back to the login area, while the forward arrows will let you page through your experiences.
 
 [insert image here]
 
-> If you have used the HoloLens Enklu app previously, you will be familiar with the overall UX.
-
+For more information on interacting with the UI and other elements inside the app, please read our guide [here](Quest/QuestInteractions).
