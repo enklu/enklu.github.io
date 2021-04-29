@@ -38,5 +38,6 @@ There will also be a login panel hovering above the grid, where you can enter yo
 ### Navigating Experiences
 
 After logging in, you will be greeted with a radial menu of all your experiences. This is the **Experience Menu**. 
+
 > If you have used the HoloLens Enklu app previously, you will be familiar with the overall UX.
 
