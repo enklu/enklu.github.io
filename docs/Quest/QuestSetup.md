@@ -45,7 +45,7 @@ There will also be a login panel hovering above the grid, where you can enter yo
 
 ### Navigating Experiences
 
-After logging in, you will be greeted with a radial menu of all your experiences. This is the **My Experiences** browser. Activating the back "Sign Out" arrow will bring you back to the login area, while the forward arrows will let you page through your experiences.
+After logging in, you will be greeted with a radial menu of all your experiences. This is the **My Experiences** browser. Activating the back "Sign Out" arrow will bring you back to the login area, while the blue arrows will let you page through your experiences.
 
 ![Login Screen](/img/product/quest/Quest_MyExperienceMenu.png)
 
