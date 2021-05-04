@@ -22,7 +22,7 @@ Currently, Enklu Cloud supports several 3D model formats, including common CAD f
 - .3dm
 - .stl
 
-We are constantly evaluating new formats to support. If a type that is important to you isn't on the list, please [Contact us](/contact).
+We are constantly evaluating new formats to support. If a type that is important to you isn't on the list, please [contact us](/contact).
 
 > Unless noted otherwise, models can be imported directly into the editor. Some types, like `.asm` files, must be in a `.zip` archive since they often have other files as dependencies. 
 
