@@ -17,7 +17,9 @@ The second method is by using the **right Touch controller**. While in the Enklu
 
 ## Moving Around a Scene
 
-If a user's guardian is too small relative to a scene, or if they are using a seated/stationary guardian, they can still move about the scene using the joystick on the right controller. When the joystick is pushed upward, an arrow icon will appear on the floor of a scene, along with a green "fishing line" that runs from the arrow to the right controller. When a user releases the joystick, they will then teleport to the location of the arrow icon.
+If a user's guardian is too small relative to a scene, or if they are using a seated/stationary guardian, they can still move about the scene using the joystick on the right controller. 
+
+When the joystick is pushed upward, an arrow icon will appear on the floor of a scene, along with a green "fishing line" that runs from the arrow to the right controller. Once the user releases the joystick, they will then teleport to the location of the arrow icon.
 
 ![VR Locomotion](/img/product/quest/Quest_VRLocomotion.gif)
 
