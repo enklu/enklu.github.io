@@ -7,18 +7,18 @@ title: Release Notes
 
 ### Enklu Cloud Comes to the Oculus Quest!
 
-Have you been dreaming of a way to view your amazing Enklu experiences on your Oculus Quest? Well consider this your lucky day!
+Have you been dreaming of a way to view your amazing Enklu experiences on your Oculus Quest? Well, you're in luck: any creator can now **develop once**, and **run in any reality**!
 
-![We have achieved Liftoff on the Quest!](/img/product/releases/2021.5/2021.5_VRRelease.gif)
+![Enklu Cloud on the Oculus Quest](/img/product/releases/2021.5/2021.5_VRRelease.gif)
 
-For our 2021.5 release, we're proud to announce the v1 release of the Enklu app for both the Quest 1 and 2! Immerse yourself like never before in your previous experiences, or create new ones that explore all that VR has to offer. 
+For our 2021.5 release, we're proud to announce the v1 release of the Enklu app for the Quest 1 and 2. Immerse yourself like never before in your previous experiences, or create new ones that explore all that VR has to offer. 
 
 And this is just the beginning! We'll be continually improving and updating the Enklu Quest app over time, and we have some surprises in store that we can't wait to share. But until then, our lips are 🤐
-
 
 > **Note**: Since this is an early release, the Enklu app is still at a preview stage. However, we'd love for you to try it out! If you're interested in playing around with Enklu Cloud in VR, please [reach out](/contact) and we'll get you access ASAP.
 
 Interested in learning more about Enklu Cloud on the Quest? Check out our official help docs [here](Quest/QuestSetup.md)!
+
 ***
 
 ## 2020.11.0 - 11/24/2020
