@@ -2,6 +2,10 @@
 
 [Enklu's documentation website](https://enklu.github.io) was created using [Docusaurus](https://docusaurus.io/) and is hosted on [GitHub Pages](https://pages.github.com/).  This website contains guides and API Reference for the Enklu Cloud [Web Editor](https://cloud.enklu.com/) and [HoloLens app](https://www.microsoft.com/en-us/p/enklu/9pkhwgcx8f3n). 
 
+## Setup
+
+You will need to have [npm](https://www.npmjs.com/get-npm) and [Node.js](https://nodejs.org/en/) installed on your computer.  It should be fine to download and install the latest LTS version.  If you are unsure if you have them installed or want to check their versions, you can simply use `npm -v` or `node -v` in a terminal and it will return the respective version number if you have it installed.
+
 ## Branches
 
 The 2 main branches to note in this repository are `release` and `master`.  Both of these branches should be treated as the "live" or "production" branches.  If you do not want an update to be on the live website, do not commit it to either of these branches.
