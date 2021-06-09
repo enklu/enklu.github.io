@@ -5,6 +5,24 @@ title: Elements
 
 The Elements API is a powerful abstraction that allows users to manipulate any property on any element through a handful of simple methods. This is important because these few methods allow for easy networking or persistent state. 
 
+When it comes to Javascript Element objects each element has a few public properties. These can be used to reference the object.
+
+```js
+var a = this.id;   // Read-only. Gets the element's ID
+
+var a = this.type; //Read-only. Get's element type.
+```
+The most common form to reference would be:
+
+```js
+var b = this.self; 
+```
+You can then use this reference to change other properties.
+```js
+var c = this.self; 
+c.visible = true; // set object visible to on
+```
+
 ## Hierarchy
 
 An element may have zero to many children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.
@@ -54,7 +72,15 @@ Relationships can be tested explicitly or with helpers.
 ```js
 b.parent === a;   // True
 b.isChildOf(a);   // True
-````
+```
+<br>
+
+You can also easily grab parent elements
+ 
+```js
+var myParent = this.parent; //This goes up the hierarchy by one parent
+var grandParent = this.parent.parent; //This goes up the hierarchy two parents 
+```
 
 <br>
 
@@ -253,6 +279,15 @@ Any element property can be used to filter by using the <code>@</code> operator.
 var big = a.findOne('..(@size==10)');
 ```
 
+Here is an example of searching for a child with a name set in the inspector
+
+```js
+const child = '{[Find this child:string]}';
+
+function enter() {
+ child  = this.findOne('..(@name==' + child + ')');  
+}
+```
 <br>
 
 Finally, a collection of matching objects can be retrieved by using find.
@@ -355,13 +390,3 @@ function msgMissing(type, args) {
 
 <br>
 
-## Miscellaneous
-
-The Elements API has a few other miscellaneous usages for scripting.
-```js
-a.id;             // Read-only. Gets the element's ID
-
-a.type;           // Read-only. Gets the element's type
-
-a.visible = true; // Gets or sets this element's visibility
-```
