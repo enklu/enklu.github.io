@@ -23,13 +23,13 @@ Many functions use ID's.
 ```js
 var a = this.id;   // Read-only. Gets the element's ID
 ```
-Each element has a type, currently there are a few different object types, LightWidget, ContentWidget, KinectWidget, ButtonWidget, and TextWidget. Any newly created asset will be a ContentWidget by default.
+Each element has a type, currently there are a few different object types, <i>LightWidget, ContentWidget, KinectWidget, ButtonWidget, and TextWidget </i>. Any newly created asset will be a ContentWidget by default.
 
 ```js
 var a = this.type; //Read-only. Get's element type. 
 ```
 
-<b>This</b> is a helpful keyword you can use to return most information you will need
+<b>This</b> is a helpful keyword you can use to return most information you will need about your current object.
 
 ```js
 function enter() {
@@ -334,7 +334,7 @@ function enter() {
 }
 ```
 
-It's also important that when searching for Vines, ID's are defined in the vine.
+It's also important to note that when searching for Vines, ID's are defined in the vine and you won't need to filter to search for them.
 ```js
 <?Vine>
         
