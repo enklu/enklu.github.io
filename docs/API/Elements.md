@@ -5,32 +5,48 @@ title: Elements
 
 The Elements API is a powerful abstraction that allows users to manipulate any property on any element through a handful of simple methods. This is important because these few methods allow for easy networking or persistent state. 
 
-When it comes to Javascript Element objects each element has a few public properties. These can be used to reference the object.
+To change these properties you will need to reference an object. The most common form to reference an object would be:
 
 ```js
-var a = this.id;   // Read-only. Gets the element's ID
-
-var a = this.type; //Read-only. Get's element type.
-```
-The most common form to reference would be:
-
-```js
-var b = this.self; 
+var b = this; 
 ```
 You can then use this reference to change other properties.
 ```js
-var c = this.self; 
+var c = this; 
 c.visible = true; // set object visible to on
+```
+
+### Common properties
+
+Many functions use ID's.
+
+```js
+var a = this.id;   // Read-only. Gets the element's ID
+```
+Each element has a type, currently there are a few different object types, LightWidget, ContentWidget, and KinectWidget, ButtonWidget, TextWidget. Any newly created asset will be a ContentWidget by default.
+
+```js
+var a = this.type; //Read-only. Get's element type. 
+```
+
+<b>This</b> is a helpful keyword you can use to return most information you will need
+
+```js
+function enter() {
+    log.info(this.transform.scale);
+    log.info(this.transform.rotation);
+    log.info(this.transform.position);
+}
 ```
 
 ## Hierarchy
 
-An element may have zero to many children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.
+An element may have one or more children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.
 
 An element's children are accessible via the readonly children field.
 
 ```js
-var children = element.children;
+var children = element.children; //Read-only.
 for (var i = 0, len = children.length; i < len; i++) {
     var child = children[i];
 }
@@ -279,15 +295,52 @@ Any element property can be used to filter by using the <code>@</code> operator.
 var big = a.findOne('..(@size==10)');
 ```
 
-Here is an example of searching for a child with a name set in the inspector
+Here is an example of  hardcoding a name search for a child element named <i>childObj1</i>. This is not a recommended method because it's not as flexible as using a variable.
+It's important to note the search filter <i>@name==</i> when searching for objects.
+```js
+function enter() {
+  var child1 =  this.findOne('..(@name==childObj1)');
+  log.info(child1);
+}
+```
+
+Here is an example of searching for a child with a name set in the inspector. This is a recommended method.
 
 ```js
-const child = '{[Find this child:string]}';
+const child = '{[Find this child:string]}'; //type in child name in inspector
 
 function enter() {
  child  = this.findOne('..(@name==' + child + ')');  
 }
 ```
+
+Here is an example of searching for an object type, it will return the first child object of that type. 
+
+```js
+const light = this.findOne('..(@type=LightWidget)');
+
+function enter() {
+    if (light) {
+        light.schema.setNumber('intensity', 0.7);
+    }
+}
+```
+
+It's slso important that when searching for Vines, ID's are defined in the vine.
+```js
+<?Vine>
+        
+<Container id='vineExample'>
+
+</Container>
+```
+```js
+const findVine = this.findOne('..vineExample'); //look for vine ID
+function enter() {
+      log.info("found "+ findVine);
+}
+```
+
 <br>
 
 Finally, a collection of matching objects can be retrieved by using find.
@@ -295,7 +348,6 @@ Finally, a collection of matching objects can be retrieved by using find.
 ```js
 var allBig = a.find('b..q.(@size==10)');
 ```
-
 <br>
 
 ## Transform
