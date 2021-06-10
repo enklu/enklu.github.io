@@ -8,12 +8,12 @@ The Elements API is a powerful abstraction that allows users to manipulate any p
 To change these properties you will need to reference an object. The most common form to reference an object would be:
 
 ```js
-var b = this; 
+var a = this; 
 ```
 You can then use this reference to change other properties.
 ```js
-var c = this; 
-c.visible = true; // set object visible to on
+var a = this; 
+a.visible = true; // set object visible to on
 ```
 
 ### Common properties
@@ -23,7 +23,7 @@ Many functions use ID's.
 ```js
 var a = this.id;   // Read-only. Gets the element's ID
 ```
-Each element has a type, currently there are a few different object types, LightWidget, ContentWidget, and KinectWidget, ButtonWidget, TextWidget. Any newly created asset will be a ContentWidget by default.
+Each element has a type, currently there are a few different object types, LightWidget, ContentWidget, KinectWidget, ButtonWidget, and TextWidget. Any newly created asset will be a ContentWidget by default.
 
 ```js
 var a = this.type; //Read-only. Get's element type. 
@@ -50,6 +50,14 @@ var children = element.children; //Read-only.
 for (var i = 0, len = children.length; i < len; i++) {
     var child = children[i];
 }
+```
+Example of turning off a particular child
+```js
+  var myChildren = this.children;
+  
+  for(var i =0; i< myChildren.length; i++){
+    myChildren[2].visible = false; 
+  }
 ```
 
 <br>
@@ -304,7 +312,7 @@ function enter() {
 }
 ```
 
-Here is an example of searching for a child with a name set in the inspector. This is a recommended method.
+Here is an example of searching for a child with a name set in the inspector. This is a recommended method using a variable.
 
 ```js
 const child = '{[Find this child:string]}'; //type in child name in inspector
@@ -326,7 +334,7 @@ function enter() {
 }
 ```
 
-It's slso important that when searching for Vines, ID's are defined in the vine.
+It's also important that when searching for Vines, ID's are defined in the vine.
 ```js
 <?Vine>
         
