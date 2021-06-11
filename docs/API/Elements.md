@@ -312,13 +312,19 @@ function enter() {
 }
 ```
 
-Here is an example of searching for a child with a name set in the inspector. This is a recommended method using a variable.
+Here is an example of searching for a child with a name set in the inspector.
+
+ <i>'{[Inspector variable label : variable type]}'</i> allows this to show in the inspector. 
+You can of course just use a regular variable if you don't want to use the inspector, but this is a recommended method for it's flexibility.
 
 ```js
 const child = '{[Find this child:string]}'; //type in child name in inspector
 
 function enter() {
- child  = this.findOne('..(@name==' + child + ')');  
+ child  = this.findOne('..(@name==' + child + ')'); 
+
+ var anotherChild = '';
+
 }
 ```
 
