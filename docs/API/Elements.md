@@ -23,13 +23,13 @@ Many functions use ID's.
 ```js
 var a = this.id;   // Read-only. Gets the element's ID
 ```
-Each element has a type, currently there are a few different object types, <i>LightWidget, ContentWidget, KinectWidget, ButtonWidget, and TextWidget </i>. Any newly created asset will be a ContentWidget by default.
+Any created asset will be a ContentWidget by default. Other possible types include: LightWidget, KinectWidget, ButtonWidget, and TextWidget. Some of these types are only created through scripts. 
 
 ```js
 var a = this.type; //Read-only. Get's element type. 
 ```
 
-<code>This</ code> is a helpful keyword you can use to return most information you will need about your current object.
+<code>This</code> is a helpful keyword you can use to return most information you will need about your current object.
 
 ```js
 function enter() {
@@ -99,7 +99,7 @@ b.isChildOf(a);   // True
 ```
 <br>
 
-You can also easily grab parent elements
+You can also grab parent elements.
  
 ```js
 var myParent = this.parent; //This goes up the hierarchy by one parent
@@ -143,7 +143,7 @@ element.schema.setBool('fizz', true);
 element.schema.getBool('fizz');    // true
 ```
 
-Here is an example using scheme to get the object name and rename (will not last outside playmode and does not change in the inspector)
+Here is an example using scheme to get the object name and rename. (Will not last outside playmode and does not change in the inspector.)
 ```js
   var name = this.schema.getString('name'); //get current object name
   log.info("my name is " + name); //output current name 
@@ -322,8 +322,7 @@ function enter() {
 
 Here is an example of searching for a child with a name set in the inspector.
 
-<code>'{[Inspector variable label : variable type]}'</code>allows this to show in the inspector. 
-You can of course just use a regular variable if you don't want to use the inspector, but this is a recommended method for it's flexibility.
+<code>'{[Inspector variable label : variable type]}'</code>allows this to show in the inspector. You can of course use a regular variable if you don't want to use the inspector. Using a variable is a recommended method for its flexibility.
 
 ```js
 const child = '{[Find this child:string]}'; //type in child name in inspector
@@ -348,7 +347,7 @@ function enter() {
 }
 ```
 
-It's also important to note that when searching for Vines, ID's are defined in the vine and you won't need to filter to search for them.
+It's also important to note that when searching for Vines, ID's are defined in the Vine and you won't need to use a filter to search for them. 
 ```js
 <?Vine>
         
