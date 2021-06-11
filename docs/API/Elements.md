@@ -29,7 +29,7 @@ Each element has a type, currently there are a few different object types, <i>Li
 var a = this.type; //Read-only. Get's element type. 
 ```
 
-<b>This</b> is a helpful keyword you can use to return most information you will need about your current object.
+<code>This</ code> is a helpful keyword you can use to return most information you will need about your current object.
 
 ```js
 function enter() {
@@ -51,7 +51,7 @@ for (var i = 0, len = children.length; i < len; i++) {
     var child = children[i];
 }
 ```
-Example of turning off a particular child
+Example of turning off a particular child.
 ```js
   var myChildren = this.children;
   
@@ -141,6 +141,14 @@ element.schema.getNumber('bar');   // 12
 // bools
 element.schema.setBool('fizz', true);
 element.schema.getBool('fizz');    // true
+```
+
+Here is an example using scheme to get the object name and rename (will not last outside playmode and does not change in the inspector)
+```js
+  var name = this.schema.getString('name'); //get current object name
+  log.info("my name is " + name); //output current name 
+  this.schema.setString('name','Bob'); //change name
+  log.info("my name is " + this.schema.getString('name')); //output newly changed name
 ```
 
 <br>
@@ -304,7 +312,7 @@ var big = a.findOne('..(@size==10)');
 ```
 
 Here is an example of  hardcoding a name search for a child element named <i>childObj1</i>. This is not a recommended method because it's not as flexible as using a variable.
-It's important to note the search filter <i>@name==</i> when searching for objects.
+It's important to note the search filter <code>@name==</code> when searching for objects.
 ```js
 function enter() {
   var child1 =  this.findOne('..(@name==childObj1)');
@@ -314,7 +322,7 @@ function enter() {
 
 Here is an example of searching for a child with a name set in the inspector.
 
- <i>'{[Inspector variable label : variable type]}'</i> allows this to show in the inspector. 
+<code>'{[Inspector variable label : variable type]}'</code>allows this to show in the inspector. 
 You can of course just use a regular variable if you don't want to use the inspector, but this is a recommended method for it's flexibility.
 
 ```js
