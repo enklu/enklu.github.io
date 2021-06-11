@@ -10,15 +10,17 @@ To change these properties you will need to reference an object. The most common
 ```js
 var a = this; 
 ```
+<br>
+
 You can then use this reference to change other properties.
 ```js
 var a = this; 
 a.visible = true; // set object visible to on
 ```
 
-### Common properties
+### Common Properties
 
-Many functions use ID's.
+Many functions use IDs:
 
 ```js
 var a = this.id;   // Read-only. Gets the element's ID
@@ -41,7 +43,7 @@ function enter() {
 
 ## Hierarchy
 
-An element may have one or more children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.
+Any element can have another element as a child. These child elements can also have other elements as children, forming a kind of directed graph. This is visualized by the tree component in the web editor.
 
 An element's children are accessible via the readonly children field.
 
@@ -51,7 +53,10 @@ for (var i = 0, len = children.length; i < len; i++) {
     var child = children[i];
 }
 ```
-Example of turning off a particular child.
+
+<br>
+
+Example of turning off a particular child:
 ```js
   var myChildren = this.children;
   
@@ -143,7 +148,9 @@ element.schema.setBool('fizz', true);
 element.schema.getBool('fizz');    // true
 ```
 
-Here is an example using scheme to get the object name and rename. (Will not last outside playmode and does not change in the inspector.)
+<br>
+
+Here is an example using schema to get the object name and rename. (Will not last outside playmode and does not change in the inspector.)
 ```js
   var name = this.schema.getString('name'); //get current object name
   log.info("my name is " + name); //output current name 
@@ -153,7 +160,7 @@ Here is an example using scheme to get the object name and rename. (Will not las
 
 <br>
 
-If an element doesn't already have a value, it returns a value up the graph. In this circumstance, the property of b is bound to the property of a.
+If an element doesn't already have a value, it returns a value up the graph. In this circumstance, the property of <i>b</i> is bound to the property of <i>a</i>.
 
 ```js
 a.addChild(b);
@@ -347,7 +354,7 @@ function enter() {
 }
 ```
 
-It's also important to note that when searching for Vines, ID's are defined in the Vine and you won't need to use a filter to search for them. 
+It's also important to note that when searching for Vines, IDs are defined in the Vine and you won't need to use a filter to search for them. 
 ```js
 <?Vine>
         
