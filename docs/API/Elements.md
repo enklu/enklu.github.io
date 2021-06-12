@@ -30,6 +30,7 @@ Any created asset will be a ContentWidget by default. Other possible types inclu
 ```js
 var a = this.type; //Read-only. Get's element type. 
 ```
+<br>
 
 <code>This</code> is a helpful keyword you can use to return most information you will need about your current object.
 
