@@ -343,6 +343,10 @@ function enter() {
 }
 ```
 
+If you would also like to set a default name for the child in the inspector, for example <i>onObject</i> change the code:
+ <code>const child = '{[Find this child:string = "onObject"]}';</code>
+This is can be an easy way to autofill default settings in the inspector.
+
 Here is an example of searching for an object type, it will return the first child object of that type. 
 
 ```js
