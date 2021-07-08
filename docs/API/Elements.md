@@ -114,6 +114,44 @@ var grandParent = this.parent.parent; //This goes up the hierarchy two parents
 
 <br>
 
+You can create vine objects and add them as children, as long as the vine is valid it will accept any argument.
+This example creates a text child that will stick to the middle of the screen.
+
+```js
+
+var myVine;
+var self = this;
+var text = "hi";
+
+/**
+ * Called when the script is initialized.
+ */
+function enter() {
+ myVine = app.elements.createFromVine(self, 
+      '<Screen><Text id="myVineID" label="' + text + 
+        '" fontSize="' + "100" + 
+        '" alignment="' + "MidCenter" +
+        '" position="' + "(-0.8, 0.5, 0)" +
+
+      '"/></Screen>'
+    );
+}
+
+/**
+ * Called before the script is removed or rebuilt.
+ */
+function exit() {
+ app.elements.destroy(myVine); //destroy child
+}
+
+module.exports = {
+  enter: enter,
+  exit: exit
+};
+```
+
+<br>
+
 ## Destroy
 
 Elements can easily be destroyed.
