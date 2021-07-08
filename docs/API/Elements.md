@@ -114,7 +114,7 @@ var grandParent = this.parent.parent; //This goes up the hierarchy two parents
 
 <br>
 
-You can create vine objects and add them as children, as long as the vine is valid it will accept any argument.
+You can create vine objects and add them as children. As long as the vine is valid, it will accept any argument.
 This example creates a text child that will stick to the middle of the screen.
 
 ```js
@@ -381,9 +381,9 @@ function enter() {
 }
 ```
 
-If you would also like to set a default name for the child in the inspector, for example <i>onObject</i> change the code:
+If you would also like to set a default name for the child in the inspector, for example <i>onObject</i> change the code to:
  <code>const child = '{[Find this child:string = "onObject"]}';</code>
-This is can be an easy way to autofill default settings in the inspector.
+This can be an easy way to autofill default settings in the inspector.
 
 Here is an example of searching for an object type, it will return the first child object of that type. 
 
