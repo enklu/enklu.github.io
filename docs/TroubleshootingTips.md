@@ -23,7 +23,10 @@ If you are running into issues, like scenes aren't working correctly or you are 
 
 Check your console by going to your Assets window then click on the Log window tab.
 
-Click on the System checkbox and look for noticeable red text. If you are running into a lot of red text you could have a code issue. You can contact us for support or try to work through the issue yourself.
+Click on the System checkbox and look for noticeable red text. If you are running into a lot of red text you could have a code issue. You can contact us for support or try to work through the issue yourself. You can see an example error message below.
+
+![Example of a debug message on the console window](img/product/consoleCheck.png)
+
 
 #### Clear cookies/cache
 
