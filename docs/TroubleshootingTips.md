@@ -30,6 +30,18 @@ Click on the System checkbox and look for noticeable red text. If you are runnin
 
 ![Example of a debug message on the console window](img/product/consoleCheck.png)
 
+### I'm getting a blue/blank screen?
+
+If you are getting a blue/blank screen you very likely ran into a script error.
+This is often caused when adding something to the inspector window and viewing the variable. 
+
+Doublecheck your code is not missing any } or ] as often this will cause this issue.
+
+```
+var StartClosed = "{[Start Closed:bool]}";
+var RESET_MSG ="{[Reset Message :string]}";
+```
+
 ### Scene won't load or crashes very quickly?
 
 Check to see how large your assets/models are. HoloLens 1 can only support up to 100k triangles(tri's). If your model is larger then that, it may crash the scene when loaded into the web player. If you're experiencing a lot of crashes, try deleting models from the hierarchy before the scene loads. If you click on the model in the Asset Library Window it will show you how many triangles your model currently has. 
