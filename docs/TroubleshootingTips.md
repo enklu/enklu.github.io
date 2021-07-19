@@ -32,10 +32,10 @@ Click on the System checkbox and look for noticeable red text. If you are runnin
 
 ### I'm getting a blue/blank screen?
 
-If you are getting a blue/blank screen you very likely ran into a script error.
+This is a silent editor crash. If you are getting a blue/blank screen you very likely ran into a script error.
 This is often caused when adding something to the inspector window and viewing the variable. 
 
-Doublecheck your code is not missing any } or ] as often this will cause this issue.
+Doublecheck your code is not missing any } or ] as often this will cause this issue. Ensure the order of those symbols is correct because failure to do will also result in a blank page.
 
 ```
 var StartClosed = "{[Start Closed:bool]}";
