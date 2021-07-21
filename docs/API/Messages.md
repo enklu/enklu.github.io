@@ -44,3 +44,41 @@ Subscribes to an event.
 - `payload <object>` [Optional] Event data.
 
 Notifies all subscribers of an event.
+
+**Make sure that you unsubscribe to messages or you could trigger a memory leak!** 
+
+Example of subscribing and unsubscribing
+
+```
+function enter() {
+
+  // If there is a trigger message
+  if (TRIGGER_MSG) {
+    // listen for the trigger message to start SAI.
+    messages.on(TRIGGER_MSG, increaseMagic);
+  }
+  
+  if (RESET_MSG) {
+    // listen for the trigger message to start SAI.
+    messages.on(RESET_MSG, reset);
+  }
+}
+
+/**
+ * Called before the script is removed or rebuilt.
+ */
+function exit() {
+  
+   if (TRIGGER_MSG) {
+    // listen for the trigger message to start SAI.
+    messages.off(TRIGGER_MSG, increaseMagic);
+  }
+  
+    if (RESET_MSG) {
+    // listen for the trigger message to start SAI.
+    messages.off(RESET_MSG, reset);
+  }
+  
+}
+
+```
