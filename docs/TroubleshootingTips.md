@@ -30,6 +30,33 @@ Click on the System checkbox and look for noticeable red text. If you are runnin
 
 ![Example of a debug message on the console window](/img/product/consoleCheck.png)
 
+
+
+### Common JavaScript Errors
+
+Here are few quick fixes to common JavaScript errors.
+
+1) Swap out keyword `this` for a variable. For some reason this can become problematic in JavaScript so swap out use cases if you run into errors like this or find a function not working.
+
+ `error : TypeError: No method was found for: subscribe(Object, String, Object).`
+
+​	solution swap out `this` for `self`.  
+
+instead of 
+```javascript
+ proximity.subscribe(this, 'enter', onTriggerEnter);
+```
+Use:
+```javascript
+ var self = this;
+
+ proximity.subscribe(self, 'enter', onTriggerEnter);
+```
+ 
+2. Having something constantly retrigger? Try and add an extra check for example `isComplete`.  
+
+   
+
 ### I'm getting a blue/blank screen?
 
 This is a silent editor crash. If you are getting a blue/blank screen you very likely ran into a script error.
