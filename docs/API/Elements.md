@@ -122,16 +122,13 @@ This example creates a text child that will stick to the middle of the screen.
 var myVine;
 var self = this;
 var text = "hi";
+var textSize = 500;
 
-/**
- * Called when the script is initialized.
- */
 function enter() {
  myVine = app.elements.createFromVine(self, 
       '<Screen><Text id="myVineID" label="' + text + 
-        '" fontSize="' + "100" + 
+        '" fontSize= 300"' +
         '" alignment="' + "MidCenter" +
-        '" position="' + "(-0.8, 0.5, 0)" +
 
       '"/></Screen>'
     );
