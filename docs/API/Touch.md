@@ -6,7 +6,7 @@ title: Touch
 The `touch` system is a higher-level system that combines elements and gestures. It is useful for registering for determining if a user touches an element with their finger.
 
 ```javascript
-var const = require('touch');
+var const touch = require('touch');
 ```
 
 > This API is available only on HoloLens.
