@@ -26,6 +26,53 @@ messages.on('show-treasure', showTreasure);
 var messages = require('messages');
 
 messages.dispatch('show-treasure', true);
+
+```
+
+> ⚠️ **Warning**: Make sure that you unsubscribe to messages or you could trigger a memory leak!
+
+Example of subscribing and unsubscribing:
+
+```javascript
+const TRIGGER_MSG = "{[Trigger Message:string]}";
+const RESET_MSG = "{[Reset Message:string]}";
+var magic;
+
+function enter() {
+  // If there is a trigger message
+  if (TRIGGER_MSG) {
+    // listen for the trigger message to increase magic.
+    messages.on(TRIGGER_MSG, increaseMagic);
+  }
+  
+  if (RESET_MSG) {
+    // listen for the trigger message to reset magic.
+    messages.on(RESET_MSG, reset);
+  }
+}
+
+function increaseMagic(){
+    magic += 1;
+}
+function reset(){
+    magic = 0;
+}
+/**
+ * Called before the script is removed or rebuilt.
+*/
+function exit() {
+  
+   if (TRIGGER_MSG) {
+    // unsubscribe from increase magic message.
+    messages.off(TRIGGER_MSG, increaseMagic);
+  }
+  
+    if (RESET_MSG) {
+    // unsubscribe from reset magic message.
+    messages.off(RESET_MSG, reset);
+  }
+  
+}
 ```
 ## Module Methods
 
