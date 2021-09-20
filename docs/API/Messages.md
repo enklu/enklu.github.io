@@ -41,12 +41,12 @@ var magic;
 function enter() {
   // If there is a trigger message
   if (TRIGGER_MSG) {
-    // listen for the trigger message to start SAI.
+    // listen for the trigger message to increase magic.
     messages.on(TRIGGER_MSG, increaseMagic);
   }
   
   if (RESET_MSG) {
-    // listen for the trigger message to start SAI.
+    // listen for the trigger message to reset magic.
     messages.on(RESET_MSG, reset);
   }
 }
@@ -63,12 +63,12 @@ function reset(){
 function exit() {
   
    if (TRIGGER_MSG) {
-    // listen for the trigger message to start SAI.
+    // unsubscribe from increase magic message.
     messages.off(TRIGGER_MSG, increaseMagic);
   }
   
     if (RESET_MSG) {
-    // listen for the trigger message to start SAI.
+    // unsubscribe from reset magic message.
     messages.off(RESET_MSG, reset);
   }
   
