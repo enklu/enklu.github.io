@@ -46,6 +46,41 @@ this.on('touchstarted', function(hit) {
 });
 ```
 
+Another example of using touch
+
+```javascript
+const touch = require('touch');
+const self = this;
+function enter() {
+    //check that we can interact with collider
+    var myCollider = touch.register(self);
+    
+    //if no collider found on object warn us, else check for touch event
+    if(!myCollider) 
+    {
+       log.warn("Warning element has no collider.");
+    }
+    else
+    {
+      // dispatched when a touch has started
+     self.on('touchstarted', function(hit)
+      {
+        onTouch();
+      });
+    }
+}
+ 
+function onTouch() {
+    
+    log.info("touched object");
+    
+}
+function exit() {    
+    //make sure to remove subscription to the touch event
+    self.off('touchstarted');
+ }
+```
+
 ## Module Events
 - `"touchstarted"`
 - `"touchdragged"`
