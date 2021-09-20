@@ -3,7 +3,7 @@ id: Touch
 title: Touch
 ---
 
-The `touch` system is a higher-level system that combines elements and gestures. It is useful for registering for determining if a user touches an element with their finger.
+The `touch` system is a higher-level system that combines elements and gestures. It is useful for registering if a user touches an element with their finger.
 
 ```javascript
 var touch = require('touch');
@@ -46,7 +46,7 @@ this.on('touchstarted', function(hit) {
 });
 ```
 
-Another example of using touch
+Another example of using touch:
 
 ```javascript
 const touch = require('touch');

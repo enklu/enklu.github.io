@@ -29,9 +29,9 @@ messages.dispatch('show-treasure', true);
 
 ```
 
-**Make sure that you unsubscribe to messages or you could trigger a memory leak!** 
+> ⚠️ **Warning**: Make sure that you unsubscribe to messages or you could trigger a memory leak!
 
-Example of subscribing and unsubscribing
+Example of subscribing and unsubscribing:
 
 ```javascript
 const TRIGGER_MSG = "{[Trigger Message:string]}";

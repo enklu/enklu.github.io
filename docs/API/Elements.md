@@ -68,7 +68,7 @@ Example of turning off a particular child:
 
 <br>
 
-Child elements may be added and removed.
+Child elements may be added and removed:
 
 ```js
 a.children;        // []
@@ -78,7 +78,7 @@ a.removeChild(b);  // []
 
 <br>
 
-Adding an element as a child to one element will remove it from another.
+Adding an element as a child to one element will remove it from another:
 
 ```js
 a.addChild(b);  // a.children = [b]
@@ -87,7 +87,7 @@ c.addChild(b);  // a.children = [], c.children = [b]
 
 <br>
 
-Adding an element to its parent will reorder the children.
+Adding an element to its parent will reorder the children:
 
 ```js
 a.addChild(a);      // [a]
@@ -97,7 +97,7 @@ a.addChild(a);      // [c, a]
 
 <br>
 
-Relationships can be tested explicitly or with helpers.
+Relationships can be tested explicitly or with helpers:
 
 ```js
 b.parent === a;   // True
@@ -105,7 +105,7 @@ b.isChildOf(a);   // True
 ```
 <br>
 
-You can also grab parent elements.
+You can also grab parent elements:
  
 ```js
 var myParent = this.parent; //This goes up the hierarchy by one parent
@@ -115,7 +115,8 @@ var grandParent = this.parent.parent; //This goes up the hierarchy two parents
 <br>
 
 You can create vine objects and add them as children. As long as the vine is valid, it will accept any argument.
-This example creates a text child that will stick to the middle of the screen.
+
+This example creates a text child that will stick to the middle of the screen:
 
 ```js
 
@@ -151,7 +152,7 @@ module.exports = {
 
 ## Destroy
 
-Elements can easily be destroyed.
+Elements can easily be destroyed:
 
 ```js
 // Destroys element and all children
@@ -354,7 +355,7 @@ Any element property can be used to filter by using the <code>@</code> operator.
 var big = a.findOne('..(@size==10)');
 ```
 
-Here is an example of  hardcoding a name search for a child element named <i>childObj1</i>. This is not a recommended method because it's not as flexible as using a variable.
+Here is an example of  hardcoding a name search for a child element named <i>childObj1</i>. This is not a recommended method since it's not as flexible as using a variable.
 It's important to note the search filter <code>@name==</code> when searching for objects.
 ```js
 function enter() {
@@ -378,11 +379,11 @@ function enter() {
 }
 ```
 
-If you would also like to set a default name for the child in the inspector, for example <i>onObject</i> change the code to:
- <code>const child = '{[Find this child:string = "onObject"]}';</code>
+If you would also like to set a default name for the child in the inspector (for example <i>onObject</i>), change the code to:
+ <code>const child = '{[Find this child:string = "onObject"]}';</code>.
 This can be an easy way to autofill default settings in the inspector.
 
-Here is an example of searching for an object type, it will return the first child object of that type. 
+Here is an example of searching for an object type, which returns the first child object of that type:
 
 ```js
 const light = this.findOne('..(@type=LightWidget)');

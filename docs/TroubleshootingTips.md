@@ -36,7 +36,7 @@ Click on the System checkbox and look for noticeable red text. If you are runnin
 
 Here are few quick fixes to common JavaScript errors.
 
-1) Swap out keyword `this` for a variable. For some reason this can become problematic in JavaScript so swap out use cases if you run into errors like this or find a function not working.
+1. Swap out keyword `this` for a variable. For some reason this can become problematic in JavaScript so swap out use cases if you run into errors like this or find a function not working.
 
  `error : TypeError: No method was found for: subscribe(Object, String, Object).`
 
