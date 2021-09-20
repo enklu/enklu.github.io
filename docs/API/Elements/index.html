@@ -61,39 +61,106 @@
               }
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Elements</h1></header><article><div><span><p>The Elements API is a powerful abstraction that allows users to manipulate any property on any element through a handful of simple methods. This is important because these few methods allow for easy networking or persistent state.</p>
+<p>To change these properties you will need to reference an object. The most common form to reference an object would be:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> 
+</code></pre>
+<p><br></p>
+<p>You can then use this reference to change other properties.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> 
+a<span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// set object visible to on</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="common-properties"></a><a href="#common-properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Properties</h3>
+<p>Many functions use IDs:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>id<span class="token punctuation">;</span>   <span class="token comment">// Read-only. Gets the element's ID</span>
+</code></pre>
+<p>Any created asset will be a ContentWidget by default. Other possible types include: LightWidget, KinectWidget, ButtonWidget, and TextWidget. Some of these types are only created through scripts.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type<span class="token punctuation">;</span> <span class="token comment">//Read-only. Get's element type. </span>
+</code></pre>
+<p><br></p>
+<p><code>This</code> is a helpful keyword you can use to return most information you will need about your current object.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>transform<span class="token punctuation">.</span>scale<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>transform<span class="token punctuation">.</span>rotation<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>transform<span class="token punctuation">.</span>position<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="hierarchy"></a><a href="#hierarchy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Hierarchy</h2>
-<p>An element may have zero to many children, which are simply other Elements, themselves having children. This forms a sort of directed graph, visualized by the tree component in the web editor.</p>
+<p>Any element can have another element as a child. These child elements can also have other elements as children, forming a kind of directed graph. This is visualized by the tree component in the web editor.</p>
 <p>An element's children are accessible via the readonly children field.</p>
-<pre><code class="hljs css language-js"><span class="token keyword">var</span> children <span class="token operator">=</span> element<span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> children <span class="token operator">=</span> element<span class="token punctuation">.</span>children<span class="token punctuation">;</span> <span class="token comment">//Read-only.</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len <span class="token operator">=</span> children<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">var</span> child <span class="token operator">=</span> children<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
 <p><br></p>
-<p>Child elements may be added and removed.</p>
+<p>Example of turning off a particular child:</p>
+<pre><code class="hljs css language-js">  <span class="token keyword">var</span> myChildren <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>children<span class="token punctuation">;</span>
+  
+  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> myChildren<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    myChildren<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span>
+</code></pre>
+<p><br></p>
+<p>Child elements may be added and removed:</p>
 <pre><code class="hljs css language-js">a<span class="token punctuation">.</span>children<span class="token punctuation">;</span>        <span class="token comment">// []</span>
 a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// [b]</span>
 a<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// []</span>
 </code></pre>
 <p><br></p>
-<p>Adding an element as a child to one element will remove it from another.</p>
+<p>Adding an element as a child to one element will remove it from another:</p>
 <pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// a.children = [b]</span>
 c<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// a.children = [], c.children = [b]</span>
 </code></pre>
 <p><br></p>
-<p>Adding an element to its parent will reorder the children.</p>
+<p>Adding an element to its parent will reorder the children:</p>
 <pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [a]</span>
 a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [a, c]</span>
 a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>      <span class="token comment">// [c, a]</span>
 </code></pre>
 <p><br></p>
-<p>Relationships can be tested explicitly or with helpers.</p>
+<p>Relationships can be tested explicitly or with helpers:</p>
 <pre><code class="hljs css language-js">b<span class="token punctuation">.</span>parent <span class="token operator">===</span> a<span class="token punctuation">;</span>   <span class="token comment">// True</span>
 b<span class="token punctuation">.</span><span class="token function">isChildOf</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment">// True</span>
 </code></pre>
 <p><br></p>
+<p>You can also grab parent elements:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">var</span> myParent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parent<span class="token punctuation">;</span> <span class="token comment">//This goes up the hierarchy by one parent</span>
+<span class="token keyword">var</span> grandParent <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>parent<span class="token punctuation">.</span>parent<span class="token punctuation">;</span> <span class="token comment">//This goes up the hierarchy two parents </span>
+</code></pre>
+<p><br></p>
+<p>You can create vine objects and add them as children. As long as the vine is valid, it will accept any argument.</p>
+<p>This example creates a text child that will stick to the middle of the screen:</p>
+<pre><code class="hljs css language-js">
+<span class="token keyword">var</span> myVine<span class="token punctuation">;</span>
+<span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> text <span class="token operator">=</span> <span class="token string">"hi"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> textSize <span class="token operator">=</span> <span class="token number">500</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ myVine <span class="token operator">=</span> app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">createFromVine</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> 
+      <span class="token string">'&lt;Screen>&lt;Text id="myVineID" label="'</span> <span class="token operator">+</span> text <span class="token operator">+</span> 
+        <span class="token string">'" fontSize= 300"'</span> <span class="token operator">+</span>
+        <span class="token string">'" alignment="'</span> <span class="token operator">+</span> <span class="token string">"MidCenter"</span> <span class="token operator">+</span>
+
+      <span class="token string">'"/>&lt;/Screen>'</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/**
+ * Called before the script is removed or rebuilt.
+ */</span>
+<span class="token keyword">function</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ app<span class="token punctuation">.</span>elements<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span>myVine<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//destroy child</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  enter<span class="token operator">:</span> enter<span class="token punctuation">,</span>
+  exit<span class="token operator">:</span> exit
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><br></p>
 <h2><a class="anchor" aria-hidden="true" id="destroy"></a><a href="#destroy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Destroy</h2>
-<p>Elements can easily be destroyed.</p>
+<p>Elements can easily be destroyed:</p>
 <pre><code class="hljs css language-js"><span class="token comment">// Destroys element and all children</span>
 element<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -116,7 +183,14 @@ element<span class="token punctuation">.</span>schema<span class="token punctuat
 element<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getBool</span><span class="token punctuation">(</span><span class="token string">'fizz'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment">// true</span>
 </code></pre>
 <p><br></p>
-<p>If an element doesn't already have a value, it returns a value up the graph. In this circumstance, the property of b is bound to the property of a.</p>
+<p>Here is an example using schema to get the object name and rename. (Will not last outside playmode and does not change in the inspector.)</p>
+<pre><code class="hljs css language-js">  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//get current object name</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"my name is "</span> <span class="token operator">+</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//output current name </span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span><span class="token string">'Bob'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//change name</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"my name is "</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//output newly changed name</span>
+</code></pre>
+<p><br></p>
+<p>If an element doesn't already have a value, it returns a value up the graph. In this circumstance, the property of <i>b</i> is bound to the property of <i>a</i>.</p>
 <pre><code class="hljs css language-js">a<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 a<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -225,6 +299,48 @@ a<span class="token punctuation">.</span>schema<span class="token punctuation">.
 <p>Any element property can be used to filter by using the <code>@</code> operator.</p>
 <pre><code class="hljs css language-js"><span class="token keyword">var</span> big <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@size==10)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
+<p>Here is an example of  hardcoding a name search for a child element named <i>childObj1</i>. This is not a recommended method since it's not as flexible as using a variable.
+It's important to note the search filter <code>@name==</code> when searching for objects.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> child1 <span class="token operator">=</span>  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@name==childObj1)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span>child1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Here is an example of searching for a child with a name set in the inspector.</p>
+<p><code>'{[Inspector variable label : variable type]}'</code>allows this to show in the inspector. You can of course use a regular variable if you don't want to use the inspector. Using a variable is a recommended method for its flexibility.</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> child <span class="token operator">=</span> <span class="token string">'{[Find this child:string]}'</span><span class="token punctuation">;</span> <span class="token comment">//type in child name in inspector</span>
+
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+ child  <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@name=='</span> <span class="token operator">+</span> child <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+ <span class="token keyword">var</span> anotherChild <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre>
+<p>If you would also like to set a default name for the child in the inspector (for example <i>onObject</i>), change the code to:
+<code>const child = '{[Find this child:string = &quot;onObject&quot;]}';</code>.
+This can be an easy way to autofill default settings in the inspector.</p>
+<p>Here is an example of searching for an object type, which returns the first child object of that type:</p>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> light <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..(@type=LightWidget)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>light<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        light<span class="token punctuation">.</span>schema<span class="token punctuation">.</span><span class="token function">setNumber</span><span class="token punctuation">(</span><span class="token string">'intensity'</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>It's also important to note that when searching for Vines, IDs are defined in the Vine and you won't need to use a filter to search for them.</p>
+<pre><code class="hljs css language-js"><span class="token operator">&lt;</span><span class="token operator">?</span>Vine<span class="token operator">></span>
+        
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">Container</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>vineExample<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token plain-text">
+
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token class-name">Container</span></span><span class="token punctuation">></span></span>
+</code></pre>
+<pre><code class="hljs css language-js"><span class="token keyword">const</span> findVine <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token string">'..vineExample'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//look for vine ID</span>
+<span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"found "</span><span class="token operator">+</span> findVine<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p><br></p>
 <p>Finally, a collection of matching objects can be retrieved by using find.</p>
 <pre><code class="hljs css language-js"><span class="token keyword">var</span> allBig <span class="token operator">=</span> a<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'b..q.(@size==10)'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -290,15 +406,7 @@ menu<span class="token punctuation">.</span><span class="token function">send</s
 <span class="token punctuation">}</span>
 </code></pre>
 <p><br></p>
-<h2><a class="anchor" aria-hidden="true" id="miscellaneous"></a><a href="#miscellaneous" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Miscellaneous</h2>
-<p>The Elements API has a few other miscellaneous usages for scripting.</p>
-<pre><code class="hljs css language-js">a<span class="token punctuation">.</span>id<span class="token punctuation">;</span>             <span class="token comment">// Read-only. Gets the element's ID</span>
-
-a<span class="token punctuation">.</span>type<span class="token punctuation">;</span>           <span class="token comment">// Read-only. Gets the element's type</span>
-
-a<span class="token punctuation">.</span>visible <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment">// Gets or sets this element's visibility</span>
-</code></pre>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/API/Drawing"><span class="arrow-prev">← </span><span>Drawing</span></a><a class="docs-next button" href="/docs/API/Gaze"><span>Gaze (Preview)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#hierarchy">Hierarchy</a></li><li><a href="#destroy">Destroy</a></li><li><a href="#schema">Schema</a><ul class="toc-headings"><li><a href="#get--set">Get &amp; Set</a></li><li><a href="#watch--unwatch">Watch &amp; Unwatch</a></li></ul></li><li><a href="#queries">Queries</a></li><li><a href="#transform">Transform</a></li><li><a href="#events">Events</a></li><li><a href="#message-passing">Message Passing</a></li><li><a href="#miscellaneous">Miscellaneous</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/ReleaseNotes.html">Release Notes</a><a href="/docs/GuidesOverview">Guides</a><a href="/docs/API/ScriptingLanguages">API Reference</a><a href="/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2021 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/js/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/API/Drawing"><span class="arrow-prev">← </span><span>Drawing</span></a><a class="docs-next button" href="/docs/API/Gaze"><span>Gaze (Preview)</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#hierarchy">Hierarchy</a></li><li><a href="#destroy">Destroy</a></li><li><a href="#schema">Schema</a><ul class="toc-headings"><li><a href="#get--set">Get &amp; Set</a></li><li><a href="#watch--unwatch">Watch &amp; Unwatch</a></li></ul></li><li><a href="#queries">Queries</a></li><li><a href="#transform">Transform</a></li><li><a href="#events">Events</a></li><li><a href="#message-passing">Message Passing</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/ReleaseNotes.html">Release Notes</a><a href="/docs/GuidesOverview">Guides</a><a href="/docs/API/ScriptingLanguages">API Reference</a><a href="/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2021 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/js/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

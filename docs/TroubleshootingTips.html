@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Troubleshooting Tips · Enklu Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="# Troubleshooting help"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Troubleshooting Tips · Enklu Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://enklu.github.io/"/><meta property="og:description" content="# Troubleshooting help"/><meta property="og:image" content="https://enklu.github.io/img/undraw_online.svg"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://enklu.github.io/img/undraw_tweetstorm.svg"/><link rel="shortcut icon" href="/img/logo/EnkluLogo.svg"/><link rel="stylesheet" href="/css/algolia-style.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script><script type="text/javascript" src="/js/code-block-buttons.js"></script><script src="https://unpkg.com/vanilla-back-to-top@7.1.14/dist/vanilla-back-to-top.min.js"></script><script>
+        document.addEventListener('DOMContentLoaded', function() {
+          addBackToTop(
+            {"zIndex":100,"diameter":46,"scrollDuration":120,"showWhenScrollTopIs":32}
+          )
+        });
+        </script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/prism.css"/><link rel="stylesheet" href="/css/main.css"/><link rel="stylesheet" href="/css/code-block-buttons.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation"/><h2 class="headerTitleWithLogo">Enklu Documentation</h2></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/docs/ReleaseNotes" target="_self">What&#x27;s New</a></li><li class=""><a href="/docs/GuidesOverview" target="_self">Guides</a></li><li class=""><a href="/docs/API/ScriptingLanguages" target="_self">API Reference</a></li><li class=""><a href="/docs/FAQ" target="_self">FAQ</a></li><li class=""><a href="/contact" target="_self">Contact</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><h1 id="__docusaurus" class="postHeaderTitle">Troubleshooting Tips</h1></header><article><div><span><h1><a class="anchor" aria-hidden="true" id="troubleshooting-help"></a><a href="#troubleshooting-help" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Troubleshooting help</h1>
+<p>If you run across some errors while using Enklu, here are a few simple troubleshooting tips you can try.</p>
+<p>First, it's recommended to work with <a href="https://www.google.com/chrome/">Google Chrome</a> or a variant like <a href="https://www.meetsidekick.com/">Sidekick</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="log-in-help"></a><a href="#log-in-help" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Log-in help</h3>
+<p>To prevent login issues, use password managers like <a href="https://www.lastpass.com/">Lastpass</a> or <a href="https://bitwarden.com/">Bitwarden</a>.</p>
+<p>If you still run into a login issue, reach out to us via <a href="contact@enklu.com">email</a> or check out our <a href="https://docs.enklu.com/contact">contact page</a>.</p>
+<h2><a class="anchor" aria-hidden="true" id="general-tips"></a><a href="#general-tips" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>General tips</h2>
+<p>If you are running into issues with your scene, here are few common solutions.</p>
+<h3><a class="anchor" aria-hidden="true" id="check-for-code-issues"></a><a href="#check-for-code-issues" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check for code issues</h3>
+<p>To check your console, go to the bottom window and click on the Log tab</p>
+<p>Click on the System checkbox and look for noticeable red text. If you are running into a lot of red text you could have a code issue. You can contact us for support or try to work through the issue yourself. You can see an example error message below.</p>
+<p><img src="/img/product/consoleCheck.png" alt="Example of a debug message on the console window"></p>
+<h3><a class="anchor" aria-hidden="true" id="common-javascript-errors"></a><a href="#common-javascript-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common JavaScript Errors</h3>
+<p>Here are few quick fixes to common JavaScript errors.</p>
+<ol>
+<li>Swap out keyword <code>this</code> for a variable. For some reason this can become problematic in JavaScript so swap out use cases if you run into errors like this or find a function not working.</li>
+</ol>
+<p><code>error : TypeError: No method was found for: subscribe(Object, String, Object).</code></p>
+<p>​   solution swap out <code>this</code> for <code>self</code>.</p>
+<p>instead of</p>
+<pre><code class="hljs css language-javascript"> proximity<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">'enter'</span><span class="token punctuation">,</span> onTriggerEnter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Use:</p>
+<pre><code class="hljs css language-javascript"> <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+
+ proximity<span class="token punctuation">.</span><span class="token function">subscribe</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> <span class="token string">'enter'</span><span class="token punctuation">,</span> onTriggerEnter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<ol start="2">
+<li>Having something constantly retrigger? Try and add an extra check for example <code>isComplete</code>.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="im-getting-a-blueblank-screen"></a><a href="#im-getting-a-blueblank-screen" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>I'm getting a blue/blank screen?</h3>
+<p>This is a silent editor crash. If you are getting a blue/blank screen you very likely ran into a script error.
+This is often caused when adding something to the inspector window and viewing the variable.</p>
+<p>Doublecheck your code is not missing any <code>}</code> or <code>]</code>  as often this will cause this issue. Ensure the order of those symbols is correct because failure to do so will also result in a blank page.</p>
+<pre><code class="hljs css language-javascript"><span class="token keyword">var</span> StartClosed <span class="token operator">=</span> <span class="token string">"{[Start Closed:bool]}"</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token constant">RESET_MSG</span> <span class="token operator">=</span><span class="token string">"{[Reset Message :string]}"</span><span class="token punctuation">;</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="scene-wont-load-or-crashes-very-quickly"></a><a href="#scene-wont-load-or-crashes-very-quickly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scene won't load or crashes very quickly?</h3>
+<p>Check to see how large your assets/models are. HoloLens 1 can only support up to 100k triangles (tri's). If your model is larger then that, it may crash the scene when loaded into the web player. If you're experiencing a lot of crashes, try deleting models from the hierarchy before the scene loads. If you click on the model in the Asset Library Window it will show you how many triangles your model currently has.</p>
+<p>For further asset help see the guide <a href="https://docs.enklu.com/docs/Assets/SceneComplexityRecommendations">here</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="asset-not-loading-correctly"></a><a href="#asset-not-loading-correctly" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Asset not loading correctly?</h3>
+<p>Check <a href="https://docs.enklu.com/docs/Assets/ImportYourOwnAssets">here</a> to see if the file type is supported.</p>
+<h3><a class="anchor" aria-hidden="true" id="scene-feels-slow"></a><a href="#scene-feels-slow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scene feels slow?</h3>
+<p>There are a few things you can do to optimize a scene.</p>
+<ol>
+<li>A simple one is reduce debug logs. If you are going to do debugging in a script it can be really useful to have a toggle to turn on and off debug messages.</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="token keyword">const</span> <span class="token constant">DEBUG_LOG</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">[</span>Debug Logging<span class="token operator">:</span>bool<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> magic <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">increaseMagic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ 
+  magic <span class="token operator">+=</span><span class="token number">1</span><span class="token punctuation">;</span>
+  
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token constant">DEBUG_LOG</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"Magic up, currently:"</span> <span class="token operator">+</span> magic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+</code></pre>
+<ol start="2">
+<li>Another thing you can do is make sure all messages are set to off when exiting. Not removing messages and setting them to off can cause memory leaks if you aren't careful.</li>
+</ol>
+<pre><code class="hljs css language-javascript"><span class="token keyword">function</span> <span class="token function">enter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// If there is a trigger message</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">TRIGGER_MSG</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// listen for the trigger message </span>
+    messages<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token constant">TRIGGER_MSG</span><span class="token punctuation">,</span> increaseMagic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">RESET_MSG</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    messages<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token constant">RESET_MSG</span><span class="token punctuation">,</span> reset<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">TRIGGER_MSG</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// stop listen for the trigger message </span>
+    messages<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token constant">TRIGGER_MSG</span><span class="token punctuation">,</span> increaseMagic<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token constant">RESET_MSG</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    messages<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token constant">RESET_MSG</span><span class="token punctuation">,</span> reset<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span>
+</code></pre>
+<ol start="3">
+<li>Remove unused assets to improve scene speed. Even if an asset is not visible it can slow down the scene, this is the same for scripts attached to objects. They will see run even if an asset is not visible.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="movedownload-assets"></a><a href="#movedownload-assets" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Move/download assets</h3>
+<p>(This only applies to custom assets, public assets cannot be modified.)
+If you need to continue to work on an asset, click on the asset in the Asset Window and click on the download button. A window will popup allowing you to review the history on that model and any updates you've made in the past. Select the model what you want to download, then click download. The file type will be .0, but you just need to <a href="https://support.microsoft.com/en-us/topic/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4#:~:text=Open%20File%20Explorer%20by%20going,to%20have%20and%20press%20Enter.">rename the file to a .zip</a> instead of .0 and then you can unzip it to continue working.</p>
+<h3><a class="anchor" aria-hidden="true" id="test-your-scene-in-another-browser"></a><a href="#test-your-scene-in-another-browser" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Test your scene in another browser</h3>
+<p>Is the scene working in another web browser? If it is working in another browser but not your main browser, then you'll need to troubleshoot your browser. If it's not working in another browser then you'll need to troubleshoot your scene.</p>
+<h3><a class="anchor" aria-hidden="true" id="clear-cookiescache"></a><a href="#clear-cookiescache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clear cookies/cache</h3>
+<p>Sometimes clearing cookies/cache can solve some issues.</p>
+<p>Here are two ways you can do this in Chrome.</p>
+<p>Common way
+<a href="https://support.google.com/accounts/answer/32050">Chrome Clear Cache &amp; Cookies</a>.</p>
+<p>Fast dev way
+<a href="https://developers.google.com/web/updates/2015/05/hard-reload">Chrome Dev tool Clear Cache &amp; Cookies + Hard Reload</a>.
+Press F12 (opens dev window) then right click on the refresh arrow and hit Empty Cache and Hard Reload</p>
+<h3><a class="anchor" aria-hidden="true" id="factory-reset"></a><a href="#factory-reset" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Factory reset</h3>
+<p>If you know you are having a browser issue with Enklu and can't find a way to fix it, a factory reset may be best. If you use a password manager, make sure you remember your master password first. A factory reset will clear all browser settings, as well as turn off any extensions. (This won't remove extensions but clears their settings, disables them, and resets login-in info). It will also clear permissions and how content is loaded.</p>
+<p><a href="https://support.google.com/chrome/answer/3296214?hl=en">Factory Reset in Chrome</a></p>
+</span></div></article></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#general-tips">General tips</a><ul class="toc-headings"><li><a href="#check-for-code-issues">Check for code issues</a></li><li><a href="#common-javascript-errors">Common JavaScript Errors</a></li><li><a href="#im-getting-a-blueblank-screen">I'm getting a blue/blank screen?</a></li><li><a href="#scene-wont-load-or-crashes-very-quickly">Scene won't load or crashes very quickly?</a></li><li><a href="#asset-not-loading-correctly">Asset not loading correctly?</a></li><li><a href="#scene-feels-slow">Scene feels slow?</a></li><li><a href="#movedownload-assets">Move/download assets</a></li><li><a href="#test-your-scene-in-another-browser">Test your scene in another browser</a></li><li><a href="#clear-cookiescache">Clear cookies/cache</a></li><li><a href="#factory-reset">Factory reset</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/" class="nav-home"><img src="/img/logo/EnkluLogo_White.svg" alt="Enklu Documentation" width="66" height="58"/></a><div><h5>Docs</h5><a href="/docs/ReleaseNotes.html">Release Notes</a><a href="/docs/GuidesOverview">Guides</a><a href="/docs/API/ScriptingLanguages">API Reference</a><a href="/docs/FAQ.html">FAQ</a></div><div><h5>Social</h5><a href="https://www.facebook.com/Enklu" target="_blank" rel="noreferrer noopener">Facebook</a><a href="https://www.instagram.com/experience_enklu/" target="_blank" rel="noreferrer noopener">Instagram</a><a href="https://www.linkedin.com/company/enklu" target="_blank" rel="noreferrer noopener">LinkedIn</a><a href="https://twitter.com/experienceenklu" target="_blank" rel="noreferrer noopener">Twitter</a></div><div style="margin-right:9em"><h5>Community</h5><a href="https://github.com/enklu" target="blank">GitHub</a><a href="https://join.slack.com/t/enklucommunity/shared_invite/zt-ellfjrtd-mA3PiYeNjudv7KyOoNJllw" target="_blank">Slack</a><a href="https://feedback.userreport.com/5dc5b61a-79b6-48b8-b78c-912adc29d1c7" target="_blank">User Feedback</a></div></section><section class="copyright">Copyright © 2021 Enklu, Inc.</section></footer></div><script type="text/javascript" src="/js/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '86bdc43f43d399bcaad5c6a09006ecac',
+                indexName: 'enklu',
+                inputSelector: '#search_input_react',
+                algoliaOptions: {}
+              });
+            </script></body></html>
