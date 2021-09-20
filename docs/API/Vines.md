@@ -59,7 +59,7 @@ In addition, tags may not have raw text inside of them. All values are passed to
 ```jsx
 <Caption
 	label='Hello'
-	visible=false 
+	visible=true 
 	font.size=100
 	width=1000.5
 	position=(0, 0, 10)
