@@ -3,6 +3,58 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2021.09.0 - 09/28/2021
+
+### Quality of Life Improvements Galore!
+
+For 2021.09, we've implemented a number of improvements and changes to both the Web Editor and the HoloLens 2 app.
+
+Check out the exhaustive list of changes below:
+
+### Improvements
+
+**HoloLens 2**
+- Reduced delay time for finish Space scan prompt
+- IUX gaze activators are now easier to activate
+- Reduced start up logging to improve startup load time
+- Mesh occlusion now defaults to `false` (no mesh occlusion)
+- Removed unnecessary logging from Trail widget functions
+- Removed unnecessary logging from Hands API functions
+- Added optional parameter to voice command registration to disable audio feedback upon keyword recognition.  This optional parameter must come at the end which should look like this: 
+    - `voice.register('command', callback, optional bool)`.  
+    - `false` to disable audio feedback.  
+    - `true` to enable audio feedback.  If no bool is supplied, it will default to `true`.
+
+**Web Editor**
+- Added shorter way to reference element name.  You can now use `this.name` instead of needing to use `this.element.name`.
+- Added ability to access children in prefabs.
+- Improved logging.  Line numbers are now included with JavaScript type errors.  Reduced unnecessary information included in logs overall.
+- Added a new method `.forceProximityCheck()` to the Proximity API to force an enter event check regardless of any previous collisions.
+- Reduced extraneous runtime logs to improve performance
+- Runtime now uses incremental garbage collection to reduce frame hitches
+- Improved overall tween performance.
+- Added `.loop()` method to Tween API that will automatically restart a tween until `.pause()` or `.stop() ` is called.
+- Added new `JellyfishWave` easing type that will curve a tween back to its original value before it completes (useful for looping).
+- Added new method `.setTrigger('Trigger name')` to Animator API.
+- Added new method `app.elements.byName('element name')` to search for an element by its name.
+
+
+### Fixes
+
+**General**
+- Enter proximity events will now properly dispatch if a trigger starts within the enter radius on load.
+
+**HoloLens 2**
+- Fixed mesh occlusion setting not always applying in-lens on load.
+- Removed index pointer prefab when hands are tracked.
+- MRTK gaze dot is now hidden (previously had 2 overlapping gaze dots).
+
+**Web Editor**
+- Fixed some web editor logs appearing as `String` instead of its value.
+- Texture quality now defaults to a higher level in the web editor.
+
+***
+
 ## 2021.05.0 - 05/04/2021
 
 ### Enklu Cloud Comes to the Oculus Quest!
@@ -354,7 +406,7 @@ interpolation.
 - Cleaner color scheme and fonts.
 - Expanded metrics support
 
-### Bug fixes
+### Fixes
 - Experience loading screen might start behind user.
 - Some menus couldn't be closed.
 - Experiences sometimes didn't load if an asset failed to load.
