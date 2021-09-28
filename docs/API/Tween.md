@@ -128,6 +128,7 @@ Sets the easing type for the tween. Supported easing types:
 - `"QuinticIn"`
 - `"QuinticOut"`
 - `"QuinticInOut"`
+- `"JellyfishWave"`
 
 ### `duration(seconds)`
 - `seconds <number>` The duration of the tween in seconds.
@@ -168,3 +169,7 @@ Stops the tween while preserving state so it may be started again.
 ### `resume()`
 
 Resumes a paused tween.
+
+### `loop()`
+
+Automatically starts a tween until `.pause()` or `.stop()` is called.

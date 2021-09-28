@@ -7,9 +7,11 @@ title: Release Notes
 
 ### Quality of Life Improvements Galore!
 
-For 2021.09, we've implemented a number of improvements and changes to both the Web Editor and the HoloLens 2 app.
+For 2021.09, we've implemented a number of improvements and changes to both the Web Editor and the HoloLens 2 app. Creating experiences and interactions should now feel both easier and more performant!
 
-Check out the exhaustive list of changes below:
+![Enklu Cloud on the Oculus Quest](/img/product/releases/2021.5/2021.5_VRRelease.gif)
+
+Check out the exhaustive list of changes below!
 
 ### Improvements
 
@@ -37,7 +39,7 @@ Check out the exhaustive list of changes below:
 - Mesh occlusion now defaults to `false` (no mesh occlusion).
 - Removed unnecessary logging from [Trail widget](API/Vines.md#trail) functions.
 - Removed unnecessary logging from [Hands API](API/Hand.md) functions.
-- Added optional parameter to voice command registration to disable audio feedback upon keyword recognition.  This optional parameter must come at the end and look like this: 
+- Added optional parameter to [voice command registration](API/Voice.md) to disable audio feedback upon keyword recognition.  This optional parameter must come at the end and look like this: 
     - `voice.register('command', callback, optional bool)`.  
     - `false` to disable audio feedback.  
     - `true` to enable audio feedback.  If no bool is supplied, it will default to `true`.
