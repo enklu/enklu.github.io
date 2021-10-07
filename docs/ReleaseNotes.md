@@ -3,13 +3,15 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
-## 2021.09.0 - 09/28/2021
+## 2021.10.0 - 10/08/2021
 
 ### Quality of Life Improvements Galore!
 
-For 2021.09, we've implemented a number of improvements and changes to both the Web Editor and the HoloLens 2 app. Creating experiences and interactions should now feel both easier and more performant!
+Wondering how to make your tweens loop more smoothly? Frustrated by the number of logs that pop up at a moment's notice? Then we've got a great update for you!
 
-![Enklu Cloud on the Oculus Quest](/img/product/releases/2021.5/2021.5_VRRelease.gif)
+![Enklu Cloud on the Oculus Quest](/img/product/releases/2021.10/2021.10_EasingComparison.gif)
+
+For 2021.10, we've implemented a number of improvements and fixes to both the **Web Editor** and the **HoloLens 2** app. Creating experiences and interactions should now feel both easier and more performant
 
 Check out the exhaustive list of changes below!
 
@@ -22,7 +24,7 @@ Check out the exhaustive list of changes below!
 
 **Web Editor**
 - Added shorter way to reference an element name.  You can now use `this.name` instead of needing to use `this.element.name`.
-- Added ability to access children in prefabs.
+- Added ability to change the material of prefab children, as long as you know the child's file name.
 - Line numbers are now included with JavaScript type errors.
 - Reduced unnecessary information included in logs overall.
 - Added a new method `.forceProximityCheck()` to the [Proximity API](API/Proximity.md) to force an enter event check regardless of any previous collisions.
@@ -30,6 +32,7 @@ Check out the exhaustive list of changes below!
 - Added new `JellyfishWave` [easing type](API/Tween.md#easingtype) that will curve a tween back to its original value before it completes (useful for looping).
 - Added new method `.setTrigger('Trigger name')` to [Animator API](API/Animator.md).
 - Added new method `app.elements.byName('element name')` to search for an element by its name.
+- Identical logs now collapse to improve log spam.
 
 **HoloLens 2**
 - Changed the [Experience Browser](HoloLens/HoloLens2Basics&Setup.md#navigating-experiences) to show 5 experiences at time.
