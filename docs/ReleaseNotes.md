@@ -21,6 +21,12 @@ Check out the exhaustive list of changes below!
 - Reduced extraneous runtime logs to improve performance.
 - Runtime now uses incremental garbage collection to reduce frame hitches.
 - Improved overall tween performance.
+- Removed unnecessary logging from [Trail widget](API/Vines.md#trail) functions.
+- Removed unnecessary logging from [Hands API](API/Hand.md) functions.
+- Added optional parameter to [voice command registration](API/Voice.md) to disable audio feedback upon keyword recognition.  This optional parameter must come at the end and look like this: 
+    - `voice.register('command', callback, optional bool)`.  
+    - `false` to disable audio feedback.  
+    - `true` to enable audio feedback.  If no bool is supplied, it will default to `true`.
 
 **Web Editor**
 - Added shorter way to reference an element name.  You can now use `this.name` instead of needing to use `this.element.name`.
@@ -40,12 +46,7 @@ Check out the exhaustive list of changes below!
 - IUX gaze activators are now easier to activate.
 - Reduced start up logging to improve startup load time.
 - Mesh occlusion now defaults to `false` (no mesh occlusion).
-- Removed unnecessary logging from [Trail widget](API/Vines.md#trail) functions.
-- Removed unnecessary logging from [Hands API](API/Hand.md) functions.
-- Added optional parameter to [voice command registration](API/Voice.md) to disable audio feedback upon keyword recognition.  This optional parameter must come at the end and look like this: 
-    - `voice.register('command', callback, optional bool)`.  
-    - `false` to disable audio feedback.  
-    - `true` to enable audio feedback.  If no bool is supplied, it will default to `true`.
+
 
 ### Fixes
 
