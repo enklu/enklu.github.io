@@ -32,7 +32,6 @@ function exit() {
 
 ## Module Methods
 ### `register(command, callback, optional bool)`
-### `registerUnprotected(command, callback, optional bool)`
 - `command <string>` The voice command to register.
 - `callback <function>` The function that will be invoked when the command is recognized. The command is passed as a parameter.
 - `optional bool <bool>` 
