@@ -31,19 +31,19 @@ function exit() {
 ```
 
 ## Module Methods
-### `register(command, callback, optional bool)`
+### `register(command, callback, [playAudioFeedback])`
 - `command <string>` The voice command to register.
 - `callback <function>` The function that will be invoked when the command is recognized. The command is passed as a parameter.
-- `optional bool <bool>` 
+- `playAudioFeedback <bool>` [Optional] audio toggle.
   - Set `false` to disable audio feedback.
   - Set `true` to enable audio feedback. If no bool is supplied, defaults to `true`.
 
 Registers a voice command.
 
-### `registerProtected(command, callback)`
+### `registerProtected(command, callback, [playAudioFeedback])`
 - `command <string>` The voice command to register.
 - `callback <function>` The function that will be invoked when the command is recognized. The command is passed as a parameter.
-- `optional bool <bool>` 
+- `playAudioFeedback <bool>` [Optional] audio toggle.
   - Set `false` to disable audio feedback.
   - Set `true` to enable audio feedback. If no bool is supplied, defaults to `true`.
 
