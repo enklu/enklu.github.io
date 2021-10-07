@@ -142,6 +142,12 @@ Sets the duration of the tween in seconds.
 
 Sets an amound of time, in seconds, to wait before the tween starts.
 
+### `loop(enableLooping)`
+- `enableLooping <bool>` Enables looping.
+- Returns: `<Tween>` The updated `Tween`.
+
+Enables a tween to loop until `.pause()` or `.stop()` is called.
+
 ### `onComplete(callback)`
 - `callback <function>` Called when the tween completes.
 - Returns: `<Tween>` The updated `Tween`.
@@ -169,7 +175,3 @@ Stops the tween while preserving state so it may be started again.
 ### `resume()`
 
 Resumes a paused tween.
-
-### `loop()`
-
-Automatically starts a tween until `.pause()` or `.stop()` is called.
