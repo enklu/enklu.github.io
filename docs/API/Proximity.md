@@ -80,4 +80,8 @@ Subscribes to a proximity event.
 - `event <string>` The event to unsubscribe from.
 - `callback <function>` The callback to unsubscribe.
 
-Unsubscrones from a proximity event.
+Unsubscribes from a proximity event.
+
+### `forceProximityCheck()`
+
+Forces an event check regardless of any previous collisions.

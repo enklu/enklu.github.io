@@ -113,6 +113,11 @@ Returns the value of the given float parameter.
 
 Sets the value of the given float parameter. 
 
+### `setTrigger('Trigger name')`
+- `Trigger name <string>`
+
+Sets the message that will be listened for.
+
 ### `getCurrentClipName([layer])`
 - `layer <int> [Optional]` The animation layer index check.
 

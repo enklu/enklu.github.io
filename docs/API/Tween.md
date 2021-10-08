@@ -128,6 +128,7 @@ Sets the easing type for the tween. Supported easing types:
 - `"QuinticIn"`
 - `"QuinticOut"`
 - `"QuinticInOut"`
+- `"JellyfishWave"`
 
 ### `duration(seconds)`
 - `seconds <number>` The duration of the tween in seconds.
@@ -140,6 +141,12 @@ Sets the duration of the tween in seconds.
 - Returns: `<Tween>` The updated `Tween`.
 
 Sets an amound of time, in seconds, to wait before the tween starts.
+
+### `loop(enableLooping)`
+- `enableLooping <bool>` Enables looping.
+- Returns: `<Tween>` The updated `Tween`.
+
+Enables a tween to loop until `.pause()` or `.stop()` is called.
 
 ### `onComplete(callback)`
 - `callback <function>` Called when the tween completes.

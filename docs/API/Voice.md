@@ -31,20 +31,25 @@ function exit() {
 ```
 
 ## Module Methods
-### `register(command, callback)`
-### `registerUnprotected(command, callback)`
+### `register(command, callback, [playAudioFeedback])`
 - `command <string>` The voice command to register.
 - `callback <function>` The function that will be invoked when the command is recognized. The command is passed as a parameter.
+- `playAudioFeedback <bool>` [Optional] audio toggle.
+  - Set `false` to disable audio feedback.
+  - Set `true` to enable audio feedback. If no bool is supplied, defaults to `true`.
 
 Registers a voice command.
 
-### `registerProtected(command, callback)`
+### `registerProtected(command, callback, [playAudioFeedback])`
 - `command <string>` The voice command to register.
 - `callback <function>` The function that will be invoked when the command is recognized. The command is passed as a parameter.
+- `playAudioFeedback <bool>` [Optional] audio toggle.
+  - Set `false` to disable audio feedback.
+  - Set `true` to enable audio feedback. If no bool is supplied, defaults to `true`.
 
 Registers a protected voice command. Protected voice commands must be spoken after the word "debug".
 
 ### `unregister(command)`
 - `command <string>` The command that should no longer be recognized.
 
-Removes registration of a voice command.d
+Removes registration of a voice command.
