@@ -9,7 +9,7 @@ title: Release Notes
 
 Wondering how to make your tweens loop more smoothly? Frustrated by the number of logs that pop up at a moment's notice? Then we've got a great update for you!
 
-![Enklu Cloud on the Oculus Quest](/img/product/releases/2021.10/2021.10_EasingComparison.gif)
+![Linear Easing vs. the new JellyfishWave Easing](/img/product/releases/2021.10/2021.10_EasingComparison.gif)
 
 For 2021.10, we've implemented a number of improvements and fixes to both the **Web Editor** and the **HoloLens 2** app. Creating experiences and interactions should now feel both easier and more performant
 
