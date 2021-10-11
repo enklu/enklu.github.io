@@ -46,10 +46,103 @@ var c = app.elements.createFromVine(a, '<Menu><Button /></Menu>');
 ```
 
 <br>
-
+**Make sure that you destroy elements or you could trigger a memory leak!** 
 Destroys an element:
 ```js
 app.elements.destroy(button);
+```
+
+<br>
+
+Here is a more complicated example for creating an array of Cylinder objects to use as colliders:
+
+```js
+const touch = require('touch');
+
+const NUMBER_OF_ITEMS = {[Amount Of Buttons:int=5]};
+const SHOW_COLLIDERS = {[Show colliders:bool]}; 
+var arrayCollider = []; 
+var height = 1;
+
+const self = this;
+
+function enter() {
+  
+  var myPosition = vec3(0,0,0);
+  createCollider(NUMBER_OF_ITEMS, myPosition);
+  
+}
+
+function createCollider(numberOfItems, myPosition){
+  
+    for(let i=0; i<numberOfItems; i++)
+    {
+       myPosition.y += height;
+       var scale = vec3(.3,.3,.3); //shrink element
+       
+     //using Cylinder ID from public assets
+      arrayCollider[i]  = app.elements.createFromVine(self, 
+      '<Content id="collider"' +
+      '"assetSrc= "c81a1608-eacb-4a96-8c60-3ceb6c1d9dac"' +
+      '"position=' + myPosition +
+      '"scale=' + scale +
+      '"/>'
+      );
+      
+      //Add collider 
+      var myCollider = touch.register(arrayCollider[i]);
+    
+      //if no collider found on object warn us, else check for touch event
+      if(!myCollider) 
+      {
+        log.warn("Warning element has no collider.");
+      }
+      else
+      {
+        // dispatched when a touch has started
+        self.on('touchstarted', function(hit)
+        {
+          onTouch();
+        });
+      }
+      
+      if(SHOW_COLLIDERS){
+        arrayCollider[i].visible = true;
+      }
+      else{
+        arrayCollider[i].visible = false;
+      }
+      
+    }
+
+}
+
+function onTouch() {
+  
+  log.info("touched object");
+  
+}
+
+function exit() {
+  
+  if(arrayCollider.length)
+  {
+    for(let i=0; i<arrayCollider.length; i++)
+    {
+      //turn off touch for that element
+      var collider = arrayCollider[i];
+      collider.off('touchstarted');
+      //destroy element to prevent memory leak
+      app.elements.destroy(arrayCollider[i]);
+    }
+  }
+}
+
+module.exports = {
+  enter: enter,
+  exit: exit
+};
+
 ```
 
 <br>
