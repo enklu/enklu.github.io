@@ -25,12 +25,15 @@ var root = app.scenes.root('myScene');
 
 The <code>elements</code> object can be used to query all scenes for an element, create elements, or destroy them.
 
-Retrieves element:
+Retrieves an element by its id:
 ```js
 button = app.elements.byId('specific-id');
 ```
 
-<br>
+Retrieves an element by name:
+```js
+button = app.elements.byName('Button');
+```
 
 Creates element as a child of another:
 ```js
@@ -38,14 +41,10 @@ var a = app.elements.create(root, 'Button');
 var b = app.elements.create(a, 'Button', 'specific-id');
 ```
 
-<br>
-
 Creates elements from a vine, as a child of <code>a</code>:
 ```js
 var c = app.elements.createFromVine(a, '<Menu><Button /></Menu>');
 ```
-
-<br>
 
 Destroys an element:
 ```js
