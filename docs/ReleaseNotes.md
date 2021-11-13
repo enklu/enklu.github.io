@@ -130,7 +130,7 @@ module.exports = {
 
 Check out the rest of our changes in the section below.
 
-## **Improvements**
+### Improvements
 
 **General**
 
@@ -141,7 +141,7 @@ Check out the rest of our changes in the section below.
 - Updated CTA color from **#33DED2** to **#2DCCD3**.
 - Implemented a few minor changes to improve overall webpage quality.
 
-## **Fixes**
+### Fixes
 
 **General**
 - Fixed an issue with the video player scaling incorrectly.
