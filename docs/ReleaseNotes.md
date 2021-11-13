@@ -127,6 +127,7 @@ module.exports = {
 ```
 </details>
 
+
 Check out the rest of our changes in the section below.
 
 ## **Improvements**
@@ -137,18 +138,16 @@ Check out the rest of our changes in the section below.
 
 **Web Editor**
 
-- Updated CTA color from #33DED2 to *#*2DCCD3
-- Implemented a few minor changes to improve overall webpage quality
+- Updated CTA color from **#33DED2** to **#2DCCD3**.
+- Implemented a few minor changes to improve overall webpage quality.
 
 ## **Fixes**
 
 **General**
-
-- Fixed an issue with the video player scaling incorrectly
+- Fixed an issue with the video player scaling incorrectly.
 
 **HoloLens 2**
-
-- Fixed a far clipping plane MRTK overwriting issue
+- Fixed a far clipping plane MRTK overwriting issue.
 
 
 ***
