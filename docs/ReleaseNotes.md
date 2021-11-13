@@ -3,6 +3,156 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2021.11.0 - 11/12/2021
+
+### Announcing PDF Support!
+
+Interested in uploading documents to your Enklu Cloud experiences? Have you wondered what it would be like to have a virtual manual right at your fingertips? Well, look no further!
+
+For 2021.11, we've added PDF support for your experiences in Enklu Cloud 🚀
+
+![PDF Uploads.gif](/img/product/releases/2021.11/PDF_uploads.gif)
+
+You can now view and scroll through PDF documents on either the web editor or on the HoloLens 2. To scroll through a PDF document, just add the following script to your PDF asset:
+
+<details close>
+<summary>**PDF Script**</summary>
+```javascript
+const self = this;
+
+// Inspector variables
+const BILLBOARD = {[Billboard:bool]};
+const PAGE_TO_DISPLAY = {[Page of PDF to start on:int = 1]};
+const UI_SCALE = {[PDF UI scale:float = 12]};
+const UI_WIDTH = {[PDF UI width:float = 0.2]};
+
+// PDF & UI parameters
+var pdfStartingPage = 1;
+var uiScale = vec3(1,1,1);
+var prevButtonPos = v.zero;
+var nextButtonPos = v.zero;
+
+// Script created elements
+var pdfButtons;
+var prevButton;
+var nextButton;
+var pageLabel;
+
+function enter() {
+  if (!self.pdfViewer) {
+    log.warn('No PDF found on element: ' + self.element.name);
+    return;
+  }
+  
+  if (BILLBOARD) {
+    self.schema.setString('face', 'camera');
+  } else {
+    self.schema.setString('face', '');
+  }
+  
+  
+  if (PAGE_TO_DISPLAY > 0 && PAGE_TO_DISPLAY <= self.pdfViewer.count) {
+    self.pdfViewer.current = PAGE_TO_DISPLAY;
+  } else {
+    log.warn('PDF cannot start on page {0} on element: {1}.  Please select a page number between 1 and {2}', PAGE_TO_DISPLAY, self.element.name, self.pdfViewer.count);
+  }
+  
+  setupUIParameters();
+  createPDFControls();
+}
+
+function setupUIParameters() {
+  uiScale = v.scale(vec3(1, 1, 1), UI_SCALE);
+  prevButtonPos = vec3(-UI_WIDTH, 0, 0);
+  nextButtonPos = vec3(UI_WIDTH, 0, 0);
+}
+
+function createPDFControls() {
+  pdfButtons = app.elements.createFromVine(self, 
+  '<Container position=(0,-4.75,0) scale=' + uiScale + '>' +
+    '<Text id="page-label" alignment="MidCenter" label="' + 
+      self.pdfViewer.current + ' / ' + self.pdfViewer.count +
+    '"/>' +
+    '<Button id="btn-prev" icon="arrow-left" position=' + prevButtonPos + '/>' +
+    '<Button id="btn-next" icon="arrow-right" position=' + nextButtonPos + '/>' +
+  '</Container>'
+  );
+  
+  pageLabel = pdfButtons.findOne('..page-label');
+  prevButton = pdfButtons.findOne('..btn-prev');
+  nextButton = pdfButtons.findOne('..btn-next');  
+  
+  setUpButtonListeners();
+}
+
+function setUpButtonListeners() {
+  prevButton.on('activated', onPrev);
+  nextButton.on('activated', onNext);
+}
+
+function onPrev() {
+  self.pdfViewer.prev();
+  updatePageLabel();
+}
+
+function onNext() {
+  self.pdfViewer.next();
+  updatePageLabel();
+}
+
+function updatePageLabel() {
+  pageLabel.schema.setString('label', 
+    self.pdfViewer.current + ' / ' + self.pdfViewer.count
+  );
+}
+
+function exit() {
+  if (pdfButtons) {
+    app.elements.destroy(pdfButtons);
+  }
+  
+  if (prevButton) {
+    prevButton.off('activated', onPrev);
+  }
+  
+  if (nextButton) {
+    nextButton.off('activated', onNext);
+  }
+}
+
+module.exports = {
+  enter: enter,
+  exit: exit
+};
+```
+</details>
+
+Check out the rest of our changes in the section below.
+
+## **Improvements**
+
+**General**
+
+- Implemented PDF upload support on both the Web Editor and HoloLens 2!
+
+**Web Editor**
+
+- Updated CTA color from #33DED2 to *#*2DCCD3
+- Implemented a few minor changes to improve overall webpage quality
+
+## **Fixes**
+
+**General**
+
+- Fixed an issue with the video player scaling incorrectly
+
+**HoloLens 2**
+
+- Fixed a far clipping plane MRTK overwriting issue
+
+
+***
+
 ## 2021.10.0 - 10/08/2021
 
 ### Quality of Life Improvements Galore!
