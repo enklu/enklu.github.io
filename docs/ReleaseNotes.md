@@ -13,7 +13,7 @@ For 2021.11, we've added PDF support for your experiences in Enklu Cloud 🚀
 
 ![PDF Uploads.gif](/img/product/releases/2021.11/PDF_uploads.gif)
 
-You can now view and scroll through PDF documents on either the web editor or on the HoloLens 2! To scroll through a PDF document, add the **PDF Controls** public script to any PDF asset in your experience. It will immediately generate buttons that will allow you to page through a document.
+You can now view and scroll through PDF documents on either the web editor or on the HoloLens 2! To scroll through a PDF document, add the **PDF Controls** [public script](Scripting/PublicScripts.md) to any PDF asset in your experience. It will immediately generate buttons that will allow you to page through a document.
 
 Check out the rest of our changes in the section below.
 
@@ -21,7 +21,7 @@ Check out the rest of our changes in the section below.
 
 **General**
 
-- Implemented PDF upload support on both the Web Editor and HoloLens 2!
+- Implemented PDF support on both the Web Editor and HoloLens 2!
 
 **Web Editor**
 
