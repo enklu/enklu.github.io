@@ -3,6 +3,42 @@ id: ReleaseNotes
 title: Release Notes
 ---
 
+## 2021.11.0 - 11/12/2021
+
+### Announcing PDF Support!
+
+Interested in uploading documents to your Enklu Cloud experiences? Have you wondered what it would be like to have a virtual manual right at your fingertips? Well, look no further!
+
+For 2021.11, we've added PDF support for your experiences in Enklu Cloud 🚀
+
+![PDF Uploads.gif](/img/product/releases/2021.11/PDF_uploads.gif)
+
+You can now view and scroll through PDF documents on either the web editor or on the HoloLens 2! To scroll through a PDF document, add the **PDF Controls** [public script](Scripting/PublicScripts.md) to any PDF asset in your experience. It will immediately generate buttons that will allow you to page through a document.
+
+Check out the rest of our changes in the section below.
+
+### Improvements
+
+**General**
+
+- Implemented PDF support on both the Web Editor and HoloLens 2!
+
+**Web Editor**
+
+- Updated CTA color from **#33DED2** to **#2DCCD3**.
+- Implemented a few minor changes to improve overall webpage quality.
+
+### Fixes
+
+**General**
+- Fixed an issue with the video player scaling incorrectly.
+
+**HoloLens 2**
+- Fixed a far clipping plane MRTK overwriting issue.
+
+
+***
+
 ## 2021.10.0 - 10/08/2021
 
 ### Quality of Life Improvements Galore!
