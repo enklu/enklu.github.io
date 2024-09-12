@@ -7,7 +7,7 @@ Enklu Cloud's scripting interface offers 2 types of scripts: Behavior scripts an
 
 ## Vine Scripts
 
-Vine scripts are written using VineML.  VineML is a markup language which strongly correlates to HTML. However unlike HTML, VineML has several built-in features specifically aimed at creating UI elements for AR. In Enklu Cloud, Vine scripts are used to describe element hierarchies, assign schema data, and display information.
+Vine scripts are written using [VineML](Vines.md).  VineML is a markup language which strongly correlates to HTML. However unlike HTML, VineML has several built-in features specifically aimed at creating UI elements for AR. In Enklu Cloud, Vine scripts are used to describe element hierarchies, assign schema data, and display information.
 
 VineML files are called *documents*. These documents are made up of a hierarchy of nested *tags* which start from a single root element. Each tag can have zero or more attributes. Let's look at an example Vine script:
 
@@ -56,7 +56,7 @@ While tags define the object structure, attributes define the object properties.
 ```jsx
 <Caption
     label = 'Hello'
-    visible = false 
+    visible = true 
     font.size = 100
     width = 1000.5
     position = (0,0,10)
